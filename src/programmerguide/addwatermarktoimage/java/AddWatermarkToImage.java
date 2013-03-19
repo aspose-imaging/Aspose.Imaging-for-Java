@@ -27,7 +27,7 @@ public class AddWatermarkToImage
         //Creates an instance of Font
         Font font = new Font("Times New Roman", 16, FontStyle.Bold);
 
-        //Create an instance of SolidBrush and set its various properties
+        //Create an instance of SolidBrush and set its various properties.
         SolidBrush brush = new SolidBrush();
         brush.setColor(Color.getBlack());
         brush.setOpacity(100);
