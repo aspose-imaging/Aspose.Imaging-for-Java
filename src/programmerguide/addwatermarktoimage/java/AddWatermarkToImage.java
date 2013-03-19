@@ -32,7 +32,7 @@ public class AddWatermarkToImage
         brush.setColor(Color.getBlack());
         brush.setOpacity(100);
 
-        //Draw a String using the SolidBrush object and Font, at specific Point
+        //Draw a String using the SolidBrush object and Font, at specific Point.
         graphics.drawString("Aspose.Imaging for .Net", font, brush, new PointF(image.getWidth()-100, image.getHeight()-100));
 
         //graphics.getImage().save(dataDir + "out.bmp");
