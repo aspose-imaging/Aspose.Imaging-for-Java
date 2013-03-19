@@ -21,7 +21,7 @@ public class AddWatermarkToImage
         //Create an instance of Image and load an existing image.
         Image image= Image.load(dataDir + "sample.bmp");
 
-        //Create and initialize an instance of Graphics class
+        //Create and initialize an instance of Graphics class.
         Graphics graphics=new Graphics(image);
 
         //Creates an instance of Font
