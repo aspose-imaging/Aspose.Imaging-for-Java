@@ -37,7 +37,7 @@ public class AddWatermarkToImage
 
         //graphics.getImage().save(dataDir + "out.bmp");
 
-        // save the image with changes.
+        // save the image with changes
         image.save(dataDir + "out.bmp");
 
         // Display Status.
