@@ -35,8 +35,6 @@ public class AddWatermarkToImage
         //Draw a String using the SolidBrush object and Font, at specific Point.
         graphics.drawString("Aspose.Imaging for .Net", font, brush, new PointF(image.getWidth()-100, image.getHeight()-100));
 
-        //graphics.getImage().save(dataDir + "out.bmp");
-
         // save the image with changes
         image.save(dataDir + "out.bmp");
 
