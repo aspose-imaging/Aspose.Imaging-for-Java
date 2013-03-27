@@ -6,6 +6,10 @@ Aspose.Imaging for Java supports maximum file formats from Raster based graphica
 
 These examples provide helpful demonstrations and code when using Aspose.Imaging for Java.
 
+###Run Examples on your PC
+
+Download the [Aspose Examples Dashboard for Java](http://www.aspose.com/community/files/72/java-components/aspose.total-for-java/category1426.aspx) to view and run all these examples on your PC.
+
 ## Aspose.Imaging for Java at a Glance
 ![Aspose.Imaging Overview](http://www.aspose.com/images/products/aspose.imaging-for-java-at-a-glance-diagram.jpg "The Main Features of Aspose.Imaging for Java")
 
