@@ -2,6 +2,21 @@
 
 This package contains Java Example Projects for [Aspose.Imaging for Java](http://www.aspose.com/java/imaging-component.aspx).
 
+##How to use the Examples?
+
+###With the Examples Dashboard
+
+Download the [Aspose Examples Dashboard for Java](http://www.aspose.com/community/files/72/java-components/aspose-examples-for-java/default.aspx) to view and run all these examples on your PC. It updates itself with the latest dependency libraries and examples.
+
+![Aspose Examples Dashboard](http://www.aspose.com/blogs/wp-content/uploads/2013/03/Java-Dashboard1.png "Aspose Examples Dashboard")
+
+###With IDE
+
+Clone or Download the ZIP and extract the contents to your local hard drive. If you have IntelliJ IDEA, then open the project directly 
+by browsing to the folder. For Netbeans and Eclipse, you can import project feature.
+
+Also download the [latest version](http://www.aspose.com/community/files/72/java-components/aspose.cells-for-java/default.aspx) of Aspose.Cells for Java and set/fix jar references.
+
 ##Open Source Feel of Aspose.Imaging
 
 Aspose.Imaging for Java is a successful commercial product, but our philosophy is to develop them using our unique "*open-source feel*" approach. In other words, we at Aspose are extremely customer driven and this shows in:
