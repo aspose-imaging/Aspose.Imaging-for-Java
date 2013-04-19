@@ -1,19 +1,6 @@
 #Aspose.Imaging for Java Examples Repository
 
-Aspose.Imaging for Java is an imaging library that lets developers create, edit, draw or convert images in their Java applications. Aspose.Imaging provides features that go beyond the native capabilities of any imaging library. It works independent of other applications and although Aspose.Imaging allows you to save to Adobe PhotoShop format (PSD), you do not need PhotoShop on the machine.
-
-Aspose.Imaging for Java supports maximum file formats from Raster based graphical Imaging and provides a wide range of compression algorithms along with numerous image processing operations.  It's many features and image processing routines should meet most imaging requirements. 
-
-These examples provide helpful demonstrations and code when using Aspose.Imaging for Java.
-
-## Aspose.Imaging for Java at a Glance
-![Aspose.Imaging Overview](http://www.aspose.com/images/products/aspose.imaging-for-java-at-a-glance-diagram.jpg "The Main Features of Aspose.Imaging for Java")
-
-###Run Examples on your PC
-
-Download the [Aspose Examples Dashboard for Java](http://www.aspose.com/community/files/72/java-components/aspose-examples-for-java/default.aspx) to view and run all these examples on your PC. No need to download any other file to run the examples in Dashboard!! It updates itself with the latest dependency libraries and examples.
-
-![Aspose Examples Dashboard](http://www.aspose.com/blogs/wp-content/uploads/2013/03/Java-Dashboard1.png "Aspose Examples Dashboard")
+This package contains Java Example Projects for [Aspose.Imaging for Java](http://www.aspose.com/java/imaging-component.aspx).
 
 ##Open Source Feel of Aspose.Imaging
 
@@ -48,42 +35,6 @@ This package contains Java Examples of [Aspose.Imaging for Java](http://www.aspo
   <tr><td>Load and Save Images</td><td>This example demonstrates the ability of Aspose.Imaging for Java to load and save images.</td></tr>
   <tr><td>Load and Save Pixels</td><td>This example demonstrates the ability of Aspose.Imaging for Java to load and save Pixels.</td></tr>
 </table>
-
-###Data
-
-Input Images - Some examples require images as input, these images are provided in Resource folder of the package.
-
-###Output
-
-All examples will output the result to Resource folder.
-
-
-##Download the examples
-
-Please [download the Aspose.Imaging for Java examples](https://github.com/asposeimaging/Aspose_Imaging_Java/downloads) to try at your end.
-
-
-##How to use the examples?
-
-This package contains Java examples of Aspose.Imaging for Java.
-
-Firstly make sure that you have downloaded and extracted the latest version of Aspose.Imaging for Java. We recommend extracting the Aspose.Imaging archive at the same location with the examples to ensure all dependencies in the examples can be found.
-
-Download the examples from the above link. There are MyEclipse project provided for the examples which can be used to easily compile and run each example.
-
-You can choose one of several options to run the examples.
-
-Open the MyEclipse project file using the MyEclipse Java IDE. The example should be ready to compile. Click on "Run" menu and choose one of the following menu items:
-
-+  Run
-+  Debug
-
-Create a new project in your favourite Java IDE and choose to create a new project from existing sources.
-
-+  Include all files within the folder of the example that is being compiled.
-+  A library reference to Aspose.Imaging.jar which is found within the lib folder must be added to the project.
-+  The entry point for each example is always found at main method in each Java file.
-
 
 ##Contact Us
 
