@@ -117,34 +117,6 @@ When the GraphicsPath has been fully described, use the corresponding Graphics c
                   </OutputFiles>
                   <Type>Console</Type>
                 </Example>
-                <Example>
-                  <Title>Drawing using Graphics</Title>
-                  <Description>With the Aspose.Imaging library you can draw simple shapes like lines, rectangles and circles, as well as complex shapes like polygons, curves, arcs and Bezier shapes.
-Aspose.Imaging library creates such shapes using Graphics class that resides in the Aspose.Imaging namespace. Graphics objects are responsible for performing different drawing operations on an image, thus changing the image's surface.
-
-The Graphics class uses a variety of helper objects to enhance the shapes:
-
-- Pens, to draw lines, outline shapes, or render other geometric representations.
-- Brushes, to define how areas are filled in.
-- Fonts, to define the shape of characters of text.</Description>
-                  <FolderName>DrawingusingGraphics</FolderName>
-                  <Order>2</Order>
-                  <DocLink>
-                    <DisplayName>Drawing using Graphics</DisplayName>
-                    <Url>http://www.aspose.com/docs/display/imagingjava/Drawing+using+Graphics</Url>
-                  </DocLink>
-                  <InputFiles>
-                    <DataFile>
-                      <Path>..\Data\sample.bmp</Path>
-                    </DataFile>
-                  </InputFiles>
-                  <OutputFiles>
-                    <DataFile>
-                      <Path>..\Data\drawImage.out.bmp</Path>
-                    </DataFile>
-                  </OutputFiles>
-                  <Type>Console</Type>
-                </Example>
               </Examples>
             </Folder>
           </Folders>
@@ -279,51 +251,62 @@ Once the image has been created, we will use the Clear method exposed by the Gra
               </OutputFiles>
               <Type>Console</Type>
             </Example>
-            <Example>
-              <Title>Drawing Rectangle</Title>
-              <Description>This example uses Graphics class to draw the rectangle shape on the Image surface. To demonstrate the operation, the example creates a new Image in BMP format and draw rectangle shape on Image surface using drawRectangle method exposed by Graphics class.</Description>
-              <FolderName>DrawingRectangle</FolderName>
-              <Order>4</Order>
-              <DocLink>
-                <DisplayName>Drawing Rectangle</DisplayName>
-                <Url>http://www.aspose.com/docs/display/imagingjava/Drawing+Rectangle</Url>
-              </DocLink>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\drawRectanleExample.out.bmp</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
           </Examples>
         </Folder>
         <Folder>
           <Title>Working with Image files</Title>
-          <Description>This section includes the following topics: 
+          <Description>This section includes the following examples:
 
-- Opening Image files 
-- Creating Image files 
-- Saving Image files</Description>
-          <FolderName>WorkingwithImagefiles</FolderName>
+1: Opening image files
+2: Creating image files
+3: Saving image files</Description>
+          <FolderName>WorkingWithImagefiles</FolderName>
           <Order>6</Order>
-          <Examples>
-            <Example>
-              <Title>Opening Image files from disk</Title>
-              <Description>The Image class is Aspose.Imaging's core class. The Image class provides methods for manipulating a single image frame, for example a JPEG image. Use the Image class to load existing image files to add effects to the image or to convert a file to another format, for example. Whatever the purpose is, Aspose.Imaging provides two standard ways to open existing files: from file or from a stream. They are discussed below with examples.</Description>
-              <FolderName>OpeningImagefilesfromdisk</FolderName>
+          <Folders>
+            <Folder>
+              <Title>Creating Image files</Title>
+              <Description>Aspose.Imaging for .NET allows developers to create their own images. Image files can be created by setting:
+
+1: An output path 
+2: A Stream</Description>
+              <FolderName>CreatingImagefiles</FolderName>
               <Order>1</Order>
-              <DocLink>
-                <DisplayName>Opening Image files from disk</DisplayName>
-                <Url>http://www.aspose.com/docs/display/imagingjava/Opening+Image+files</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\sample.bmp</Path>
-                </DataFile>
-              </InputFiles>
-              <Type>Console</Type>
-            </Example>
-          </Examples>
+              <Examples>
+                <Example>
+                  <Title>Creating an Image by Setting a Path</Title>
+                  <Description>This example demonstrates how to create an image using the path.</Description>
+                  <FolderName>CreatingAnImageBySettingPath</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Creating Image files</DisplayName>
+                    <Url>Creating+Image+files</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\output.bmp</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Creating an Image Using a Stream</Title>
+                  <Description>Following example shows how Aspose.Imaging can be used to create an image using stream.</Description>
+                  <FolderName>CreatingImageUsingStream</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Creating an Image Using a Stream</DisplayName>
+                    <Url>Creating+Image+files</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\sample.bmp</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+          </Folders>
         </Folder>
       </Folders>
     </Folder>
