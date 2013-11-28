@@ -15,7 +15,7 @@ Download the [Aspose Examples Dashboard for Java](http://www.aspose.com/communit
 Clone or Download the ZIP and extract the contents to your local hard drive. If you have IntelliJ IDEA, then open the project directly 
 by browsing to the folder. For Netbeans and Eclipse, you can import project feature.
 
-Also download the [latest version](http://www.aspose.com/community/files/72/java-components/aspose.cells-for-java/default.aspx) of Aspose.Cells for Java and set/fix jar references.
+Also download the [latest version](http://www.aspose.com/community/files/72/java-components/aspose.imaging-for-java/default.aspx) of Aspose.Imaging for Java and set/fix jar references.
 
 ##Open Source Feel of Aspose.Imaging
 
