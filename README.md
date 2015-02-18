@@ -55,10 +55,13 @@ This package contains Java Examples of [Aspose.Imaging for Java](http://www.aspo
   <tr><td>Create files through FileStream</td><td>This example demonstrates the ability of Aspose.Imaging for Java to create Image files from scratch using FileStream object.</td></tr>
   <tr><td>Create files through ByteArrayInputStream</td><td>This example demonstrates the ability of Aspose.Imaging for Java to create Image files from scratch using ByteArrayInputStream object.</td></tr>
   <tr><td>Colors</td><td>This example demonstrates the ability of Aspose.Imaging for Java to render different colors on an image.</td></tr>
-  <tr><td>Draw Figures</td><td>This example demonstrates the usage of Aspose.Imaging for Java to draw primitive objects like Line, Rectangle, Circle and Ellipse.</td></tr>
   <tr><td>Draw Pixel</td><td>This example demonstrates the usage of Aspose.Imaging for Java to draw images using the core functionality.</td></tr>
   <tr><td>Load and Save Images</td><td>This example demonstrates the ability of Aspose.Imaging for Java to load and save images.</td></tr>
   <tr><td>Load and Save Pixels</td><td>This example demonstrates the ability of Aspose.Imaging for Java to load and save Pixels.</td></tr>
+  <tr><td>Draw Figures</td><td>These examples demonstrate the ability of Aspose.Imaging for Java to draw primitive objects such as Arc, Bezier, Ellipse, Line & Rectangle.</td></tr>
+  <tr><td>Export Image</td><td>This example demonstrates the ability of Aspose.Imaging for Java to export images to different raster image formats including BMP, TIFF, GIF, PNG and JPEG.</td></tr>
+  <tr><td>Concatenate TIFF Images</td><td>This example demonstrates the ability of Aspose.Imaging for Java to merge TIFF images into one.</td></tr>
+  <tr><td>Stamp Image</td><td>This example demonstrates the ability of Aspose.Imaging for Java to draw watermark on images.</td></tr>
 </table>
 
 ##Contact Us
