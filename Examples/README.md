@@ -1,4 +1,4 @@
-## Aspose.Imaging for Java
+## Aspose.Imaging for Java Examples
 
 This directory contains Java code examples for [Aspose.Imaging for Java](http://www.aspose.com/java/imaging-component.aspx).
 
