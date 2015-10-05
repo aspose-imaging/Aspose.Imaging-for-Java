@@ -1,0 +1,5 @@
+jar_dir: ../asposeimagingjava/jars
+license_path: ../asposeimagingjava/license/path
+jvm_args: -Xms512m -Xmx1G
+
+

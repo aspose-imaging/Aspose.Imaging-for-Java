@@ -1,0 +1,5 @@
+require_relative 'images'
+require_relative 'drawing'
+require_relative 'metafiles'
+require_relative 'psd'
+require_relative 'djvu'
