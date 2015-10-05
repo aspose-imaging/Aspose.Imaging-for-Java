@@ -1,0 +1,5 @@
+require_relative 'djvu/convertingdjvutopdf'
+require_relative 'djvu/convertingdjvutotiff'
+require_relative 'djvu/convertingrangeofdjvupages'
+require_relative 'djvu/convertingrangeofdjvupagestoseparateimages'
+require_relative 'djvu/convertingspecificportionofdjvupage'

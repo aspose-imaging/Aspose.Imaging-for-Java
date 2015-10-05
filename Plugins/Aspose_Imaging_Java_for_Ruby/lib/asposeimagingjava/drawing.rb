@@ -1,0 +1,6 @@
+require_relative 'drawing/drawingimagesusingcorefunctionality'
+require_relative 'drawing/drawingimagesusinggraphics'
+require_relative 'drawing/drawinglines'
+require_relative 'drawing/drawingellipse'
+require_relative 'drawing/drawingrectangle'
+require_relative 'drawing/drawingarc'
