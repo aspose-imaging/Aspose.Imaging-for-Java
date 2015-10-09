@@ -31,3 +31,13 @@ Lets understand the above code
 * The first line makes sure that the Aspose.Imaging is loaded and available 
 * Include the files that are required to access the Aspose.Imaging
 * Initialize the libraries. The aspose JAVA classes are loaded from the path provided in the aspose.yml file
+
+## Download Latest Versions?
+
+* [Latest Releases on Codeplex](https://asposeimagingjavaruby.codeplex.com/releases/view/617825)
+
+## Clone Plugin SourceCodes?
+
+This project is also hosted and maintained at CodePlex. To clone navigate to:
+
+* [Aspose.Imaging Java for Ruby on CodePlex - click here](https://asposeimagingjavaruby.codeplex.com/SourceControl/latest)
