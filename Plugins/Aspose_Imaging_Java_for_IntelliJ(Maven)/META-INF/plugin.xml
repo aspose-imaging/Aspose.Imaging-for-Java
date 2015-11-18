@@ -1,0 +1,29 @@
+<!--
+  ~ @author Adeel Ilyas <adeel.ilyas@aspose.com>
+  -->
+<idea-plugin version="2">
+    <id>com.aspose.imaging.java.intellij.maven</id>
+    <name>Aspose.Imaging Java for IntelliJ IDEA Maven</name>
+    <version>1.0.0.0</version>
+
+    <vendor email="imaging@aspose.com" url="http://www.aspose.com">Aspose Pty Ltd.</vendor>
+
+
+    <description><![CDATA[<br/><b>Aspose.Imaging for Java</b>  is an easy-to-use, high-performance and well-documented imaging library, that provides the most flexible group of routines for the developers to create, manipulate, save and convert images in their Java applications with ease and performance.<br/><br/>The plugin's <b>Aspose.Imaging Maven Project</b> wizard lets you create a Aspose.Imaging Java API maven project by fetching & referencing the latest API mvn artifact from the Aspose Cloud Maven Repository.<br/><br/>Plugin provided wizards also gives you option to download & import the example source codes for using Aspose.Imaging for Java API.<br/><br/>After the completion of wizard, project will be created and API examples are downloaded. All references and required resources will also be automatically added to the project.<br/><br/>You can then import / use codes (using option <b>File-> New-> Aspose.Imaging Example</b>) from downloaded examples for your project needs and enhance them as necessary.<br/>
+    ]]></description>
+
+
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="139"/>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <moduleBuilder builderClass="com.aspose.wizards.maven.AsposeMavenModuleBuilder"/>
+    </extensions>
+
+    <actions>
+        <action id="aspose.imaging.example" class="com.aspose.examples.AsposeExampleAction" text="Aspose.Imaging Example" icon="/resources/asposeSmall.png"
+                description="Aspose.Imaging Examples allow you to add Aspose sourcecode examples to demonstrate Aspose.Imaging Java API usage. Available samples are displayed in tree format from where you can select one. Selected category examples will be added to current project including source files and required data files.">
+            <add-to-group group-id="NewGroup" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
