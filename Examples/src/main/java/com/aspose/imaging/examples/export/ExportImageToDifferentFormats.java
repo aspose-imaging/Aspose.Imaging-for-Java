@@ -9,6 +9,8 @@
 package com.aspose.imaging.examples.export;
 
 import com.aspose.imaging.examples.Utils;
+import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
+import com.aspose.imaging.imageoptions.TiffOptions;
 
 public class ExportImageToDifferentFormats
 {
@@ -30,7 +32,7 @@ public class ExportImageToDifferentFormats
         image.save(dataDir + "output.png", new com.aspose.imaging.imageoptions.PngOptions());
 
         //Export to TIFF file format using the default options
-        image.save(dataDir + "output.tiff", new com.aspose.imaging.imageoptions.TiffOptions());
+        image.save(dataDir + "output.tiff", new TiffOptions(TiffExpectedFormat.Default));
 
         // Display Status.
         System.out.println("Image exported to BMP, JPG, PNG and TIFF formats successfully!");
