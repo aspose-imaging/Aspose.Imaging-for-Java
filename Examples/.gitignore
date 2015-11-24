@@ -1,0 +1,14 @@
+.idea
+*.iml
+target
+build
+output.*
+output-*
+output_*
+Output.*
+Output-*
+Output_*
+out_*.*
+Out_*.*
+Thumbs.db
+.DS_Store
