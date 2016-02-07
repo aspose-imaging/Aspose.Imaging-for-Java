@@ -11,6 +11,7 @@ This package contains Java example code for [Aspose.Imaging for Java](http://www
 Directory | Description
 --------- | -----------
 [Examples](Examples)  |  Examples for Aspose.Imaging for Java
+[Plugins](Plugins)  |  Third-party integration plugins for Aspose.Imaging for Java
 
 ## Resources
 
