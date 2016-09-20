@@ -9,7 +9,7 @@ public class BluranImage {
 	public static void main(String... args) throws Exception {
 		// ExStart:BluranImage
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(BluranImage.class);
+		String dataDir = Utils.getSharedDataDir(BluranImage.class) + "ModifyingImages/";
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
 		// Convert the image into RasterImage.
 		RasterImage rasterImage = (RasterImage) image;
@@ -19,7 +19,7 @@ public class BluranImage {
 		rasterImage.filter(rasterImage.getBounds(), new GaussianBlurFilterOptions(5, 5));
 
 		// Save the results to output path.
-		rasterImage.save(dataDir + "BlurAnImage.gif");
+		rasterImage.save(dataDir + "BluranImage_out.gif");
 		// ExEnd:BluranImage
 	}
 

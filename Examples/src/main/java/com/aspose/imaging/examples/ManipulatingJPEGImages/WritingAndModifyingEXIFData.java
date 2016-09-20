@@ -9,7 +9,7 @@ public class WritingAndModifyingEXIFData {
 	public static void main(String... args) throws Exception {
 		// ExStart:WritingAndModifyingEXIFData
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(WritingAndModifyingEXIFData.class);
+		String dataDir = Utils.getSharedDataDir(WritingAndModifyingEXIFData.class) + "ManipulatingJPEGImages/";
 
 		// Load an image using the factory method load exposed by Image class
 		Image image = Image.load(dataDir + "aspose-logo.jpg");

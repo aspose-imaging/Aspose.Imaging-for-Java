@@ -10,7 +10,7 @@ import com.aspose.imaging.internal.ae.as;
 
 public class ConvertGIFImageLayersToTIFF {
 	public static void main(String... args) throws Exception {
-		String dataDir = Utils.getDataDir(ConvertGIFImageLayersToTIFF.class);
+		String dataDir = Utils.getSharedDataDir(ConvertGIFImageLayersToTIFF.class) + "ConvertingImages/";
 
 		// Load a GIF image
 		Image objImage = Image.load(dataDir + "aspose-logo.gif");

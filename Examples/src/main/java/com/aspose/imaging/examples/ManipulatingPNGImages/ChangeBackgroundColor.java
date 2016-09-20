@@ -6,7 +6,7 @@ public class ChangeBackgroundColor {
 	public static void main(String... args) throws Exception {
 		// ExStart:ChangeBackgroundColor
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ChangeBackgroundColor.class);
+		String dataDir = Utils.getSharedDataDir(ChangeBackgroundColor.class) + "ManipulatingPNGImages/";
 
 		// Create an instance of Image class and load a PNG image
 		com.aspose.imaging.Image img = com.aspose.imaging.Image.load(dataDir + "aspose_logo.png");
@@ -30,7 +30,7 @@ public class ChangeBackgroundColor {
 		rasterImg.saveArgb32Pixels(img.getBounds(), pixels);
 
 		// Save the updated image to disk.
-		rasterImg.save(dataDir + "test-out.png");
+		rasterImg.save(dataDir + "ChangeBackgroundColor_out.png");
 		// ExEnd:ChangeBackgroundColor
 	}
 

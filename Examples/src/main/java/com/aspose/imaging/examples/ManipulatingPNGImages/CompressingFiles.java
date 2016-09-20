@@ -8,7 +8,7 @@ public class CompressingFiles {
 	public static void main(String... args) throws Exception {
 		// ExStart:CompressingFiles
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(CompressingFiles.class);
+		String dataDir = Utils.getSharedDataDir(CompressingFiles.class) + "ManipulatingPNGImages/";
 		// Load an image from file (or stream)
 		Image image = Image.load(dataDir + "aspose_logo.png");
 		// Loop over possible CompressionLevel range
@@ -18,7 +18,7 @@ public class CompressingFiles {
 			// Set CompressionLevel
 			options.setCompressionLevel(i);
 			// Save result on disk (or stream)
-			image.save(i + ".png", options);
+			image.save("CompressingFiles_out" + i + ".png", options);
 		}
 		// ExEnd:CompressingFiles
 	}

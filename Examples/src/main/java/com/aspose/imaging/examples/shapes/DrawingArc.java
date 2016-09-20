@@ -8,7 +8,7 @@ public class DrawingArc
     public static void main(String[] args) throws Exception
     {
         // The path to the documents directory.
-        String dataDir = Utils.getDataDir(DrawingArc.class);
+        String dataDir = Utils.getSharedDataDir(DrawingArc.class) + "shapes/";
 
         // Creates an instance of BmpOptions and set its various properties
         com.aspose.imaging.imageoptions.BmpOptions bmpCreateOptions = new com.aspose.imaging.imageoptions.BmpOptions();
@@ -34,11 +34,10 @@ public class DrawingArc
         int sweepAngle = 270;
 
         // Draw arc to screen.
-        //graphic.drawArc(new Pen(com.aspose.imaging.Color.getBlack()), 0, 0,width, height, startAngle, sweepAngle);
         graphic.drawArc(new Pen(com.aspose.imaging.Color.getYellow()), 0, 0,width, height, startAngle, sweepAngle);
 
         // Save all changes.
-        image.save(dataDir + "outputarc.bmp");
+        image.save(dataDir + "DrawingArc_out.bmp");
 
         // Display Status.
         System.out.println("Arc has been drawn in image successfully!");

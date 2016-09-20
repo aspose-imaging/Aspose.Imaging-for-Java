@@ -8,7 +8,7 @@ public class DrawingusingGraphics
     public static void main(String[] args) throws Exception
     {
         // The path to the documents directory.
-        String dataDir = Utils.getDataDir(DrawingusingGraphics.class);
+        String dataDir = Utils.getSharedDataDir(DrawingusingGraphics.class) + "images/";
         
         //Create an instance of BmpCreateOptions and set its various properties
         com.aspose.imaging.imageoptions.BmpOptions createOptions = new com.aspose.imaging.imageoptions.BmpOptions();
@@ -32,7 +32,7 @@ public class DrawingusingGraphics
         graphics.drawEllipse(pen, new com.aspose.imaging.Rectangle(10, 10, 150, 100));
         
         // Save all changes.
-        image.save(dataDir + "drawImage.out.bmp");
+        image.save(dataDir + "DrawingusingGraphics_out.bmp");
         
         //Print message
         System.out.println("Image drawn successfully. Check output file.");

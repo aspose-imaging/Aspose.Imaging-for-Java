@@ -1,6 +1,5 @@
 package com.aspose.imaging.examples.files;
 
-import com.aspose.imaging.*;
 import com.aspose.imaging.examples.Utils;
 
 public class CreatingImageUsingStream
@@ -8,7 +7,7 @@ public class CreatingImageUsingStream
     public static void main(String[] args) throws Exception
     {
         // The path to the documents directory.
-        String dataDir = Utils.getDataDir(CreatingImageUsingStream.class);
+        String dataDir = Utils.getSharedDataDir(CreatingImageUsingStream.class) + "files/";
 
         //Creates an instance of BmpOptions and set its various properties
         com.aspose.imaging.imageoptions.BmpOptions createOptions = new com.aspose.imaging.imageoptions.BmpOptions();

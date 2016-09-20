@@ -4,9 +4,9 @@ import com.aspose.imaging.examples.Utils;
 
 public class UseBradleythresholding {
 	public static void main(String[] args) throws Exception {
-		String dataDir = Utils.getDataDir(UseBradleythresholding.class);
+		String dataDir = Utils.getSharedDataDir(UseBradleythresholding.class) + "export/";
 		String sourcepath = dataDir + "aspose_logo.png";
-		String outputPath = dataDir + "binarized_output.png";
+		String outputPath = dataDir + "UseBradleythresholding_out.png";
 
 		// Load an existing image.
 		com.aspose.imaging.fileformats.png.PngImage objimage = (com.aspose.imaging.fileformats.png.PngImage) com.aspose.imaging.Image

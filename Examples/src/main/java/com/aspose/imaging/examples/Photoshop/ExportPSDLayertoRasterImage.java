@@ -4,7 +4,7 @@ import com.aspose.imaging.examples.Utils;
 
 public class ExportPSDLayertoRasterImage {
 	public static void main(String... args) throws Exception {
-		String dataDir = Utils.getDataDir(ExportPSDLayertoRasterImage.class);
+		String dataDir = Utils.getSharedDataDir(ExportPSDLayertoRasterImage.class) + "Photoshop/";
 		String sourceFileName = dataDir + "samplePsd.psd";
 
 		// Create an instance of Image class and load PSD file as image.
@@ -20,7 +20,7 @@ public class ExportPSDLayertoRasterImage {
 		// Loop through the list of layers
 		for (int i = 0; i < psdImage.getLayers().length; i++) {
 			// convert and save the layer to PNG file format.
-			psdImage.getLayers()[i].save("layer_" + i + 1 + ".png", pngOptions);
+			psdImage.getLayers()[i].save("ExportPSDLayertoRasterImage_out" + i + 1 + ".png", pngOptions);
 		}
 	}
 

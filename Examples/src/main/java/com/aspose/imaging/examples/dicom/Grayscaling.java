@@ -5,9 +5,9 @@ import com.aspose.imaging.examples.Utils;
 public class Grayscaling {
 	public static void main(String... args) throws Exception {
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(Grayscaling.class);
+		String dataDir = Utils.getSharedDataDir(Grayscaling.class) + "dicom/";
 		String inputFile = dataDir + "image.dcm";
-		String outputFile = dataDir + "grayscale.bmp";
+		String outputFile = dataDir + "Grayscaling_out.bmp";
 
 		// Load an existing image.
 		com.aspose.imaging.fileformats.dicom.DicomImage image = new com.aspose.imaging.fileformats.dicom.DicomImage(

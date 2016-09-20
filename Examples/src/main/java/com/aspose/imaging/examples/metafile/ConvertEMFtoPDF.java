@@ -5,13 +5,13 @@ import com.aspose.imaging.imageoptions.PdfOptions;
 
 public class ConvertEMFtoPDF {
 	public static void main(String... args) throws Exception {
-		String dataDir = Utils.getDataDir(ConvertEMFtoPDF.class);
+		String dataDir = Utils.getSharedDataDir(ConvertEMFtoPDF.class) + "metafile/";
 		String[] filePaths = new String[] { dataDir + "FilledRectangleRotateMode_c.emf", dataDir + "image5.emf",
 				dataDir + "LinearGradientBrushCircuitMode.emf", dataDir + "Pict.emf", dataDir + "Picture1.emf",
 				dataDir + "test.emf", dataDir + "wrong-font-size.emf" };
 
 		for (String filePath : filePaths) {
-			String outPath = filePath + ".pdf";
+			String outPath = filePath + "ConvertEMFtoPDF_out" + ".pdf";
 
 			com.aspose.imaging.fileformats.emf.EmfImage image = com.aspose.imaging.fileformats.emf.EmfImage
 					.load(filePath);

@@ -11,7 +11,7 @@ public class ConvertRangeOfDjVuPages {
 	public static void main(String... args) throws Exception {
 		// ExStart:ConvertRangeOfDjVuPages
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ConvertRangeOfDjVuPages.class);
+		String dataDir = Utils.getSharedDataDir(ConvertRangeOfDjVuPages.class) + "djvu/";
 
 		// Load a DjVu image
 		DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");

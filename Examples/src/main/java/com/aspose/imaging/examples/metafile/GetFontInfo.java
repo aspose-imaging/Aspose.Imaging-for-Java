@@ -8,7 +8,7 @@ import com.aspose.imaging.fileformats.metafile.EmfMetafileImage;
 public class GetFontInfo {
 
     public static void main(String... args) throws Exception {
-        String dataDir = Utils.getDataDir(GetFontInfo.class);
+        String dataDir = Utils.getSharedDataDir(GetFontInfo.class) + "metafile/";
 
         System.out.println("Get list of font names accessible to Aspose.Imaging API");
         for (String f : FontSettings.getAllFonts()) {

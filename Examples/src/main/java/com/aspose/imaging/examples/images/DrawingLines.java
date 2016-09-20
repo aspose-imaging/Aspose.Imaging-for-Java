@@ -6,7 +6,7 @@ import com.aspose.imaging.examples.Utils;
 public class DrawingLines {
 	public static void main(String[] args) throws Exception {
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(DrawingLines.class);
+		String dataDir = Utils.getSharedDataDir(DrawingLines.class) + "images/";
 		// Creates an instance of BmpOptions and set its various properties
 		com.aspose.imaging.imageoptions.BmpOptions bmpCreateOptions = new com.aspose.imaging.imageoptions.BmpOptions();
 		bmpCreateOptions.setBitsPerPixel(32);
@@ -51,7 +51,7 @@ public class DrawingLines {
 				new com.aspose.imaging.Point(90, 9), new com.aspose.imaging.Point(9, 9));
 
 		// Save all changes.
-		image.save(dataDir + "DrawLinesExample.bmp");
+		image.save(dataDir + "DrawingLines_out.bmp");
 	}
 
 }

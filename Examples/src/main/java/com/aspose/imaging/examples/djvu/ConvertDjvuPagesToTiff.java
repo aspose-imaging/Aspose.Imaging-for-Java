@@ -12,13 +12,13 @@ public class ConvertDjvuPagesToTiff {
 
     public static void main(String[] args) throws Exception {
         // The path to the documents directory.
-        String dataDir = Utils.getDataDir(ConvertDjvuPagesToTiff.class);
+        String dataDir = Utils.getSharedDataDir(ConvertDjvuPagesToTiff.class) + "djvu/";
 
         //Load a DjVu image
         DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");
 
         //Create an instance of TiffOptions & use preset options for Black n While with Deflate compression
-        TiffOptions exportOptions = new TiffOptions(TiffExpectedFormat.TiffDeflateBW);
+        TiffOptions exportOptions = new TiffOptions(TiffExpectedFormat.TiffDeflateBw);
 
         //Create an instance of IntRange and initialize it with range of pages to be exported
         IntRange range = new IntRange(0, 2); //Export first 2 pages
@@ -27,7 +27,7 @@ public class ConvertDjvuPagesToTiff {
         exportOptions.setMultiPageOptions(new DjvuMultiPageOptions(range));
 
         //Call Save method while passing instance of TiffOptions
-        image.save(dataDir + "Output.tiff", exportOptions);
+        image.save(dataDir + "ConvertDjvuPagesToTiff_out.tiff", exportOptions);
 
         // Display Status.
         System.out.println("File conveted");

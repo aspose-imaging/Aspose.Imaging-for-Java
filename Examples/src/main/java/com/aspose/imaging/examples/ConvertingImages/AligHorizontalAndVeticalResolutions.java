@@ -9,13 +9,13 @@ public class AligHorizontalAndVeticalResolutions {
 	public static void main(String... args) throws Exception {
 		// ExStart:AligHorizontalAndVeticalResolutions
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AligHorizontalAndVeticalResolutions.class);
+		String dataDir = Utils.getSharedDataDir(AligHorizontalAndVeticalResolutions.class) + "ConvertingImages/";
 		TiffImage image = (TiffImage) Image.load(dataDir + "sample.tiff");
 		// call the align resolution method
 		image.alignResolutions();
 
 		// Save the results to output path.
-		image.save(dataDir + "AlignHorizontalAndVeticalResolutionsOfImage_out.tiff");
+		image.save(dataDir + "AligHorizontalAndVeticalResolutions_out.tiff");
 
 		int framesCount = image.getFrames().length;
 		for (int i = 0; i < framesCount; i++) {

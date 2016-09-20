@@ -8,7 +8,7 @@ import com.aspose.imaging.imageoptions.PngOptions;
 
 public class CropbyRectangle {
 	public static void main(String... args) throws Exception {
-		String dataDir = Utils.getDataDir(CropbyRectangle.class);
+		String dataDir = Utils.getSharedDataDir(CropbyRectangle.class) + "metafile/";
 		// Load an EMF file in an instance of MetafileImage
 		MetafileImage metaImage = (MetafileImage) Image.load(dataDir + "Picture1.emf");
 
@@ -19,7 +19,7 @@ public class CropbyRectangle {
 		metaImage.crop(rectangle);
 
 		// Save the result in PNG format
-		metaImage.save(dataDir + "destinationFilePath.png", new PngOptions());
+		metaImage.save(dataDir + "CropbyRectangle_out.png", new PngOptions());
 	}
 
 }

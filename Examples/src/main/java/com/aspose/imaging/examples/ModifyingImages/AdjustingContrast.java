@@ -11,7 +11,7 @@ public class AdjustingContrast {
 	public static void main(String... args) throws Exception {
 		// ExStart:AdjustingContrast
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AdjustingContrast.class);
+		String dataDir = Utils.getSharedDataDir(AdjustingContrast.class) + "ModifyingImages/";
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
 		// Cast object of Image to RasterImage
 		RasterImage rasterImage = (RasterImage)image;
@@ -33,7 +33,7 @@ public class AdjustingContrast {
 		tiffOptions.setPhotometric(TiffPhotometrics.Rgb);
 
 		// Save the resultant image to TIFF format
-		rasterImage.save(dataDir + "AdjustContrast_out.tiff", tiffOptions);
+		rasterImage.save(dataDir + "AdjustingContrast_out.tiff", tiffOptions);
 		// ExEnd:AdjustingContrast
 	}
 

@@ -8,9 +8,8 @@ import com.aspose.imaging.imageoptions.PngOptions;
 
 public class ExportPsdLayersToImages {
     public static void main(String[] args) throws Exception {
-        String dataDir = Utils.getDataDir(ExportPsdLayersToImages.class);
+        String dataDir = Utils.getSharedDataDir(ExportPsdLayersToImages.class) + "export/";
         String inputPath = dataDir + "conic_pyramid.dxf";
-        String outputPath = dataDir + "Output.pdf";
 
         Image image = Image.load(dataDir + "sample.psd");
         PsdImage psdImage = (PsdImage) image;
@@ -18,7 +17,7 @@ public class ExportPsdLayersToImages {
         pngOptions.setColorType(PngColorType.TruecolorWithAlpha);
 
         for (int i = 0; i < psdImage.getLayers().length; i++) {
-            psdImage.getLayers()[i].save(dataDir + "Output-" + i + ".png", pngOptions);
+            psdImage.getLayers()[i].save(dataDir + "ExportPsdLayersToImages_out" + i + ".png", pngOptions);
         }
     }
 }

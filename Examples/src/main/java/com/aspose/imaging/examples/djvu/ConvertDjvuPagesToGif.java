@@ -13,7 +13,7 @@ public class ConvertDjvuPagesToGif {
 
     public static void main(String[] args) throws Exception {
         // The path to the documents directory.
-        String dataDir = Utils.getDataDir(ConvertDjvuPagesToGif.class);
+        String dataDir = Utils.getSharedDataDir(ConvertDjvuPagesToGif.class) + "djvu/";
 
         //Load a DjVu image
         DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");
@@ -37,7 +37,7 @@ public class ConvertDjvuPagesToGif {
         exportOptions.setMultiPageOptions(new DjvuMultiPageOptions(range));
         
         //Call Save method while passing instance of GifOptions
-        image.save(dataDir + "output.gif", exportOptions);
+        image.save(dataDir + "ConvertDjvuPagesToGif_out.gif", exportOptions);
 
         System.out.println("File conveted");
     }

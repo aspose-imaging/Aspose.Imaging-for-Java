@@ -5,7 +5,7 @@ import com.aspose.imaging.imageoptions.PngOptions;
 
 public class ConvertPSDLayerstoRasterImages {
 	public static void main(String... args) throws Exception {
-		String dataDir = Utils.getDataDir(ConvertPSDLayerstoRasterImages.class);
+		String dataDir = Utils.getSharedDataDir(ConvertPSDLayerstoRasterImages.class) + "Photoshop/";
 		String sourceFileName = dataDir + "samplePsd.psd";
 
 		// Create an instance of Image class
@@ -23,7 +23,7 @@ public class ConvertPSDLayerstoRasterImages {
 
 		for (int i = 0; i < allLayers.length; i++) {
 			// convert and save the layer to PNG file format.
-			allLayers[i].save("layer" + i + 1 + ".png", pngOptions);
+			allLayers[i].save("ConvertPSDLayerstoRasterImages_out" + i + 1 + ".png", pngOptions);
 		}
 	}
 

@@ -8,7 +8,7 @@ import com.aspose.imaging.imageoptions.PsdOptions;
 
 public class ExportImagestoPSDFormat {
 	public static void main(String... args) throws Exception {
-		String dataDir = Utils.getDataDir(ExportImagestoPSDFormat.class);
+		String dataDir = Utils.getSharedDataDir(ExportImagestoPSDFormat.class) + "Photoshop/";
 		String sourceFileName = dataDir + "sample.bmp";
 		Image image = Image.load(sourceFileName);
 
@@ -19,7 +19,7 @@ public class ExportImagestoPSDFormat {
 		psdOptions.setVersion(4);
 
 		// Save image to disk in PSD format
-		image.save(dataDir + "output.psd", psdOptions);
+		image.save(dataDir + "ExportImagestoPSDFormat_out.psd", psdOptions);
 	}
 
 }

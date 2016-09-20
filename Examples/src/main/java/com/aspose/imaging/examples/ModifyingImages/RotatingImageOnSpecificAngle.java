@@ -8,7 +8,7 @@ public class RotatingImageOnSpecificAngle {
 	public static void main(String... args) throws Exception {
 		// ExStart:RotatingImageOnSpecificAngle
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(RotatingImageOnSpecificAngle.class);
+		String dataDir = Utils.getSharedDataDir(RotatingImageOnSpecificAngle.class) + "ModifyingImages/";
 
 		RasterImage image = (RasterImage) Image.load(dataDir + "aspose-logo.jpg");
 

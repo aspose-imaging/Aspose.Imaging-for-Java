@@ -5,9 +5,9 @@ import com.aspose.imaging.examples.Utils;
 public class RotateDICOMImage {
 	public static void main(String... args) throws Exception {
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(RotateDICOMImage.class);
+		String dataDir = Utils.getSharedDataDir(RotateDICOMImage.class) + "dicom/";
 		String inputFile = dataDir + "image.dcm";
-		String outputFile = dataDir + "rotate.bmp";
+		String outputFile = dataDir + "RotateDICOMImage_out.bmp";
 
 		com.aspose.imaging.fileformats.dicom.DicomImage image = new com.aspose.imaging.fileformats.dicom.DicomImage(
 				inputFile);

@@ -7,7 +7,7 @@ import com.aspose.imaging.imageoptions.PngOptions;
 
 public class CropbyShifts {
 	public static void main(String... args) throws Exception {
-		String dataDir = Utils.getDataDir(CropbyShifts.class);
+		String dataDir = Utils.getSharedDataDir(CropbyShifts.class) + "metafile/";
 		// Load an EMF file in an instance of MetafileImage
 		MetafileImage metaImage = (MetafileImage) Image.load(dataDir + "Picture1.emf");
 
@@ -22,7 +22,7 @@ public class CropbyShifts {
 		metaImage.crop(leftShift, rightShift, topShift, bottomShift);
 
 		// Save the result in PNG format
-		metaImage.save(dataDir + "destinationFilePath.png", new PngOptions());
+		metaImage.save(dataDir + "CropbyShifts_out.png", new PngOptions());
 	}
 
 }
