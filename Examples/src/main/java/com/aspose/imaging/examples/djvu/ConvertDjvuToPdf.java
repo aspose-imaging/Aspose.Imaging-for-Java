@@ -12,7 +12,7 @@ public class ConvertDjvuToPdf {
 
     public static void main(String[] args) throws Exception {
         // The path to the documents directory.
-        String dataDir = Utils.getDataDir(ConvertDjvuToPdf.class);
+        String dataDir = Utils.getSharedDataDir(ConvertDjvuToPdf.class) + "djvu/";
 
         //Load a DjVu image
         DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");
@@ -30,7 +30,7 @@ public class ConvertDjvuToPdf {
         exportOptions.setMultiPageOptions(new DjvuMultiPageOptions(range));
         
         //Save the result in PDF format
-        image.save(dataDir + "output.pdf", exportOptions);
+        image.save(dataDir + "ConvertDjvuToPdf_out.pdf", exportOptions);
 
         // Display Status.
         System.out.println("File conveted");

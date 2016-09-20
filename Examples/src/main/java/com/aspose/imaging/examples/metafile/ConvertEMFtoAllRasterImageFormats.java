@@ -11,24 +11,24 @@ import com.aspose.imaging.imageoptions.TiffOptions;
 
 public class ConvertEMFtoAllRasterImageFormats {
 	public static void main(String... args) throws Exception {
-		String dataDir = Utils.getDataDir(ConvertEMFtoAllRasterImageFormats.class);
+		String dataDir = Utils.getSharedDataDir(ConvertEMFtoAllRasterImageFormats.class) + "metafile/";
 		// Load a Metafile in an instance of EmfMetafileImage class
 		EmfMetafileImage metafile = new EmfMetafileImage(dataDir + "Picture1.emf");
 
 		// Save EMF to BMP using BmpOptions object
-		metafile.save(dataDir + "output.bmp", new BmpOptions());
+		metafile.save(dataDir + "ConvertEMFtoAllRasterImageFormats_out.bmp", new BmpOptions());
 
 		// Save EMF to JPG using JpegOptions object
-		metafile.save(dataDir + "output.jpg", new JpegOptions());
+		metafile.save(dataDir + "ConvertEMFtoAllRasterImageFormats_out.jpg", new JpegOptions());
 
 		// Save EMF to PNG using PngOptions object
-		metafile.save(dataDir + "output.png", new PngOptions());
+		metafile.save(dataDir + "ConvertEMFtoAllRasterImageFormats_out.png", new PngOptions());
 
 		// Save EMF to GIF using GifOptions object
-		metafile.save(dataDir + "output.gif", new GifOptions());
+		metafile.save(dataDir + "ConvertEMFtoAllRasterImageFormats_out.gif", new GifOptions());
 
 		// Save EMF to TIFF using TiffOptions object with default settings
-		metafile.save(dataDir + "output.tiff", new TiffOptions(TiffExpectedFormat.Default));
+		metafile.save(dataDir + "ConvertEMFtoAllRasterImageFormats_out.tiff", new TiffOptions(TiffExpectedFormat.Default));
 	}
 
 }

@@ -8,7 +8,7 @@ public class AddThumbnailtoJFIFSegment {
 	public static void main(String... args) throws Exception {
 		// ExStart:AddThumbnailtoJFIFSegment
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AddThumbnailtoJFIFSegment.class);
+		String dataDir = Utils.getSharedDataDir(AddThumbnailtoJFIFSegment.class) + "ManipulatingJPEGImages/";
 		
 		//Create an instance of JpegImage to store the thumbnail
 		JpegImage thumbnailImage = new JpegImage(100, 100);
@@ -23,7 +23,7 @@ public class AddThumbnailtoJFIFSegment {
 		image.getJfif().setThumbnail(thumbnailImage);
 
 		//Save the resultant image
-		image.save(dataDir + "output.jpg");
+		image.save(dataDir + "AddThumbnailtoJFIFSegment_out.jpg");
 		// ExEnd:AddThumbnailtoJFIFSegment
 	}
 

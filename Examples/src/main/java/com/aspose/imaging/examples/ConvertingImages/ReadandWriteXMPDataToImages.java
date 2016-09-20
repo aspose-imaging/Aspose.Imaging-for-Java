@@ -20,7 +20,7 @@ import com.aspose.imaging.xmp.schemas.photoshop.PhotoshopPackage;
 
 public class ReadandWriteXMPDataToImages {
 	public static void main(String... args) throws Exception {
-		String dataDir = Utils.getDataDir(ReadandWriteXMPDataToImages.class);
+		String dataDir = Utils.getSharedDataDir(ReadandWriteXMPDataToImages.class) + "ConvertingImages/";
 		
 		// Specify the size of image by defining a Rectangle 
 		Rectangle rect = new Rectangle(0, 0, 100, 200);

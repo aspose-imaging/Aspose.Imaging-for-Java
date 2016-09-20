@@ -4,7 +4,7 @@ import com.aspose.imaging.examples.Utils;
 
 public class CombineImagesusingGraphicsClass {
 	public static void main(String[] args) throws Exception {
-		String dataDir = Utils.getDataDir(CombineImagesusingGraphicsClass.class);
+		String dataDir = Utils.getSharedDataDir(CombineImagesusingGraphicsClass.class) + "images/";
 		// Create an instance of JpegOptions and set its various properties
 		com.aspose.imaging.imageoptions.JpegOptions ImageOptions = new com.aspose.imaging.imageoptions.JpegOptions();
 

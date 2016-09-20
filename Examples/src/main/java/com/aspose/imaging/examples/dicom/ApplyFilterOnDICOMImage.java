@@ -5,9 +5,9 @@ import com.aspose.imaging.examples.Utils;
 public class ApplyFilterOnDICOMImage {
 	public static void main(String... args) throws Exception {
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ApplyFilterOnDICOMImage.class);
+		String dataDir = Utils.getSharedDataDir(ApplyFilterOnDICOMImage.class) + "dicom/";
 		String inputFile = dataDir + "image.dcm";
-		String outputFile = dataDir + "brightness.bmp";
+		String outputFile = dataDir + "ApplyFilterOnDICOMImage_out.bmp";
 
 		// Load an image
 		com.aspose.imaging.fileformats.dicom.DicomImage image = new com.aspose.imaging.fileformats.dicom.DicomImage(

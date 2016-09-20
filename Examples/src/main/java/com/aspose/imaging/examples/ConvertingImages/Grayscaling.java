@@ -7,7 +7,7 @@ import com.aspose.imaging.examples.Utils;
 public class Grayscaling {
 	public static void main(String... args) throws Exception {
 		// ExStart:Grayscaling
-		String dataDir = Utils.getDataDir(Grayscaling.class);
+		String dataDir = Utils.getSharedDataDir(Grayscaling.class) + "ConvertingImages/";
 
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
 		// Cast the image to RasterCachedImage

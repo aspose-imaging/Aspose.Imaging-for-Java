@@ -10,7 +10,7 @@ public class ApplyingGaussWienerFilterForColoredimage {
 	public static void main(String... args) throws Exception {
 		// ExStart:ApplyingGaussWienerFilterForColoredimage
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ApplyingGaussWienerFilterForColoredimage.class);
+		String dataDir = Utils.getSharedDataDir(ApplyingGaussWienerFilterForColoredimage.class) + "ConvertingImages/";
 		Image image = Image.load(dataDir + "aspose-logo.gif");
 		// caste the image into RasterImage
 		RasterImage rasterImage = (RasterImage) image;

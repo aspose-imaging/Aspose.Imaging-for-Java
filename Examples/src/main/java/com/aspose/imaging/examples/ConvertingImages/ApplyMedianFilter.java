@@ -10,7 +10,7 @@ public class ApplyMedianFilter {
 	public static void main(String... args) throws Exception {
 		// ExStart:ApplyMedianFilter
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ApplyMedianFilter.class);
+		String dataDir = Utils.getSharedDataDir(ApplyMedianFilter.class) + "ConvertingImages/";
 		
 		// Load the noisy image 
 		Image image = Image.load(dataDir + "aspose-logo.gif");

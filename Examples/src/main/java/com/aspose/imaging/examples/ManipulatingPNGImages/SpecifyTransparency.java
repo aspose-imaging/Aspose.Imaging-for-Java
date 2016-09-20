@@ -12,7 +12,7 @@ public class SpecifyTransparency {
 	public static void main(String... args) throws Exception {
 		// ExStart:SpecifyTransparency
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SpecifyTransparency.class);
+		String dataDir = Utils.getSharedDataDir(SpecifyTransparency.class) + "ManipulatingPNGImages/";
 
 		// Initialize variables to hold width & height values
 		int width = 0;
@@ -30,18 +30,16 @@ public class SpecifyTransparency {
 		// Load the pixels of RasterImage into the array of type Color
 		pixels = raster.loadPixels(new Rectangle(0, 0, width, height));
 
-		// Create & initialize an instance of PngImage while specifying size and
-		// PngColorType
+		// Create & initialize an instance of PngImage while specifying size and PngColorType
 		PngImage png = new PngImage(width, height, PngColorType.TruecolorWithAlpha);
 		// Save the previously loaded pixels on to the new PngImage
 		png.savePixels(new Rectangle(0, 0, width, height), pixels);
 
-		// Set TransparentColor property to specify which color to be rendered
-		// as transparent
+		// Set TransparentColor property to specify which color to be rendered as transparent
 		png.setTransparentColor(Color.getBlack());
 
 		// Save the result on disc
-		png.save(dataDir + "output.jpg");
+		png.save(dataDir + "SpecifyTransparency_out.jpg");
 		// ExEnd:SpecifyTransparency
 	}
 

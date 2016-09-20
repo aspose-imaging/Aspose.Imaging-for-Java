@@ -9,14 +9,14 @@ public class DitheringRasterImages {
 	public static void main(String... args) throws Exception {
 		// ExStart:DitheringRasterImages
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(DitheringRasterImages.class);
+		String dataDir = Utils.getSharedDataDir(DitheringRasterImages.class) + "ModifyingImages/";
 		JpegImage image = (JpegImage) Image.load(dataDir + "aspose-logo.jpg");
 
 		// Perform Floyd Steinberg dithering on the current image
 		image.dither(DitheringMethod.ThresholdDithering, 4);
 
 		// Save the resultant image
-		image.save(dataDir + "SampleImage_out.bmp");
+		image.save(dataDir + "DitheringRasterImages_out.bmp");
 		// ExEnd:DitheringRasterImages
 	}
 

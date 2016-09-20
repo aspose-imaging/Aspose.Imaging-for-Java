@@ -8,7 +8,7 @@ public class ResizeImageWidthwithResizeTypeEnumeration {
 	public static void main(String... args) throws Exception {
 		// ExStart:ResizeImageWidthwithResizeTypeEnumeration
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ResizeImageWidthwithResizeTypeEnumeration.class);
+		String dataDir = Utils.getSharedDataDir(ResizeImageWidthwithResizeTypeEnumeration.class) + "ModifyingImages/";
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
 
 		if (!image.isCached()) {

@@ -8,7 +8,7 @@ public class DrawingUsingGraphicsPath
     public static void main(String[] args) throws Exception
     {
         // The path to the documents directory.
-        String dataDir = Utils.getDataDir(DrawingUsingGraphicsPath.class);
+        String dataDir = Utils.getSharedDataDir(DrawingUsingGraphicsPath.class) + "images/";
 
         //Create an instance of BmpCreateOptions and set its various properties
         com.aspose.imaging.imageoptions.BmpOptions createOptions = new com.aspose.imaging.imageoptions.BmpOptions();

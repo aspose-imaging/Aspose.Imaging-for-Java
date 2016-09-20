@@ -8,7 +8,7 @@ public class ReadJpegEXIFTags {
 	public static void main(String... args) throws Exception {
 		// ExStart:ReadJpegEXIFTags
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ReadJpegEXIFTags.class);
+		String dataDir = Utils.getSharedDataDir(ReadJpegEXIFTags.class) + "ManipulatingJPEGImages/";
 
 		// Load the image in an instance of JpegImage
 		JpegImage image = (JpegImage) Image.load(dataDir + "aspose-logo.jpg");
@@ -19,7 +19,7 @@ public class ReadJpegEXIFTags {
 			JpegImage thumbnail = (JpegImage) image.getExifData().getThumbnail();
 
 			// Save the thumbnail to disk with a new name
-			thumbnail.save(dataDir + "output.jpg");
+			thumbnail.save(dataDir + "ReadJpegEXIFTags_out.jpg");
 		}
 		// ExEnd:ReadJpegEXIFTags
 	}

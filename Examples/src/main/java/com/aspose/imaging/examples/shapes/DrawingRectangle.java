@@ -1,6 +1,6 @@
 package com.aspose.imaging.examples.shapes;
 
-import com.aspose.imaging.*;
+import com.aspose.imaging.Pen;
 import com.aspose.imaging.examples.Utils;
 
 public class DrawingRectangle
@@ -8,7 +8,7 @@ public class DrawingRectangle
     public static void main(String[] args) throws Exception
     {
         // The path to the documents directory.
-        String dataDir = Utils.getDataDir(DrawingRectangle.class);
+        String dataDir = Utils.getSharedDataDir(DrawingRectangle.class) + "shapes/";
         
         // Creates an instance of BmpOptions and set its various properties
         com.aspose.imaging.imageoptions.BmpOptions bmpCreateOptions = new com.aspose.imaging.imageoptions.BmpOptions();
@@ -29,12 +29,11 @@ public class DrawingRectangle
         // Draw a dotted rectangle shape by specifying the Pen object having red color and a rectangle structure
         graphic.drawRectangle(new Pen(com.aspose.imaging.Color.getRed()),new com.aspose.imaging.Rectangle(30, 10, 40, 80));
 
-        // Draw a continuous rectangle shape by specifying the Pen object having
-        // solid brush with blue color and a rectangle structure
+        // Draw a continuous rectangle shape by specifying the Pen object having solid brush with blue color and a rectangle structure
         graphic.drawRectangle(new Pen(new com.aspose.imaging.brushes.SolidBrush(com.aspose.imaging.Color.getBlue())),new com.aspose.imaging.Rectangle(10, 30, 80, 40));
 
         // Save all changes.
-        image.save(dataDir + "drawRectanleExample.out.bmp");
+        image.save(dataDir + "DrawingRectangle_out.bmp");
       
         //Print message
         System.out.println("Rectangle created successfully. Check output file.");

@@ -8,7 +8,7 @@ import com.aspose.imaging.imageoptions.PngOptions;
 
 public class WatermarkMetafiles {
 	public static void main(String... args) throws Exception {
-		String dataDir = Utils.getDataDir(WatermarkMetafiles.class);
+		String dataDir = Utils.getSharedDataDir(WatermarkMetafiles.class) + "metafile/";
 		// Load an EMF image in an instance of EmfMetafileImage
 		EmfMetafileImage image = (EmfMetafileImage) Image.load(dataDir + "Sample1.emf");
 		try {
@@ -32,7 +32,7 @@ public class WatermarkMetafiles {
 			drawer.drawString("This is the custom", posx, posy);
 			drawer.drawString("watermark string!", posx, posy + 30);
 			// Save the result in raster image format
-			image.save(dataDir + "destinationFilePath.png", new PngOptions());
+			image.save(dataDir + "WatermarkMetafiles_out.png", new PngOptions());
 
 		} finally {
 			// Dispose image

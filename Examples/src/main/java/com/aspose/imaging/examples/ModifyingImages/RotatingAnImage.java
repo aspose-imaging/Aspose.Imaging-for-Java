@@ -8,7 +8,7 @@ public class RotatingAnImage {
 	public static void main(String... args) throws Exception {
 		// ExStart:RotatingAnImage
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(RotatingAnImage.class);
+		String dataDir = Utils.getSharedDataDir(RotatingAnImage.class) + "ModifyingImages/";
 		// loading an Image
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
 

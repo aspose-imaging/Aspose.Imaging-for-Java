@@ -5,9 +5,9 @@ import com.aspose.imaging.examples.Utils;
 public class CropbyShifts {
 	public static void main(String... args) throws Exception {
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(CropbyShifts.class);
+		String dataDir = Utils.getSharedDataDir(CropbyShifts.class) + "dicom/";
 		String inputFile = dataDir + "image.dcm";
-		String outputFile = dataDir + "crop.bmp";
+		String outputFile = dataDir + "CropbyShifts_out.bmp";
 
 		// Load an existing image.
 		com.aspose.imaging.fileformats.dicom.DicomImage image = new com.aspose.imaging.fileformats.dicom.DicomImage(

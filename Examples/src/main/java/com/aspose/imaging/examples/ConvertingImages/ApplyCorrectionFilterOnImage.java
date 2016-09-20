@@ -8,7 +8,7 @@ public class ApplyCorrectionFilterOnImage {
 	public static void main(String... args) throws Exception {
 		// ExStart:ApplyCorrectionFilterOnImage
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ApplyCorrectionFilterOnImage.class);
+		String dataDir = Utils.getSharedDataDir(ApplyCorrectionFilterOnImage.class) + "ConvertingImages/";
 
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
 		// Convert the image into RasterImage.

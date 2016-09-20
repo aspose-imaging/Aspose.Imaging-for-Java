@@ -11,7 +11,7 @@ public class AdjustingGamma {
 	public static void main(String... args) throws Exception {
 		// ExStart:AdjustingGamma
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AdjustingGamma.class);
+		String dataDir = Utils.getSharedDataDir(AdjustingGamma.class) + "ModifyingImages/";
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
 		
 		    // Cast object of Image to RasterImage
@@ -34,7 +34,7 @@ public class AdjustingGamma {
 		    tiffOptions.setPhotometric(TiffPhotometrics.Rgb);
 
 		    // Save the resultant image to TIFF format
-		    rasterImage.save(dataDir + "AdjustGamma_out.tiff", tiffOptions);
+		    rasterImage.save(dataDir + "AdjustingGamma_out.tiff", tiffOptions);
 		 // ExEnd:AdjustingGamma
 		}
 

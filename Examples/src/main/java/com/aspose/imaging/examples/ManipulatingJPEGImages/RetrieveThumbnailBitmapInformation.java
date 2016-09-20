@@ -13,7 +13,7 @@ public class RetrieveThumbnailBitmapInformation {
 	public static void main(String... args) throws Exception {
 		// ExStart:RetrieveThumbnailBitmapInformation
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(RetrieveThumbnailBitmapInformation.class);
+		String dataDir = Utils.getSharedDataDir(RetrieveThumbnailBitmapInformation.class) + "ManipulatingJPEGImages/";
 
 		// Load the image in an instance of JpegImage
 		JpegImage image = (JpegImage) Image.load(dataDir + "aspose-logo.jpg");
@@ -31,7 +31,7 @@ public class RetrieveThumbnailBitmapInformation {
 
 		// Set file source in which the results will be stores; last Boolean
 		// parameter denotes isTemporal
-		bmpOptions.setSource(new FileCreateSource(dataDir + "output.jpg", false));
+		bmpOptions.setSource(new FileCreateSource(dataDir + "RetrieveThumbnailBitmapInformation_out.jpg", false));
 
 		// Create a BmpImage while using the instance of BmpOptions and
 		// providing resultant dimensions

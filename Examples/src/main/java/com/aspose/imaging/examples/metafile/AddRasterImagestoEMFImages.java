@@ -7,7 +7,7 @@ import com.aspose.imaging.fileformats.metafile.EmfRecorderGraphics2D;
 
 public class AddRasterImagestoEMFImages {
 	public static void main(String... args) throws Exception {
-		String dataDir = Utils.getDataDir(AddRasterImagestoEMFImages.class);
+		String dataDir = Utils.getSharedDataDir(AddRasterImagestoEMFImages.class) + "metafile/";
 		// Load the image to be inserted
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
 		try {
@@ -27,7 +27,7 @@ public class AddRasterImagestoEMFImages {
 			// Create an instance of EmfMetafileImage
 			EmfMetafileImage emfMetafileImage = emfRecorderGraphics.endRecording();
 			// Save the result
-			emfMetafileImage.save(dataDir + "destinationFilePath.emf");
+			emfMetafileImage.save(dataDir + "AddRasterImagestoEMFImages_out.emf");
 		} finally {
 			image.dispose();
 		}

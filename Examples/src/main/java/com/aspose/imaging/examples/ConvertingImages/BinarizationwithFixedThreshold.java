@@ -8,7 +8,7 @@ public class BinarizationwithFixedThreshold {
 	public static void main(String... args) throws Exception {
 		// ExStart:BinarizationwithFixedThreshold
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(BinarizationwithFixedThreshold.class);
+		String dataDir = Utils.getSharedDataDir(BinarizationwithFixedThreshold.class) + "ConvertingImages/";
 
 		// Load an image in an instance of Image
 		Image image = Image.load(dataDir + "aspose-logo.jpg");

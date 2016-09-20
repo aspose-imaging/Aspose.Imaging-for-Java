@@ -3,6 +3,7 @@ package com.aspose.imaging.examples.ModifyingImages;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
 import com.aspose.imaging.examples.Utils;
+import com.aspose.imaging.examples.metafile.WatermarkMetafiles;
 import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
 import com.aspose.imaging.fileformats.tiff.enums.TiffPhotometrics;
 import com.aspose.imaging.imageoptions.TiffOptions;
@@ -11,7 +12,7 @@ public class AdjustBrightness {
 	public static void main(String... args) throws Exception {
 		// ExStart:AdjustBrightness
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AdjustBrightness.class);
+		String dataDir = Utils.getSharedDataDir(AdjustBrightness.class) + "ModifyingImages/";
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
 		// Cast object of Image to RasterImage
 		RasterImage rasterImage = (RasterImage) image;

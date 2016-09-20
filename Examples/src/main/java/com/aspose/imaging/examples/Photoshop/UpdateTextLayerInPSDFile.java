@@ -4,9 +4,9 @@ import com.aspose.imaging.examples.Utils;
 
 public class UpdateTextLayerInPSDFile {
 	public static void main(String... args) throws Exception {
-		String dataDir = Utils.getDataDir(UpdateTextLayerInPSDFile.class);
+		String dataDir = Utils.getSharedDataDir(UpdateTextLayerInPSDFile.class) + "Photoshop/";
 		String sourceFileName = dataDir + "samplePsd.psd";
-		String outputFile = dataDir + "result.psd";
+		String outputFile = dataDir + "UpdateTextLayerInPSDFile.psd";
 
 		com.aspose.imaging.Image image = com.aspose.imaging.Image.load(sourceFileName);
 		try {

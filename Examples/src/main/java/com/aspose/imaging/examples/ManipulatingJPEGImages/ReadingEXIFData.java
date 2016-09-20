@@ -9,7 +9,7 @@ public class ReadingEXIFData {
 	public static void main(String... args) throws Exception {
 		// ExStart:ReadingEXIFData
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ReadingEXIFData.class);
+		String dataDir = Utils.getSharedDataDir(ReadingEXIFData.class) + "ManipulatingJPEGImages/";
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
 
 		// Initialize an object of ExifData and fill it will image's EXIF

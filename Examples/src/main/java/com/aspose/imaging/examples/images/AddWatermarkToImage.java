@@ -3,13 +3,14 @@ package com.aspose.imaging.examples.images;
 import com.aspose.imaging.*;
 import com.aspose.imaging.brushes.*;
 import com.aspose.imaging.examples.Utils;
+import com.aspose.imaging.examples.export.ExportDxfToPdf;
 
 public class AddWatermarkToImage
 {
     public static void main(String[] args) throws Exception
     {
         // The path to the documents directory.
-        String dataDir = Utils.getDataDir(AddWatermarkToImage.class);
+        String dataDir = Utils.getSharedDataDir(ExportDxfToPdf.class) + "images/";
 
         //Create an instance of Image and load an existing image.
         Image image= Image.load(dataDir + "sample.bmp");
@@ -29,7 +30,7 @@ public class AddWatermarkToImage
         graphics.drawString("Aspose.Imaging for .Net", font, brush, new PointF(image.getWidth()-100, image.getHeight()-100));
 
         // save the image with changes
-        image.save(dataDir + "out.bmp");
+        image.save(dataDir + "AddWatermarkToImage_out.bmp");
 
         // Display Status.
         System.out.println("Watermark added successfully!");

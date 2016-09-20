@@ -8,7 +8,7 @@ public class DrawingLines
     public static void main(String[] args) throws Exception
     {
         // The path to the documents directory.
-        String dataDir = Utils.getDataDir(DrawingLines.class);
+        String dataDir = Utils.getSharedDataDir(DrawingLines.class) + "shapes/";
 
         //Creates an instance of BmpOptions and set its various properties
         com.aspose.imaging.imageoptions.BmpOptions bmpCreateOptions = new com.aspose.imaging.imageoptions.BmpOptions();
@@ -46,7 +46,7 @@ public class DrawingLines
 
         //Save all changes.
         //image.save(dataDir + "outputlines.bmp");
-        graphic.getImage().save(dataDir + "outputlines.bmp");
+        graphic.getImage().save(dataDir + "DrawingLines_out.bmp");
 
         // Display Status.
         System.out.println("Lines have been drawn in image successfully!");

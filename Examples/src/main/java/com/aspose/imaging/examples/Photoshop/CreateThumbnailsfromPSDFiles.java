@@ -10,7 +10,7 @@ import com.aspose.imaging.fileformats.psd.resources.ThumbnailResource;
 
 public class CreateThumbnailsfromPSDFiles {
 	public static void main(String... args) throws Exception {
-		String dataDir = Utils.getDataDir(CreateThumbnailsfromPSDFiles.class);
+		String dataDir = Utils.getSharedDataDir(CreateThumbnailsfromPSDFiles.class) + "Photoshop/";
 		String sourceFileName = dataDir + "samplePsd.psd";
 		String outputFileName = dataDir + "result.psd";
 		// Load a PSD in an instance of PsdImage
@@ -26,8 +26,7 @@ public class CreateThumbnailsfromPSDFiles {
 				if (thumbnail.getFormat() == ThumbnailFormat.KJpegRgb) {
 					// Create a new BmpImage by specifying the width and height
 					BmpImage thumnailImage = new BmpImage(thumbnail.getWidth(), thumbnail.getHeight());
-					// Store the pixels of thumbnail on to the newly created
-					// BmpImage
+					// Store the pixels of thumbnail on to the newly created BmpImage
 					thumnailImage.savePixels(thumnailImage.getBounds(), thumbnail.getThumbnailData());
 					// Save thumbnail on disc
 					thumnailImage.save(outputFileName);

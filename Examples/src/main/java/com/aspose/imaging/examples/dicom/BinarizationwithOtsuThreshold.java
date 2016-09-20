@@ -5,9 +5,9 @@ import com.aspose.imaging.examples.Utils;
 public class BinarizationwithOtsuThreshold {
 	public static void main(String... args) throws Exception {
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(BinarizationwithOtsuThreshold.class);
+		String dataDir = Utils.getSharedDataDir(BinarizationwithOtsuThreshold.class) + "dicom/";
 		String inputFile = dataDir + "image.dcm";
-		String outputFile = dataDir + "Fixed.bmp";
+		String outputFile = dataDir + "BinarizationwithOtsuThreshold_out.bmp";
 
 		// Load an existing image.
 		com.aspose.imaging.fileformats.dicom.DicomImage image = new com.aspose.imaging.fileformats.dicom.DicomImage(

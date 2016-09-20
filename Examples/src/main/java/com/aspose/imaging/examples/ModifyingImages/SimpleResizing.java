@@ -8,7 +8,7 @@ public class SimpleResizing {
 		// ExStart:SimpleResizing
 		// Create an instance of JpegImage and load an image as of JpegImage
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SimpleResizing.class);
+		String dataDir = Utils.getSharedDataDir(SimpleResizing.class) + "ModifyingImages/";
 
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
 

@@ -10,7 +10,7 @@ public class ExportImageToPSD
     public static void main(String[] args) throws Exception
     {
         // The path to the documents directory.
-        String dataDir = Utils.getDataDir(ExportImageToPSD.class);
+        String dataDir = Utils.getSharedDataDir(ExportImageToPSD.class) + "export/";
 
         //Load an existing image
         com.aspose.imaging.Image image = com.aspose.imaging.Image.load(dataDir + "sample.bmp");
@@ -24,10 +24,10 @@ public class ExportImageToPSD
         saveOptions.setCompressionMethod(CompressionMethod.Raw);
 
         //Set the ColorMode to GrayScale//Note: Other supported ColorModes are ColorModes.Bitmap and ColorModes.RGB
-        saveOptions.setColorMode(ColorModes.RGB);
+        saveOptions.setColorMode(ColorModes.Rgb);
 
         //Save the image to disk location with supplied PsdOptions settings
-        image.save(dataDir + "output.psd", saveOptions);
+        image.save(dataDir + "ExportImageToPSD_out.psd", saveOptions);
 
         // Display Status.
         System.out.println("Image exported to PSD successfully!");

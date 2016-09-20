@@ -10,7 +10,7 @@ public class SpecifyBitDepth {
 	public static void main(String... args) throws Exception {
 		// ExStart:SpecifyBitDepth
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SpecifyBitDepth.class);
+		String dataDir = Utils.getSharedDataDir(SpecifyBitDepth.class) + "ManipulatingPNGImages/";
 
 		// Load an existing PNG image
 		PngImage pngImage = (PngImage) Image.load(dataDir + "aspose_logo.png");
@@ -25,7 +25,7 @@ public class SpecifyBitDepth {
 		options.setBitDepth((byte) 1);
 
 		// Save changes to the disc
-		pngImage.save(dataDir + "output.jpg", options);
+		pngImage.save(dataDir + "SpecifyBitDepth_out.jpg", options);
 		// ExEnd:SpecifyBitDepth
 	}
 

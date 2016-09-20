@@ -10,7 +10,7 @@ public class ConvertanyLoadedImageDirectlyToPNGformat {
 	public static void main(String... args) throws Exception {
 		// ExStart:ConvertanyLoadedImageDirectlyToPNGformat
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ConvertanyLoadedImageDirectlyToPNGformat.class);
+		String dataDir = Utils.getSharedDataDir(ConvertanyLoadedImageDirectlyToPNGformat.class) + "ManipulatingPNGImages/";
 
 		// Load the source image (any format) in an instance of RasterImage
 		RasterImage image = (RasterImage) Image.load(dataDir + "aspose-logo.jpg");
@@ -26,7 +26,7 @@ public class ConvertanyLoadedImageDirectlyToPNGformat {
 		image.setTransparentColor(true);
 
 		// Save the image on disc in PNG format
-		image.save(dataDir + "output.jpg", new PngOptions());
+		image.save(dataDir + "ConvertanyLoadedImageDirectlyToPNGformat_out.jpg", new PngOptions());
 		// ExEnd:ConvertanyLoadedImageDirectlyToPNGformat
 	}
 

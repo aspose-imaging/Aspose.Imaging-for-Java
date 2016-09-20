@@ -12,7 +12,7 @@ public class ConvertDjvuPagePortionToImage {
 
     public static void main(String[] args) throws Exception {
         // The path to the documents directory.
-        String dataDir = Utils.getDataDir(ConvertDjvuPagePortionToImage.class);
+        String dataDir = Utils.getSharedDataDir(ConvertDjvuPagePortionToImage.class) + "djvu/";
 
         //Load a DjVu image
         DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");
@@ -35,7 +35,7 @@ public class ConvertDjvuPagePortionToImage {
         exportOptions.setMultiPageOptions(new DjvuMultiPageOptions(exportPageIndex, exportArea));
 
         //Save the image
-        image.save(dataDir + "Output.png", exportOptions);
+        image.save(dataDir + "ConvertDjvuPagePortionToImage_out.png", exportOptions);
 
         System.out.println("File conveted");
     }

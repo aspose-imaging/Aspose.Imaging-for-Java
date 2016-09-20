@@ -12,7 +12,7 @@ public class ConvertSpecificPortionOfDjVuPage {
 	public static void main(String... args) throws Exception {
 		// ExStart:ConvertSpecificPortionOfDjVuPage
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ConvertSpecificPortionOfDjVuPage.class);
+		String dataDir = Utils.getSharedDataDir(ConvertSpecificPortionOfDjVuPage.class) + "djvu/";
 
 		// Load a DjVu image
 		DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");

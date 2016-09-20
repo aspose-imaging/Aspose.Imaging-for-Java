@@ -10,7 +10,7 @@ public class ApplyMotionWienerFilter {
 	public static void main(String... args) throws Exception {
 		// ExStart:ApplyMotionWienerFilter
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ApplyMotionWienerFilter.class);
+		String dataDir = Utils.getSharedDataDir(ApplyMotionWienerFilter.class) + "ConvertingImages/";
 		Image image = Image.load(dataDir + "aspose-logo.gif");
 		// caste the image into RasterImage
 		RasterImage rasterImage = (RasterImage) image;

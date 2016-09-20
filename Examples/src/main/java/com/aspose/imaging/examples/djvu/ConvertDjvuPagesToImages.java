@@ -11,7 +11,7 @@ public class ConvertDjvuPagesToImages {
 
     public static void main(String[] args) throws Exception {
         // The path to the documents directory.
-        String dataDir = Utils.getDataDir(ConvertDjvuPagesToImages.class);
+        String dataDir = Utils.getSharedDataDir(ConvertDjvuPagesToImages.class) + "djvu/";
 
         //Load a DjVu image
         DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");
@@ -29,7 +29,7 @@ public class ConvertDjvuPagesToImages {
         for (int i : range.getRange()) {
             //Save each page in separate file, as BMP do not support layering
             exportOptions.setMultiPageOptions(new DjvuMultiPageOptions(range.getArrayOneItemFromIndex(counter)));
-            String output = dataDir + "Output-" + (counter++) + ".bmp";
+            String output = dataDir + "ConvertDjvuPagesToImages_out" + (counter++) + ".bmp";
             image.save(output, exportOptions);
         }
 

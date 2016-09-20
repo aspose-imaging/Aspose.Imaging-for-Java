@@ -6,7 +6,7 @@ import com.aspose.imaging.examples.Utils;
 public class DrawingArc {
 	public static void main(String[] args) throws Exception {
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(DrawingArc.class);
+		String dataDir = Utils.getSharedDataDir(DrawingArc.class) + "images/";
 		// Creates an instance of BmpOptions and set its various properties
 		com.aspose.imaging.imageoptions.BmpOptions bmpCreateOptions = new com.aspose.imaging.imageoptions.BmpOptions();
 		bmpCreateOptions.setBitsPerPixel(32);
@@ -36,7 +36,7 @@ public class DrawingArc {
 		graphic.drawArc(new Pen(com.aspose.imaging.Color.getBlack()), 0, 0, width, height, startAngle, sweepAngle);
 
 		// Save all changes.
-		image.save(dataDir + "DrawArcExample.bmp");
+		image.save(dataDir + "DrawingArc_out.bmp");
 	}
 
 }

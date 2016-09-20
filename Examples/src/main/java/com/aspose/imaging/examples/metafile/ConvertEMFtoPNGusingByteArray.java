@@ -11,7 +11,7 @@ import com.aspose.imaging.imageoptions.PngOptions;
 
 public class ConvertEMFtoPNGusingByteArray {
 	public static void main(String... args) throws Exception {
-		String dataDir = Utils.getDataDir(ConvertEMFtoBMPusingFilePathLocation.class);
+		String dataDir = Utils.getSharedDataDir(ConvertEMFtoPNGusingByteArray.class) + "metafile/";
 		// Read all bytes from an EMF file
 		byte[] bytes = Files.readAllBytes(Paths.get(dataDir + "picture1.emf"));
 

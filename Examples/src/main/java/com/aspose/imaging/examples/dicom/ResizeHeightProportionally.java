@@ -6,9 +6,9 @@ import com.aspose.imaging.examples.Utils;
 public class ResizeHeightProportionally {
 	public static void main(String... args) throws Exception {
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ResizeHeightProportionally.class);
+		String dataDir = Utils.getSharedDataDir(ResizeHeightProportionally.class) + "dicom/";
 		String inputFile = dataDir + "image.dcm";
-		String outputFile = dataDir + "resize.bmp";
+		String outputFile = dataDir + "ResizeHeightProportionally_out.bmp";
 
 		com.aspose.imaging.fileformats.dicom.DicomImage image = new com.aspose.imaging.fileformats.dicom.DicomImage(
 				inputFile);
