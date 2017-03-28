@@ -26,7 +26,7 @@ For more info about the **Aspose.Imaging for Java API**, please check the api do
 
 ## Plugin Documentation
 
-For the complete documentation of this Intellij IDEA plugin, [please go through this wiki - click here](http://goo.gl/bZZ7qw)
+For the complete documentation of this Intellij IDEA plugin, [please go through this wiki - click here](https://docs.aspose.com/display/imagingjava/Aspose.Imaging+Java+for+IntelliJ+IDEA+-+Maven)
 
 ## Download Latest Versions?
 
