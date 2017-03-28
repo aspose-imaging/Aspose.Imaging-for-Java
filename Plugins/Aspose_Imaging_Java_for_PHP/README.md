@@ -10,9 +10,9 @@ http://php-java-bridge.sourceforge.net/pjb/index.php
 To download Aspose.Imaging for Java API to be used with these examples through PHP/Java Bridge
 Please navigate to:
 
-http://www.aspose.com/community/files/72/java-components/aspose.imaging-for-java/
+http://www.aspose.com/downloads/imaging/java
 
 For most complete documentation of the project, check Aspose.Imaging Java for PHP confluence wiki link:
 
-http://www.aspose.com/docs/display/imagingjava/2.+Aspose.Imaging+Java+For+PHP
+https://docs.aspose.com/display/imagingjava/Aspose.Imaging+Java+For+PHP
 
