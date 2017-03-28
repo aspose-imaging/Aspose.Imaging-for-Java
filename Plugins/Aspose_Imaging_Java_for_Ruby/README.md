@@ -9,13 +9,13 @@ Execute following command.
 
 To download Aspose.Imaging for Java API to be used with these examples through RJB, Please navigate to:
 
-http://www.aspose.com/community/files/72/java-components/aspose.imaging-for-java/default.aspx
+http://www.aspose.com/downloads/imaging/java
 
 Note: Create jars folder at root of the gem folder and copy downloaded Aspose.Imaging for java component into it.
 
-For most complete documentation of the project, check Aspose.OCR Java for Ruby confluence wiki link:
+For most complete documentation of the project, check Aspose.Imaging for Java confluence wiki link for Ruby:
 
-http://www.aspose.com/docs/display/imagingjava/1.+Aspose.Imaging+Java+For+Ruby
+https://docs.aspose.com//display/imagingjava/Aspose.Imaging+Java+For+Ruby
 
 ## Usage
 
