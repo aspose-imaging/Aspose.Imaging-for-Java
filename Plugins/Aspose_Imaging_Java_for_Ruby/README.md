@@ -15,7 +15,7 @@ Note: Create jars folder at root of the gem folder and copy downloaded Aspose.Im
 
 For most complete documentation of the project, check Aspose.Imaging for Java confluence wiki link for Ruby:
 
-https://docs.aspose.com//display/imagingjava/Aspose.Imaging+Java+For+Ruby
+https://docs.aspose.com/display/imagingjava/Aspose.Imaging+Java+For+Ruby
 
 ## Usage
 
