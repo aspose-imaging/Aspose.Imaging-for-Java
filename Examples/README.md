@@ -1,6 +1,6 @@
 ## Aspose.Imaging for Java Examples
 
-This directory contains Java code examples for [Aspose.Imaging for Java](http://www.aspose.com/java/imaging-component.aspx).
+This directory contains Java code examples for [Aspose.Imaging for Java](https://www.aspose.com/products/imaging/java).
 
 ## How to use the examples?
 
