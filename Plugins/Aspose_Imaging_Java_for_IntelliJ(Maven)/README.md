@@ -21,8 +21,8 @@ Aspose.Imaging for Java is an easy-to-use, high-performance and well-documented 
 Aspose.Imaging provides features that go beyond the native capabilities of the development platform. It works independent of other applications, and although Aspose.Imaging allows you to save to Adobe PhotoShop® format (PSD), you do not need PhotoShop on the machine.
 For more info about the **Aspose.Imaging for Java API**, please check the api documentation urls:
 
-* [http://www.aspose.com/java/imaging-component.aspx](http://www.aspose.com/java/imaging-component.aspx)
-* [http://www.aspose.com/java/imaging-component/key-features.aspx](http://www.aspose.com/java/imaging-component/key-features.aspx)
+* [Aspose.Imaging Product Page](https://www.aspose.com/products/imaging/java)
+* [Aspose.Imaging Key Features](https://www.aspose.com/products/imaging/java#features)
 
 ## Plugin Documentation
 
