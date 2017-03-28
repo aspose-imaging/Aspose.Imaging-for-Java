@@ -4,4 +4,4 @@ This directory contains Java code examples for [Aspose.Imaging for Java](https:/
 
 ## How to use the examples?
 
-Use your favourite Java IDE to open/import the project. Read our [documentation](http://www.aspose.com/docs/display/imagingjava/How+to+Use+the+Examples) for more details.
+Use your favourite Java IDE to open/import the project. Read our [documentation](https://docs.aspose.com/display/imagingjava/How+to+Use+the+Examples) for more details.
