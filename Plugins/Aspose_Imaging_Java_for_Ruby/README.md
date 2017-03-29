@@ -1,4 +1,4 @@
-# Aspose_Imaging_Java_for_Ruby
+# Aspose.Imaging Java for Ruby
 Aspose.Imaging Java for Ruby is a Ruby gem that demonstrates / provides the Aspose.Imaging for Java API usage examples in Ruby by using Rjb - Ruby Java Bridge.
 
 ## Installation
@@ -7,15 +7,11 @@ Execute following command.
 
     $ gem install asposeimagingjava
 
-To download Aspose.Imaging for Java API to be used with these examples through RJB, Please navigate to:
-
-http://www.aspose.com/downloads/imaging/java
+To download Aspose.Imaging for Java API to be used with these examples through RJB, Please navigate to [download section](http://www.aspose.com/downloads/imaging/java)
 
 Note: Create jars folder at root of the gem folder and copy downloaded Aspose.Imaging for java component into it.
 
-For most complete documentation of the project, check Aspose.Imaging for Java confluence wiki link for Ruby:
-
-https://docs.aspose.com/display/imagingjava/Aspose.Imaging+Java+For+Ruby
+For most complete documentation of the project, check Aspose.Imaging for Java confluence wiki link for [Ruby Configuration](https://docs.aspose.com/display/imagingjava/Aspose.Imaging+Java+For+Ruby)
 
 ## Usage
 
