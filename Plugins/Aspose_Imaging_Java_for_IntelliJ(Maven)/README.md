@@ -28,17 +28,4 @@ For more info about the **Aspose.Imaging for Java API**, please check the api do
 
 For the complete documentation of this Intellij IDEA plugin, [please go through this wiki - click here](https://docs.aspose.com/display/imagingjava/Aspose.Imaging+Java+for+IntelliJ+IDEA+-+Maven)
 
-## Download Latest Versions?
 
-
-* [Latest Releases on Codeplex](https://asposeimagingjavaintellij.codeplex.com/releases)
-
-
-
-## Clone Plugin SourceCodes?
-
-
-This project is also hosted and maintained at CodePlex. To clone navigate to: 
-
-
-* [Aspose.Imaging Java for IntelliJ Maven on CodePlex - click here](https://asposeimagingjavaintellij.codeplex.com/SourceControl/latest)
