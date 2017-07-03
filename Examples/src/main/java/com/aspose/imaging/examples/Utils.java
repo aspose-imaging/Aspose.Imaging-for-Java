@@ -32,4 +32,8 @@ public class Utils {
 		return dir.toString() + File.separator;
 	}
 
+public static void main(String[] args) {
+
+
+
 }
