@@ -19,5 +19,5 @@ Directory | Description
 + **Product Home:** [Aspose.Imaging for Java](https://www.aspose.com/products/imaging/java)
 + **Download:** [Download Aspose.Imaging for Java](https://downloads.aspose.com/imaging/java)
 + **Documentation:** [Aspose.Imaging for Java Documentation](https://docs.aspose.com/display/imagingjava/home)
-+ **Forum:** [Aspose.Imaging for Java Forum](http://www.aspose.com/community/forums/aspose.imaging-product-family/498/showforum.aspx)
++ **Forum:** [Aspose.Imaging for Java Forum](https://forum.aspose.com/c/imaging)
 + **Blog:** [Aspose.Imaging for Java Blog](https://blog.aspose.com/category/aspose-products/aspose.imaging-product-family/)
