@@ -25,6 +25,7 @@ public class SupportGrayScaleWithAlpha {
                   
                 finally
                  {
+                
                   image.dispose();
                 }
 		  // ExEnd:SupportGrayScaleWithAlpha
