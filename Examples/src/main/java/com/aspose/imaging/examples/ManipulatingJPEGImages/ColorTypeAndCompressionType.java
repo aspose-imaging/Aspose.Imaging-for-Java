@@ -15,8 +15,7 @@ public class ColorTypeAndCompressionType {
               //ExStart:ColorTypeAndCompressionType
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ColorTypeAndCompressionType.class) + "ManipulatingJPEGImages/";
-
-		Image original = Image.load(dataDir+"ColorGif.gif");
+                Image original = Image.load(dataDir+"ColorGif.gif");
          try
           {
 	     JpegOptions jpegOptions = new JpegOptions()

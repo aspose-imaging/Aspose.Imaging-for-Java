@@ -11,7 +11,6 @@ public class MissingFonts
         String dataDir = Utils.getSharedDataDir(MissingFonts.class) + "images/";
          //ExStart:MissingFonts
         String fileName = "testReplacementNotAvailableFonts.psd";
-
         PsdImage image = (PsdImage)Image.load(fileName, new PsdLoadOptions(){{ setDefaultReplacementFont ("Arial"); }});
      try
        {
