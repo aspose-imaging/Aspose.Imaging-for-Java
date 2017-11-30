@@ -14,7 +14,6 @@ import com.aspose.imaging.imageoptions.SvgOptions;
     private static final String SourceFolder = "C:\\Temp\\Errors\\6\\";
     private static String OutFolder = SourceFolder + OutFolderName;
     private static String FontFolder = OutFolder + "\\" + FontFolderName;
-
     public void readFileWithEmbeddedFontsAndExportToPdf()
     {
         this.readAndExportToPdf("EmbeddedFonts.svg");

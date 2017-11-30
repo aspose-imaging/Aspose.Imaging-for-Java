@@ -10,7 +10,6 @@ import com.aspose.imaging.imageoptions.SvgOptions;
 class SvgImageTester
 {
       //ExStart:MetaFilesAsSVG
-
     private static final String ImageFolderName = "Images";
     private static final String OutFolderName = "Out\\";
     private static final String SourceFolder = "C:\\Temp\\Errors\\7\\";

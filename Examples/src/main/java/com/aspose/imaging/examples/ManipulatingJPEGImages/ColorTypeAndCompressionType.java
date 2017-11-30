@@ -11,7 +11,8 @@ import com.aspose.imaging.sources.FileCreateSource;
 
 public class ColorTypeAndCompressionType {
 	public static void main(String... args) throws Exception {
-		//ExStart:ColorTypeAndCompressionType
+		
+              //ExStart:ColorTypeAndCompressionType
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ColorTypeAndCompressionType.class) + "ManipulatingJPEGImages/";
 

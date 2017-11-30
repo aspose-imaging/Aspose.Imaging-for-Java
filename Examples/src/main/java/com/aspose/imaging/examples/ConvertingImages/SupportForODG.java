@@ -11,8 +11,9 @@ public class SupportForODG {
         //ExStart:SupportForODG
 	String[] files = new String[] {"example.odg", "example1.odg"};
         String folder = "C:\\Temp\\";
+        
         final MetafileRasterizationOptions rasterizationOptions = new MetafileRasterizationOptions();
-     for (String file : files)
+        for (String file : files)
        {
 	String fileName = folder + file;
 	Image image = Image.load(fileName);

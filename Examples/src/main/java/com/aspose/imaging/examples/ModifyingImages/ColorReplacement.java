@@ -9,8 +9,7 @@ public class ColorReplacement {
 		//ExStart:ColorReplacement
 		 using (PsdImage image = (PsdImage)Image.Load(path + "photooverlay_5_new_3.psd"))
               {
-
-                PsdImage psdImage = image;
+                 PsdImage psdImage = image;
                 var pngOptions = new PngOptions();
                 foreach (var layer in psdImage.Layers)
                 {

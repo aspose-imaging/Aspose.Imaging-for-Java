@@ -11,7 +11,7 @@ public class ForceFontCache
         String dataDir = Utils.getSharedDataDir(ForceFontCache.class) + "images/";
          //ExStart:ForceFontCache
          PsdImage image = (PsdImage)Image.load(dataDir+"input.psd");
-      try
+          try
         {
 	image.save("NoFont.psd");
          }
