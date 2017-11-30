@@ -8,7 +8,7 @@ import com.aspose.imaging.imageoptions.PngOptions;
 public class SupportForODG {
 	public static void main(String... args) throws Exception {
 	String dataDir = Utils.getSharedDataDir(SupportForODG.class) + "ConvertingImages/";
-        
+        //ExStart:SupportForODG
 	String[] files = new String[] {"example.odg", "example1.odg"};
         String folder = "C:\\Temp\\";
         final MetafileRasterizationOptions rasterizationOptions = new MetafileRasterizationOptions();

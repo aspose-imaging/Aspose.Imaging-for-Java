@@ -36,7 +36,7 @@ public class ColorReplacement {
                 }
                 psdImage.Save(path+"asposeImage02.png", new Aspose.Imaging.ImageOptions.PngOptions());
             }
-            //ExStart:ColorReplacement
+            //ExEnd:ColorReplacement
         }
 	}
         }
