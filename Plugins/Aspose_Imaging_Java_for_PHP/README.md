@@ -6,7 +6,7 @@ You will need to configure PHP/Java Bridge before using any of the Aspose provid
 For the configuration/setup of PHP/Java Bridge, please visit [this link](http://php-java-bridge.sourceforge.net/pjb/index.php).
 
 To download Aspose.Imaging for Java API to be used with these examples through PHP/Java Bridge
-Please navigate to [this download link](http://www.aspose.com/downloads/imaging/java).
+Please navigate to [this download link](http://maven.aspose.com/repository/simple/ext-release-local/com/aspose/aspose-imaging/).
 
 For most complete documentation of the project, check [Aspose.Imaging Java for PHP](https://docs.aspose.com/display/imagingjava/Aspose.Imaging+Java+For+PHP) in confluence wiki.
 
