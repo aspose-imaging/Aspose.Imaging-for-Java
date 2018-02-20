@@ -10,13 +10,20 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
-    <dependencies>
+  <dependencies>
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-imaging</artifactId>
-            <version>3.1</version>
+            <version>17.12</version>
+             <classifier>jdk16</classifier>
         </dependency>
-    </dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <type>jar</type>
+    </dependency>
+  </dependencies>
     <repositories>
         <repository>
             <id>aspose-maven-repository</id>
