@@ -1,8 +1,11 @@
 package com.aspose.imaging.examples.ConvertingImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.SizeF;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.svg.SvgImage;
+import com.aspose.imaging.imageoptions.MetafileRasterizationOptions;
+import com.aspose.imaging.imageoptions.PdfOptions;
 import com.aspose.imaging.imageoptions.PngOptions;
 
 public class SupportForODG {

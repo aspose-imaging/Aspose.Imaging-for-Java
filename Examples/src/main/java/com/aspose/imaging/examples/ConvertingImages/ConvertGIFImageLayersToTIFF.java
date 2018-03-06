@@ -6,7 +6,6 @@ import com.aspose.imaging.fileformats.gif.GifImage;
 import com.aspose.imaging.fileformats.gif.blocks.GifFrameBlock;
 import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
 import com.aspose.imaging.imageoptions.TiffOptions;
-import com.aspose.imaging.internal.ae.as;
 
 public class ConvertGIFImageLayersToTIFF {
 	public static void main(String... args) throws Exception {

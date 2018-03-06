@@ -2,13 +2,22 @@ package com.aspose.imaging.examples.metafile;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
+import com.aspose.imaging.SizeF;
+import com.aspose.imaging.fileformats.svg.FontStoreType;
+import com.aspose.imaging.fileformats.svg.FontStoringArgs;
+import com.aspose.imaging.fileformats.svg.SvgResourceKeeperCallback;
 import com.aspose.imaging.imageloadoptions.MetafileLoadOptions;
 import com.aspose.imaging.imageoptions.EmfRasterizationOptions;
+import com.aspose.imaging.imageoptions.PdfOptions;
 import com.aspose.imaging.imageoptions.SvgOptions;
+import com.aspose.imaging.imageoptions.SvgRasterizationOptions;
+import com.aspose.imaging.system.io.FileMode;
+import com.aspose.imaging.system.io.FileStream;
+import java.io.File;
 
  class SvgFontTester
 {
-    //ExStart:SavingSVGWithFonts
+    //ExStart:SvgFontTester
     private static final String FontFolderName = "fonts";
     private static final String OutFolderName = "Out\\";
     private static final String SourceFolder = "C:\\Temp\\Errors\\6\\";
@@ -189,7 +198,7 @@ class SvgCallbackFontTest extends SvgResourceKeeperCallback
      * Called when font resource ready to be saved to storage.
      * @param args The arguments.
      */
-    @Override
+   
     public void onFontResourceReady(FontStoringArgs args)
     {
         if (this.useEmbeddedFont)
@@ -224,4 +233,4 @@ class SvgCallbackFontTest extends SvgResourceKeeperCallback
         }
     }
 }
- //ExEnd:SavingSVGWithFonts
+ //ExEnd:SvgFontTester

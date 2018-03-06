@@ -5,15 +5,19 @@ import com.aspose.imaging.Image;
 import com.aspose.imaging.Rectangle;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.bmp.BmpImage;
+import com.aspose.imaging.fileformats.jpeg.JpegCompressionMode;
 import com.aspose.imaging.fileformats.jpeg.JpegImage;
+import com.aspose.imaging.fileformats.png.PngImage;
 import com.aspose.imaging.imageoptions.BmpOptions;
+import com.aspose.imaging.imageoptions.JpegOptions;
+import com.aspose.imaging.imageoptions.PngOptions;
 import com.aspose.imaging.sources.FileCreateSource;
 
-public class SupportFor2-7BitsPerSampleInJPEG-LS {
-	public static void main(String... args) throws Exception {
-		// ExStart:SupportFor2-7BitsPerSampleInJPEG-LS
+public class SupportFor2 {
+public static void main(String... args) throws Exception {
+		//ExStart:SupportFor2
 		// The path to the documents directory.
-		String dataDir = Utils.getSharedDataDir(SupportFor2-7BitsPerSampleInJPEG-LS.class) + "ManipulatingJPEGImages/";
+		String dataDir = Utils.getSharedDataDir(SupportFor2.class) + "ManipulatingJPEGImages/";
 
 		int bpp = 2; // Set 2 bits per sample to see the difference in size and quality
 
@@ -47,7 +51,7 @@ public class SupportFor2-7BitsPerSampleInJPEG-LS {
        {
          	jpegImage.dispose();
       }
-		// ExEnd:SupportFor2-7BitsPerSampleInJPEG-LS
+		//ExEnd:SupportFor2
   }
 
 }

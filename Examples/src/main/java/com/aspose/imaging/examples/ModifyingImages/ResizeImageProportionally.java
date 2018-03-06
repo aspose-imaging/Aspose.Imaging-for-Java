@@ -5,7 +5,7 @@ import com.aspose.imaging.examples.Utils;
 
 public class ResizeImageProportionally {
 	public static void main(String... args) throws Exception {
-		// ExStart:ResizeImageProportionally
+		//ExStart:ResizeImageProportionally
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ResizeImageProportionally.class) + "ModifyingImages/";
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
@@ -23,7 +23,7 @@ public class ResizeImageProportionally {
 
 		// saving result
 		image.save(dataDir + "ResizeImageProportionally_out.png");
-		// ExEnd:ResizeImageProportionally
+		//ExEnd:ResizeImageProportionally
 	}
 
 }

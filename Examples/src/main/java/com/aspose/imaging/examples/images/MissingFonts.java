@@ -2,6 +2,10 @@ package com.aspose.imaging.examples.images;
 
 import com.aspose.imaging.*;
 import com.aspose.imaging.examples.Utils;
+import com.aspose.imaging.fileformats.png.PngColorType;
+import com.aspose.imaging.fileformats.psd.PsdImage;
+import com.aspose.imaging.imageloadoptions.PsdLoadOptions;
+import com.aspose.imaging.imageoptions.PngOptions;
 
 public class MissingFonts
 {

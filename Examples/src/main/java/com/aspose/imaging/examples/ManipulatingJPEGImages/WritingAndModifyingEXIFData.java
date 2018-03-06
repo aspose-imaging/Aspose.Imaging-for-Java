@@ -7,7 +7,7 @@ import com.aspose.imaging.fileformats.jpeg.JpegImage;
 
 public class WritingAndModifyingEXIFData {
 	public static void main(String... args) throws Exception {
-		// ExStart:WritingAndModifyingEXIFData
+		//ExStart:WritingAndModifyingEXIFData
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(WritingAndModifyingEXIFData.class) + "ManipulatingJPEGImages/";
 
@@ -29,7 +29,7 @@ public class WritingAndModifyingEXIFData {
 
 		// Save the changes to the original image
 		image.save();
-		// ExEnd:WritingAndModifyingEXIFData
+		//ExEnd:WritingAndModifyingEXIFData
 	}
 
 }

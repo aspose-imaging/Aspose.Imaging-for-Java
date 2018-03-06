@@ -3,6 +3,10 @@ package com.aspose.imaging.examples.dicom;
 import com.aspose.imaging.examples.Utils;
 
 public class AdjustingBrightness {
+
+  
+
+   
 	public static void main(String... args) throws Exception {
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(AdjustingBrightness.class) + "dicom/";
@@ -10,8 +14,7 @@ public class AdjustingBrightness {
 		String outputFile = dataDir + "AdjustingBrightness_out.bmp";
 
 		// Load a DICOM image in an instance of DicomImage
-		com.aspose.imaging.fileformats.dicom.DicomImage image = new com.aspose.imaging.fileformats.dicom.DicomImage(
-				inputFile);
+com.aspose.imaging.fileformats.dicom.DicomImage image = new com.aspose.imaging.fileformats.dicom.DicomImage(inputFile);
 
 		// Adjust the brightness
 		image.adjustBrightness(50);

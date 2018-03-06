@@ -1,7 +1,7 @@
 package com.aspose.imaging.examples.metafile;
 
 import com.aspose.imaging.examples.Utils;
-import com.aspose.imaging.fileformats.metafile.FontSettings;
+import com.aspose.imaging.FontSettings;
 import com.aspose.imaging.fileformats.metafile.MetafileImage;
 import com.aspose.imaging.fileformats.metafile.EmfMetafileImage;
 

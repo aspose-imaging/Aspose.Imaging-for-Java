@@ -6,7 +6,7 @@ import com.aspose.imaging.imageoptions.PngOptions;
 
 public class CompressingFiles {
 	public static void main(String... args) throws Exception {
-		// ExStart:CompressingFiles
+		//ExStart:CompressingFiles
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(CompressingFiles.class) + "ManipulatingPNGImages/";
 		// Load an image from file (or stream)
@@ -20,7 +20,7 @@ public class CompressingFiles {
 			// Save result on disk (or stream)
 			image.save("CompressingFiles_out" + i + ".png", options);
 		}
-		// ExEnd:CompressingFiles
+		//ExEnd:CompressingFiles
 	}
 
 }

@@ -13,8 +13,7 @@ public class ConvertEMFtoPDF {
 		for (String filePath : filePaths) {
 			String outPath = filePath + "ConvertEMFtoPDF_out" + ".pdf";
 
-			com.aspose.imaging.fileformats.emf.EmfImage image = com.aspose.imaging.fileformats.emf.EmfImage
-					.load(filePath);
+com.aspose.imaging.fileformats.emf.EmfImage image = (com.aspose.imaging.fileformats.emf.EmfImage) com.aspose.imaging.fileformats.emf.EmfImage.load(filePath);
 			try {
 				com.aspose.imaging.system.io.FileStream outputStream = new com.aspose.imaging.system.io.FileStream(
 						outPath, com.aspose.imaging.system.io.FileMode.Create);

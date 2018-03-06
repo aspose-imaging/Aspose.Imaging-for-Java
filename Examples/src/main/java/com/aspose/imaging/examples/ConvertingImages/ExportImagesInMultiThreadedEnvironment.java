@@ -9,7 +9,7 @@ public class ExportImagesInMultiThreadedEnvironment
 {
 	public static void main(String... args) throws Exception 
 {
-		// ExStart:ExportImagesInMultiThreadedEnvironment
+		//ExStart:ExportImagesInMultiThreadedEnvironment
 
 		// Create temporary image.
         java.io.File tmp = java.io.File.createTempFile("image", "tes");
@@ -64,7 +64,7 @@ public class ExportImagesInMultiThreadedEnvironment
             fileStream = null;
         }
 
-		// ExEnd:ExportImagesInMultiThreadedEnvironment
+		//ExEnd:ExportImagesInMultiThreadedEnvironment
 	}
 
 }

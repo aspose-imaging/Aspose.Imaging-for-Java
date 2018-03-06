@@ -7,7 +7,7 @@ import com.aspose.imaging.imagefilters.filteroptions.GaussianBlurFilterOptions;
 
 public class BluranImage {
 	public static void main(String... args) throws Exception {
-		// ExStart:BluranImage
+		//ExStart:BluranImage
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(BluranImage.class) + "ModifyingImages/";
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
@@ -20,7 +20,7 @@ public class BluranImage {
 
 		// Save the results to output path.
 		rasterImage.save(dataDir + "BluranImage_out.gif");
-		// ExEnd:BluranImage
+		//ExEnd:BluranImage
 	}
 
 }

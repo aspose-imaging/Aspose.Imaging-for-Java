@@ -4,7 +4,7 @@ import com.aspose.imaging.examples.Utils;
 
 public class ChangeBackgroundColor {
 	public static void main(String... args) throws Exception {
-		// ExStart:ChangeBackgroundColor
+		//ExStart:ChangeBackgroundColor
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ChangeBackgroundColor.class) + "ManipulatingPNGImages/";
 
@@ -31,7 +31,7 @@ public class ChangeBackgroundColor {
 
 		// Save the updated image to disk.
 		rasterImg.save(dataDir + "ChangeBackgroundColor_out.png");
-		// ExEnd:ChangeBackgroundColor
+		//ExEnd:ChangeBackgroundColor
 	}
 
 }

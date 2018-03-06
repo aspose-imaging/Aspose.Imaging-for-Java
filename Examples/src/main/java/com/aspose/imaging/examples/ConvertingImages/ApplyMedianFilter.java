@@ -4,11 +4,10 @@ import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imagefilters.filteroptions.MedianFilterOptions;
-import com.aspose.imaging.internal.ae.as;
 
 public class ApplyMedianFilter {
 	public static void main(String... args) throws Exception {
-		// ExStart:ApplyMedianFilter
+		//ExStart:ApplyMedianFilter
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ApplyMedianFilter.class) + "ConvertingImages/";
 		
@@ -30,7 +29,7 @@ public class ApplyMedianFilter {
 
 		    // Save the resultant image
 		    image.save(dataDir + "median_test_denoise_out.gif");
-		 // ExEnd:ApplyMedianFilter
+		 //ExEnd:ApplyMedianFilter
 	}
 
 }

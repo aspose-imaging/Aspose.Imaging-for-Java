@@ -6,7 +6,7 @@ import com.aspose.imaging.fileformats.jpeg.JpegImage;
 
 public class AddThumbnailtoJFIFSegment {
 	public static void main(String... args) throws Exception {
-		// ExStart:AddThumbnailtoJFIFSegment
+		//ExStart:AddThumbnailtoJFIFSegment
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(AddThumbnailtoJFIFSegment.class) + "ManipulatingJPEGImages/";
 		
@@ -24,7 +24,7 @@ public class AddThumbnailtoJFIFSegment {
 
 		//Save the resultant image
 		image.save(dataDir + "AddThumbnailtoJFIFSegment_out.jpg");
-		// ExEnd:AddThumbnailtoJFIFSegment
+		//ExEnd:AddThumbnailtoJFIFSegment
 	}
 
 }

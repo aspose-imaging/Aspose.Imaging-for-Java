@@ -5,15 +5,20 @@ import com.aspose.imaging.Image;
 import com.aspose.imaging.Rectangle;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.bmp.BmpImage;
+import com.aspose.imaging.fileformats.jpeg.JpegCompressionMode;
 import com.aspose.imaging.fileformats.jpeg.JpegImage;
+import com.aspose.imaging.fileformats.jpeg.JpegLsInterleaveMode;
 import com.aspose.imaging.imageoptions.BmpOptions;
+import com.aspose.imaging.imageoptions.JpegOptions;
+import com.aspose.imaging.imageoptions.PngOptions;
 import com.aspose.imaging.sources.FileCreateSource;
 
-public class SupportForJPEG-LS {
+public class SupportForJPEG
+{
 	public static void main(String... args) throws Exception {
-		// ExStart:SupportForJPEG-LS
+		//ExStart:SupportForJPEG
 		// The path to the documents directory.
-		String dataDir = Utils.getSharedDataDir(SupportForJPEG-LS.class) + "ManipulatingJPEGImages/";
+		String dataDir = Utils.getSharedDataDir(SupportForJPEG.class) + "ManipulatingJPEGImages/";
 
 		String sourceJpegFileName = "lena24b.jls";
                 String outputPngFileName = "lena24b.png";
@@ -43,7 +48,11 @@ public class SupportForJPEG-LS {
           {
               jpegImage.dispose();
           }
-		// ExEnd:SupportForJPEG-LS
+		//ExEnd:SupportForJPEG
   }
+
+    private static Object[] arrayToString(byte[] horizontalSampling) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }

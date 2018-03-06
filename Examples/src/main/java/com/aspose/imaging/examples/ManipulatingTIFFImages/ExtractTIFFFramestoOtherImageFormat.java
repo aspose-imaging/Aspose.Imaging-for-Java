@@ -8,7 +8,7 @@ import com.aspose.imaging.imageoptions.JpegOptions;
 
 public class ExtractTIFFFramestoOtherImageFormat {
 	public static void main(String... args) throws Exception {
-		// ExStart:ExtractTIFFFramestoOtherImageFormat
+		//ExStart:ExtractTIFFFramestoOtherImageFormat
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ExtractTIFFFramestoOtherImageFormat.class) + "ManipulatingTIFFImages/";
 		TiffImage multiImage = (TiffImage) Image.load(dataDir + "sample.tif");
@@ -17,7 +17,7 @@ public class ExtractTIFFFramestoOtherImageFormat {
 		for (TiffFrame frame : frames) {
 			frame.save(dataDir + "ExtractTIFFFramestoOtherImageFormat_out" +i+ ".jpg", new JpegOptions());
 		}
-		// ExEnd:ExtractTIFFFramestoOtherImageFormat
+		//ExEnd:ExtractTIFFFramestoOtherImageFormat
 	}
 
 }

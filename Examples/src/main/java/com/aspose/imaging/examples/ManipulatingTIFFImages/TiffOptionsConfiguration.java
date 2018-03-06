@@ -7,7 +7,7 @@ import com.aspose.imaging.imageoptions.TiffOptions;
 
 public class TiffOptionsConfiguration {
 	public static void main(String... args) throws Exception {
-		// ExStart:TiffOptionsConfiguration
+		//ExStart:TiffOptionsConfiguration
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(TiffOptionsConfiguration.class) + "ManipulatingTIFFImages/";
 
@@ -20,7 +20,7 @@ public class TiffOptionsConfiguration {
 
 		// Save the result in Tiff format RGB with Jpeg compression
 		image.save(dataDir + "TiffOptionsConfiguration_out.tiff", options);
-		// ExEnd:TiffOptionsConfiguration
+		//ExEnd:TiffOptionsConfiguration
 	}
 
 }

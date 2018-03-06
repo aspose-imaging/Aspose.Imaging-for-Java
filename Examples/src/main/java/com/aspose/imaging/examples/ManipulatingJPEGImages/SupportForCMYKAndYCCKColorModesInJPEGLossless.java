@@ -5,13 +5,19 @@ import com.aspose.imaging.Image;
 import com.aspose.imaging.Rectangle;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.bmp.BmpImage;
+import com.aspose.imaging.fileformats.jpeg.JpegCompressionColorMode;
+import com.aspose.imaging.fileformats.jpeg.JpegCompressionMode;
 import com.aspose.imaging.fileformats.jpeg.JpegImage;
 import com.aspose.imaging.imageoptions.BmpOptions;
+import com.aspose.imaging.imageoptions.JpegOptions;
+import com.aspose.imaging.imageoptions.PngOptions;
 import com.aspose.imaging.sources.FileCreateSource;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 
 public class SupportForCMYKAndYCCKColorModesInJPEGLossless {
 	public static void main(String... args) throws Exception {
-		// ExStart:SupportForCMYKAndYCCKColorModesInJPEGLossless
+		//ExStart:SupportForCMYKAndYCCKColorModesInJPEGLossless
 		// The path to the documents directory.
 		ByteArrayOutputStream jpegStream_cmyk = new ByteArrayOutputStream();
                 ByteArrayOutputStream jpegStream_ycck = new ByteArrayOutputStream();
@@ -63,4 +69,6 @@ public class SupportForCMYKAndYCCKColorModesInJPEGLossless {
                 {
                image.dispose();
                 }
+        }
+}
              //ExEnd:SupportForCMYKAndYCCKColorModesInJPEGLossless

@@ -13,7 +13,7 @@ public class ImportanImageToPSDLayer {
 		com.aspose.imaging.fileformats.psd.PsdImage image = (com.aspose.imaging.fileformats.psd.PsdImage) com.aspose.imaging.Image
 				.load(sourceFileName);
 
-		// Extract a layer from PSDImage
+		//Extract a layer from PSDImage
 		com.aspose.imaging.fileformats.psd.layers.Layer layer = image.getLayers()[1];
 
 		// Load the image that is needed to be imported into the PSD file.

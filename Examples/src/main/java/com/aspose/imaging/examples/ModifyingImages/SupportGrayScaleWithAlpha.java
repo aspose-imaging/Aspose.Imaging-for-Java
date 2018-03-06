@@ -2,10 +2,13 @@ package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.examples.Utils;
+import com.aspose.imaging.fileformats.png.PngColorType;
+import com.aspose.imaging.fileformats.psd.PsdImage;
+import com.aspose.imaging.imageoptions.PngOptions;
 
 public class SupportGrayScaleWithAlpha {
 	public static void main(String... args) throws Exception {
-		// ExStart:SupportGrayScaleWithAlpha
+		//ExStart:SupportGrayScaleWithAlpha
 		// Create an instance of JpegImage and load an image as of JpegImage
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(SupportGrayScaleWithAlpha.class) + "ModifyingImages/";
@@ -28,7 +31,7 @@ public class SupportGrayScaleWithAlpha {
                 
                   image.dispose();
                 }
-		  // ExEnd:SupportGrayScaleWithAlpha
+		  //ExEnd:SupportGrayScaleWithAlpha
 	       
                 } 
 

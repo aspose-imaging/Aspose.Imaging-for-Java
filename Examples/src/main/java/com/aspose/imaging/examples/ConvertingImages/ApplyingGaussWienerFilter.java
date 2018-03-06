@@ -7,7 +7,7 @@ import com.aspose.imaging.imagefilters.filteroptions.GaussWienerFilterOptions;
 
 public class ApplyingGaussWienerFilter {
 	public static void main(String... args) throws Exception {
-		// ExStart:ApplyingGaussWienerFilter
+		//ExStart:ApplyingGaussWienerFilter
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ApplyingGaussWienerFilter.class) + "ConvertingImages/";
 		Image image = Image.load(dataDir + "aspose-logo.gif");
@@ -27,7 +27,7 @@ public class ApplyingGaussWienerFilter {
 
 		// Save the resultant image
 		image.save(dataDir + "ApplyGaussWienerFilter_out.gif");
-		// ExEnd:ApplyingGaussWienerFilter
+		//ExEnd:ApplyingGaussWienerFilter
 	}
 
 }

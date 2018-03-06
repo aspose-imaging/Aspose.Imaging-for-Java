@@ -10,7 +10,7 @@ import com.aspose.imaging.imageoptions.TiffOptions;
 
 public class AdjustBrightness {
 	public static void main(String... args) throws Exception {
-		// ExStart:AdjustBrightness
+		//ExStart:AdjustBrightness
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(AdjustBrightness.class) + "ModifyingImages/";
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
@@ -34,7 +34,7 @@ public class AdjustBrightness {
 
 		// Save the resultant image to TIFF format
 		rasterImage.save(dataDir + "AdjustBrightness_out.tiff", tiffOptions);
-		// ExEnd:AdjustBrightness
+		//ExEnd:AdjustBrightness
 	}
 
 }

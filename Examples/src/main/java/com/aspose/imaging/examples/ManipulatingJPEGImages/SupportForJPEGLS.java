@@ -5,15 +5,21 @@ import com.aspose.imaging.Image;
 import com.aspose.imaging.Rectangle;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.bmp.BmpImage;
+import com.aspose.imaging.fileformats.jpeg.JpegCompressionColorMode;
+import com.aspose.imaging.fileformats.jpeg.JpegCompressionMode;
 import com.aspose.imaging.fileformats.jpeg.JpegImage;
 import com.aspose.imaging.imageoptions.BmpOptions;
+import com.aspose.imaging.imageoptions.JpegOptions;
+import com.aspose.imaging.imageoptions.PngOptions;
 import com.aspose.imaging.sources.FileCreateSource;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 
-public class SupportForJPEG-LSWithCMYK {
+public class SupportForJPEGLS{
 	public static void main(String... args) throws Exception {
-		// ExStart:SupportForJPEG-LSWithCMYK
+		//ExStart:SupportForJPEGLS
 		// The path to the documents directory.
-		String dataDir = Utils.getSharedDataDir(SupportForJPEG-LSWithCMYK.class) + "ManipulatingJPEGImages/";
+		String dataDir = Utils.getSharedDataDir(SupportForJPEGLS.class) + "ManipulatingJPEGImages/";
 
 		ByteArrayOutputStream jpegLsStream = new ByteArrayOutputStream();
 
@@ -50,7 +56,7 @@ public class SupportForJPEG-LSWithCMYK {
            {
 	      image.dispose();
            } 
-           // ExEnd:SupportForJPEG-LSWithCMYK
+           //ExEnd:SupportForJPEG-LSWithCMYK
 }
 
 }

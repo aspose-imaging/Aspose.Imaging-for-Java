@@ -4,6 +4,8 @@ import com.aspose.imaging.Image;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.svg.SvgImage;
 import com.aspose.imaging.imageoptions.PngOptions;
+import com.aspose.imaging.imageoptions.SvgOptions;
+import com.aspose.imaging.imageoptions.SvgRasterizationOptions;
 
 public class ConvertRasterFormatToSVG {
 	public static void main(String... args) throws Exception {

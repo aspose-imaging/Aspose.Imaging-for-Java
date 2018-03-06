@@ -6,7 +6,7 @@ import com.aspose.imaging.examples.Utils;
 
 public class BinarizationwithFixedThreshold {
 	public static void main(String... args) throws Exception {
-		// ExStart:BinarizationwithFixedThreshold
+		//ExStart:BinarizationwithFixedThreshold
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(BinarizationwithFixedThreshold.class) + "ConvertingImages/";
 
@@ -24,7 +24,7 @@ public class BinarizationwithFixedThreshold {
 		rasterCachedImage.binarizeFixed((byte) 100);
 		// Save the resultant image
 		rasterCachedImage.save(dataDir + "BinarizationWithFixedThreshold_out.jpg");
-		// ExEnd:BinarizationwithFixedThreshold
+		//ExEnd:BinarizationwithFixedThreshold
 	}
 
 }

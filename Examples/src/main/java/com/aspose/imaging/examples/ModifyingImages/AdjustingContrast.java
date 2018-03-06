@@ -9,7 +9,7 @@ import com.aspose.imaging.imageoptions.TiffOptions;
 
 public class AdjustingContrast {
 	public static void main(String... args) throws Exception {
-		// ExStart:AdjustingContrast
+		//ExStart:AdjustingContrast
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(AdjustingContrast.class) + "ModifyingImages/";
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
@@ -34,7 +34,7 @@ public class AdjustingContrast {
 
 		// Save the resultant image to TIFF format
 		rasterImage.save(dataDir + "AdjustingContrast_out.tiff", tiffOptions);
-		// ExEnd:AdjustingContrast
+		//ExEnd:AdjustingContrast
 	}
 
 }

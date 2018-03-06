@@ -8,7 +8,7 @@ import com.aspose.imaging.imageoptions.PngOptions;
 
 public class ConvertanyLoadedImageDirectlyToPNGformat {
 	public static void main(String... args) throws Exception {
-		// ExStart:ConvertanyLoadedImageDirectlyToPNGformat
+		//ExStart:ConvertanyLoadedImageDirectlyToPNGformat
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ConvertanyLoadedImageDirectlyToPNGformat.class) + "ManipulatingPNGImages/";
 
@@ -27,7 +27,7 @@ public class ConvertanyLoadedImageDirectlyToPNGformat {
 
 		// Save the image on disc in PNG format
 		image.save(dataDir + "ConvertanyLoadedImageDirectlyToPNGformat_out.jpg", new PngOptions());
-		// ExEnd:ConvertanyLoadedImageDirectlyToPNGformat
+		//ExEnd:ConvertanyLoadedImageDirectlyToPNGformat
 	}
 
 }

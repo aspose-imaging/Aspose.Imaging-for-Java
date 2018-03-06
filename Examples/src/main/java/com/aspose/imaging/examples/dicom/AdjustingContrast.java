@@ -3,6 +3,8 @@ package com.aspose.imaging.examples.dicom;
 import com.aspose.imaging.examples.Utils;
 
 public class AdjustingContrast {
+
+    private static Object com;
 	public static void main(String... args) throws Exception {
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(AdjustingContrast.class) + "dicom/";
@@ -10,8 +12,7 @@ public class AdjustingContrast {
 		String outputFile = dataDir + "AdjustingContrast_out.bmp";
 
 		// Load a DICOM image in an instance of DicomImage
-		com.aspose.imaging.fileformats.dicom.DicomImage image = new com.aspose.imaging.fileformats.dicom.DicomImage(
-				inputFile);
+com.aspose.imaging.fileformats.dicom.DicomImage image = new com.aspose.imaging.fileformats.dicom.DicomImage(inputFile);
 
 		// Adjust the contrast
 		image.adjustContrast(50);

@@ -8,7 +8,7 @@ import com.aspose.imaging.imageoptions.JpegOptions;
 
 public class ExpandandCropImages {
 	public static void main(String... args) throws Exception {
-		// ExStart:ExpandandCropImages
+		//ExStart:ExpandandCropImages
 		String dataDir = Utils.getSharedDataDir(ExpandandCropImages.class) + "ConvertingImages/";
 
 		RasterImage rasterImage = (RasterImage) Image.load(dataDir + "aspose-logo.jpg");
@@ -20,7 +20,7 @@ public class ExpandandCropImages {
 
 		// Save output image by passing output file name, image options and rectangle object.
 		rasterImage.save(dataDir + "ExpandandCropImages_out.jpg", new JpegOptions(), destRect);
-		// ExEnd:ExpandandCropImages
+		//ExEnd:ExpandandCropImages
 	}
 
 }

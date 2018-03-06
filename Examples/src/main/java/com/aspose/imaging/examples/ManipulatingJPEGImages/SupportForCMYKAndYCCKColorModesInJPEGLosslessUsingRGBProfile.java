@@ -5,21 +5,29 @@ import com.aspose.imaging.Image;
 import com.aspose.imaging.Rectangle;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.bmp.BmpImage;
+import com.aspose.imaging.fileformats.jpeg.JpegCompressionColorMode;
+import com.aspose.imaging.fileformats.jpeg.JpegCompressionMode;
 import com.aspose.imaging.fileformats.jpeg.JpegImage;
 import com.aspose.imaging.imageoptions.BmpOptions;
+import com.aspose.imaging.imageoptions.JpegOptions;
+import com.aspose.imaging.imageoptions.PngOptions;
 import com.aspose.imaging.sources.FileCreateSource;
+import com.aspose.imaging.sources.StreamSource;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.RandomAccessFile;
 
 public class SupportForCMYKAndYCCKColorModesInJPEGLosslessUsingRGBProfile {
 	public static void main(String... args) throws Exception {
-		// ExStart:SupportForCMYKAndYCCKColorModesInJPEGLosslessUsingRGBProfile
+		//ExStart:SupportForCMYKAndYCCKColorModesInJPEGLosslessUsingRGBProfile
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(SupportForCMYKAndYCCKColorModesInJPEGLosslessUsingRGBProfile.class) + "ManipulatingJPEGImages/";
 
-		jpegStream_cmyk = new ByteArrayOutputStream();
-                jpegStream_ycck = new ByteArrayOutputStream();
+		ByteArrayOutputStream jpegStream_cmyk = new ByteArrayOutputStream();
+             ByteArrayOutputStream jpegStream_ycck = new ByteArrayOutputStream();
  
                 // Save to JPEG Lossless CMYK
-                image = (JpegImage)Image.load("056.jpg");
+                JpegImage image = (JpegImage)Image.load("056.jpg");
             try
              {
                 JpegOptions options = new JpegOptions();
@@ -69,7 +77,7 @@ public class SupportForCMYKAndYCCKColorModesInJPEGLosslessUsingRGBProfile {
                {
                  image.dispose();
                   }
-              // ExEnd:SupportForCMYKAndYCCKColorModesInJPEGLosslessUsingRGBProfile
+              //ExEnd:SupportForCMYKAndYCCKColorModesInJPEGLosslessUsingRGBProfile
                   }
 
                   }

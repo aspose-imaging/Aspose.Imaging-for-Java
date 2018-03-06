@@ -11,7 +11,7 @@ import com.aspose.imaging.sources.FileCreateSource;
 
 public class RetrieveThumbnailBitmapInformation {
 	public static void main(String... args) throws Exception {
-		// ExStart:RetrieveThumbnailBitmapInformation
+		//ExStart:RetrieveThumbnailBitmapInformation
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(RetrieveThumbnailBitmapInformation.class) + "ManipulatingJPEGImages/";
 
@@ -42,7 +42,7 @@ public class RetrieveThumbnailBitmapInformation {
 
 		// Save the results
 		bmpImage.save();
-		// ExEnd:RetrieveThumbnailBitmapInformation
+		//ExEnd:RetrieveThumbnailBitmapInformation
 	}
 
 }

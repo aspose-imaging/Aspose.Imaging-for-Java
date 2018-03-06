@@ -6,7 +6,7 @@ import com.aspose.imaging.examples.Utils;
 
 public class BinarizationwithOtsuThreshold {
 	public static void main(String... args) throws Exception {
-		// ExStart:BinarizationwithOtsuThreshold
+		//ExStart:BinarizationwithOtsuThreshold
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(BinarizationwithOtsuThreshold.class) + "ConvertingImages/";
 
@@ -24,6 +24,6 @@ public class BinarizationwithOtsuThreshold {
 		rasterCachedImage.binarizeOtsu();
 		// Save the resultant image
 		rasterCachedImage.save(dataDir + "BinarizationWithOtsuThreshold_out.jpg");
-		// ExEnd:BinarizationwithOtsuThreshold
+		//ExEnd:BinarizationwithOtsuThreshold
 	}
 }

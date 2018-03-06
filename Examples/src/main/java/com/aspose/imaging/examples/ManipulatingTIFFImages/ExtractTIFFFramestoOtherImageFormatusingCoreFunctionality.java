@@ -11,7 +11,7 @@ import com.aspose.imaging.sources.FileCreateSource;
 
 public class ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality {
 	public static void main(String... args) throws Exception {
-		// ExStart:ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality
+		//ExStart:ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality.class) + "ManipulatingTIFFImages/";
 
@@ -34,7 +34,7 @@ public class ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality {
 
 			frameCounter++;
 		}
-		// ExEnd:ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality
+		//ExEnd:ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality
 	}
 
 }

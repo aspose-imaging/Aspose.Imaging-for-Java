@@ -17,7 +17,7 @@ public class ExportDNGImageToJPEGFormat
 {
 	public static void main(String[] args) throws Exception 
         {
-		// ExStart:ExportDNGImageToJPEGFormat 
+		//ExStart:ExportDNGImageToJPEGFormat 
 
         //Declare variables to store file paths for input and output images.
         String sourceFiles = "Path_to_source_folder\\Source\\HDR - 3c.dng";
@@ -32,7 +32,7 @@ public class ExportDNGImageToJPEGFormat
         objimage.save(destPath, new com.aspose.imaging.imageoptions.JpegOptions());
 
 
-		// ExEnd:ExportDNGImageToJPEGFormat 
+		//ExEnd:ExportDNGImageToJPEGFormat 
 	}
 
 }

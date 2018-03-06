@@ -6,7 +6,7 @@ import com.aspose.imaging.fileformats.jpeg.JpegImage;
 
 public class AutoCorrectOrientationOfJPEGImages {
 	public static void main(String... args) throws Exception {
-		// ExStart:AutoCorrectOrientationOfJPEGImages
+		//ExStart:AutoCorrectOrientationOfJPEGImages
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(AutoCorrectOrientationOfJPEGImages.class) + "ManipulatingJPEGImages/";
 		
@@ -18,7 +18,7 @@ public class AutoCorrectOrientationOfJPEGImages {
 
 		//Save the result on disc or stream
 		image.save(dataDir + "AutoCorrectOrientationOfJPEGImages_out.jpg");
-		// ExEnd:AutoCorrectOrientationOfJPEGImages
+		//ExEnd:AutoCorrectOrientationOfJPEGImages
 	}
 
 }

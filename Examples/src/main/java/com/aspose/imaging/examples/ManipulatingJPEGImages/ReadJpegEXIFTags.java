@@ -6,7 +6,7 @@ import com.aspose.imaging.fileformats.jpeg.JpegImage;
 
 public class ReadJpegEXIFTags {
 	public static void main(String... args) throws Exception {
-		// ExStart:ReadJpegEXIFTags
+		//ExStart:ReadJpegEXIFTags
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ReadJpegEXIFTags.class) + "ManipulatingJPEGImages/";
 
@@ -21,7 +21,7 @@ public class ReadJpegEXIFTags {
 			// Save the thumbnail to disk with a new name
 			thumbnail.save(dataDir + "ReadJpegEXIFTags_out.jpg");
 		}
-		// ExEnd:ReadJpegEXIFTags
+		//ExEnd:ReadJpegEXIFTags
 	}
 
 }

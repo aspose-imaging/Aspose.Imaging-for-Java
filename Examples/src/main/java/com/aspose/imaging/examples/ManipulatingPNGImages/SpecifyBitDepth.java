@@ -8,7 +8,7 @@ import com.aspose.imaging.imageoptions.PngOptions;
 
 public class SpecifyBitDepth {
 	public static void main(String... args) throws Exception {
-		// ExStart:SpecifyBitDepth
+		//ExStart:SpecifyBitDepth
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(SpecifyBitDepth.class) + "ManipulatingPNGImages/";
 
@@ -26,7 +26,7 @@ public class SpecifyBitDepth {
 
 		// Save changes to the disc
 		pngImage.save(dataDir + "SpecifyBitDepth_out.jpg", options);
-		// ExEnd:SpecifyBitDepth
+		//ExEnd:SpecifyBitDepth
 	}
 
 }

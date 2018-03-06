@@ -6,7 +6,7 @@ import com.aspose.imaging.examples.Utils;
 
 public class ApplyCorrectionFilterOnImage {
 	public static void main(String... args) throws Exception {
-		// ExStart:ApplyCorrectionFilterOnImage
+		//ExStart:ApplyCorrectionFilterOnImage
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ApplyCorrectionFilterOnImage.class) + "ConvertingImages/";
 
@@ -40,7 +40,7 @@ public class ApplyCorrectionFilterOnImage {
 
 		// Save the results to output path.
 		rasterImage.save(dataDir + "a1_out.jpg");
-		// ExEnd:ApplyCorrectionFilterOnImage
+		//ExEnd:ApplyCorrectionFilterOnImage
 	}
 
 }

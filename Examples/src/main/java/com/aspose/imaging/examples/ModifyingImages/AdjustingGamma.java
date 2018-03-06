@@ -9,7 +9,7 @@ import com.aspose.imaging.imageoptions.TiffOptions;
 
 public class AdjustingGamma {
 	public static void main(String... args) throws Exception {
-		// ExStart:AdjustingGamma
+		//ExStart:AdjustingGamma
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(AdjustingGamma.class) + "ModifyingImages/";
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
@@ -35,7 +35,7 @@ public class AdjustingGamma {
 
 		    // Save the resultant image to TIFF format
 		    rasterImage.save(dataDir + "AdjustingGamma_out.tiff", tiffOptions);
-		 // ExEnd:AdjustingGamma
+		 //ExEnd:AdjustingGamma
 		}
 
 }

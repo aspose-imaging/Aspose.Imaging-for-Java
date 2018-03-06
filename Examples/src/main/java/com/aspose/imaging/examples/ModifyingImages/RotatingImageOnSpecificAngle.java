@@ -6,7 +6,7 @@ import com.aspose.imaging.examples.Utils;
 
 public class RotatingImageOnSpecificAngle {
 	public static void main(String... args) throws Exception {
-		// ExStart:RotatingImageOnSpecificAngle
+		//ExStart:RotatingImageOnSpecificAngle
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(RotatingImageOnSpecificAngle.class) + "ModifyingImages/";
 
@@ -22,7 +22,7 @@ public class RotatingImageOnSpecificAngle {
 
 		// Save the result to a new file
 		image.save(dataDir + "RotatingImageOnSpecificAngle_out.jpg");
-		// ExEnd:RotatingImageOnSpecificAngle
+		//ExEnd:RotatingImageOnSpecificAngle
 	}
 
 }

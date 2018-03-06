@@ -4,11 +4,10 @@ import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imagefilters.filteroptions.MotionWienerFilterOptions;
-import com.aspose.imaging.internal.ae.as;
 
 public class ApplyMotionWienerFilter {
 	public static void main(String... args) throws Exception {
-		// ExStart:ApplyMotionWienerFilter
+		//ExStart:ApplyMotionWienerFilter
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ApplyMotionWienerFilter.class) + "ConvertingImages/";
 		Image image = Image.load(dataDir + "aspose-logo.gif");
@@ -28,7 +27,7 @@ public class ApplyMotionWienerFilter {
 
 		// Save the resultant image
 		image.save(dataDir + "ApplyingMotionWienerFilter_out.gif");
-		// ExEnd:ApplyMotionWienerFilter
+		//ExEnd:ApplyMotionWienerFilter
 	}
 
 }

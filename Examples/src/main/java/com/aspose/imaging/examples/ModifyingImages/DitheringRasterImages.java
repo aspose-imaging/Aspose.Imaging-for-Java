@@ -7,7 +7,7 @@ import com.aspose.imaging.fileformats.jpeg.JpegImage;
 
 public class DitheringRasterImages {
 	public static void main(String... args) throws Exception {
-		// ExStart:DitheringRasterImages
+		//ExStart:DitheringRasterImages
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(DitheringRasterImages.class) + "ModifyingImages/";
 		JpegImage image = (JpegImage) Image.load(dataDir + "aspose-logo.jpg");
@@ -17,7 +17,7 @@ public class DitheringRasterImages {
 
 		// Save the resultant image
 		image.save(dataDir + "DitheringRasterImages_out.bmp");
-		// ExEnd:DitheringRasterImages
+		//ExEnd:DitheringRasterImages
 	}
 
 }

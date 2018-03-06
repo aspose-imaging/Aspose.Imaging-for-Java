@@ -15,7 +15,7 @@ import com.aspose.imaging.sources.FileCreateSource;
 
 public class AddDifferentImagesasSeparateFramesinaMultiPageTIFF {
 	public static void main(String... args) throws Exception {
-		// ExStart:AddDifferentImagesasSeparateFramesinaMultiPageTIFF
+		//ExStart:AddDifferentImagesasSeparateFramesinaMultiPageTIFF
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(AddDifferentImagesasSeparateFramesinaMultiPageTIFF.class) + "ManipulatingTIFFImages/";
 		// Create an instance of TiffOptions with CCITTFAX3 compression
@@ -58,7 +58,7 @@ public class AddDifferentImagesasSeparateFramesinaMultiPageTIFF {
 		}
 		// Save the changes to TiffImage
 		tiffImage.save();
-		// ExEnd:AddDifferentImagesasSeparateFramesinaMultiPageTIFF
+		//ExEnd:AddDifferentImagesasSeparateFramesinaMultiPageTIFF
 	}
 
 }

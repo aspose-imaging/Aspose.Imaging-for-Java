@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.images;
 
 import com.aspose.imaging.*;
 import com.aspose.imaging.examples.Utils;
+import com.aspose.imaging.fileformats.psd.PsdImage;
 
 public class ForceFontCache
 {

@@ -2,12 +2,17 @@ package com.aspose.imaging.examples.metafile;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
+import com.aspose.imaging.fileformats.svg.SvgResourceKeeperCallback;
 import com.aspose.imaging.imageloadoptions.MetafileLoadOptions;
 import com.aspose.imaging.imageoptions.EmfRasterizationOptions;
 import com.aspose.imaging.imageoptions.SvgOptions;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 
-class SvgImageTester
+class MetaFilesAsSVG
+
 {
       //ExStart:MetaFilesAsSVG
     private static final String ImageFolderName = "Images";
@@ -136,11 +141,7 @@ class SvgCallbackImageTest extends SvgResourceKeeperCallback
      */
     private int fontCounter = 0;
 
-    /**
-     * Initializes a new instance of the {@see SvgTests.SvgCallbackImageTest} class.
-     * @param useEmbeddedImage if set to true [use embedded image].
-     * @param outFolder The out folder.
-     */
+   
     public SvgCallbackImageTest(boolean useEmbeddedImage, String outFolder)
     {
         this.useEmbeddedImage = useEmbeddedImage;
@@ -168,7 +169,7 @@ class SvgCallbackImageTest extends SvgResourceKeeperCallback
     }
 
 
-    @Override
+  
     public String onImageResourceReady(byte[] imageData, int imageType, String suggestedFileName, boolean[] useEmbeddedImage)
     {
         useEmbeddedImage[0] = this.useEmbeddedImage;

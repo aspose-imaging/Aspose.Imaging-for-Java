@@ -17,7 +17,7 @@ public class ConvertEMFtoSVG {
 		try {
 			// Create an instance of EmfRasterizationOptions class and set
 			// different options
-			EmfRasterizationOptions emfRasterizationOptions = new EmfRasterizationOptions();
+			final EmfRasterizationOptions emfRasterizationOptions = new EmfRasterizationOptions();
 			emfRasterizationOptions.setBackgroundColor(Color.getWhite());
 			emfRasterizationOptions.setPageWidth(image.getWidth());
 			emfRasterizationOptions.setPageHeight(image.getHeight());

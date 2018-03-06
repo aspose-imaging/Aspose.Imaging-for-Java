@@ -32,6 +32,8 @@ Image image = Image.load(inputFile);
 try
 {
 TiffOptions options = new TiffOptions(TiffExpectedFormat.TiffDeflateRgba);
+
+
 image.save(outputFileTiff, options);
 }
 finally

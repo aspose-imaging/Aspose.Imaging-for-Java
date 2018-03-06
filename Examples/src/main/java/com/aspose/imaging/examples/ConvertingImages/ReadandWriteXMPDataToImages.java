@@ -8,6 +8,8 @@ import com.aspose.imaging.fileformats.tiff.TiffImage;
 import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
 import com.aspose.imaging.fileformats.tiff.enums.TiffPhotometrics;
 import com.aspose.imaging.imageoptions.TiffOptions;
+import static com.aspose.imaging.internal.b.d.b.in;
+import static com.aspose.imaging.internal.de.c.in;
 import com.aspose.imaging.system.io.MemoryStream;
 import com.aspose.imaging.xmp.XmpHeaderPi;
 import com.aspose.imaging.xmp.XmpMeta;
@@ -17,6 +19,10 @@ import com.aspose.imaging.xmp.XmpTrailerPi;
 import com.aspose.imaging.xmp.schemas.dublincore.DublinCorePackage;
 import com.aspose.imaging.xmp.schemas.photoshop.ColorMode;
 import com.aspose.imaging.xmp.schemas.photoshop.PhotoshopPackage;
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
+import static java.io.FileDescriptor.in;
+import static java.lang.System.in;
+import static javax.management.Query.in;
 
 public class ReadandWriteXMPDataToImages {
 	public static void main(String... args) throws Exception {
@@ -26,14 +32,15 @@ public class ReadandWriteXMPDataToImages {
 		Rectangle rect = new Rectangle(0, 0, 100, 200);
 
 		TiffOptions tiffOptions = new TiffOptions(TiffExpectedFormat.TiffJpegRgb);
-		tiffOptions.Photometric = TiffPhotometrics.MinIsBlack;
-		tiffOptions.BitsPerSample = new ushort(8);
+		tiffOptions.setPhotometric(TiffPhotometrics.MinIsBlack);
+                    
+	
 
 		// create the brand new image just for sample purposes
 		TiffImage image = new TiffImage(new TiffFrame(tiffOptions, rect.getWidth(), rect.getHeight()));
 		    // create an instance of XMP-Header
-		    XmpHeaderPi xmpHeader = new XmpHeaderPi(Guid.NewGuid().ToString());
-
+		    XmpHeaderPi xmpHeader = new XmpHeaderPi();
+                   xmpHeader.setGuid(dataDir);
 		    // create an instance of Xmp-TrailerPi 
 		    XmpTrailerPi xmpTrailer = new XmpTrailerPi(true);
 
@@ -50,8 +57,7 @@ public class ReadandWriteXMPDataToImages {
 		    photoshopPackage.setCity("London");
 		    photoshopPackage.setCountry("England");
 		    photoshopPackage.setColorMode(ColorMode.Rgb);
-		    photoshopPackage.SetCreatedDate(DateTime.UtcNow);
-
+	
 		    // add photoshop package into XMP metadata
 		    xmpData.addPackage(photoshopPackage);
 
@@ -66,22 +72,13 @@ public class ReadandWriteXMPDataToImages {
 
 		    MemoryStream ms = new MemoryStream();
 		        // update XMP metadata into image
-		        image.XmpData = xmpData;
-
+		        image.setXmpData(xmpData);
+                            
 		        // Save image on the disk or in memory stream
-		        image.save(ms);
+		        image.save();
 
-		        ms.Seek(0, System.IO.SeekOrigin.Begin);
-
-		        // Load the image from memory stream or from disk to read/get the metadata
-		        TiffImage img = (TiffImage)Image.load(ms);
-		       
-		            // getting the XMP metadata
-		            XmpPacketWrapper imgXmpData = img.getXmpData();
-		            foreach (XmpPackage package in imgXmpData.Packages)
-		            {
-		                // use package data ...
-		            }
+		     
+		 
 }
 
 }

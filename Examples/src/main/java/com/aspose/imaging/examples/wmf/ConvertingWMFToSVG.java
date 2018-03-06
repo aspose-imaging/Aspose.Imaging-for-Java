@@ -4,7 +4,7 @@ import com.aspose.imaging.examples.Utils;
 
 public class ConvertingWMFToSVG {
 	public static void main(String... args) throws Exception {
-		// ExStart:ConvertingWMFToSVG
+		//ExStart:ConvertingWMFToSVG
 		String dataDir = Utils.getSharedDataDir(ConvertingWMFToSVG.class) + "wmf/";
 		// Path & Name of input file
 		String inputFileName = dataDir + "sample.wmf";
@@ -23,7 +23,7 @@ public class ConvertingWMFToSVG {
 			// Call save method to convert WMF to SVG format by passing output
 			// file name and SvgOptions class instance.
 			image.save(outputFileName,
-					new com.aspose.imaging.imageoptions.SvgOptions() {
+                                new com.aspose.imaging.imageoptions.SvgOptions() {
 						{
 							setVectorRasterizationOptions(options);
 						}
@@ -31,6 +31,6 @@ public class ConvertingWMFToSVG {
 		} finally {
 			image.dispose();
 		}
-		// ExEnd:ConvertingWMFToSVG
+		//ExEnd:ConvertingWMFToSVG
 	}
 }

@@ -1,13 +1,13 @@
 package com.aspose.imaging.examples.ConvertingImages;
 
-import com.aspose.imaging.Image;
+import java.awt.Image;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.tiff.TiffFrame;
 import com.aspose.imaging.fileformats.tiff.TiffImage;
 
 public class AligHorizontalAndVeticalResolutions {
 	public static void main(String... args) throws Exception {
-		// ExStart:AligHorizontalAndVeticalResolutions
+		//ExStart:AligHorizontalAndVeticalResolutions
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(AligHorizontalAndVeticalResolutions.class) + "ConvertingImages/";
 		TiffImage image = (TiffImage) Image.load(dataDir + "sample.tiff");
@@ -24,7 +24,7 @@ public class AligHorizontalAndVeticalResolutions {
 			System.out.println("Horizontal and vertical resolutions are equal:"
 					+ ((int) frame.getVerticalResolution() == (int) frame.getHorizontalResolution()));
 		}
-		// ExEnd:AligHorizontalAndVeticalResolutions
+		//ExEnd:AligHorizontalAndVeticalResolutions
 	}
 
 }

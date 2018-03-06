@@ -10,7 +10,7 @@ import com.aspose.imaging.fileformats.png.PngImage;
 
 public class SpecifyTransparency {
 	public static void main(String... args) throws Exception {
-		// ExStart:SpecifyTransparency
+		//ExStart:SpecifyTransparency
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(SpecifyTransparency.class) + "ManipulatingPNGImages/";
 
@@ -40,7 +40,7 @@ public class SpecifyTransparency {
 
 		// Save the result on disc
 		png.save(dataDir + "SpecifyTransparency_out.jpg");
-		// ExEnd:SpecifyTransparency
+		//ExEnd:SpecifyTransparency
 	}
 
 }

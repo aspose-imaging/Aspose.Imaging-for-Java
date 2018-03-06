@@ -7,7 +7,7 @@ import com.aspose.imaging.fileformats.jpeg.JpegImage;
 
 public class ReadingEXIFData {
 	public static void main(String... args) throws Exception {
-		// ExStart:ReadingEXIFData
+		//ExStart:ReadingEXIFData
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ReadingEXIFData.class) + "ManipulatingJPEGImages/";
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
@@ -40,7 +40,7 @@ public class ReadingEXIFData {
 			System.out.println("Exif Sharpness: " + exif.getSharpness());
 			System.out.println("Exif MeteringMode: " + exif.getMeteringMode());
 		}
-		// ExEnd:ReadingEXIFData
+		//ExEnd:ReadingEXIFData
 	}
 
 }

@@ -9,7 +9,7 @@ public class SyncRootProperty
 {
 	public static void main(String... args) throws Exception 
 {
-		// ExStart:ExportImagesInMultiThreadedEnvironment
+		//ExStart:ExportImagesInMultiThreadedEnvironment
 
 		// create new synchronized two-way stream
         com.aspose.imaging.StreamContainer streamContainer = new com.aspose.imaging.StreamContainer(new java.io.ByteArrayInputStream(new byte[0]));
@@ -27,7 +27,7 @@ public class SyncRootProperty
                 streamContainer.dispose();
         }
 
-		// ExEnd:ExportImagesInMultiThreadedEnvironment
+		//ExEnd:ExportImagesInMultiThreadedEnvironment
 	}
 
 }

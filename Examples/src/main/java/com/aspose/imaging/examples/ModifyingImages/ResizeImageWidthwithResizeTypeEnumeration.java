@@ -6,7 +6,7 @@ import com.aspose.imaging.examples.Utils;
 
 public class ResizeImageWidthwithResizeTypeEnumeration {
 	public static void main(String... args) throws Exception {
-		// ExStart:ResizeImageWidthwithResizeTypeEnumeration
+		//ExStart:ResizeImageWidthwithResizeTypeEnumeration
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ResizeImageWidthwithResizeTypeEnumeration.class) + "ModifyingImages/";
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
@@ -24,6 +24,6 @@ public class ResizeImageWidthwithResizeTypeEnumeration {
 		image.resizeHeightProportionally(newHeight, ResizeType.NearestNeighbourResample);
 		// saving result
 		image.save(dataDir + "ResizeImageWithResizeTypeEnumeration_out.png");
-		// ExEnd:ResizeImageWidthwithResizeTypeEnumeration
+		//ExEnd:ResizeImageWidthwithResizeTypeEnumeration
 	}
 }

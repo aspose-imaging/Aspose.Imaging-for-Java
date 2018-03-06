@@ -4,7 +4,7 @@ import com.aspose.imaging.examples.Utils;
 
 public class ApplyFilterMethod {
 	public static void main(String... args) throws Exception {
-		// ExStart:ApplyFilterMethod
+		//ExStart:ApplyFilterMethod
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ApplyFilterMethod.class) + "ManipulatingPNGImages/";
 
@@ -19,7 +19,7 @@ public class ApplyFilterMethod {
 
 		// Save changes to the disc
 		png.save(dataDir + "ApplyFilterMethod_out.jpg", options);
-		// ExEnd:ApplyFilterMethod
+		//ExEnd:ApplyFilterMethod
 	}
 
 }

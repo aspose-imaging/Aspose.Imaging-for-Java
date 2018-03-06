@@ -9,8 +9,7 @@ public class SimpleResizing {
 		String inputFile = dataDir + "image.dcm";
 		String outputFile = dataDir + "SimpleResizing_out.bmp";
 
-		com.aspose.imaging.fileformats.dicom.DicomImage image = new com.aspose.imaging.fileformats.dicom.DicomImage(
-				inputFile);
+com.aspose.imaging.fileformats.dicom.DicomImage image = new com.aspose.imaging.fileformats.dicom.DicomImage(inputFile);
 
 		image.resize(200, 200);
 		image.save(outputFile, new com.aspose.imaging.imageoptions.BmpOptions());
