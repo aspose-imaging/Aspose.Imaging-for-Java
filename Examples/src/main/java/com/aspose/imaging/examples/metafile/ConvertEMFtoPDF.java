@@ -6,7 +6,8 @@ import com.aspose.imaging.imageoptions.PdfOptions;
 public class ConvertEMFtoPDF {
 	public static void main(String... args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(ConvertEMFtoPDF.class) + "metafile/";
-		String[] filePaths = new String[] { dataDir + "FilledRectangleRotateMode_c.emf", dataDir + "image5.emf",
+                //ExStart:ConvertEMFtoPDF
+                String[] filePaths = new String[] { dataDir + "FilledRectangleRotateMode_c.emf", dataDir + "image5.emf",
 				dataDir + "LinearGradientBrushCircuitMode.emf", dataDir + "Pict.emf", dataDir + "Picture1.emf",
 				dataDir + "test.emf", dataDir + "wrong-font-size.emf" };
 
@@ -41,6 +42,7 @@ com.aspose.imaging.fileformats.emf.EmfImage image = (com.aspose.imaging.fileform
 				image.dispose();
 			}
 		}
-	}
+                //ExEnd:ConvertEMFtoPDF
+        }
 
 }

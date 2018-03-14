@@ -10,7 +10,8 @@ public class CropbyRectangle {
 	public static void main(String... args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(CropbyRectangle.class) + "metafile/";
 		// Load an EMF file in an instance of MetafileImage
-		MetafileImage metaImage = (MetafileImage) Image.load(dataDir + "Picture1.emf");
+                //ExStart:CropbyRectangle
+                MetafileImage metaImage = (MetafileImage) Image.load(dataDir + "Picture1.emf");
 
 		// Create an instance of Rectangle class with desired size
 		Rectangle rectangle = new Rectangle(10, 10, 100, 100);
@@ -21,5 +22,5 @@ public class CropbyRectangle {
 		// Save the result in PNG format
 		metaImage.save(dataDir + "CropbyRectangle_out.png", new PngOptions());
 	}
-
+        //ExEnd:CropbyRectangle
 }

@@ -6,7 +6,8 @@ public class ImportanImageToPSDLayer {
 	public static void main(String... args) throws Exception {
 		// Declare variables to store file paths for input and output.
 		String dataDir = Utils.getSharedDataDir(ImportanImageToPSDLayer.class) + "Photoshop/";
-		String sourceFileName = dataDir + "samplePsd.psd";
+                //ExStart:ImportanImageToPSDLayer
+                String sourceFileName = dataDir + "samplePsd.psd";
 		String outputFileName = dataDir + "ImportanImageToPSDLayer_out.psd";
 
 		// Load a PSD file as an image and caste it into PsdImage
@@ -28,5 +29,5 @@ public class ImportanImageToPSDLayer {
 		// Save the results to output path.
 		image.save(outputFileName, new com.aspose.imaging.imageoptions.PsdOptions());
 	}
-
+        //ExEnd:ImportanImageToPSDLayer
 }

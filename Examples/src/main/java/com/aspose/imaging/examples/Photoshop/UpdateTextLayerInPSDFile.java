@@ -7,7 +7,7 @@ public class UpdateTextLayerInPSDFile {
 		String dataDir = Utils.getSharedDataDir(UpdateTextLayerInPSDFile.class) + "Photoshop/";
 		String sourceFileName = dataDir + "samplePsd.psd";
 		String outputFile = dataDir + "UpdateTextLayerInPSDFile.psd";
-
+                //ExStart:UpdateTextLayerInPSDFile
 		com.aspose.imaging.Image image = com.aspose.imaging.Image.load(sourceFileName);
 		try {
 			com.aspose.imaging.fileformats.psd.PsdImage psdImage = (com.aspose.imaging.fileformats.psd.PsdImage) image;
@@ -26,5 +26,5 @@ public class UpdateTextLayerInPSDFile {
 			image.dispose();
 		}
 	}
-
+        //ExEnd:UpdateTextLayerInPSDFile
 }

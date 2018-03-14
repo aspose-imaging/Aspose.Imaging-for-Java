@@ -9,7 +9,7 @@ public class DrawingArc
     {
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir(DrawingArc.class) + "shapes/";
-
+       //ExStart:DrawingArc
         // Creates an instance of BmpOptions and set its various properties
         com.aspose.imaging.imageoptions.BmpOptions bmpCreateOptions = new com.aspose.imaging.imageoptions.BmpOptions();
         bmpCreateOptions.setBitsPerPixel(32);
@@ -42,6 +42,8 @@ public class DrawingArc
         // Display Status.
         System.out.println("Arc has been drawn in image successfully!");
     }
+
+    //ExEnd:DrawingArc
 }
 
 

@@ -14,7 +14,7 @@ public class ConvertDjvuPagesToGif {
     public static void main(String[] args) throws Exception {
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir(ConvertDjvuPagesToGif.class) + "djvu/";
-
+        //ExStart:ConvertDjvuPagesToGif 
         //Load a DjVu image
         DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");
 
@@ -40,5 +40,6 @@ public class ConvertDjvuPagesToGif {
         image.save(dataDir + "ConvertDjvuPagesToGif_out.gif", exportOptions);
 
         System.out.println("File conveted");
+        //ExEnd:ConvertDjvuPagesToGif 
     }
 }

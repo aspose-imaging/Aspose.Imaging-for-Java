@@ -6,7 +6,8 @@ import com.aspose.imaging.imageoptions.JpegOptions;
 public class MergPSDlayers {
 	public static void main(String... args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(MergPSDlayers.class) + "Photoshop/";
-		String sourceFileName = dataDir + "samplePsd.psd";
+                //ExStart:MergPSDlayers
+                String sourceFileName = dataDir + "samplePsd.psd";
 
 		// Load an existing PSD file as image
 		com.aspose.imaging.Image image = com.aspose.imaging.Image.load(sourceFileName);
@@ -24,5 +25,5 @@ public class MergPSDlayers {
 		// save it as jpg image.
 		psdImage.save(dataDir + "MergPSDlayers_out.jpg", jpgOptions);
 	}
-
+        //ExEnd:MergPSDlayers
 }

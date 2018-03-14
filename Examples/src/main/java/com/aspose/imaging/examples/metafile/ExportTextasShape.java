@@ -10,7 +10,7 @@ import com.aspose.imaging.imageoptions.SvgOptions;
 public class ExportTextasShape {
 	public static void main(String... args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(ExportTextasShape.class) + "metafile/";
-
+                //ExStart:ExportTextasShape
 		Image image = Image.load(dataDir + "picture1.emf", new MetafileLoadOptions(true));
 		try {
 			final EmfRasterizationOptions emfRasterizationOptions = new EmfRasterizationOptions();
@@ -32,5 +32,5 @@ public class ExportTextasShape {
 		} finally {
 			image.dispose();
 		}
-	}
+	}        //ExEnd:ExportTextasShape
 }

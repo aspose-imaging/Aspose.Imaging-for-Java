@@ -14,7 +14,8 @@ import com.aspose.imaging.sources.FileCreateSource;
 
 public class CreatIndexedPSDFiles {
 	public static void main(String... args) throws Exception {
-		String dataDir = Utils.getSharedDataDir(CreatIndexedPSDFiles.class) + "Photoshop/";
+            //ExStart:CreatIndexedPSDFiles
+                String dataDir = Utils.getSharedDataDir(CreatIndexedPSDFiles.class) + "Photoshop/";
 		// Create an instance of PsdOptions and set it's properties
 		PsdOptions createOptions = new PsdOptions();
 		// Set source
@@ -37,6 +38,7 @@ public class CreatIndexedPSDFiles {
 		graphics.clear(Color.getWhite());
 		graphics.drawEllipse(new Pen(Color.getRed(), 6), new Rectangle(0, 0, 400, 400));
 		psd.save();
-	}
+                //ExEnd:CreatIndexedPSDFiles
+        }
 
 }

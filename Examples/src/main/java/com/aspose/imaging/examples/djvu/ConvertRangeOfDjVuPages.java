@@ -12,7 +12,7 @@ public class ConvertRangeOfDjVuPages {
 		//ExStart:ConvertRangeOfDjVuPages
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ConvertRangeOfDjVuPages.class) + "djvu/";
-
+                //ExStart:ConvertRangeOfDjVuPages
 		// Load a DjVu image
 		DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");
 		// Create an instance of BmpOptions
@@ -31,5 +31,5 @@ public class ConvertRangeOfDjVuPages {
 		}
 		//ExEnd:ConvertRangeOfDjVuPages
 	}
-
+        //ExEnd:ConvertRangeOfDjVuPages
 }

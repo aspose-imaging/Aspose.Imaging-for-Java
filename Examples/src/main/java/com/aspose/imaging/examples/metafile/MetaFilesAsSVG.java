@@ -21,7 +21,7 @@ class MetaFilesAsSVG
     private static String OutFolder = SourceFolder + OutFolderName;
     private static String ImageFolder = OutFolder + "\\" + ImageFolderName;
 
-    public void saveWithEmbeddedImages()
+    public void saveWithEmbeddedImages() throws Exception
     {
         String[] files = new String[]
                 {
@@ -34,7 +34,7 @@ class MetaFilesAsSVG
         }
     }
 
-    public void saveWithExportImages()
+    public void saveWithExportImages() throws Exception
     {
         String[] files = new String[]
                 {
@@ -58,7 +58,7 @@ class MetaFilesAsSVG
         }
     }
 
-    private void save(final boolean useEmbedded, String fileName, String[] expectedImages)
+    private void save(final boolean useEmbedded, String fileName, String[] expectedImages) throws Exception
     {
         File f = new File(OutFolder);
         if (!f.exists())
@@ -111,12 +111,12 @@ class MetaFilesAsSVG
                 String file = files[i];
                 if (file == null || file.isEmpty())
                 {
-                    throw new TestException(String.format("Expected file name: %s, current is empty", expectedImages[i]));
+                    throw new Exception(String.format("Expected file name: %s, current is empty", expectedImages[i]));
                 }
 
                 if (!file.equalsIgnoreCase(expectedImages[i]))
                 {
-                    throw new TestException(String.format("Expected file name: '%s', current: '%s'", expectedImages[i], file));
+                    throw new Exception(String.format("Expected file name: '%s', current: '%s'", expectedImages[i], file));
                 }
             }
         }

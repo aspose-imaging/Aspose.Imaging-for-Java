@@ -9,7 +9,7 @@ public class DrawingusingGraphics
     {
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir(DrawingusingGraphics.class) + "images/";
-        
+        //ExStart:DrawingusingGraphics
         //Create an instance of BmpCreateOptions and set its various properties
         com.aspose.imaging.imageoptions.BmpOptions createOptions = new com.aspose.imaging.imageoptions.BmpOptions();
         createOptions.setBitsPerPixel(24);
@@ -36,5 +36,6 @@ public class DrawingusingGraphics
         
         //Print message
         System.out.println("Image drawn successfully. Check output file.");
+        //ExEnd:DrawingusingGraphics
     }
 }

@@ -8,7 +8,7 @@ public class CreatingImageUsingStream
     {
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir(CreatingImageUsingStream.class) + "files/";
-
+        //ExStart:CreatingImageUsingStream
         //Creates an instance of BmpOptions and set its various properties
         com.aspose.imaging.imageoptions.BmpOptions createOptions = new com.aspose.imaging.imageoptions.BmpOptions();
 
@@ -25,7 +25,7 @@ public class CreatingImageUsingStream
 
         // Display Status.
         System.out.println("Image created successfully!");
-        
+        //ExEnd:CreatingImageUsingStream
     }
 }
 

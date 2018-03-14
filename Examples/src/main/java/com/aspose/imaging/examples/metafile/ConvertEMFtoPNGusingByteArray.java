@@ -13,7 +13,8 @@ public class ConvertEMFtoPNGusingByteArray {
 	public static void main(String... args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(ConvertEMFtoPNGusingByteArray.class) + "metafile/";
 		// Read all bytes from an EMF file
-		byte[] bytes = Files.readAllBytes(Paths.get(dataDir + "picture1.emf"));
+                //ExStart:ConvertEMFtoPNGusingByteArray
+                byte[] bytes = Files.readAllBytes(Paths.get(dataDir + "picture1.emf"));
 
 		// Load array of bytes into an instance of ByteArrayInputStream
 		ByteArrayInputStream inputStream = new ByteArrayInputStream(bytes);
@@ -33,5 +34,5 @@ public class ConvertEMFtoPNGusingByteArray {
 		// Convert the data in ByteArrayOutputStream to an array of bytes
 		byte[] outputBytes = outputStream.toByteArray();
 	}
-
+        //ExEnd:ConvertEMFtoPNGusingByteArray
 }

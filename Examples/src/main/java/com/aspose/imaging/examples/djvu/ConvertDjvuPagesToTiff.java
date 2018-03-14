@@ -13,7 +13,7 @@ public class ConvertDjvuPagesToTiff {
     public static void main(String[] args) throws Exception {
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir(ConvertDjvuPagesToTiff.class) + "djvu/";
-
+        //ExStart:ConvertDjvuPagesToTiff 
         //Load a DjVu image
         DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");
 
@@ -32,4 +32,5 @@ public class ConvertDjvuPagesToTiff {
         // Display Status.
         System.out.println("File conveted");
     }
+    //ExEnd:ConvertDjvuPagesToTiff 
 }

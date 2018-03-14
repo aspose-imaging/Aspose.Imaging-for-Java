@@ -7,7 +7,7 @@ public class ConvertEmftoRasterimages {
 	public static void main(String... args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(ConvertEmftoRasterimages.class) + "metafile/";
 		String filePath = dataDir + "Picture1.emf";
-
+                //ExStart:ConvertEmftoRasterimages 
 		// Create EmfRasterizationOption class instance and set properties
 		com.aspose.imaging.imageoptions.EmfRasterizationOptions emfRasterizationOptions = new com.aspose.imaging.imageoptions.EmfRasterizationOptions();
 
@@ -69,5 +69,5 @@ public class ConvertEmftoRasterimages {
 
 		image.save(filePath + "_out.webp", objWebPo);
 	}
-
+        //ExEnd:ConvertEmftoRasterimages 
 }

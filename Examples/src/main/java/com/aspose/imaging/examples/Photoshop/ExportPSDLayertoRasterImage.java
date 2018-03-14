@@ -6,7 +6,7 @@ public class ExportPSDLayertoRasterImage {
 	public static void main(String... args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(ExportPSDLayertoRasterImage.class) + "Photoshop/";
 		String sourceFileName = dataDir + "samplePsd.psd";
-
+                //ExStart:ExportPSDLayertoRasterImage
 		// Create an instance of Image class and load PSD file as image.
 		com.aspose.imaging.Image objImage = com.aspose.imaging.Image.load(sourceFileName);
 
@@ -23,5 +23,5 @@ public class ExportPSDLayertoRasterImage {
 			psdImage.getLayers()[i].save("ExportPSDLayertoRasterImage_out" + i + 1 + ".png", pngOptions);
 		}
 	}
-
+               //ExEnd:ExportPSDLayertoRasterImage
 }

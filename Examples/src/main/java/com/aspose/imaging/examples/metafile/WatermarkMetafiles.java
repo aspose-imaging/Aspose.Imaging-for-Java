@@ -10,7 +10,8 @@ public class WatermarkMetafiles {
 	public static void main(String... args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(WatermarkMetafiles.class) + "metafile/";
 		// Load an EMF image in an instance of EmfMetafileImage
-		EmfMetafileImage image = (EmfMetafileImage) Image.load(dataDir + "Sample1.emf");
+               //ExStart:WatermarkMetafiles
+                EmfMetafileImage image = (EmfMetafileImage) Image.load(dataDir + "Sample1.emf");
 		try {
 			// Create an instance of Graphics2D by calling
 			// EmfMetafileImage.getWatermarkDrawer
@@ -39,5 +40,5 @@ public class WatermarkMetafiles {
 			image.dispose();
 		}
 	}
-
+        //ExEnd:WatermarkMetafiles
 }

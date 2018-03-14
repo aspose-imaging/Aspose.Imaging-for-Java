@@ -8,7 +8,7 @@ import com.aspose.imaging.imageoptions.PngOptions;
 public class ConvertSVGtoRasterFormat {
 	public static void main(String... args) throws Exception {
 	String dataDir = Utils.getSharedDataDir(ConvertSVGtoRasterFormat.class) + "ConvertingImages/";
-	
+        //ExStart:ConvertSVGtoRasterFormat
 	// Load the image
 	SvgImage image = (SvgImage)Image.load(dataDir + "aspose-logo.Svg");
 	
@@ -18,4 +18,5 @@ public class ConvertSVGtoRasterFormat {
 		// Save the results to disk
 		image.save(dataDir + "ConvertingSVGToRasterImages_out.png", pngOptions);
 	}
+        //ExEnd:ConvertSVGtoRasterFormat
 }

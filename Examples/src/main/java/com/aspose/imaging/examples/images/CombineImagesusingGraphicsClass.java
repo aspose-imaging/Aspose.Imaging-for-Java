@@ -6,7 +6,9 @@ public class CombineImagesusingGraphicsClass {
 	public static void main(String[] args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(CombineImagesusingGraphicsClass.class) + "images/";
 		// Create an instance of JpegOptions and set its various properties
-		com.aspose.imaging.imageoptions.JpegOptions ImageOptions = new com.aspose.imaging.imageoptions.JpegOptions();
+		
+                //ExStart:CombineImagesusingGraphicsClass 
+                com.aspose.imaging.imageoptions.JpegOptions ImageOptions = new com.aspose.imaging.imageoptions.JpegOptions();
 
 		// Create an instance of FileCreateSource and assign it to Source
 		// property
@@ -27,6 +29,8 @@ public class CombineImagesusingGraphicsClass {
 
 		// Call save method to save the resultant image.
 		image.save();
-	}
+	
+                //ExEnd:CombineImagesusingGraphicsClass 
+        }
 
 }

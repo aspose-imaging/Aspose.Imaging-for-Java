@@ -8,7 +8,7 @@ public class CreatingAnImageBySettingPath
     {
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir(CreatingAnImageBySettingPath.class) + "files/";
-
+        //ExStart::CreatingAnImageBySettingPath
         //Creates an instance of BmpOptions and set its various properties
         com.aspose.imaging.imageoptions.BmpOptions createOptions = new com.aspose.imaging.imageoptions.BmpOptions();
 
@@ -25,6 +25,7 @@ public class CreatingAnImageBySettingPath
 
         // Display Status.
         System.out.println("Image created successfully!");
+        //ExEnd:CreatingAnImageBySettingPath
     }
 }
 

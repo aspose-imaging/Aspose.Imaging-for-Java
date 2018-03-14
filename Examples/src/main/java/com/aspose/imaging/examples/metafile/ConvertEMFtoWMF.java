@@ -7,7 +7,8 @@ public class ConvertEMFtoWMF
 {
 	public static void main(String... args) throws Exception 
         {
-		// List of existing EMF images. 
+            //ExStart:ConvertEMFtoWMF 
+         // List of existing EMF images. 
         String path = "";
         String[] files = new String[] { "TestEmfRotatedText.emf", "TestEmfPlusFigures.emf", "TestEmfBezier.emf" };
 
@@ -31,6 +32,6 @@ public class ConvertEMFtoWMF
             image.dispose();
 	}
 	}
-
+        //ExEnd:ConvertEMFtoWMF 
         }
 }

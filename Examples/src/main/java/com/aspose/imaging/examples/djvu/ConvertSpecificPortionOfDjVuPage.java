@@ -10,10 +10,10 @@ import com.aspose.imaging.imageoptions.PngOptions;
 
 public class ConvertSpecificPortionOfDjVuPage {
 	public static void main(String... args) throws Exception {
-		//ExStart:ConvertSpecificPortionOfDjVuPage
+		
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ConvertSpecificPortionOfDjVuPage.class) + "djvu/";
-
+                //ExStart:ConvertSpecificPortionOfDjVuPage
 		// Load a DjVu image
 		DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");
 		// Create an instance of PngOptions
@@ -32,5 +32,5 @@ public class ConvertSpecificPortionOfDjVuPage {
 		image.save(dataDir + "ConvertSpecificPortionOfDjVuPage_out.djvu", exportOptions);
 		//ExEnd:ConvertSpecificPortionOfDjVuPage
 	}
-
+              
 }

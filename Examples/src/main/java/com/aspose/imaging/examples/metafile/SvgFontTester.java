@@ -15,7 +15,7 @@ import com.aspose.imaging.system.io.FileMode;
 import com.aspose.imaging.system.io.FileStream;
 import java.io.File;
 
- class SvgFontTester
+public class SvgFontTester
 {
     //ExStart:SvgFontTester
     private static final String FontFolderName = "fonts";

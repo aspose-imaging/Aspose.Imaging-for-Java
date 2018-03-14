@@ -9,7 +9,8 @@ public class AddRasterImagestoEMFImages {
 	public static void main(String... args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(AddRasterImagestoEMFImages.class) + "metafile/";
 		// Load the image to be inserted
-		Image image = Image.load(dataDir + "aspose-logo.jpg");
+                //ExStart:AddRasterImagestoEMFImages 
+                Image image = Image.load(dataDir + "aspose-logo.jpg");
 		try {
 			// Store the DPI value
 			float dpi = 200f;
@@ -32,5 +33,5 @@ public class AddRasterImagestoEMFImages {
 			image.dispose();
 		}
 	}
-
+        //ExEnd:AddRasterImagestoEMFImages 
 }

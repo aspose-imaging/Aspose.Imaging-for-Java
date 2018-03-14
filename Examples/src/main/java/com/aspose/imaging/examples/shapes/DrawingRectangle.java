@@ -9,7 +9,7 @@ public class DrawingRectangle
     {
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir(DrawingRectangle.class) + "shapes/";
-        
+        //ExStart:DrawingRectangle
         // Creates an instance of BmpOptions and set its various properties
         com.aspose.imaging.imageoptions.BmpOptions bmpCreateOptions = new com.aspose.imaging.imageoptions.BmpOptions();
         bmpCreateOptions.setBitsPerPixel(32);
@@ -37,5 +37,6 @@ public class DrawingRectangle
       
         //Print message
         System.out.println("Rectangle created successfully. Check output file.");
+        //ExEnd:DrawingRectangle
     }
 }

@@ -9,7 +9,6 @@ import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
 import com.aspose.imaging.fileformats.tiff.enums.TiffPhotometrics;
 import com.aspose.imaging.imageoptions.TiffOptions;
 import static com.aspose.imaging.internal.b.d.b.in;
-import static com.aspose.imaging.internal.de.c.in;
 import com.aspose.imaging.system.io.MemoryStream;
 import com.aspose.imaging.xmp.XmpHeaderPi;
 import com.aspose.imaging.xmp.XmpMeta;
@@ -27,7 +26,7 @@ import static javax.management.Query.in;
 public class ReadandWriteXMPDataToImages {
 	public static void main(String... args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(ReadandWriteXMPDataToImages.class) + "ConvertingImages/";
-		
+                //ExStart:ReadandWriteXMPDataToImages 
 		// Specify the size of image by defining a Rectangle 
 		Rectangle rect = new Rectangle(0, 0, 100, 200);
 
@@ -77,7 +76,7 @@ public class ReadandWriteXMPDataToImages {
 		        // Save image on the disk or in memory stream
 		        image.save();
 
-		     
+                        //ExEnd:ReadandWriteXMPDataToImages    
 		 
 }
 

@@ -9,7 +9,7 @@ public class GetFontInfo {
 
     public static void main(String... args) throws Exception {
         String dataDir = Utils.getSharedDataDir(GetFontInfo.class) + "metafile/";
-
+        //ExStart:GetFontInfo
         System.out.println("Get list of font names accessible to Aspose.Imaging API");
         for (String f : FontSettings.getAllFonts()) {
             System.out.println("\t" + f);
@@ -25,6 +25,7 @@ public class GetFontInfo {
         for (String f : metafile.getMissedFonts()) {
             System.out.println("\t" + f);
         }
+        //ExEnd:GetFontInfo
     }
 }
 

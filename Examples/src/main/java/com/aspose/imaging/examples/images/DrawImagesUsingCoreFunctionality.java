@@ -9,7 +9,7 @@ public class DrawImagesUsingCoreFunctionality
     {
         // The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(DrawImagesUsingCoreFunctionality.class) + "images/";
-
+                //ExStart:DrawImagesUsingCoreFunctionality
         //Create an instance of BmpCreateOptions and set its various properties
         com.aspose.imaging.imageoptions.BmpOptions createOptions = new com.aspose.imaging.imageoptions.BmpOptions();
         createOptions.setBitsPerPixel(24);
@@ -35,6 +35,7 @@ public class DrawImagesUsingCoreFunctionality
 
         // Display Status.
         System.out.println("Processing completed successfully!");
+        //ExEnd:DrawImagesUsingCoreFunctionality
     }
 }
 

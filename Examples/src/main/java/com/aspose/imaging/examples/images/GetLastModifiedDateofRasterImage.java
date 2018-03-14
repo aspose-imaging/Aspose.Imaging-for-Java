@@ -7,7 +7,8 @@ public class GetLastModifiedDateofRasterImage {
 	public static void main(String... args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(GetLastModifiedDateofRasterImage.class) + "images/";
 		// Declare variable to store file path for input image
-		String path = dataDir + "aspose-logo.jpg";
+                //ExStart:GetLastModifiedDateofRasterImage
+                String path = dataDir + "aspose-logo.jpg";
 
 		com.aspose.imaging.RasterImage image = (com.aspose.imaging.RasterImage) Image.load(path);
 		try {
@@ -22,6 +23,6 @@ public class GetLastModifiedDateofRasterImage {
 		} finally {
 			image.dispose();
 		}
-
+                //ExEnd:GetLastModifiedDateofRasterImage
 	}
 }

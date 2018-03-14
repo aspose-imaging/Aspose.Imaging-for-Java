@@ -23,7 +23,8 @@ public class CreateEMFMetaFileImage {
 	}
 	public void penAndMixedArcTests()
 	{
-	// EmfRecorderGraphics2D class provides you the frame or canvas to draw shapes on it.
+            //ExStart:CreateEMFMetaFileImage
+           // EmfRecorderGraphics2D class provides you the frame or canvas to draw shapes on it.
 	// Create an instance of EmfRecorderGraphics2D class. The constructor takes in 3 parameters:
 	// 1. Instance of Imaging Rectangle class
 	// 2. Instance of Imaging Size class
@@ -117,3 +118,4 @@ public class CreateEMFMetaFileImage {
 	        image.save(outPath, options);
 	    }
 }
+            //ExEnd:CreateEMFMetaFileImage

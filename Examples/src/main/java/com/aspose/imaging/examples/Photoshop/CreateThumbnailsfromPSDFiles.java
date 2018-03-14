@@ -14,7 +14,8 @@ public class CreateThumbnailsfromPSDFiles {
 		String sourceFileName = dataDir + "samplePsd.psd";
 		String outputFileName = dataDir + "result.psd";
 		// Load a PSD in an instance of PsdImage
-		PsdImage image = (PsdImage) Image.load(sourceFileName);
+                //ExStart:CreateThumbnailsfromPSDFiles
+                PsdImage image = (PsdImage) Image.load(sourceFileName);
 
 		// Iterate over the PSD resources
 		for (ResourceBlock resource : image.getImageResources()) {
@@ -32,7 +33,8 @@ public class CreateThumbnailsfromPSDFiles {
 					thumnailImage.save(outputFileName);
 				}
 			}
-		}
+                        //ExEnd:CreateThumbnailsfromPSDFiles
+                }
 	}
 
 }

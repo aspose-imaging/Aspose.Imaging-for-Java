@@ -11,7 +11,7 @@ public class ConvertEMFtoSVG {
 	public static void main(String... args) throws Exception {
 
 		String dataDir = Utils.getSharedDataDir(ConvertEMFtoSVG.class) + "metafile/";
-		
+                //ExStart:ConvertEMFtoSVG
 		// Load an existing EMF file
 		Image image = Image.load(dataDir + "Picture1.emf", new MetafileLoadOptions(true));
 		try {
@@ -32,7 +32,7 @@ public class ConvertEMFtoSVG {
 		} finally {
 			image.dispose();
 		}
-
+                //ExEnd:ConvertEMFtoSVG
 	}
 
 }

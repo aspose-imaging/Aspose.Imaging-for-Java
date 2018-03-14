@@ -10,8 +10,9 @@ public class AligHorizontalAndVeticalResolutions {
 		//ExStart:AligHorizontalAndVeticalResolutions
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(AligHorizontalAndVeticalResolutions.class) + "ConvertingImages/";
-		TiffImage image = (TiffImage) Image.load(dataDir + "sample.tiff");
-		// call the align resolution method
+	
+		TiffImage image = (TiffImage) com.aspose.imaging.Image.load(dataDir + "sample.tif");
+              
 		image.alignResolutions();
 
 		// Save the results to output path.

@@ -11,7 +11,7 @@ public class AddWatermarkToImage
     {
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir(ExportDxfToPdf.class) + "images/";
-
+        //ExStart:AddWatermarkToImage
         //Create an instance of Image and load an existing image.
         Image image= Image.load(dataDir + "sample.bmp");
 
@@ -34,6 +34,8 @@ public class AddWatermarkToImage
 
         // Display Status.
         System.out.println("Watermark added successfully!");
+    
+       //ExEnd:AddWatermarkToImage
     }
 }
 

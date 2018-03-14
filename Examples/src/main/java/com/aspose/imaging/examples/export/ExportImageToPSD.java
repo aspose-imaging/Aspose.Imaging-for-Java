@@ -11,7 +11,7 @@ public class ExportImageToPSD
     {
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir(ExportImageToPSD.class) + "export/";
-
+        //ExStart:ExportImageToPSD
         //Load an existing image
         com.aspose.imaging.Image image = com.aspose.imaging.Image.load(dataDir + "sample.bmp");
 
@@ -32,6 +32,9 @@ public class ExportImageToPSD
         // Display Status.
         System.out.println("Image exported to PSD successfully!");
     }
+
+    //ExEnd:ExportImageToPSD
+
 }
 
 

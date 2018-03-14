@@ -10,7 +10,7 @@ public class ExportImageToDifferentFormats
     {
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir(ExportImageToDifferentFormats.class) + "export/";
-
+        //ExStart:ExportImageToDifferentFormats
         //Load an existing image (of type Gif) in an instance of Image class
         com.aspose.imaging.Image image = com.aspose.imaging.Image.load(dataDir + "sample.gif");
 
@@ -29,6 +29,9 @@ public class ExportImageToDifferentFormats
         // Display Status.
         System.out.println("Image exported to BMP, JPG, PNG and TIFF formats successfully!");
     }
+
+    //ExEnd:ExportImageToDifferentFormats
+
 }
 
 

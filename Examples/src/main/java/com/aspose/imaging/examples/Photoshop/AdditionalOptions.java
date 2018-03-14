@@ -9,7 +9,7 @@ public class AdditionalOptions {
 		String dataDir = Utils.getSharedDataDir(AdditionalOptions.class) + "Photoshop/";
 		String sourceFileName = dataDir + "samplePsd.psd";
 		String outputFile = dataDir + "AdditionalOptions_out.psd";
-
+                //ExStart:AdditionalOptions
 		// Load an existing PSD file as Image
 		com.aspose.imaging.Image image = com.aspose.imaging.Image.load(sourceFileName);
 		try {
@@ -48,5 +48,7 @@ public class AdditionalOptions {
 		} finally {
 			image.dispose();
 		}
-	}
+                //ExEnd:AdditionalOptions
+        }
+       
 }
