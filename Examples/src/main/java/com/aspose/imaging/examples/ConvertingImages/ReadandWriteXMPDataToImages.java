@@ -8,7 +8,7 @@ import com.aspose.imaging.fileformats.tiff.TiffImage;
 import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
 import com.aspose.imaging.fileformats.tiff.enums.TiffPhotometrics;
 import com.aspose.imaging.imageoptions.TiffOptions;
-import static com.aspose.imaging.internal.b.d.b.in;
+//import static com.aspose.imaging.internal.b.d.b.in;
 import com.aspose.imaging.system.io.MemoryStream;
 import com.aspose.imaging.xmp.XmpHeaderPi;
 import com.aspose.imaging.xmp.XmpMeta;
@@ -19,7 +19,7 @@ import com.aspose.imaging.xmp.schemas.dublincore.DublinCorePackage;
 import com.aspose.imaging.xmp.schemas.photoshop.ColorMode;
 import com.aspose.imaging.xmp.schemas.photoshop.PhotoshopPackage;
 import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
-import static java.io.FileDescriptor.in;
+//import static java.io.FileDescriptor.in;
 import static java.lang.System.in;
 import static javax.management.Query.in;
 

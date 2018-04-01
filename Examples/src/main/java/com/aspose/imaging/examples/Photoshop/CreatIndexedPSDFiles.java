@@ -14,10 +14,11 @@ import com.aspose.imaging.sources.FileCreateSource;
 
 public class CreatIndexedPSDFiles {
 	public static void main(String... args) throws Exception {
-            //ExStart:CreatIndexedPSDFiles
+            
                 String dataDir = Utils.getSharedDataDir(CreatIndexedPSDFiles.class) + "Photoshop/";
 		// Create an instance of PsdOptions and set it's properties
-		PsdOptions createOptions = new PsdOptions();
+            //ExStart:CreatIndexedPSDFiles
+                PsdOptions createOptions = new PsdOptions();
 		// Set source
 		createOptions.setSource(new FileCreateSource(dataDir + "output.psd", false));
 		// Set ColorMode to Indexed

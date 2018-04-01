@@ -11,10 +11,10 @@ import com.aspose.imaging.sources.FileCreateSource;
 
 public class RetrieveThumbnailBitmapInformation {
 	public static void main(String... args) throws Exception {
-		//ExStart:RetrieveThumbnailBitmapInformation
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(RetrieveThumbnailBitmapInformation.class) + "ManipulatingJPEGImages/";
-
+//ExStart:RetrieveThumbnailBitmapInformation
+		
 		// Load the image in an instance of JpegImage
 		JpegImage image = (JpegImage) Image.load(dataDir + "aspose-logo.jpg");
 

@@ -8,7 +8,7 @@ public class ConcatTIFFImages {
 	public static void main(String[] args) throws Exception {
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ConcatTIFFImages.class) + "images/";
-                //ExStart:ConcatTIFFImages 
+                //ExStart:ConcatTIFFImages
 		// Create an instance of TiffImage and load the copied destination image
 		TiffImage image1 = (TiffImage) com.aspose.imaging.Image.load(dataDir + "TestDemo.tif");
 
@@ -26,7 +26,7 @@ public class ConcatTIFFImages {
 
 		// Display Status.
 		System.out.println("Concatenation of TIF files done successfully!");
-                //ExEnd:ConcatTIFFImages 
+                //ExEnd:ConcatTIFFImages
         
         }
 }

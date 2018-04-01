@@ -28,6 +28,7 @@ public class ImportanImageToPSDLayer {
 
 		// Save the results to output path.
 		image.save(outputFileName, new com.aspose.imaging.imageoptions.PsdOptions());
-	}
-        //ExEnd:ImportanImageToPSDLayer
+	//ExEnd:ImportanImageToPSDLayer
+        }
+        
 }

@@ -6,9 +6,9 @@ import com.aspose.imaging.imageoptions.PngOptions;
 
 public class CompressingFiles {
 	public static void main(String... args) throws Exception {
-		//ExStart:CompressingFiles
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(CompressingFiles.class) + "ManipulatingPNGImages/";
+		//ExStart:CompressingFiles
 		// Load an image from file (or stream)
 		Image image = Image.load(dataDir + "aspose_logo.png");
 		// Loop over possible CompressionLevel range

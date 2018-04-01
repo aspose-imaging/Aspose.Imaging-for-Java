@@ -24,6 +24,7 @@ public class ResizeHeightProportionally {
 		
 		image.resizeHeightProportionally(100, ResizeType.AdaptiveResample);
 		image.save(outputFile, new com.aspose.imaging.imageoptions.BmpOptions());
-	}
-        //ExEnd:ResizeHeightProportionally 
+	
+        //ExEnd:ResizeHeightProportionally
+    }
 }

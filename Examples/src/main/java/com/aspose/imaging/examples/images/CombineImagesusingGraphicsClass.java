@@ -7,7 +7,7 @@ public class CombineImagesusingGraphicsClass {
 		String dataDir = Utils.getSharedDataDir(CombineImagesusingGraphicsClass.class) + "images/";
 		// Create an instance of JpegOptions and set its various properties
 		
-                //ExStart:CombineImagesusingGraphicsClass 
+                //ExStart:CombineImagesusingGraphicsClass
                 com.aspose.imaging.imageoptions.JpegOptions ImageOptions = new com.aspose.imaging.imageoptions.JpegOptions();
 
 		// Create an instance of FileCreateSource and assign it to Source

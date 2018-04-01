@@ -7,10 +7,10 @@ import com.aspose.imaging.fileformats.tiff.TiffImage;
 
 public class AligHorizontalAndVeticalResolutions {
 	public static void main(String... args) throws Exception {
-		//ExStart:AligHorizontalAndVeticalResolutions
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(AligHorizontalAndVeticalResolutions.class) + "ConvertingImages/";
-	
+	//ExStart:AligHorizontalAndVeticalResolutions
+		
 		TiffImage image = (TiffImage) com.aspose.imaging.Image.load(dataDir + "sample.tif");
               
 		image.alignResolutions();

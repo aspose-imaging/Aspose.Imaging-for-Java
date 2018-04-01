@@ -11,6 +11,8 @@ public class OpeningImageusingaStream {
 		com.aspose.imaging.Image image = com.aspose.imaging.Image.load(stream);
 
 		// do some image processing
-	}
+	
         //ExEnd:OpeningImageusingaStream
+
+        }
 }

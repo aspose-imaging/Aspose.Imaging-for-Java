@@ -15,11 +15,11 @@ import com.aspose.imaging.sources.FileCreateSource;
 public class ColorTypeAndCompressionType {
 	public static void main(String... args) throws Exception {
 		
-              //ExStart:ColorTypeAndCompressionType
-		// The path to the documents directory.
-		String dataDir = Utils.getSharedDataDir(ColorTypeAndCompressionType.class) + "ManipulatingJPEGImages/";
-                Image original = Image.load(dataDir+"ColorGif.gif");
-         try
+          	// The path to the documents directory.
+        String dataDir = Utils.getSharedDataDir(ColorTypeAndCompressionType.class) + "ManipulatingJPEGImages/";
+      //ExStart:ColorTypeAndCompressionType
+      Image original = Image.load(dataDir+"ColorGif.gif");
+        try
           {
 	     JpegOptions jpegOptions = new JpegOptions()
 	 {{

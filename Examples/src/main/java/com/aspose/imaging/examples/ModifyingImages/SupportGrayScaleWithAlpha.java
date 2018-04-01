@@ -8,11 +8,11 @@ import com.aspose.imaging.imageoptions.PngOptions;
 
 public class SupportGrayScaleWithAlpha {
 	public static void main(String... args) throws Exception {
-		//ExStart:SupportGrayScaleWithAlpha
 		// Create an instance of JpegImage and load an image as of JpegImage
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(SupportGrayScaleWithAlpha.class) + "ModifyingImages/";
-
+//ExStart:SupportGrayScaleWithAlpha
+		
 		String filePath = "ill_bado_gs723.psd";
                 Image image = Image.load(filePath);
                 try

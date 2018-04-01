@@ -8,8 +8,9 @@ public class AdditionalOptions {
 	public static void main(String... args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(AdditionalOptions.class) + "Photoshop/";
 		String sourceFileName = dataDir + "samplePsd.psd";
-		String outputFile = dataDir + "AdditionalOptions_out.psd";
-                //ExStart:AdditionalOptions
+		  //ExStart:AdditionalOptions
+                  String outputFile = dataDir + "AdditionalOptions_out.psd";
+              
 		// Load an existing PSD file as Image
 		com.aspose.imaging.Image image = com.aspose.imaging.Image.load(sourceFileName);
 		try {

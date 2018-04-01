@@ -11,11 +11,11 @@ import com.aspose.imaging.fileformats.psd.resources.ThumbnailResource;
 public class CreateThumbnailsfromPSDFiles {
 	public static void main(String... args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(CreateThumbnailsfromPSDFiles.class) + "Photoshop/";
-		String sourceFileName = dataDir + "samplePsd.psd";
-		String outputFileName = dataDir + "result.psd";
 		// Load a PSD in an instance of PsdImage
                 //ExStart:CreateThumbnailsfromPSDFiles
-                PsdImage image = (PsdImage) Image.load(sourceFileName);
+               String sourceFileName = dataDir + "samplePsd.psd";
+		String outputFileName = dataDir + "result.psd";
+		 PsdImage image = (PsdImage) Image.load(sourceFileName);
 
 		// Iterate over the PSD resources
 		for (ResourceBlock resource : image.getImageResources()) {

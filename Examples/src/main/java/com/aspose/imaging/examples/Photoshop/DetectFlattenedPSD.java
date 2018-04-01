@@ -6,7 +6,7 @@ public class DetectFlattenedPSD {
 	public static void main(String... args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(DetectFlattenedPSD.class) + "Photoshop/";
 		String flattenPath = dataDir + "sample.psd";
-               //ExStart:DetectFlattenedPSD 
+               //ExStart:DetectFlattenedPSD
 		// Create an instance of Image class and load PSD file as image.
 		com.aspose.imaging.Image objImage = com.aspose.imaging.Image.load(flattenPath);
 
@@ -17,6 +17,7 @@ public class DetectFlattenedPSD {
 
 		// Get the true value if PSD is flatten and false in case the PSD is not flatten.
 		System.out.println(psdImage.isFlatten());
-	}
-        //ExEnd:DetectFlattenedPSD 
+        //ExEnd:DetectFlattenedPSD	
+        }
+
 }

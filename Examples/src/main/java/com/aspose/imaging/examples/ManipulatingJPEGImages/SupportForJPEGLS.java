@@ -17,10 +17,10 @@ import java.io.ByteArrayOutputStream;
 
 public class SupportForJPEGLS{
 	public static void main(String... args) throws Exception {
-		//ExStart:SupportForJPEGLS
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(SupportForJPEGLS.class) + "ManipulatingJPEGImages/";
-
+//ExStart:SupportForJPEGLS
+		
 		ByteArrayOutputStream jpegLsStream = new ByteArrayOutputStream();
 
                // Save to CMYK JPEG-LS
@@ -56,7 +56,7 @@ public class SupportForJPEGLS{
            {
 	      image.dispose();
            } 
-           //ExEnd:SupportForJPEG-LSWithCMYK
+           //ExEnd:SupportForJPEGLS
 }
 
 }

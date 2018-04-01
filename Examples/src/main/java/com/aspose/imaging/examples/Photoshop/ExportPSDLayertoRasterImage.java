@@ -22,6 +22,7 @@ public class ExportPSDLayertoRasterImage {
 			// convert and save the layer to PNG file format.
 			psdImage.getLayers()[i].save("ExportPSDLayertoRasterImage_out" + i + 1 + ".png", pngOptions);
 		}
-	}
                //ExEnd:ExportPSDLayertoRasterImage
+        }
+
 }

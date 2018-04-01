@@ -14,7 +14,8 @@ public class OpeningImagefilesfromdisk
         
         //Print message
         System.out.println("Image is loaded successfully.");
-    }
+    
 
     //ExEnd:OpeningImagefilesfromdisk
+    }
 }

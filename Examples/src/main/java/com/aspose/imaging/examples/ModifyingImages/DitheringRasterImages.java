@@ -7,9 +7,9 @@ import com.aspose.imaging.fileformats.jpeg.JpegImage;
 
 public class DitheringRasterImages {
 	public static void main(String... args) throws Exception {
-		//ExStart:DitheringRasterImages
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(DitheringRasterImages.class) + "ModifyingImages/";
+		//ExStart:DitheringRasterImages
 		JpegImage image = (JpegImage) Image.load(dataDir + "aspose-logo.jpg");
 
 		// Perform Floyd Steinberg dithering on the current image

@@ -25,6 +25,7 @@ public class CropbyShifts {
 
 		// Save the results to disk
 		image.save(outputFile, new com.aspose.imaging.imageoptions.BmpOptions());
-	}
+	
         //ExEnd:CropbyShifts
+    }
 }

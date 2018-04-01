@@ -4,10 +4,10 @@ import com.aspose.imaging.examples.Utils;
 
 public class ChangeBackgroundColor {
 	public static void main(String... args) throws Exception {
-		//ExStart:ChangeBackgroundColor
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ChangeBackgroundColor.class) + "ManipulatingPNGImages/";
-
+//ExStart:ChangeBackgroundColor
+		
 		// Create an instance of Image class and load a PNG image
 		com.aspose.imaging.Image img = com.aspose.imaging.Image.load(dataDir + "aspose_logo.png");
 

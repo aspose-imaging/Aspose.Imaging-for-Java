@@ -15,10 +15,11 @@ import com.aspose.imaging.sources.FileCreateSource;
 
 public class AddDifferentImagesasSeparateFramesinaMultiPageTIFF {
 	public static void main(String... args) throws Exception {
-		//ExStart:AddDifferentImagesasSeparateFramesinaMultiPageTIFF
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(AddDifferentImagesasSeparateFramesinaMultiPageTIFF.class) + "ManipulatingTIFFImages/";
-		// Create an instance of TiffOptions with CCITTFAX3 compression
+            //ExStart:AddDifferentImagesasSeparateFramesinaMultiPageTIFF
+
+            // Create an instance of TiffOptions with CCITTFAX3 compression
 		TiffOptions outputSettings = new TiffOptions(TiffExpectedFormat.TiffCcittFax3);
 		// Set source for the result
 		outputSettings.setSource(new FileCreateSource(dataDir + "output.tiff", false));

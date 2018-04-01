@@ -11,10 +11,10 @@ import com.aspose.imaging.sources.FileCreateSource;
 
 public class ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality {
 	public static void main(String... args) throws Exception {
-		//ExStart:ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality.class) + "ManipulatingTIFFImages/";
-
+//ExStart:ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality
+		
 		TiffImage multiImage = (TiffImage) Image.load(dataDir + "sample.tif");
 		int frameCounter = 0;
 		for (TiffFrame tiffFrame : multiImage.getFrames()) {

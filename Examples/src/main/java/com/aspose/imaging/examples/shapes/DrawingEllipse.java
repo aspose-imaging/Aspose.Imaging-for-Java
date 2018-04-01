@@ -10,7 +10,7 @@ public class DrawingEllipse
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir(DrawingEllipse.class) + "shapes/";
         //ExStart:DrawingEllipse
-{
+
         // Creates an instance of BmpOptions and set its various properties
         com.aspose.imaging.imageoptions.BmpOptions bmpCreateOptions = new com.aspose.imaging.imageoptions.BmpOptions();
         bmpCreateOptions.setBitsPerPixel(32);
@@ -43,6 +43,6 @@ public class DrawingEllipse
 }
 }
 
-}
+
 
 

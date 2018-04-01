@@ -18,10 +18,10 @@ import com.aspose.imaging.imageoptions.TiffOptions;
 import junit.framework.Assert;
 public class SupportTiffDeflate 
 {
-
+//ExStart:SupportTiffDeflate
  public static void main(String... args) throws Exception {
 
-     //ExStart:SupportTiffDeflate 
+     
 String dataDir = Utils.getSharedDataDir(SupportTiffDeflate.class) + "ManipulatingTIFFImages/";
 
 String inputFile = "C:\\Temp\\Errors\\Alpha.png";
@@ -53,6 +53,6 @@ finally
 {
 image.dispose();
 }
-//ExEnd:SupportTiffDeflate 
+//ExEnd:SupportTiffDeflate
 }
 }

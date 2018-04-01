@@ -3,14 +3,14 @@ package com.aspose.imaging.examples.images;
 import com.aspose.imaging.*;
 import com.aspose.imaging.brushes.*;
 import com.aspose.imaging.examples.Utils;
-import com.aspose.imaging.examples.export.ExportDxfToPdf;
 
 public class AddWatermarkToImage
 {
     public static void main(String[] args) throws Exception
     {
+      
         // The path to the documents directory.
-        String dataDir = Utils.getSharedDataDir(ExportDxfToPdf.class) + "images/";
+        String dataDir = Utils.getSharedDataDir(AddWatermarkToImage.class) + "images/";
         //ExStart:AddWatermarkToImage
         //Create an instance of Image and load an existing image.
         Image image= Image.load(dataDir + "sample.bmp");

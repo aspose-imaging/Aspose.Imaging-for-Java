@@ -9,7 +9,7 @@ public class CropbyShifts {
 	public static void main(String... args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(CropbyShifts.class) + "metafile/";
 		// Load an EMF file in an instance of MetafileImage
-                //ExStart:CropbyShifts 
+                //ExStart:CropbyShifts
                 MetafileImage metaImage = (MetafileImage) Image.load(dataDir + "Picture1.emf");
 
 		// Define shift values for all four sides
@@ -24,6 +24,6 @@ public class CropbyShifts {
 
 		// Save the result in PNG format
 		metaImage.save(dataDir + "CropbyShifts_out.png", new PngOptions());
+               //ExEnd:CropbyShifts
 	}
-               //ExEnd:CropbyShifts 
 }

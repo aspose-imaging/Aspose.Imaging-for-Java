@@ -209,5 +209,6 @@ class SvgCallbackImageTest extends SvgResourceKeeperCallback
 
         return "./" + this.getLink() + "/" + suggestedFileName;
     }
-}
+
  //ExEnd:MetaFilesAsSVG
+}

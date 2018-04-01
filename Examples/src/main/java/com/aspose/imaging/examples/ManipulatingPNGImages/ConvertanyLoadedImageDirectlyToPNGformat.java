@@ -8,10 +8,10 @@ import com.aspose.imaging.imageoptions.PngOptions;
 
 public class ConvertanyLoadedImageDirectlyToPNGformat {
 	public static void main(String... args) throws Exception {
-		//ExStart:ConvertanyLoadedImageDirectlyToPNGformat
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ConvertanyLoadedImageDirectlyToPNGformat.class) + "ManipulatingPNGImages/";
-
+//ExStart:ConvertanyLoadedImageDirectlyToPNGformat
+		
 		// Load the source image (any format) in an instance of RasterImage
 		RasterImage image = (RasterImage) Image.load(dataDir + "aspose-logo.jpg");
 

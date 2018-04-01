@@ -6,10 +6,10 @@ import com.aspose.imaging.examples.Utils;
 
 public class BinarizationwithOtsuThreshold {
 	public static void main(String... args) throws Exception {
-		//ExStart:BinarizationwithOtsuThreshold
+		
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(BinarizationwithOtsuThreshold.class) + "ConvertingImages/";
-
+//ExStart:BinarizationwithOtsuThreshold
 		// Load an image in an instance of Image
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
 

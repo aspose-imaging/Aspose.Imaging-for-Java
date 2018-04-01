@@ -25,6 +25,7 @@ public class UpdateTextLayerInPSDFile {
 		} finally {
 			image.dispose();
 		}
-	}
-        //ExEnd:UpdateTextLayerInPSDFile
+	//ExEnd:UpdateTextLayerInPSDFile
+        }
+        
 }

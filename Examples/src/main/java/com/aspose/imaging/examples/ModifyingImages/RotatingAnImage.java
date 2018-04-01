@@ -6,9 +6,9 @@ import com.aspose.imaging.examples.Utils;
 
 public class RotatingAnImage {
 	public static void main(String... args) throws Exception {
-		//ExStart:RotatingAnImage
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(RotatingAnImage.class) + "ModifyingImages/";
+		//ExStart:RotatingAnImage
 		// loading an Image
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
 

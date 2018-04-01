@@ -12,11 +12,11 @@ import com.aspose.imaging.examples.Utils;
 public class SupportForSmallCap {
     
       public static void main(String... args) throws Exception {
-		//ExStart:SupportForSmallCap
+		
 		// Create an instance of JpegImage and load an image as of JpegImage
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(SupportForSmallCap.class) + "ModifyingImages/";
-
+//ExStart:SupportForSmallCap
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
 
 		image.resize(300, 300);

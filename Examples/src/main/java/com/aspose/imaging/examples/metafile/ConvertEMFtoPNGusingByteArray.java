@@ -33,6 +33,7 @@ public class ConvertEMFtoPNGusingByteArray {
 
 		// Convert the data in ByteArrayOutputStream to an array of bytes
 		byte[] outputBytes = outputStream.toByteArray();
-	}
+	
         //ExEnd:ConvertEMFtoPNGusingByteArray
+        }
 }

@@ -16,10 +16,10 @@ import com.aspose.imaging.sources.FileCreateSource;
 public class SupportForJPEG
 {
 	public static void main(String... args) throws Exception {
-		//ExStart:SupportForJPEG
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(SupportForJPEG.class) + "ManipulatingJPEGImages/";
-
+//ExStart:SupportForJPEG
+		
 		String sourceJpegFileName = "lena24b.jls";
                 String outputPngFileName = "lena24b.png";
                 String outputPngRectFileName = "lena24b_rect.png";

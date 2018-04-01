@@ -5,10 +5,11 @@ import com.aspose.imaging.examples.Utils;
 
 public class SimpleResizeImageProportionally {
 	public static void main(String... args) throws Exception {
-		//ExStart:SimpleResizeImageProportionally
+		
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(SimpleResizeImageProportionally.class) + "ModifyingImages/";
-		Image image = Image.load(dataDir + "aspose-logo.jpg");
+		//ExStart:SimpleResizeImageProportionally
+                Image image = Image.load(dataDir + "aspose-logo.jpg");
 
 		if (!image.isCached()) {
 			image.cacheData();

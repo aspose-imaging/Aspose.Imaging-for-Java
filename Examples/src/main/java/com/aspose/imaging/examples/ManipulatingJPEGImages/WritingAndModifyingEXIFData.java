@@ -7,10 +7,10 @@ import com.aspose.imaging.fileformats.jpeg.JpegImage;
 
 public class WritingAndModifyingEXIFData {
 	public static void main(String... args) throws Exception {
-		//ExStart:WritingAndModifyingEXIFData
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(WritingAndModifyingEXIFData.class) + "ManipulatingJPEGImages/";
-
+//ExStart:WritingAndModifyingEXIFData
+		
 		// Load an image using the factory method load exposed by Image class
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
 

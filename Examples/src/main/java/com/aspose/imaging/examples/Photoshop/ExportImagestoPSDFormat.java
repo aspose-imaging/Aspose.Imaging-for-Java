@@ -21,6 +21,7 @@ public class ExportImagestoPSDFormat {
 
 		// Save image to disk in PSD format
 		image.save(dataDir + "ExportImagestoPSDFormat_out.psd", psdOptions);
-	}
         //ExEnd:ExportImagestoPSDFormat
+        }
+
 }

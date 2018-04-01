@@ -23,6 +23,7 @@ public class ResizeWidthProportionally {
 
 		image.resizeWidthProportionally(150, ResizeType.AdaptiveResample);
 		image.save(outputFile, new com.aspose.imaging.imageoptions.BmpOptions());
-	}
+	
         //ExEnd:ResizeWidthProportionally
+    }
 }

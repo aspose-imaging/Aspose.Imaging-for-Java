@@ -13,8 +13,8 @@ public class ConvertImageWithGrayscale {
     
 public static void main(String... args) throws Exception {
 
-    //ExStart:ConvertImageWithGrayscale
  String dataDir = Utils.getSharedDataDir(ConvertImageWithGrayscale.class) + "ModifyingImages/"; 
+    //ExStart:ConvertImageWithGrayscale
  String srcDir = "IMAGINGNET-2160\\";
  String outputFolder = "C:\\temp\\";
  

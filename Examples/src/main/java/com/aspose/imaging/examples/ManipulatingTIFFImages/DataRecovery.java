@@ -8,10 +8,11 @@ import com.aspose.imaging.examples.Utils;
 
 public class DataRecovery {
 	public static void main(String... args) throws Exception {
-		//ExStart:DataRecovery
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(DataRecovery.class) + "ManipulatingTIFFImages/";
-		// Create an instance of LoadOptions
+		//ExStart:DataRecovery
+		
+                // Create an instance of LoadOptions
 		LoadOptions loadOptions = new LoadOptions();
 
 		// Specify the DataRecoveryMode for the object of LoadOptions

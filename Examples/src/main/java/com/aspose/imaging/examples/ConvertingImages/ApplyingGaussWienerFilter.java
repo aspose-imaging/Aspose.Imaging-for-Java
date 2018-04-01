@@ -7,9 +7,9 @@ import com.aspose.imaging.imagefilters.filteroptions.GaussWienerFilterOptions;
 
 public class ApplyingGaussWienerFilter {
 	public static void main(String... args) throws Exception {
-		//ExStart:ApplyingGaussWienerFilter
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ApplyingGaussWienerFilter.class) + "ConvertingImages/";
+		//ExStart:ApplyingGaussWienerFilter
 		Image image = Image.load(dataDir + "aspose-logo.gif");
 		// caste the image into RasterImage
 		RasterImage rasterImage = (RasterImage) image;

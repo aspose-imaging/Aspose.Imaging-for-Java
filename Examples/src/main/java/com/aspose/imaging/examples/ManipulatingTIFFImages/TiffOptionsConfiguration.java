@@ -7,10 +7,10 @@ import com.aspose.imaging.imageoptions.TiffOptions;
 
 public class TiffOptionsConfiguration {
 	public static void main(String... args) throws Exception {
-		//ExStart:TiffOptionsConfiguration
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(TiffOptionsConfiguration.class) + "ManipulatingTIFFImages/";
-
+//ExStart:TiffOptionsConfiguration
+		
 		// Load an image through file path location or stream
 		Image image = Image.load(dataDir + "new.tiff");
 

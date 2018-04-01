@@ -32,5 +32,8 @@ public class ExportTextasShape {
 		} finally {
 			image.dispose();
 		}
-	}        //ExEnd:ExportTextasShape
-}
+	    
+        //ExEnd:ExportTextasShape
+
+        }
+}  

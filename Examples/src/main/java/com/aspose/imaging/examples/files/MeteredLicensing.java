@@ -5,7 +5,7 @@ public class MeteredLicensing
 	public static void main(String[] args) throws Exception 
         {
 		// Create an instance of OCR Metered class
-            //ExStart:MeteredLicensing 
+        //ExStart:MeteredLicensing
         com.aspose.imaging.Metered metered = new com.aspose.imaging.Metered();
         
         // Access the setMeteredKey property and pass public and private keys as parameters
@@ -24,5 +24,5 @@ public class MeteredLicensing
         // get metered data amount
         System.out.println("Consumption quantity" + com.aspose.imaging.Metered.getConsumptionQuantity());
 	}
-        //ExEnd:MeteredLicensing 
+        //ExEnd:MeteredLicensing
 }

@@ -14,9 +14,10 @@ public class AdjustingBrightness {
 
  public static void main(String... args)  {
 		// The path to the documents directory.
-                //ExStart:AdjustingBrightness 
+               
                 String dataDir = Utils.getSharedDataDir(AdjustingBrightness.class) + "dicom/";
-		String inputFile = dataDir + "image.dcm";
+		  //ExStart:AdjustingBrightness
+                  String inputFile = dataDir + "image.dcm";
 		String outputFile = dataDir + "AdjustingBrightness_out.bmp";
 
 		File file = new File(inputFile);
@@ -36,14 +37,13 @@ public class AdjustingBrightness {
 		// Create an instance of BmpOptions for the resultant image and Save the
 		// resultant image
 		image.save(outputFile, new com.aspose.imaging.imageoptions.BmpOptions());
-	}   catch (FileNotFoundException ex) {
+                
+	}   
+                
+                catch (FileNotFoundException ex) {
                 Logger.getLogger(AdjustingBrightness.class.getName()).log(Level.SEVERE, null, ex);
             }
+                 //ExEnd:AdjustingBrightness
         }
-    //   try 
-      // catch(Exception e)
-        {
-        //    e.printStackTrace();
-        }
-        //ExEnd:AdjustingBrightness 
+        
 }

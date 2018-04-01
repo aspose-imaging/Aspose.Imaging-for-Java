@@ -10,10 +10,10 @@ import com.aspose.imaging.fileformats.png.PngImage;
 
 public class SpecifyTransparency {
 	public static void main(String... args) throws Exception {
-		//ExStart:SpecifyTransparency
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(SpecifyTransparency.class) + "ManipulatingPNGImages/";
-
+//ExStart:SpecifyTransparency
+		
 		// Initialize variables to hold width & height values
 		int width = 0;
 		int height = 0;

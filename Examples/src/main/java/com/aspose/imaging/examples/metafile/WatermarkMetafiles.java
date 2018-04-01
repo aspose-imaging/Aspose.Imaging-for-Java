@@ -39,6 +39,6 @@ public class WatermarkMetafiles {
 			// Dispose image
 			image.dispose();
 		}
-	}
         //ExEnd:WatermarkMetafiles
+	}
 }

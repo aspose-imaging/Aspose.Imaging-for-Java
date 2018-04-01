@@ -13,7 +13,7 @@ public class ConvertDjvuToPdf {
     public static void main(String[] args) throws Exception {
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir(ConvertDjvuToPdf.class) + "djvu/";
-        //ExStart:ConvertDjvuToPdf 
+        //ExStart:ConvertDjvuToPdf
         //Load a DjVu image
         DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");
 
@@ -35,7 +35,7 @@ public class ConvertDjvuToPdf {
         // Display Status.
         System.out.println("File conveted");
     
-        //ExEnd:ConvertDjvuToPdf 
+        //ExEnd:ConvertDjvuToPdf
     }
 }
 

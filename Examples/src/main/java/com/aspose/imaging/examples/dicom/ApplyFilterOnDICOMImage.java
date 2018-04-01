@@ -10,9 +10,10 @@ import java.util.logging.Logger;
 public class ApplyFilterOnDICOMImage {
 	public static void main(String... args) throws Exception {
 		// The path to the documents directory.
-               //ExStart:ApplyFilterOnDICOMImage
+             
                 String dataDir = Utils.getSharedDataDir(ApplyFilterOnDICOMImage.class) + "dicom/";
-		String inputFile = dataDir + "image.dcm";
+		  //ExStart:ApplyFilterOnDICOMImage
+                  String inputFile = dataDir + "image.dcm";
 		String outputFile = dataDir + "ApplyFilterOnDICOMImage_out.bmp";
               	File file = new File(inputFile);
 		FileInputStream fis = null;
@@ -35,6 +36,6 @@ public class ApplyFilterOnDICOMImage {
                  {
                 Logger.getLogger(AdjustingBrightness.class.getName()).log(Level.SEVERE, null, ex);
             }
-                //ExEnd:ApplyFilterOnDICOMImage  
+                //ExEnd:ApplyFilterOnDICOMImage
         }
 }

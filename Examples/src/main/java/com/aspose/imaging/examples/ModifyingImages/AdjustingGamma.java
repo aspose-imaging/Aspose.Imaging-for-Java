@@ -9,9 +9,9 @@ import com.aspose.imaging.imageoptions.TiffOptions;
 
 public class AdjustingGamma {
 	public static void main(String... args) throws Exception {
-		//ExStart:AdjustingGamma
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(AdjustingGamma.class) + "ModifyingImages/";
+		//ExStart:AdjustingGamma
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
 		
 		    // Cast object of Image to RasterImage

@@ -8,10 +8,10 @@ import com.aspose.imaging.imageoptions.PngOptions;
 
 public class SpecifyBitDepth {
 	public static void main(String... args) throws Exception {
-		//ExStart:SpecifyBitDepth
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(SpecifyBitDepth.class) + "ManipulatingPNGImages/";
-
+//ExStart:SpecifyBitDepth
+		
 		// Load an existing PNG image
 		PngImage pngImage = (PngImage) Image.load(dataDir + "aspose_logo.png");
 

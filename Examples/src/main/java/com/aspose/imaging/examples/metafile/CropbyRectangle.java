@@ -21,6 +21,7 @@ public class CropbyRectangle {
 
 		// Save the result in PNG format
 		metaImage.save(dataDir + "CropbyRectangle_out.png", new PngOptions());
-	}
+	
         //ExEnd:CropbyRectangle
+        }
 }

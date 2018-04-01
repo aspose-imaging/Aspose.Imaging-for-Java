@@ -6,9 +6,9 @@ import com.aspose.imaging.fileformats.jpeg.JpegImage;
 
 public class AutoCorrectOrientationOfJPEGImages {
 	public static void main(String... args) throws Exception {
-		//ExStart:AutoCorrectOrientationOfJPEGImages
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(AutoCorrectOrientationOfJPEGImages.class) + "ManipulatingJPEGImages/";
+		//ExStart:AutoCorrectOrientationOfJPEGImages
 		
 		//Load a Jpeg image from file path location or stream
 		JpegImage image = (JpegImage)Image.load(dataDir + "aspose-logo.jpg");

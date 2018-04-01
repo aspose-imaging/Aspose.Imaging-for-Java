@@ -38,6 +38,7 @@ public class DrawingEllipse {
 
 		// Save all changes.
 		image.save(dataDir + "DrawingEllipse_out.bmp");
-	}
+	
         //ExEnd:DrawingEllipse
+        }
 }

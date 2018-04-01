@@ -40,6 +40,6 @@ public class ConvertDjvuPagesToGif {
         image.save(dataDir + "ConvertDjvuPagesToGif_out.gif", exportOptions);
 
         System.out.println("File conveted");
-        //ExEnd:ConvertDjvuPagesToGif 
+        //ExEnd:ConvertDjvuPagesToGif
     }
 }

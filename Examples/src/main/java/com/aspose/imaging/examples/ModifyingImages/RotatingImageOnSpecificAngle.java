@@ -6,10 +6,10 @@ import com.aspose.imaging.examples.Utils;
 
 public class RotatingImageOnSpecificAngle {
 	public static void main(String... args) throws Exception {
-		//ExStart:RotatingImageOnSpecificAngle
+		
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(RotatingImageOnSpecificAngle.class) + "ModifyingImages/";
-
+//ExStart:RotatingImageOnSpecificAngle
 		RasterImage image = (RasterImage) Image.load(dataDir + "aspose-logo.jpg");
 
 		// Before rotation, the image should be cached for better performance

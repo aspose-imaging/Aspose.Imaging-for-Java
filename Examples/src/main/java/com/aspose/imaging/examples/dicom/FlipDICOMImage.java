@@ -24,6 +24,7 @@ public class FlipDICOMImage {
 
 		image.rotateFlip(com.aspose.imaging.RotateFlipType.Rotate180FlipNone);
 		image.save(outputFile, new com.aspose.imaging.imageoptions.BmpOptions());
-	}
+	
         //ExEnd:FlipDICOMImage
+    }
 }

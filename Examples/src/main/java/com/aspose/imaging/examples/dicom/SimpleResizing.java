@@ -24,6 +24,7 @@ public class SimpleResizing {
 		
 		image.resize(200, 200);
 		image.save(outputFile, new com.aspose.imaging.imageoptions.BmpOptions());
-	}
+	
         //ExEnd:SimpleResizing
+    }
 }

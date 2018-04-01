@@ -69,6 +69,7 @@ public class SupportForCMYKAndYCCKColorModesInJPEGLossless {
                 {
                image.dispose();
                 }
+                 //ExEnd:SupportForCMYKAndYCCKColorModesInJPEGLossless
         }
 }
-             //ExEnd:SupportForCMYKAndYCCKColorModesInJPEGLossless
+            

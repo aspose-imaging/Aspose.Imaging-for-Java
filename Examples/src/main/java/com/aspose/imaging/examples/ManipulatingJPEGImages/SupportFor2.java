@@ -15,10 +15,10 @@ import com.aspose.imaging.sources.FileCreateSource;
 
 public class SupportFor2 {
 public static void main(String... args) throws Exception {
-		//ExStart:SupportFor2
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(SupportFor2.class) + "ManipulatingJPEGImages/";
-
+//ExStart:SupportFor2
+		
 		int bpp = 2; // Set 2 bits per sample to see the difference in size and quality
 
                 // The origin PNG with 8 bits per sample

@@ -4,10 +4,10 @@ import com.aspose.imaging.examples.Utils;
 
 public class ApplyFilterMethod {
 	public static void main(String... args) throws Exception {
-		//ExStart:ApplyFilterMethod
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ApplyFilterMethod.class) + "ManipulatingPNGImages/";
-
+	//ExStart:ApplyFilterMethod
+	
 		com.aspose.imaging.fileformats.png.PngImage png = (com.aspose.imaging.fileformats.png.PngImage) com.aspose.imaging.Image
 				.load(dataDir + "aspose_logo.png");
 

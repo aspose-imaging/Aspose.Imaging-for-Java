@@ -17,13 +17,14 @@ import com.aspose.imaging.imageoptions.EmfRasterizationOptions;
 import com.aspose.imaging.imageoptions.PdfOptions;
 
 public class CreateEMFMetaFileImage {
-	public static void main(String... args) throws Exception {
+         //ExStart:CreateEMFMetaFileImage
+    public static void main(String... args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(CreateEMFMetaFileImage.class) + "metafile/";
 		new CreateEMFMetaFileImage().penAndMixedArcTests();
 	}
 	public void penAndMixedArcTests()
 	{
-            //ExStart:CreateEMFMetaFileImage
+   
            // EmfRecorderGraphics2D class provides you the frame or canvas to draw shapes on it.
 	// Create an instance of EmfRecorderGraphics2D class. The constructor takes in 3 parameters:
 	// 1. Instance of Imaging Rectangle class
@@ -117,5 +118,6 @@ public class CreateEMFMetaFileImage {
 		// Call the save method to convert the EMF metafile image to PDF.
 	        image.save(outPath, options);
 	    }
+//ExEnd:CreateEMFMetaFileImage
 }
-            //ExEnd:CreateEMFMetaFileImage
+            

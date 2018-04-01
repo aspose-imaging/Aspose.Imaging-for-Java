@@ -10,9 +10,9 @@ import com.aspose.imaging.imageoptions.TiffOptions;
 
 public class AdjustBrightness {
 	public static void main(String... args) throws Exception {
-		//ExStart:AdjustBrightness
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(AdjustBrightness.class) + "ModifyingImages/";
+		//ExStart:AdjustBrightness
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
 		// Cast object of Image to RasterImage
 		RasterImage rasterImage = (RasterImage) image;

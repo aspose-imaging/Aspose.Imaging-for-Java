@@ -6,10 +6,10 @@ import com.aspose.imaging.fileformats.jpeg.JpegImage;
 
 public class ReadJpegEXIFTags {
 	public static void main(String... args) throws Exception {
-		//ExStart:ReadJpegEXIFTags
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ReadJpegEXIFTags.class) + "ManipulatingJPEGImages/";
-
+//ExStart:ReadJpegEXIFTags
+		
 		// Load the image in an instance of JpegImage
 		JpegImage image = (JpegImage) Image.load(dataDir + "aspose-logo.jpg");
 

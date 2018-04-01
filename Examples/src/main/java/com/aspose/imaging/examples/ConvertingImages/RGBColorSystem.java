@@ -13,10 +13,10 @@ import com.aspose.imaging.imageoptions.TiffOptions;
 
 public class RGBColorSystem {
     
-    //ExStart:RGBColorSystem
-  
+   
        String dataDir = Utils.getSharedDataDir(RGBColorSystem.class) + "ConvertingImages/";
-     
+    //ExStart:RGBColorSystem
+    
     String sourceFilePath = "testTileDeflate.tif";
     String outputFilePath = "testTileDeflate Cmyk.tif";
  

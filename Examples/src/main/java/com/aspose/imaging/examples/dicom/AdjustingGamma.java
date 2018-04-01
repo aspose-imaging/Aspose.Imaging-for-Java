@@ -37,5 +37,6 @@ public class AdjustingGamma {
                  {
                 Logger.getLogger(AdjustingBrightness.class.getName()).log(Level.SEVERE, null, ex);
             }
-}        //ExEnd:AdjustingGamma
+        //ExEnd:AdjustingGamma
+}
 }

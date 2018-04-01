@@ -6,9 +6,9 @@ import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
 public class ConvertEmftoRasterimages {
 	public static void main(String... args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(ConvertEmftoRasterimages.class) + "metafile/";
+		//ExStart:ConvertEmftoRasterimages
 		String filePath = dataDir + "Picture1.emf";
-                //ExStart:ConvertEmftoRasterimages 
-		// Create EmfRasterizationOption class instance and set properties
+                // Create EmfRasterizationOption class instance and set properties
 		com.aspose.imaging.imageoptions.EmfRasterizationOptions emfRasterizationOptions = new com.aspose.imaging.imageoptions.EmfRasterizationOptions();
 
 		emfRasterizationOptions.setBackgroundColor(com.aspose.imaging.Color.getPapayaWhip());
@@ -68,6 +68,7 @@ public class ConvertEmftoRasterimages {
 		objWebPo.setVectorRasterizationOptions(emfRasterizationOptions);
 
 		image.save(filePath + "_out.webp", objWebPo);
-	}
-        //ExEnd:ConvertEmftoRasterimages 
+        //ExEnd:ConvertEmftoRasterimages
+        	}
+
 }

@@ -34,7 +34,7 @@ public class ConvertGIFImageLayersToTIFF {
 			gifBlock.save(dataDir + "asposelogo" + i + "_out.tif", objTiff);
 
 		}
-
+      //ExEnd:ConvertGIFImageLayersToTIFF 
 	}
-        //ExEnd:ConvertGIFImageLayersToTIFF 
+  
 }

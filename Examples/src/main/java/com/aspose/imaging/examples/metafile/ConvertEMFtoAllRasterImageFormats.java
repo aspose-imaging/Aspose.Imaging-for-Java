@@ -14,7 +14,7 @@ public class ConvertEMFtoAllRasterImageFormats {
 		String dataDir = Utils.getSharedDataDir(ConvertEMFtoAllRasterImageFormats.class) + "metafile/";
 		// Load a Metafile in an instance of EmfMetafileImage class
 		EmfMetafileImage metafile = new EmfMetafileImage(dataDir + "Picture1.emf");
-                //ExStart:ConvertEMFtoAllRasterImageFormats 
+                //ExStart:ConvertEMFtoAllRasterImageFormats
 		// Save EMF to BMP using BmpOptions object
 		metafile.save(dataDir + "ConvertEMFtoAllRasterImageFormats_out.bmp", new BmpOptions());
 
@@ -29,6 +29,7 @@ public class ConvertEMFtoAllRasterImageFormats {
 
 		// Save EMF to TIFF using TiffOptions object with default settings
 		metafile.save(dataDir + "ConvertEMFtoAllRasterImageFormats_out.tiff", new TiffOptions(TiffExpectedFormat.Default));
-	}
-        //ExEnd:ConvertEMFtoAllRasterImageFormats 
+	
+        //ExEnd:ConvertEMFtoAllRasterImageFormats
+    }
 }

@@ -232,5 +232,5 @@ class SvgCallbackFontTest extends SvgResourceKeeperCallback
             args.setFontFileUri("./" + this.getLink() + "/" + name);
         }
     }
-}
  //ExEnd:SvgFontTester
+    }

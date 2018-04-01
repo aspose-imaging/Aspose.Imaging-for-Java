@@ -21,6 +21,7 @@ public class UseBradleythresholding {
 
 		// Save the output image
 		objimage.save(outputPath);
-	}
+	
         //ExEnd:UseBradleythresholding
+    }
 }

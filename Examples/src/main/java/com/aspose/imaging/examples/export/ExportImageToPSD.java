@@ -31,10 +31,10 @@ public class ExportImageToPSD
 
         // Display Status.
         System.out.println("Image exported to PSD successfully!");
-    }
+    
 
     //ExEnd:ExportImageToPSD
-
+    }
 }
 
 

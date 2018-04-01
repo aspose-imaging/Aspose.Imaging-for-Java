@@ -7,9 +7,9 @@ import com.aspose.imaging.imagefilters.filteroptions.MedianFilterOptions;
 
 public class ApplyMedianFilter {
 	public static void main(String... args) throws Exception {
-		//ExStart:ApplyMedianFilter
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(ApplyMedianFilter.class) + "ConvertingImages/";
+		//ExStart:ApplyMedianFilter
 		
 		// Load the noisy image 
 		Image image = Image.load(dataDir + "aspose-logo.gif");

@@ -9,7 +9,7 @@ import com.aspose.imaging.imageoptions.PngOptions;
 public class ConvertingWMFtoPNG {
 	public static void main(String... args) throws Exception {
 		String dataDir = Utils.getSharedDataDir(ConvertingWMFtoPNG.class) + "wmf/";
-                //ExStart:ConvertingWMFtoPNG 
+                //ExStart:ConvertingWMFtoPNG
                 String inputFileName = dataDir + "sample.wmf";
 		String outFileName = dataDir + "ConvertingWMFtoPNG_out.png";
                   Image image = Image.load(dataDir);
@@ -35,6 +35,6 @@ public class ConvertingWMFtoPNG {
 		} finally {
 			image.dispose();
 		}
-                //ExEnd:ConvertingWMFtoPNG 
+                //ExEnd:ConvertingWMFtoPNG
 	}
 }

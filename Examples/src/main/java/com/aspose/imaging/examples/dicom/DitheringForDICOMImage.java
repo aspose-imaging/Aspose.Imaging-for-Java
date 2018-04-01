@@ -26,6 +26,7 @@ public class DitheringForDICOMImage {
 
 		// Save the image
 		image.save(outputFile, new com.aspose.imaging.imageoptions.BmpOptions());
-	}
+	
         //ExEnd:DitheringForDICOMImage
+    }
 }

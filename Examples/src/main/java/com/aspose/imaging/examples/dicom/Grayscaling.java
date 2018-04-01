@@ -27,6 +27,7 @@ public class Grayscaling {
 
 		// Save the resultant image.
 		image.save(outputFile, new com.aspose.imaging.imageoptions.BmpOptions());
-	}
+	
         //ExEnd:Grayscaling
+    }
 }

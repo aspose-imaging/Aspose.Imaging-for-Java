@@ -7,9 +7,9 @@ import com.aspose.imaging.imagefilters.filteroptions.GaussianBlurFilterOptions;
 
 public class BluranImage {
 	public static void main(String... args) throws Exception {
-		//ExStart:BluranImage
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(BluranImage.class) + "ModifyingImages/";
+		//ExStart:BluranImage
 		Image image = Image.load(dataDir + "aspose-logo.jpg");
 		// Convert the image into RasterImage.
 		RasterImage rasterImage = (RasterImage) image;

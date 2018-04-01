@@ -24,6 +24,7 @@ public class MergPSDlayers {
 		// call the Save the method of PSDImage class to merge the layers and
 		// save it as jpg image.
 		psdImage.save(dataDir + "MergPSDlayers_out.jpg", jpgOptions);
+                //ExEnd:MergPSDlayers
 	}
-        //ExEnd:MergPSDlayers
+        
 }

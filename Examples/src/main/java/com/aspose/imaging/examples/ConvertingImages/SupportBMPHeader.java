@@ -17,8 +17,8 @@ public class SupportBMPHeader {
 
 public static void main(String... args) throws Exception {
 
-    //ExStart:SupportBMPHeader 
        String dataDir = Utils.getSharedDataDir(SupportBMPHeader.class) + "ConvertingImages/";
+    //ExStart:SupportBMPHeader 
        Image image = Image.load(dataDir+"test.bmp");
     try
      {

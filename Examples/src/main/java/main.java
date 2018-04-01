@@ -4,10 +4,7 @@
  * and open the template in the editor.
  */
 
-/**
- *
- * @author Rizwan Khan
- */
+
 public class main {
     
 public static void main(String[] args) {

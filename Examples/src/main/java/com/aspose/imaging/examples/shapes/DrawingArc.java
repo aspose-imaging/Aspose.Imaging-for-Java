@@ -41,9 +41,9 @@ public class DrawingArc
 
         // Display Status.
         System.out.println("Arc has been drawn in image successfully!");
-    }
 
     //ExEnd:DrawingArc
+    }
 }
 
 

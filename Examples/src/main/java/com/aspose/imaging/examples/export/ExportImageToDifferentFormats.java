@@ -28,10 +28,10 @@ public class ExportImageToDifferentFormats
 
         // Display Status.
         System.out.println("Image exported to BMP, JPG, PNG and TIFF formats successfully!");
-    }
+    
 
     //ExEnd:ExportImageToDifferentFormats
-
+    }
 }
 
 

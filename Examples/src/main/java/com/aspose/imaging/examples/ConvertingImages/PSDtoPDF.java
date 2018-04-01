@@ -13,8 +13,8 @@ import com.aspose.imaging.imageoptions.PdfOptions;
 public class PSDtoPDF 
 {
 	public static void main(String... args) throws Exception {
-            //ExStart:PSDtoPDF
         String dataDir = Utils.getSharedDataDir(PSDtoPDF.class) + "ConvertingImages/";
+            //ExStart:PSDtoPDF
         Image image = Image.load(dataDir);
     try
       {

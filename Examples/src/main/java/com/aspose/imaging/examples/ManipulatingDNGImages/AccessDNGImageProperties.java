@@ -17,7 +17,7 @@ public class AccessDNGImageProperties
 {
 	public static void main(String[] args) throws Exception 
         {
-		//ExStart:ExportDNGImageToJPEGFormat 
+		//ExStart:AccessDNGImageProperties 
 
         //Declare variables to store file path for input image.
         String sourceFiles = "Path_to_source_folder\\Source\\HDR - 3c.dng";
@@ -37,7 +37,7 @@ public class AccessDNGImageProperties
 	System.out.println("Iso speed:" + objimage.getImgData().getImageOtherParameters().getIsoSpeed());
 
 
-		//ExEnd:ExportDNGImageToJPEGFormat 
+		//ExEnd:AccessDNGImageProperties 
 	}
 
 }

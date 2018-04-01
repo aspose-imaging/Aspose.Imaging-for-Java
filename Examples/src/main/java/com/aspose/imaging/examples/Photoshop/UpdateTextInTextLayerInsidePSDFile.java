@@ -10,7 +10,7 @@ public class UpdateTextInTextLayerInsidePSDFile {
 		String dataDir = Utils.getSharedDataDir(UpdateTextInTextLayerInsidePSDFile.class) + "Photoshop/";
 		String sourceFileName = dataDir + "samplePsd.psd";
 		String outputFile = dataDir + "UpdateTextInTextLayerInsidePSDFile_out.psd";
-                //ExStart:UpdateTextInTextLayerInsidePSDFile 
+                //ExStart:UpdateTextInTextLayerInsidePSDFile
 		// Load an existing PSD file as Image
 		com.aspose.imaging.Image image = com.aspose.imaging.Image.load(sourceFileName);
 		try {
