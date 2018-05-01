@@ -20,7 +20,7 @@ psdLoadOptions.setUseDiskForLoadEffectsResource(true);
 PsdImage image = (PsdImage)Image.load(dataDir+"test.psd",psdLoadOptions);
 try
 {
-   Debug.assert_(image.getLayers()[2] != null, "Layer with effects resource was not recognized");
+   //Debug.assert_(image.getLayers()[2] != null, "Layer with effects resource was not recognized");
 
    PngOptions pngOptions=new PngOptions();
 
