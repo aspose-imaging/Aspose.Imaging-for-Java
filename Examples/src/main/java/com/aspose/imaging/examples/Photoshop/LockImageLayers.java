@@ -5,6 +5,7 @@ import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.psd.CompressionMethod;
 import com.aspose.imaging.fileformats.psd.PsdImage;
 import com.aspose.imaging.fileformats.psd.layers.Layer;
+//import com.aspose.imaging.fileformats.psd.layers.layerresources;
 
 public class LockImageLayers {
 	public static void main(String... args) throws Exception {
@@ -16,13 +17,14 @@ public class LockImageLayers {
                 PsdImage image = (PsdImage)Image.load(sourceFile);
                 try
                 {
+                   
                     Layer[] layers = image.getLayers();
-                    layers[4].setLayerLock(LayerLockType.LockAll);
-                    layers[2].setLayerLock(LayerLockType.None);
-                    layers[3].setLayerLock(LayerLockType.LockTransparentPixels);
-                    layers[1].setLayerLock(LayerLockType.LockImagePixels);
-                    layers[5].setLayerLock(LayerLockType.LockPosition);
-                    layers[5].setFlags(LayerFlags.TransparencyProtected);
+                    layers[4].setLayerLock(com.aspose.imaging.fileformats.psd.layers.layerresources.LayerLockType.LockAll);
+                    layers[2].setLayerLock(com.aspose.imaging.fileformats.psd.layers.layerresources.LayerLockType.None);
+                    layers[3].setLayerLock(com.aspose.imaging.fileformats.psd.layers.layerresources.LayerLockType.LockTransparentPixels);
+                    layers[1].setLayerLock(com.aspose.imaging.fileformats.psd.layers.layerresources.LayerLockType.LockImagePixels);
+                    layers[5].setLayerLock(com.aspose.imaging.fileformats.psd.layers.layerresources.LayerLockType.LockPosition);
+                    layers[5].setFlags(com.aspose.imaging.fileformats.psd.layers.LayerFlags.TransparencyProtected);
                     image.save(outputFile);
                 }
                 finally
