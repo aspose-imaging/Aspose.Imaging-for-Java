@@ -15,16 +15,19 @@
       <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-imaging</artifactId>
-            <version>18.8</version>
-              
+            <version>18.9</version>
+            <classifier>jdk16</classifier>
             <type>jar</type>
-      </dependency>
-        <!--dependency>
+         <!--groupId>com</groupId>
+              <artifactId>aspose</artifactId>
+    <version>aspose-imaging</version!-->
+
+            <!--dependency>
             <groupId>com.aspose</groupId>
             <artifactId>cad-java-examples</artifactId>
             <version>17.12</version>
-            <type>jar</type>
-        </dependency!-->
+            <type>jar</type!-->
+        </dependency>
      
         <dependency>
             <groupId>junit</groupId>
