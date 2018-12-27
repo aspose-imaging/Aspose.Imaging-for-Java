@@ -40,7 +40,7 @@
         <repository>
             <id>aspose-maven-repository</id>
             <!--url>http://maven.aspose.com/repository/simple/ext-release-local/</url!-->
-             <url>http://artifact.aspose.com/repo/</url>
+             <url>http://repository.aspose.com/repo/</url>
             <!--url>http://maven.aspose.com/artifactory/simple/ext-release-local/</url!-->
               <!--url>http://maven-qa.aspose.com/repository/ext-release-local</url!-->
         </repository>
