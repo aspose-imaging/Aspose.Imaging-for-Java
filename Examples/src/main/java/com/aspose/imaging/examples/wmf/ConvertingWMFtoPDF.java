@@ -17,7 +17,7 @@ import com.aspose.imaging.imageoptions.PngOptions;
 import com.aspose.imaging.imageoptions.WmfOptions;
 public class ConvertingWMFtoPDF {
 	public static void main(String... args) throws Exception {
-		String dataDir = Utils.getSharedDataDir(ConvertingWMFtoPNG.class) + "wmf/";
+		String dataDir = Utils.getSharedDataDir(ConvertingWMFtoPDF.class) + "wmf/";
                 //ExStart:ConvertingWMFtoPDF
                 String inputFileName = dataDir + "sample.wmf";
 		String outFileName = dataDir + "ConvertingWMFtoPDF_out.pdf";
