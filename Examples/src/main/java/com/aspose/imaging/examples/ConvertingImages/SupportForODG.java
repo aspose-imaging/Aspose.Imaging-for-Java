@@ -5,6 +5,7 @@ import com.aspose.imaging.SizeF;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.svg.SvgImage;
 import com.aspose.imaging.imageoptions.MetafileRasterizationOptions;
+import com.aspose.imaging.imageoptions.OdgRasterizationOptions;
 import com.aspose.imaging.imageoptions.PdfOptions;
 import com.aspose.imaging.imageoptions.PngOptions;
 
@@ -15,7 +16,7 @@ public class SupportForODG {
 	String[] files = new String[] {"example.odg", "example1.odg"};
         String folder = "C:\\Temp\\";
         
-        final MetafileRasterizationOptions rasterizationOptions = new MetafileRasterizationOptions();
+        final OdgRasterizationOptions rasterizationOptions = new OdgRasterizationOptions();
         for (String file : files)
        {
 	String fileName = folder + file;
