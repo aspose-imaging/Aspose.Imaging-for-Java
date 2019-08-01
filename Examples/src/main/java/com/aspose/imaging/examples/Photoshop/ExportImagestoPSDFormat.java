@@ -8,12 +8,12 @@ import com.aspose.imaging.imageoptions.PsdOptions;
 
 public class ExportImagestoPSDFormat {
 	public static void main(String... args) throws Exception {
+        //ExStart:ExportImagestoPSDFormat
 		String dataDir = Utils.getSharedDataDir(ExportImagestoPSDFormat.class) + "Photoshop/";
-               //ExStart:ExportImagestoPSDFormat
-                String sourceFileName = dataDir + "sample.bmp";
+        String sourceFileName = dataDir + "sample.bmp";
 		Image image = Image.load(sourceFileName);
 
-		// Create an instance of PsdOptions and set it’s various properties
+		// Create an instance of PsdOptions and set it`s various properties
 		PsdOptions psdOptions = new PsdOptions();
 		psdOptions.setColorMode(ColorModes.Rgb);
 		psdOptions.setCompressionMethod(CompressionMethod.RLE);
@@ -22,6 +22,6 @@ public class ExportImagestoPSDFormat {
 		// Save image to disk in PSD format
 		image.save(dataDir + "ExportImagestoPSDFormat_out.psd", psdOptions);
         //ExEnd:ExportImagestoPSDFormat
-        }
+    }
 
 }

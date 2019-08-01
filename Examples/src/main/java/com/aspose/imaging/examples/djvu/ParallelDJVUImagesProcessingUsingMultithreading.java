@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.aspose.imaging.examples.djvu;
 
 import com.aspose.imaging.Image;
@@ -35,7 +30,7 @@ public class ParallelDJVUImagesProcessingUsingMultithreading {
 
             for (int i = 0; i < numThreads; i++)
             {
-                final String outputFile = outDir + fileName + "_task" + i+ ".png";
+                final String outputFile = outDir + String.format("%s_task%d.png", fileName, i);
                 execServ.execute(new Runnable()
                 {
                     @Override

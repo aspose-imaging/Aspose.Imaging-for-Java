@@ -2,7 +2,7 @@ package com.aspose.imaging.examples;
 
 import java.io.File;
 
-public class Utils {
+public final class Utils {
 
 	public static String getDataDir(Class c) {
 		File dir = new File(System.getProperty("user.dir"));
@@ -32,9 +32,7 @@ public class Utils {
 		return dir.toString() + File.separator;
 	}
 
-public static void main(String[] args) {
-
-
-
-}
+	private Utils() {
+		// Do nothings
+	}
 }

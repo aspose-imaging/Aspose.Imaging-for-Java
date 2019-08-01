@@ -5,20 +5,26 @@
  */
 package com.aspose.imaging.examples;
 
+import java.lang.Math;
+
 /**
  *
  * @author mfazi
  */
 public class Assert {
-    public static boolean areEqual(Object left, Object right) {
-        return left == right;
+    public static void areEqual(Object left, Object right) {
+        assert left.equals(right);
     }
 
-    public static boolean areEqual(Object left, Object right, Object epsilon) {
-        return left == right;
+    public static void areEqual(float left, float right, float epsilon) {
+        assert Math.abs(left - right) < epsilon;
     }
 
-    public static boolean areNotEqual(Object left, Object right) {
-        return left == right;
+    public static void areNotEqual(Object left, Object right) {
+        assert !left.equals(right);
+    }
+    
+    public static void assertTrue(boolean value) {
+        assert value;
     }
 }
