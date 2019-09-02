@@ -6,28 +6,38 @@ import com.aspose.imaging.RasterImage;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.PngOptions;
 
-public class ConvertanyLoadedImageDirectlyToPNGformat {
-	public static void main(String... args) throws Exception {
-		// The path to the documents directory.
-		String dataDir = Utils.getSharedDataDir(ConvertanyLoadedImageDirectlyToPNGformat.class) + "ManipulatingPNGImages/";
-//ExStart:ConvertanyLoadedImageDirectlyToPNGformat
-		
-		// Load the source image (any format) in an instance of RasterImage
-		RasterImage image = (RasterImage) Image.load(dataDir + "aspose-logo.jpg");
+public class ConvertanyLoadedImageDirectlyToPNGformat
+{
+    public static void main(String... args)
+    {
+		//ExStart:ConvertanyLoadedImageDirectlyToPNGformat
 
-		// Set the background color for the image
-		image.setBackgroundColor(Color.getWhite());
+        // The path to the documents directory.
+        String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
 
-		// Set the transparent color for the image
-		image.setTransparentColor(Color.getBlack());
+        // Load the source image (any format) in an instance of RasterImage
+        RasterImage image = (RasterImage) Image.load(dataDir + "aspose-logo.jpg");
 
-		// Set the HasTransparentColor & HasBackgroundColor properties to true
-		image.setBackgroundColor(true);
-		image.setTransparentColor(true);
+		try
+		{
+			// Set the background color for the image
+			image.setBackgroundColor(Color.getWhite());
 
-		// Save the image on disc in PNG format
-		image.save(dataDir + "ConvertanyLoadedImageDirectlyToPNGformat_out.jpg", new PngOptions());
+			// Set the transparent color for the image
+			image.setTransparentColor(Color.getBlack());
+
+			// Set the HasTransparentColor & HasBackgroundColor properties to true
+			image.setBackgroundColor(true);
+			image.setTransparentColor(true);
+
+			// Save the image on disc in PNG format
+			image.save(dataDir + "ConvertanyLoadedImageDirectlyToPNGformat_out.jpg", new PngOptions());
+		}
+		finally
+		{
+			image.close();
+		}
 		//ExEnd:ConvertanyLoadedImageDirectlyToPNGformat
-	}
+    }
 
 }

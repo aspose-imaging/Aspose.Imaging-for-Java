@@ -10,23 +10,30 @@ import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.JpegOptions;
 
 /**
- *
  * @author mfazi
  */
-public class ReadLargePNGFile {
-    public static void main(String[] args)  {
-         
-         //ExStart:ReadLargePNGFile
-     
-        String dataDir = Utils.getSharedDataDir(ReadLargePNGFile.class) + "ManipulatingPNGImages/";
-        
+public class ReadLargePNGFile
+{
+    public static void main(String[] args)
+    {
+        //ExStart:ReadLargePNGFile
+
+        String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
+
         Image image = Image.load(dataDir + "halfGigImage.png");
-        
-        // Create an instance of JpegOptions
-	JpegOptions options = new JpegOptions();
-                
-        image.save(dataDir + "halfGigImage.jpg", options);
-        
+
+        try
+        {
+            // Create an instance of JpegOptions
+            JpegOptions options = new JpegOptions();
+
+            image.save(dataDir + "halfGigImage.jpg", options);
+        }
+        finally
+        {
+            image.close();
+        }
+
         //ExEnd:ReadLargePNGFile
     }
 }

@@ -7,9 +7,9 @@ import com.aspose.imaging.imageoptions.PdfOptions;
 
 public class SupportOfDPISettingsInPdfOptions {
     
-    public static void main(String... args) throws Exception {
+    public static void main(String... args) {
         
-        String dataDir = Utils.getSharedDataDir(SupportOfDPISettingsInPdfOptions.class) + "ModifyingImages/";
+        String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         String fileName = "SampleTiff1.tiff";
         String inputFileName = dataDir + fileName;
         String outFileName = inputFileName + ".pdf";

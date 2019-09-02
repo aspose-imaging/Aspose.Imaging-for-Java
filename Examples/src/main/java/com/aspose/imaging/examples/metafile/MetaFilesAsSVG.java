@@ -1,11 +1,11 @@
 package com.aspose.imaging.examples.metafile;
-import com.aspose.imaging.examples.Utils;
+
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.fileformats.svg.SvgResourceKeeperCallback;
-import com.aspose.imaging.imageloadoptions.MetafileLoadOptions;
 import com.aspose.imaging.imageoptions.EmfRasterizationOptions;
 import com.aspose.imaging.imageoptions.SvgOptions;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -14,7 +14,7 @@ import java.io.IOException;
 class MetaFilesAsSVG
 
 {
-      //ExStart:MetaFilesAsSVG
+    //ExStart:MetaFilesAsSVG
     private static final String ImageFolderName = "Images";
     private static final String OutFolderName = "Out\\";
     private static final String SourceFolder = "C:\\Temp\\Errors\\7\\";
@@ -42,15 +42,15 @@ class MetaFilesAsSVG
                 };
 
         String[][] expectedImages = new String[][]
-        {
-            new String[]
-            {
-                "svg_img1.png",  "svg_img10.png", "svg_img11.png","svg_img12.png",
-                "svg_img13.png", "svg_img14.png", "svg_img15.png", "svg_img16.png",
-                "svg_img2.png", "svg_img3.png", "svg_img4.png", "svg_img5.png",
-                "svg_img6.png","svg_img7.png", "svg_img8.png", "svg_img9.png"
-            },
-        };
+                {
+                        new String[]
+                                {
+                                        "svg_img1.png", "svg_img10.png", "svg_img11.png", "svg_img12.png",
+                                        "svg_img13.png", "svg_img14.png", "svg_img15.png", "svg_img16.png",
+                                        "svg_img2.png", "svg_img3.png", "svg_img4.png", "svg_img5.png",
+                                        "svg_img6.png", "svg_img7.png", "svg_img8.png", "svg_img9.png"
+                                },
+                };
 
         for (int i = 0; i < files.length; i++)
         {
@@ -68,7 +68,7 @@ class MetaFilesAsSVG
         String fontStoreType = useEmbedded ? "Embedded" : "Stream";
         String inputFile = SourceFolder + fileName;
         String outFileName = fileName + "_" + fontStoreType + ".svg";
-        String outputFile = OutFolder  + "\\" +  outFileName;
+        String outputFile = OutFolder + "\\" + outFileName;
         Image image = Image.load(inputFile);
         final String imageFolder;
         try
@@ -77,8 +77,8 @@ class MetaFilesAsSVG
             emfRasterizationOptions.setBackgroundColor(Color.getWhite());
             emfRasterizationOptions.setPageWidth(image.getWidth());
             emfRasterizationOptions.setPageHeight(image.getHeight());
-            final String testingFileName = inputFile.substring(inputFile.lastIndexOf("\\")+1, inputFile.length() - 4);
-            imageFolder = ImageFolder + "\\" +  testingFileName;
+            final String testingFileName = inputFile.substring(inputFile.lastIndexOf("\\") + 1, inputFile.length() - 4);
+            imageFolder = ImageFolder + "\\" + testingFileName;
             image.save(outputFile,
                     new SvgOptions()
                     {{
@@ -86,7 +86,7 @@ class MetaFilesAsSVG
                         setCallback(
                                 new SvgCallbackImageTest(useEmbedded, imageFolder)
                                 {{
-                                    setLink(ImageFolderName +"/"+testingFileName);
+                                    setLink(ImageFolderName + "/" + testingFileName);
                                 }});
                     }});
         }
@@ -99,11 +99,11 @@ class MetaFilesAsSVG
         {
             f = new File(imageFolder);
             String[] files = f.list();
-            if (files.length != expectedImages.length)
+            if (files == null || files.length != expectedImages.length)
             {
                 throw new RuntimeException(String.format(
                         "Expected count image files = %d, Current count image files = %d", expectedImages.length,
-                        files.length));
+                        files == null ? 0 : files.length));
             }
 
             for (int i = 0; i < files.length; i++)
@@ -141,7 +141,7 @@ class SvgCallbackImageTest extends SvgResourceKeeperCallback
      */
     private int fontCounter = 0;
 
-   
+
     public SvgCallbackImageTest(boolean useEmbeddedImage, String outFolder)
     {
         this.useEmbeddedImage = useEmbeddedImage;
@@ -150,8 +150,11 @@ class SvgCallbackImageTest extends SvgResourceKeeperCallback
         if (f.exists())
         {
             File[] list = f.listFiles();
-            for (File it : list)
-                it.delete();
+            if (list != null)
+            {
+                for (File it : list)
+                    it.delete();
+            }
             f.delete();
         }
     }
@@ -169,7 +172,6 @@ class SvgCallbackImageTest extends SvgResourceKeeperCallback
     }
 
 
-  
     public String onImageResourceReady(byte[] imageData, int imageType, String suggestedFileName, boolean[] useEmbeddedImage)
     {
         useEmbeddedImage[0] = this.useEmbeddedImage;
@@ -187,7 +189,7 @@ class SvgCallbackImageTest extends SvgResourceKeeperCallback
         }
 
         String name = suggestedFileName;
-        name = name.substring(name.indexOf('\\')+1);
+        name = name.substring(name.indexOf('\\') + 1);
         String fileName = imageFolder + "\\" + name;
 
         try
@@ -210,5 +212,5 @@ class SvgCallbackImageTest extends SvgResourceKeeperCallback
         return "./" + this.getLink() + "/" + suggestedFileName;
     }
 
- //ExEnd:MetaFilesAsSVG
+    //ExEnd:MetaFilesAsSVG
 }

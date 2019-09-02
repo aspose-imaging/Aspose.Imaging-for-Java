@@ -4,27 +4,44 @@ import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.jpeg.JFIFData;
 import com.aspose.imaging.fileformats.jpeg.JpegImage;
 
-public class AddThumbnailtoJFIFSegment {
-	public static void main(String... args) throws Exception {
-		// The path to the documents directory.
-		String dataDir = Utils.getSharedDataDir(AddThumbnailtoJFIFSegment.class) + "ManipulatingJPEGImages/";
+public class AddThumbnailtoJFIFSegment
+{
+    public static void main(String... args)
+    {
 		//ExStart:AddThumbnailtoJFIFSegment
-		
-		//Create an instance of JpegImage to store the thumbnail
-		JpegImage thumbnailImage = new JpegImage(100, 100);
 
-		//Create another instance of JpegImage as primary image
-		JpegImage image = new JpegImage(1000, 1000);
+        // The path to the documents directory.
+        String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
 
-		//Set the Jfif value as new JFIFData
-		image.setJfif( new JFIFData());
+        //Create an instance of JpegImage to store the thumbnail
+        JpegImage thumbnailImage = new JpegImage(100, 100);
 
-		//Store the thumbnail in the Jfif segment
-		image.getJfif().setThumbnail(thumbnailImage);
+		try
+		{
+			//Create another instance of JpegImage as primary image
+			JpegImage image = new JpegImage(1000, 1000);
 
-		//Save the resultant image
-		image.save(dataDir + "AddThumbnailtoJFIFSegment_out.jpg");
+			try
+			{
+				//Set the Jfif value as new JFIFData
+				image.setJfif(new JFIFData());
+
+				//Store the thumbnail in the Jfif segment
+				image.getJfif().setThumbnail(thumbnailImage);
+
+				//Save the resultant image
+				image.save(dataDir + "AddThumbnailtoJFIFSegment_out.jpg");
+			}
+			finally
+			{
+				image.close();
+			}
+		}
+		finally
+		{
+			thumbnailImage.close();
+		}
 		//ExEnd:AddThumbnailtoJFIFSegment
-	}
+    }
 
 }

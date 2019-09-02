@@ -1,19 +1,18 @@
 package com.aspose.imaging.examples.ConvertingImages;
 
 import com.aspose.imaging.Image;
-import com.aspose.imaging.SizeF;
+import com.aspose.imaging.ImageOptionsBase;
 import com.aspose.imaging.Size;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.OtgRasterizationOptions;
 import com.aspose.imaging.imageoptions.PdfOptions;
 import com.aspose.imaging.imageoptions.PngOptions;
-import com.aspose.imaging.ImageOptionsBase;
 
 public class SupportOfOTG {
 
-    public static void main(String... args) throws Exception {
+    public static void main(String... args) {
 
-        String dataDir = Utils.getSharedDataDir(SupportForODG.class) + "OTG/";
+        String dataDir = Utils.getSharedDataDir() + "OTG/";
         String fileName = "VariousObjectsMultiPage.otg";
         String inputFileName = dataDir + fileName;
         ImageOptionsBase[] options = { new PngOptions(), new PdfOptions() };

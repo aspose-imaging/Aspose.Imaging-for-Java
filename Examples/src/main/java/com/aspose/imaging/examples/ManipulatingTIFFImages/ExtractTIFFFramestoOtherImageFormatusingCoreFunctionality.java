@@ -9,32 +9,48 @@ import com.aspose.imaging.fileformats.tiff.TiffImage;
 import com.aspose.imaging.imageoptions.JpegOptions;
 import com.aspose.imaging.sources.FileCreateSource;
 
-public class ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality {
-	public static void main(String... args) throws Exception {
-		// The path to the documents directory.
-		String dataDir = Utils.getSharedDataDir(ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality.class) + "ManipulatingTIFFImages/";
-//ExStart:ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality
-		
-		TiffImage multiImage = (TiffImage) Image.load(dataDir + "sample.tif");
-		int frameCounter = 0;
-		for (TiffFrame tiffFrame : multiImage.getFrames()) {
-			multiImage.setActiveFrame(tiffFrame);
-			Color[] pixels = multiImage.loadPixels(tiffFrame.getBounds());
-			JpegOptions jpgCreateOptions = new JpegOptions();
+public class ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality
+{
+    public static void main(String... args)
+    {
+		//ExStart:ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality
 
-			jpgCreateOptions
-					.setSource(new FileCreateSource(String.format(dataDir + "Concat" + frameCounter + ".jpg"), false));
-			JpegImage jpgImage = (JpegImage) Image.create(jpgCreateOptions, tiffFrame.getWidth(),
-					tiffFrame.getHeight());
+        // The path to the documents directory.
+        String dataDir = Utils.getSharedDataDir() + "ManipulatingTIFFImages/";
 
+        TiffImage multiImage = (TiffImage) Image.load(dataDir + "sample.tif");
+		try
+		{
+			int frameCounter = 0;
+			for (TiffFrame tiffFrame : multiImage.getFrames())
 			{
-				jpgImage.savePixels(tiffFrame.getBounds(), pixels);
-				jpgImage.save();
-			}
+				multiImage.setActiveFrame(tiffFrame);
+				Color[] pixels = multiImage.loadPixels(tiffFrame.getBounds());
+				JpegOptions jpgCreateOptions = new JpegOptions();
 
-			frameCounter++;
+				jpgCreateOptions
+						.setSource(new FileCreateSource(dataDir + "Concat" + frameCounter + ".jpg", false));
+				JpegImage jpgImage = (JpegImage) Image.create(jpgCreateOptions, tiffFrame.getWidth(),
+						tiffFrame.getHeight());
+				try
+				{
+					jpgImage.savePixels(tiffFrame.getBounds(), pixels);
+					jpgImage.save();
+				}
+				finally
+				{
+					jpgImage.close();
+					jpgCreateOptions.close();
+				}
+
+				frameCounter++;
+			}
+		}
+		finally
+		{
+			multiImage.close();
 		}
 		//ExEnd:ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality
-	}
+    }
 
 }

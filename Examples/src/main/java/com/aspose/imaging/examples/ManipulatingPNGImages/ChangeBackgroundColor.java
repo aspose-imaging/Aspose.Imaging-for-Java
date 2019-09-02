@@ -1,37 +1,52 @@
 package com.aspose.imaging.examples.ManipulatingPNGImages;
 
+import com.aspose.imaging.Color;
 import com.aspose.imaging.examples.Utils;
 
-public class ChangeBackgroundColor {
-	public static void main(String... args) throws Exception {
-		// The path to the documents directory.
-		String dataDir = Utils.getSharedDataDir(ChangeBackgroundColor.class) + "ManipulatingPNGImages/";
-//ExStart:ChangeBackgroundColor
-		
-		// Create an instance of Image class and load a PNG image
-		com.aspose.imaging.Image img = com.aspose.imaging.Image.load(dataDir + "aspose_logo.png");
+public class ChangeBackgroundColor
+{
+    public static void main(String... args)
+    {
+		//ExStart:ChangeBackgroundColor
 
-		// Create an instance of RasterImage and get the pixels array by calling
-		// method LoadArgb32Pixels.
-		com.aspose.imaging.RasterImage rasterImg = (com.aspose.imaging.RasterImage) img;
+        // The path to the documents directory.
+        String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
 
-		int[] pixels = rasterImg.loadArgb32Pixels(img.getBounds());
+        // Create an instance of Image class and load a PNG image
+        com.aspose.imaging.Image img = com.aspose.imaging.Image.load(dataDir + "aspose_logo.png");
 
-		// Iterate through the pixel array.
-		for (int i = 0; i < pixels.length; i++) {
-			// Check the pixel information that if it is a transparent color
-			// pixel
-			if (pixels[i] == rasterImg.getTransparentColor().toArgb()) {
-				// Change the pixel color to white
-				pixels[i] = com.aspose.imaging.Color.getWhite().toArgb();
+		try
+		{
+			// Create an instance of RasterImage and get the pixels array by calling
+			// method LoadArgb32Pixels.
+			com.aspose.imaging.RasterImage rasterImg = (com.aspose.imaging.RasterImage) img;
+
+			int[] pixels = rasterImg.loadArgb32Pixels(img.getBounds());
+
+			int transparentColor = rasterImg.getTransparentColor().toArgb();
+			int whiteColor = Color.getWhite().toArgb();
+			// Iterate through the pixel array.
+			for (int i = 0; i < pixels.length; i++)
+			{
+				// Check the pixel information that if it is a transparent color
+				// pixel
+				if (pixels[i] == transparentColor)
+				{
+					// Change the pixel color to white
+					pixels[i] = whiteColor;
+				}
 			}
-		}
-		// Replace the pixel array into the image.
-		rasterImg.saveArgb32Pixels(img.getBounds(), pixels);
+			// Replace the pixel array into the image.
+			rasterImg.saveArgb32Pixels(img.getBounds(), pixels);
 
-		// Save the updated image to disk.
-		rasterImg.save(dataDir + "ChangeBackgroundColor_out.png");
+			// Save the updated image to disk.
+			rasterImg.save(dataDir + "ChangeBackgroundColor_out.png");
+		}
+		finally
+		{
+			img.close();
+		}
 		//ExEnd:ChangeBackgroundColor
-	}
+    }
 
 }

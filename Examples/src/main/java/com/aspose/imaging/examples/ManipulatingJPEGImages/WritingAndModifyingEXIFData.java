@@ -5,31 +5,41 @@ import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.exif.ExifData;
 import com.aspose.imaging.fileformats.jpeg.JpegImage;
 
-public class WritingAndModifyingEXIFData {
-	public static void main(String... args) throws Exception {
-		// The path to the documents directory.
-		String dataDir = Utils.getSharedDataDir(WritingAndModifyingEXIFData.class) + "ManipulatingJPEGImages/";
-//ExStart:WritingAndModifyingEXIFData
-		
-		// Load an image using the factory method load exposed by Image class
-		Image image = Image.load(dataDir + "aspose-logo.jpg");
+public class WritingAndModifyingEXIFData
+{
+    public static void main(String... args)
+    {
+		//ExStart:WritingAndModifyingEXIFData
 
-		// Initialize an object of ExifData and fill it will image's EXIF
-		// information
-		ExifData exif = ((JpegImage) image).getExifData();
+        // The path to the documents directory.
+        String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
 
-		// Set Lens Make information
-		exif.setLensMake("Sony");
+        // Load an image using the factory method load exposed by Image class
+        Image image = Image.load(dataDir + "aspose-logo.jpg");
 
-		// Set WhiteBalance information
-		exif.setWhiteBalance(com.aspose.imaging.exif.enums.ExifWhiteBalance.Auto);
+		try
+		{
+			// Initialize an object of ExifData and fill it will image's EXIF
+			// information
+			ExifData exif = ((JpegImage) image).getExifData();
 
-		// Set that Flash was fires
-		exif.setFlash(com.aspose.imaging.exif.enums.ExifFlash.Fired);
+			// Set Lens Make information
+			exif.setLensMake("Sony");
 
-		// Save the changes to the original image
-		image.save();
+			// Set WhiteBalance information
+			exif.setWhiteBalance(com.aspose.imaging.exif.enums.ExifWhiteBalance.Auto);
+
+			// Set that Flash was fires
+			exif.setFlash(com.aspose.imaging.exif.enums.ExifFlash.Fired);
+
+			// Save the changes to the original image
+			image.save();
+		}
+		finally
+		{
+			image.close();
+		}
 		//ExEnd:WritingAndModifyingEXIFData
-	}
+    }
 
 }

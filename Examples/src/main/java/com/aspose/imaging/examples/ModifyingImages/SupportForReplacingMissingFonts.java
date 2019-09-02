@@ -11,22 +11,23 @@ import com.aspose.imaging.imageoptions.VectorRasterizationOptions;
 import com.aspose.imaging.imageoptions.WmfRasterizationOptions;
 
 
-public class SupportForReplacingMissingFonts {
+public class SupportForReplacingMissingFonts
+{
 
-    public static void main(String... args) throws Exception {
-        
-         //ExStart:SupportForReplacingMissingFonts
-        String dataDir = Utils.getSharedDataDir(SupportForReplacingMissingFonts.class) + "ModifyingImages/";        
+    public static void main(String... args)
+    {
+        //ExStart:SupportForReplacingMissingFonts
+        String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         FontSettings.setDefaultFontName("Comic Sans MS");
-         
-        String[] files = new String[] { "missing-font.emf", "missing-font.odg", "missing-font.svg", "missing-font.wmf" };
-        VectorRasterizationOptions[] options = new VectorRasterizationOptions[] { new EmfRasterizationOptions(), new OdgRasterizationOptions(), new SvgRasterizationOptions(), new WmfRasterizationOptions() };
-         
+
+        String[] files = new String[]{"missing-font.emf", "missing-font.odg", "missing-font.svg", "missing-font.wmf"};
+        VectorRasterizationOptions[] options = new VectorRasterizationOptions[]{new EmfRasterizationOptions(), new OdgRasterizationOptions(), new SvgRasterizationOptions(), new WmfRasterizationOptions()};
+
         for (int i = 0; i < files.length; i++)
         {
             String outFile = dataDir + files[i] + ".png";
-            
-            try(Image img = Image.load(dataDir + files[i]))
+
+            try (Image img = Image.load(dataDir + files[i]))
             {
                 options[i].setPageWidth(img.getWidth());
                 options[i].setPageHeight(img.getHeight());

@@ -1,17 +1,17 @@
 package com.aspose.imaging.examples.memorystrategies;
 
 import com.aspose.imaging.Image;
-import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.LoadOptions;
-import com.aspose.imaging.RotateFlipType;
 import com.aspose.imaging.RasterImage;
+import com.aspose.imaging.RotateFlipType;
+import com.aspose.imaging.examples.Utils;
 
-import com.aspose.imaging.imageoptions.TiffOptions;
-
-public class OptimizationStrategyInRotate {
-	public static void main(String... args) throws Exception {
-		// The path to the documents directory.
-		String dataDir = Utils.getSharedDataDir(Utils.class) + "ModifyingImages/";
+public class OptimizationStrategyInRotate
+{
+    public static void main(String... args)
+    {
+        // The path to the documents directory.
+        String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
         String fileName = "SampleTiff1.tiff";
         String inputFileName = dataDir + fileName;
@@ -23,7 +23,7 @@ public class OptimizationStrategyInRotate {
             // perform RotateFlip operation
             image.rotateFlip(RotateFlipType.Rotate90FlipNone);
             // perform Rotate operation
-            ((RasterImage)image).rotate(60); // rotate 60 degrees clockwise
+            ((RasterImage) image).rotate(60); // rotate 60 degrees clockwise
         }
-	}
+    }
 }

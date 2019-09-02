@@ -22,7 +22,7 @@ public class DrawRasterImageOnSVG {
          
          //ExStart:DrawRasterImageOnSVG
      
-        String dir = Utils.getSharedDataDir(DrawRasterImageOnSVG.class) + "images/";
+        String dir = Utils.getSharedDataDir() + "images/";
         
         RasterImage imageToDraw = (RasterImage)Image.load(dir + "asposenet_220_src01.png");
         try

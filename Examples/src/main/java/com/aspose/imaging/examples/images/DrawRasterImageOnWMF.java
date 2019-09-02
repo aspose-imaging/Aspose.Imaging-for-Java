@@ -23,7 +23,7 @@ public class DrawRasterImageOnWMF {
          
          //ExStart:DrawRasterImageOnWMF
      
-        String dir = Utils.getSharedDataDir(DrawRasterImageOnWMF.class) + "images/";
+        String dir = Utils.getSharedDataDir() + "images/";
         
         // Load the image to be drawn
         RasterImage imageToDraw = (RasterImage)Image.load(dir + "asposenet_220_src01.png");

@@ -6,25 +6,24 @@ import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.wmf.WmfImage;
 
 /**
- *
  * @author mfazi
  */
-public class CropWMFFile {
-    
-    public static void main(String[] args)  {
-
+public class CropWMFFile
+{
+    public static void main(String[] args)
+    {
         //ExStart:CropWMFFile
-     
-        String dataDir = Utils.getSharedDataDir(CropWMFFile.class) + "WMF/";
-        
-        try(WmfImage image = (WmfImage)Image.load(dataDir + "test.wmf"))
+
+        String dataDir = Utils.getSharedDataDir() + "WMF/";
+
+        try (WmfImage image = (WmfImage) Image.load(dataDir + "test.wmf"))
         {
-			image.crop(new Rectangle(10, 10, 100, 150));
-			System.out.println(image.getWidth());
-			System.out.println(image.getHeight());
-			image.save(dataDir + "test.wmf_crop.wmf");
-		}
+            image.crop(new Rectangle(10, 10, 100, 150));
+            System.out.println(image.getWidth());
+            System.out.println(image.getHeight());
+            image.save(dataDir + "test.wmf_crop.wmf");
+        }
         //ExEnd:CropWMFFile
     }
-   
+
 }

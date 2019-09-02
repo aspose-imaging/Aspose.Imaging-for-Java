@@ -11,7 +11,7 @@ public class SupportForODG {
 	public static void main(String... args) throws Exception {
         
         //ExStart:SupportForODG
-        String dataDir = Utils.getSharedDataDir(SupportForODG.class) + "ConvertingImages/";
+        String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
         String[] files = new String[] {"example.odg", "example1.odg"};
         String folder = dataDir;
         
@@ -24,19 +24,17 @@ public class SupportForODG {
             {
                 rasterizationOptions.setPageSize(new SizeF(image.getWidth(), image.getHeight()));
                 String outFileName = fileName.replace(".odg", ".png");
-                image.save(outFileName,
-                        new PngOptions()
-                {{
-                    setVectorRasterizationOptions(rasterizationOptions);
-                }});
+                image.save(outFileName,  new PngOptions()
+                                {{
+                                    setVectorRasterizationOptions(rasterizationOptions);
+                                }});
 
                 outFileName = fileName.replace(".odg", ".pdf");
 
-                image.save(outFileName,
-                        new PdfOptions()
-                {{
-                    setVectorRasterizationOptions(rasterizationOptions);
-                }});
+                image.save(outFileName, new PdfOptions()
+                                {{
+                                    setVectorRasterizationOptions(rasterizationOptions);
+                                }});
             }
         }
         //ExEnd:SupportForODG

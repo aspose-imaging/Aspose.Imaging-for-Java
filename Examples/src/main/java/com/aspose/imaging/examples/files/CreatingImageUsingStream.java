@@ -4,10 +4,10 @@ import com.aspose.imaging.examples.Utils;
 
 public class CreatingImageUsingStream
 {
-    public static void main(String[] args) throws Exception
+    public static void main(String[] args)
     {
         // The path to the documents directory.
-        String dataDir = Utils.getSharedDataDir(CreatingImageUsingStream.class) + "files/";
+        String dataDir = Utils.getSharedDataDir() + "files/";
         //ExStart:CreatingImageUsingStream
         //Creates an instance of BmpOptions and set its various properties
         com.aspose.imaging.imageoptions.BmpOptions createOptions = new com.aspose.imaging.imageoptions.BmpOptions();
@@ -19,12 +19,20 @@ public class CreatingImageUsingStream
         createOptions.setSource(new com.aspose.imaging.sources.FileCreateSource(dataDir + "sample.bmp"));
 
         //Creates an instance of Image
-        com.aspose.imaging.Image image = com.aspose.imaging.Image.create(createOptions,500,500);
+        com.aspose.imaging.Image image = com.aspose.imaging.Image.create(createOptions, 500, 500);
 
-        image.save();
+        try
+        {
+            image.save();
 
-        // Display Status.
-        System.out.println("Image created successfully!");
+            // Display Status.
+            System.out.println("Image created successfully!");
+        }
+        finally
+        {
+            image.close();
+            createOptions.close(); // to be sure that file is released
+        }
         //ExEnd:CreatingImageUsingStream
     }
 }

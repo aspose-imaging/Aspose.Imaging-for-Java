@@ -15,21 +15,20 @@ import com.aspose.imaging.fileformats.psd.layers.fillsettings.FillType;
 import com.aspose.imaging.fileformats.psd.layers.fillsettings.IColorFillSettings;
 
 /**
- *
  * @author mfazi
  */
-public class SupportOfColorFillLayer {
-    public static void main(String[] args)  {
-         
-         //ExStart:SupportOfColorFillLayer
-     
-        String dataDir = Utils.getSharedDataDir(SupportOfColorFillLayer.class) + "Photoshop/";
+public class SupportOfColorFillLayer
+{
+    public static void main(String[] args)
+    {
+        //ExStart:SupportOfColorFillLayer
+
+        String dataDir = Utils.getSharedDataDir() + "Photoshop/";
         String sourceFileName = dataDir + "ColorFillLayer.psd";
         String exportPath = dataDir + "ColorFillLayer_output.psd";
-        String exportPathPng = dataDir + "ColorFillLayer_output.png";
- 
+
         PsdImage im = (PsdImage) Image.load(sourceFileName);
- 
+
         try
         {
             for (Layer layer : im.getLayers())
@@ -37,14 +36,14 @@ public class SupportOfColorFillLayer {
                 if (layer instanceof FillLayer)
                 {
                     FillLayer fillLayer = (FillLayer) layer;
- 
+
                     if (fillLayer.getFillSettings().getFillType() != FillType.Color)
                     {
                         throw new RuntimeException("Wrong Fill Layer");
                     }
- 
+
                     IColorFillSettings settings = (IColorFillSettings) fillLayer.getFillSettings();
- 
+
                     settings.setColor(Color.getRed());
                     fillLayer.update();
                     im.save(exportPath);
@@ -57,6 +56,6 @@ public class SupportOfColorFillLayer {
             im.close();
         }
         //ExEnd:SupportOfColorFillLayer
-        
+
     }
 }

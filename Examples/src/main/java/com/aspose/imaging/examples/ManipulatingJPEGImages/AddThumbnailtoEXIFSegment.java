@@ -4,27 +4,44 @@ import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.exif.JpegExifData;
 import com.aspose.imaging.fileformats.jpeg.JpegImage;
 
-public class AddThumbnailtoEXIFSegment {
-	public static void main(String... args) throws Exception {
-		// The path to the documents directory.
-		String dataDir = Utils.getSharedDataDir(AddThumbnailtoEXIFSegment.class) + "ManipulatingJPEGImages/";
-	//ExStart:AddThumbnailtoEXIFSegment
-	
-		// Create an instance of JpegImage to store the thumbnail
-		JpegImage thumbnailImage = new JpegImage(100, 100);
+public class AddThumbnailtoEXIFSegment
+{
+    public static void main(String... args)
+    {
+		//ExStart:AddThumbnailtoEXIFSegment
 
-		// Create another instance of JpegImage as primary image
-		JpegImage image = new JpegImage(1000, 1000);
+        // The path to the documents directory.
+        String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
 
-		// Set the ExifData value as new JpegExifData
-		image.setExifData(new JpegExifData());
+        // Create an instance of JpegImage to store the thumbnail
+        JpegImage thumbnailImage = new JpegImage(100, 100);
 
-		// Store the thumbnail in the Exif segment
-		image.getExifData().setThumbnail(thumbnailImage);
+		try
+		{
+			// Create another instance of JpegImage as primary image
+			JpegImage image = new JpegImage(1000, 1000);
 
-		// Save the resultant image
-		image.save(dataDir + "AddThumbnailtoEXIFSegment_out.jpg");
+			try
+			{
+				// Set the ExifData value as new JpegExifData
+				image.setExifData(new JpegExifData());
+
+				// Store the thumbnail in the Exif segment
+				image.getExifData().setThumbnail(thumbnailImage);
+
+				// Save the resultant image
+				image.save(dataDir + "AddThumbnailtoEXIFSegment_out.jpg");
+			}
+			finally
+			{
+				image.close();
+			}
+		}
+		finally
+		{
+			thumbnailImage.close();
+		}
 		//ExEnd:AddThumbnailtoEXIFSegment
-	}
+    }
 
 }

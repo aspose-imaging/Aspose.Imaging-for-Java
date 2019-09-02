@@ -1,0 +1,569 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="1188" height="533">
+<style>
+
+@font-face {
+font-family: "Arial";
+src: url("./fonts/arial.ttf");
+}
+
+@font-face {
+font-family: "Verdana";
+src: url("./fonts/verdana.ttf");
+}
+
+@font-face {
+font-family: "Astakhov Dished Glamour E-F";
+src: url("./fonts/ca084233-0000-0000-0000-000000000000.ttf");
+}
+
+@font-face {
+font-family: "Bookshelf Symbol 7";
+src: url("./fonts/BSSYM7.TTF");
+}
+</style>
+
+<g transform="matrix(1 0 0 1 0 0)">
+    <path transform="matrix(0.9999996 0 0 1 0 0)"  d="M0 0L0 200L501 200L501 0" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+    <path transform="matrix(1.002 0 0 1 0 7.170484E-07)"  d="M20 20L28 20L28 32.28906L20 32.28906L20 32.28906L20 20L20 20L20 20z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.958007)" x="20" y="20" style="fill:#000000;font-family:Arial;" font-size="11">
+A
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 7.170484E-07)"  d="M27.5 20L33.5 20L33.5 32.28906L27.5 32.28906L27.5 32.28906L27.5 20L27.5 20L27.5 20z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.958007)" x="27.5" y="20" style="fill:#000000;font-family:Arial;" font-size="11">
+s
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 7.170484E-07)"  d="M33 20L39.11768 20L39.11768 32.28906L33 32.28906L33 32.28906L33 20L33 20L33 20z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.958007)" x="33" y="20" style="fill:#000000;font-family:Arial;" font-size="11">
+p
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 7.170484E-07)"  d="M38.61768 20L44.73535 20L44.73535 32.28906L38.61768 32.28906L38.61768 32.28906L38.61768 20L38.61768 20L38.61768 20z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.958007)" x="38.61768" y="20" style="fill:#000000;font-family:Arial;" font-size="11">
+o
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 7.170484E-07)"  d="M44.23535 20L50.23535 20L50.23535 32.28906L44.23535 32.28906L44.23535 32.28906L44.23535 20L44.23535 20L44.23535 20z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.958007)" x="44.23535" y="20" style="fill:#000000;font-family:Arial;" font-size="11">
+s
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 7.170484E-07)"  d="M49.73535 20L55.85303 20L55.85303 32.28906L49.73535 32.28906L49.73535 32.28906L49.73535 20L49.73535 20L49.73535 20z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.958007)" x="49.73535" y="20" style="fill:#000000;font-family:Arial;" font-size="11">
+e
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 7.170484E-07)"  d="M55.35303 20L58.40918 20L58.40918 32.28906L55.35303 32.28906L55.35303 32.28906L55.35303 20L55.35303 20L55.35303 20z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.958007)" x="55.35303" y="20" style="fill:#000000;font-family:Arial;" font-size="11">
+
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 7.170484E-07)"  d="M57.90918 20L65.90918 20L65.90918 32.28906L57.90918 32.28906L57.90918 32.28906L57.90918 20L57.90918 20L57.90918 20z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.958007)" x="57.90918" y="20" style="fill:#000000;font-family:Arial;" font-size="11">
+A
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 7.170484E-07)"  d="M65.40918 20L69.40918 20L69.40918 32.28906L65.40918 32.28906L65.40918 32.28906L65.40918 20L65.40918 20L65.40918 20z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.958007)" x="65.40918" y="20" style="fill:#000000;font-family:Arial;" font-size="11">
+r
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 7.170484E-07)"  d="M68.90918 20L71.35303 20L71.35303 32.28906L68.90918 32.28906L68.90918 32.28906L68.90918 20L68.90918 20L68.90918 20z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.958007)" x="68.90918" y="20" style="fill:#000000;font-family:Arial;" font-size="11">
+i
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 7.170484E-07)"  d="M70.85303 20L76.9707 20L76.9707 32.28906L70.85303 32.28906L70.85303 32.28906L70.85303 20L70.85303 20L70.85303 20z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.958007)" x="70.85303" y="20" style="fill:#000000;font-family:Arial;" font-size="11">
+a
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 7.170484E-07)"  d="M76.4707 20L82.4707 20L82.4707 32.28906L76.4707 32.28906L76.4707 32.28906L76.4707 20L76.4707 20L76.4707 20z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.958007)" x="76.4707" y="20" style="fill:#000000;font-family:Arial;" font-size="11">
+l
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M20 40L28 40L28 53.36865L20 53.36865L20 53.36865L20 40L20 40L20 40z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="20" y="40" style="fill:#000000;font-family:Verdana;" font-size="11">
+A
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M27.5 40L33.5 40L33.5 53.36865L27.5 53.36865L27.5 53.36865L27.5 40L27.5 40L27.5 40z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="27.5" y="40" style="fill:#000000;font-family:Verdana;" font-size="11">
+s
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M33 40L40 40L40 53.36865L33 53.36865L33 53.36865L33 40L33 40L33 40z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="33" y="40" style="fill:#000000;font-family:Verdana;" font-size="11">
+p
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M39.5 40L46.5 40L46.5 53.36865L39.5 53.36865L39.5 53.36865L39.5 40L39.5 40L39.5 40z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="39.5" y="40" style="fill:#000000;font-family:Verdana;" font-size="11">
+o
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M46 40L52 40L52 53.36865L46 53.36865L46 53.36865L46 40L46 40L46 40z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="46" y="40" style="fill:#000000;font-family:Verdana;" font-size="11">
+s
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M51.5 40L58.5 40L58.5 53.36865L51.5 53.36865L51.5 53.36865L51.5 40L51.5 40L51.5 40z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="51.5" y="40" style="fill:#000000;font-family:Verdana;" font-size="11">
+e
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M58 40L62 40L62 53.36865L58 53.36865L58 53.36865L58 40L58 40L58 40z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="58" y="40" style="fill:#000000;font-family:Verdana;" font-size="11">
+
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M61.5 40L69.5 40L69.5 53.36865L61.5 53.36865L61.5 53.36865L61.5 40L61.5 40L61.5 40z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="61.5" y="40" style="fill:#000000;font-family:Verdana;" font-size="11">
+V
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M69 40L76 40L76 53.36865L69 53.36865L69 53.36865L69 40L69 40L69 40z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="69" y="40" style="fill:#000000;font-family:Verdana;" font-size="11">
+e
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M75.5 40L80.5 40L80.5 53.36865L75.5 53.36865L75.5 53.36865L75.5 40L75.5 40L75.5 40z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="75.5" y="40" style="fill:#000000;font-family:Verdana;" font-size="11">
+r
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M80 40L87 40L87 53.36865L80 53.36865L80 53.36865L80 40L80 40L80 40z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="80" y="40" style="fill:#000000;font-family:Verdana;" font-size="11">
+d
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M86.5 40L93.5 40L93.5 53.36865L86.5 53.36865L86.5 53.36865L86.5 40L86.5 40L86.5 40z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="86.5" y="40" style="fill:#000000;font-family:Verdana;" font-size="11">
+a
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M93 40L100 40L100 53.36865L93 53.36865L93 53.36865L93 40L93 40L93 40z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="93" y="40" style="fill:#000000;font-family:Verdana;" font-size="11">
+n
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M99.5 40L106.5 40L106.5 53.36865L99.5 53.36865L99.5 53.36865L99.5 40L99.5 40L99.5 40z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="99.5" y="40" style="fill:#000000;font-family:Verdana;" font-size="11">
+a
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M20 60L28 60L28 72.18164L20 72.18164L20 72.18164L20 60L20 60L20 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="20" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+A
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M27.5 60L31.78076 60L31.78076 72.18164L27.5 72.18164L27.5 72.18164L27.5 60L27.5 60L27.5 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="27.5" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+s
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M31.28076 60L37.28076 60L37.28076 72.18164L31.28076 72.18164L31.28076 72.18164L31.28076 60L31.28076 60L31.28076 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="31.28076" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+p
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M36.78076 60L42.78076 60L42.78076 72.18164L36.78076 72.18164L36.78076 72.18164L36.78076 60L36.78076 60L36.78076 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="36.78076" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+o
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M42.28076 60L46.56152 60L46.56152 72.18164L42.28076 72.18164L42.28076 72.18164L42.28076 60L42.28076 60L42.28076 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="42.28076" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+s
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M46.06152 60L51.06152 60L51.06152 72.18164L46.06152 72.18164L46.06152 72.18164L46.06152 60L46.06152 60L46.06152 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="46.06152" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+e
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M50.56152 60L53.56152 60L53.56152 72.18164L50.56152 72.18164L50.56152 72.18164L50.56152 60L50.56152 60L50.56152 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="50.56152" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M53.06152 60L61.06152 60L61.06152 72.18164L53.06152 72.18164L53.06152 72.18164L53.06152 60L53.06152 60L53.06152 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="53.06152" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+T
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M60.56152 60L63.61768 60L63.61768 72.18164L60.56152 72.18164L60.56152 72.18164L60.56152 60L60.56152 60L60.56152 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="60.56152" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+i
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M63.11768 60L72.11768 60L72.11768 72.18164L63.11768 72.18164L63.11768 72.18164L63.11768 60L63.11768 60L63.11768 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="63.11768" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+m
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M71.61768 60L76.61768 60L76.61768 72.18164L71.61768 72.18164L71.61768 72.18164L71.61768 60L71.61768 60L71.61768 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="71.61768" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+e
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M76.11768 60L80.39844 60L80.39844 72.18164L76.11768 72.18164L76.11768 72.18164L76.11768 60L76.11768 60L76.11768 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="76.11768" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+s
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M79.89844 60L82.89844 60L82.89844 72.18164L79.89844 72.18164L79.89844 72.18164L79.89844 60L79.89844 60L79.89844 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="79.89844" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M82.39844 60L90.39844 60L90.39844 72.18164L82.39844 72.18164L82.39844 72.18164L82.39844 60L82.39844 60L82.39844 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="82.39844" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+N
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M89.89844 60L94.89844 60L94.89844 72.18164L89.89844 72.18164L89.89844 72.18164L89.89844 60L89.89844 60L89.89844 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="89.89844" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+e
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M94.39844 60L102.3423 60L102.3423 72.18164L94.39844 72.18164L94.39844 72.18164L94.39844 60L94.39844 60L94.39844 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="94.39844" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+w
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M101.8423 60L104.8423 60L104.8423 72.18164L101.8423 72.18164L101.8423 72.18164L101.8423 60L101.8423 60L101.8423 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="101.8423" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M104.3423 60L111.6792 60L111.6792 72.18164L104.3423 72.18164L104.3423 72.18164L104.3423 60L104.3423 60L104.3423 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="104.3423" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+R
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M111.1792 60L117.1792 60L117.1792 72.18164L111.1792 72.18164L111.1792 72.18164L111.1792 60L111.1792 60L111.1792 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="111.1792" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+o
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M116.6792 60L125.6792 60L125.6792 72.18164L116.6792 72.18164L116.6792 72.18164L116.6792 60L116.6792 60L116.6792 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="116.6792" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+m
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M125.1792 60L130.1792 60L130.1792 72.18164L125.1792 72.18164L125.1792 72.18164L125.1792 60L125.1792 60L125.1792 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="125.1792" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+a
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M129.6792 60L135.1792 60L135.1792 72.18164L129.6792 72.18164L129.6792 72.18164L129.6792 60L129.6792 60L129.6792 60z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 9.802248)" x="129.6792" y="60" style="fill:#000000;font-family:Astakhov Dished Glamour E-F;" font-size="11">
+n
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M20 80L28 80L28 93.47607L20 93.47607L20 93.47607L20 80L20 80L20 80z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="20" y="80" style="fill:#000000;font-family:Bookshelf Symbol 7;" font-size="11">
+A
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M27.5 80L34.1333 80L34.1333 93.47607L27.5 93.47607L27.5 93.47607L27.5 80L27.5 80L27.5 80z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="27.5" y="80" style="fill:#000000;font-family:Bookshelf Symbol 7;" font-size="11">
+s
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M33.6333 80L39.67041 80L39.67041 93.47607L33.6333 93.47607L33.6333 93.47607L33.6333 80L33.6333 80L33.6333 80z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="33.6333" y="80" style="fill:#000000;font-family:Bookshelf Symbol 7;" font-size="11">
+p
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M39.17041 80L45.20752 80L45.20752 93.47607L39.17041 93.47607L39.17041 93.47607L39.17041 80L39.17041 80L39.17041 80z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="39.17041" y="80" style="fill:#000000;font-family:Bookshelf Symbol 7;" font-size="11">
+o
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M44.70752 80L51.34082 80L51.34082 93.47607L44.70752 93.47607L44.70752 93.47607L44.70752 80L44.70752 80L44.70752 80z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="44.70752" y="80" style="fill:#000000;font-family:Bookshelf Symbol 7;" font-size="11">
+s
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M50.84082 80L55.66943 80L55.66943 93.47607L50.84082 93.47607L50.84082 93.47607L50.84082 80L50.84082 80L50.84082 80z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="50.84082" y="80" style="fill:#000000;font-family:Bookshelf Symbol 7;" font-size="11">
+e
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M55.16943 80L58.16943 80L58.16943 93.47607L55.16943 93.47607L55.16943 93.47607L55.16943 80L55.16943 80L55.16943 80z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="55.16943" y="80" style="fill:#000000;font-family:Bookshelf Symbol 7;" font-size="11">
+
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M57.66943 80L64.66943 80L64.66943 93.47607L57.66943 93.47607L57.66943 93.47607L57.66943 80L57.66943 80L57.66943 80z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="57.66943" y="80" style="fill:#000000;font-family:Bookshelf Symbol 7;" font-size="11">
+S
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M64.16943 80L71.71582 80L71.71582 93.47607L64.16943 93.47607L64.16943 93.47607L64.16943 80L64.16943 80L64.16943 80z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="64.16943" y="80" style="fill:#000000;font-family:Bookshelf Symbol 7;" font-size="11">
+y
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M71.21582 80L77.55371 80L77.55371 93.47607L71.21582 93.47607L71.21582 93.47607L71.21582 80L71.21582 80L71.21582 80z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="71.21582" y="80" style="fill:#000000;font-family:Bookshelf Symbol 7;" font-size="11">
+m
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M77.05371 80L84.05371 80L84.05371 93.47607L77.05371 93.47607L77.05371 93.47607L77.05371 80L77.05371 80L77.05371 80z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="77.05371" y="80" style="fill:#000000;font-family:Bookshelf Symbol 7;" font-size="11">
+b
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M83.55371 80L89.59082 80L89.59082 93.47607L83.55371 93.47607L83.55371 93.47607L83.55371 80L83.55371 80L83.55371 80z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="83.55371" y="80" style="fill:#000000;font-family:Bookshelf Symbol 7;" font-size="11">
+o
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 0)"  d="M89.09082 80L95.12793 80L95.12793 93.47607L89.09082 93.47607L89.09082 93.47607L89.09082 80L89.09082 80L89.09082 80z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05908)" x="89.09082" y="80" style="fill:#000000;font-family:Bookshelf Symbol 7;" font-size="11">
+l
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M20 100L29 100L29 113.3687L20 113.3687L20 113.3687L20 100L20 100L20 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="20" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+A
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M28.5 100L35.5 100L35.5 113.3687L28.5 113.3687L28.5 113.3687L28.5 100L28.5 100L28.5 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="28.5" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+s
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M35 100L43 100L43 113.3687L35 113.3687L35 113.3687L35 100L35 100L35 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="35" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+p
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M42.5 100L50.5 100L50.5 113.3687L42.5 113.3687L42.5 113.3687L42.5 100L42.5 100L42.5 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="42.5" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+o
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M50 100L57 100L57 113.3687L50 113.3687L50 113.3687L50 100L50 100L50 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="50" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+s
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M56.5 100L64.5 100L64.5 113.3687L56.5 113.3687L56.5 113.3687L56.5 100L56.5 100L56.5 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="56.5" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+e
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M64 100L68 100L68 113.3687L64 113.3687L64 113.3687L64 100L64 100L64 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="64" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M67.5 100L75.90039 100L75.90039 113.3687L67.5 113.3687L67.5 113.3687L67.5 100L67.5 100L67.5 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="67.5" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+V
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M75.40039 100L83.40039 100L83.40039 113.3687L75.40039 113.3687L75.40039 113.3687L75.40039 100L75.40039 100L75.40039 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="75.40039" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+e
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M82.90039 100L88.90039 100L88.90039 113.3687L82.90039 113.3687L82.90039 113.3687L82.90039 100L82.90039 100L82.90039 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="82.90039" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+r
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M88.40039 100L96.40039 100L96.40039 113.3687L88.40039 113.3687L88.40039 113.3687L88.40039 100L88.40039 100L88.40039 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="88.40039" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+d
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M95.90039 100L103.9004 100L103.9004 113.3687L95.90039 113.3687L95.90039 113.3687L95.90039 100L95.90039 100L95.90039 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="95.90039" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+a
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M103.4004 100L111.4004 100L111.4004 113.3687L103.4004 113.3687L103.4004 113.3687L103.4004 100L103.4004 100L103.4004 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="103.4004" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+n
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M110.9004 100L118.9004 100L118.9004 113.3687L110.9004 113.3687L110.9004 113.3687L110.9004 100L110.9004 100L110.9004 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="110.9004" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+a
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M118.4004 100L122.4004 100L122.4004 113.3687L118.4004 113.3687L118.4004 113.3687L118.4004 100L118.4004 100L118.4004 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="118.4004" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M121.9004 100L130.2793 100L130.2793 113.3687L121.9004 113.3687L121.9004 113.3687L121.9004 100L121.9004 100L121.9004 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="121.9004" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+B
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M129.7793 100L137.7793 100L137.7793 113.3687L129.7793 113.3687L129.7793 113.3687L129.7793 100L129.7793 100L129.7793 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="129.7793" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+o
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M137.2793 100L141.2793 100L141.2793 113.3687L137.2793 113.3687L137.2793 113.3687L137.2793 100L137.2793 100L137.2793 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="137.2793" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+l
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -5.736388E-06)"  d="M140.7793 100L148.4707 100L148.4707 113.3687L140.7793 113.3687L140.7793 113.3687L140.7793 100L140.7793 100L140.7793 100z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05907)" x="140.7793" y="100" style="fill:#000000;font-family:Verdana;font-weight:bold;" font-size="11">
+d
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M20 120L28 120L28 133.3687L20 133.3687L20 133.3687L20 120L20 120L20 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="20" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+A
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M27.5 120L33.5 120L33.5 133.3687L27.5 133.3687L27.5 133.3687L27.5 120L27.5 120L27.5 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="27.5" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+s
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M33 120L40 120L40 133.3687L33 133.3687L33 133.3687L33 120L33 120L33 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="33" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+p
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M39.5 120L46.5 120L46.5 133.3687L39.5 133.3687L39.5 133.3687L39.5 120L39.5 120L39.5 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="39.5" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+o
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M46 120L52 120L52 133.3687L46 133.3687L46 133.3687L46 120L46 120L46 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="46" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+s
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M51.5 120L58.5 120L58.5 133.3687L51.5 133.3687L51.5 133.3687L51.5 120L51.5 120L51.5 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="51.5" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+e
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M58 120L62 120L62 133.3687L58 133.3687L58 133.3687L58 120L58 120L58 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="58" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M61.5 120L69.5 120L69.5 133.3687L61.5 133.3687L61.5 133.3687L61.5 120L61.5 120L61.5 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="61.5" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+V
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M69 120L76 120L76 133.3687L69 133.3687L69 133.3687L69 120L69 120L69 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="69" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+e
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M75.5 120L80.5 120L80.5 133.3687L75.5 133.3687L75.5 133.3687L75.5 120L75.5 120L75.5 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="75.5" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+r
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M80 120L87 120L87 133.3687L80 133.3687L80 133.3687L80 120L80 120L80 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="80" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+d
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M86.5 120L93.5 120L93.5 133.3687L86.5 133.3687L86.5 133.3687L86.5 120L86.5 120L86.5 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="86.5" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+a
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M93 120L100 120L100 133.3687L93 133.3687L93 133.3687L93 120L93 120L93 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="93" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+n
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M99.5 120L106.5 120L106.5 133.3687L99.5 133.3687L99.5 133.3687L99.5 120L99.5 120L99.5 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="99.5" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+a
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M106 120L110 120L110 133.3687L106 133.3687L106 133.3687L106 120L106 120L106 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="106" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M109.5 120L114.5 120L114.5 133.3687L109.5 133.3687L109.5 133.3687L109.5 120L109.5 120L109.5 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="109.5" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+I
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M114 120L118.3345 120L118.3345 133.3687L114 133.3687L114 133.3687L114 120L114 120L114 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="114" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+t
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M117.8345 120L124.8345 120L124.8345 133.3687L117.8345 133.3687L117.8345 133.3687L117.8345 120L117.8345 120L117.8345 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="117.8345" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+a
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M124.3345 120L127.353 120L127.353 133.3687L124.3345 133.3687L124.3345 133.3687L124.3345 120L124.3345 120L124.3345 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="124.3345" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+l
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M126.853 120L129.8716 120L129.8716 133.3687L126.853 133.3687L126.853 133.3687L126.853 120L126.853 120L126.853 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="126.853" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+i
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M129.3716 120L135.3716 120L135.3716 133.3687L129.3716 133.3687L129.3716 133.3687L129.3716 120L129.3716 120L129.3716 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="129.3716" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+c
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M134.8716 120L138.8716 120L138.8716 133.3687L134.8716 133.3687L134.8716 133.3687L134.8716 120L134.8716 120L134.8716 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="134.8716" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M138.3716 120L146.4229 120L146.4229 133.3687L138.3716 133.3687L138.3716 133.3687L138.3716 120L138.3716 120L138.3716 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="138.3716" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+U
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M145.9229 120L152.9229 120L152.9229 133.3687L145.9229 133.3687L145.9229 133.3687L145.9229 120L145.9229 120L145.9229 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="145.9229" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+n
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M152.4229 120L159.4229 120L159.4229 133.3687L152.4229 133.3687L152.4229 133.3687L152.4229 120L152.4229 120L152.4229 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="152.4229" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+d
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M158.9229 120L165.9229 120L165.9229 133.3687L158.9229 133.3687L158.9229 133.3687L158.9229 120L158.9229 120L158.9229 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="158.9229" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+e
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M165.4229 120L170.4229 120L170.4229 133.3687L165.4229 133.3687L165.4229 133.3687L165.4229 120L165.4229 120L165.4229 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="165.4229" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+r
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M169.9229 120L172.9414 120L172.9414 133.3687L169.9229 133.3687L169.9229 133.3687L169.9229 120L169.9229 120L169.9229 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="169.9229" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+l
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M172.4414 120L175.46 120L175.46 133.3687L172.4414 133.3687L172.4414 133.3687L172.4414 120L172.4414 120L172.4414 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="172.4414" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+i
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M174.96 120L181.96 120L181.96 133.3687L174.96 133.3687L174.96 133.3687L174.96 120L174.96 120L174.96 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="174.96" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+n
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 5.736387E-06)"  d="M181.46 120L188.46 120L188.46 133.3687L181.46 133.3687L181.46 133.3687L181.46 120L181.46 120L181.46 120z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 11.05909)" x="181.46" y="120" style="fill:#000000;font-family:Verdana;font-style:italic;" font-size="11">
+e
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M20 140L42 140L42 178.8906L20 178.8906L20 178.8906L20 140L20 140L20 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="20" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+A
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M41.5 140L58.5 140L58.5 178.8906L41.5 178.8906L41.5 178.8906L41.5 140L41.5 140L41.5 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="41.5" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+s
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M58 140L78 140L78 178.8906L58 178.8906L58 178.8906L58 140L58 140L58 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="58" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+p
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M77.5 140L96.92188 140L96.92188 178.8906L77.5 178.8906L77.5 178.8906L77.5 140L77.5 140L77.5 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="77.5" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+o
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M96.42188 140L113.4219 140L113.4219 178.8906L96.42188 178.8906L96.42188 178.8906L96.42188 140L96.42188 140L96.42188 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="96.42188" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+s
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M112.9219 140L131.9844 140L131.9844 178.8906L112.9219 178.8906L112.9219 178.8906L112.9219 140L112.9219 140L112.9219 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="112.9219" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+e
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M131.4844 140L142.7344 140L142.7344 178.8906L131.4844 178.8906L131.4844 178.8906L131.4844 140L131.4844 140L131.4844 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="131.4844" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M142.2344 140L164.2344 140L164.2344 178.8906L142.2344 178.8906L142.2344 178.8906L142.2344 140L142.2344 140L142.2344 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="142.2344" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+V
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M163.7344 140L182.7969 140L182.7969 178.8906L163.7344 178.8906L163.7344 178.8906L163.7344 140L163.7344 140L163.7344 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="163.7344" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+e
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M182.2969 140L196.2969 140L196.2969 178.8906L182.2969 178.8906L182.2969 178.8906L182.2969 140L182.2969 140L182.2969 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="182.2969" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+r
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M195.7969 140L215.7969 140L215.7969 178.8906L195.7969 178.8906L195.7969 178.8906L195.7969 140L195.7969 140L195.7969 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="195.7969" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+d
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M215.2969 140L234.5156 140L234.5156 178.8906L215.2969 178.8906L215.2969 178.8906L215.2969 140L215.2969 140L215.2969 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="215.2969" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+a
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M234.0156 140L254.2656 140L254.2656 178.8906L234.0156 178.8906L234.0156 178.8906L234.0156 140L234.0156 140L234.0156 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="234.0156" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+n
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M253.7656 140L272.9844 140L272.9844 178.8906L253.7656 178.8906L253.7656 178.8906L253.7656 140L253.7656 140L253.7656 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="253.7656" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+a
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M272.4844 140L283.7344 140L283.7344 178.8906L272.4844 178.8906L272.4844 178.8906L272.4844 140L272.4844 140L272.4844 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="272.4844" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M283.2344 140L303.5781 140L303.5781 178.8906L283.2344 178.8906L283.2344 178.8906L283.2344 140L283.2344 140L283.2344 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="283.2344" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+2
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M303.0781 140L323.4219 140L323.4219 178.8906L303.0781 178.8906L303.0781 178.8906L303.0781 140L303.0781 140L303.0781 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="303.0781" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+4
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M322.9219 140L339.9219 140L339.9219 178.8906L322.9219 178.8906L322.9219 178.8906L322.9219 140L322.9219 140L322.9219 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="322.9219" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+s
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M339.4219 140L356.4219 140L356.4219 178.8906L339.4219 178.8906L339.4219 178.8906L339.4219 140L339.4219 140L339.4219 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="339.4219" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+z
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M355.9219 140L367.1719 140L367.1719 178.8906L355.9219 178.8906L355.9219 178.8906L355.9219 140L355.9219 140L355.9219 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="355.9219" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M366.6719 140L388.9219 140L388.9219 178.8906L366.6719 178.8906L366.6719 178.8906L366.6719 140L366.6719 140L366.6719 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="366.6719" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+R
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M388.4219 140L407.4844 140L407.4844 178.8906L388.4219 178.8906L388.4219 178.8906L388.4219 140L388.4219 140L388.4219 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="388.4219" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+e
+	</text>
+    <path transform="matrix(1.002 0 0 1 0 -2.868193E-06)"  d="M406.9844 140L426.9219 140L426.9219 178.8906L406.9844 178.8906L406.9844 178.8906L406.9844 140L406.9844 140L406.9844 140z" stroke="none" fill="#FFFFFF" fill-rule="nonzero" />
+	<text transform="matrix(1.002 0 0 1 0 32.17187)" x="406.9844" y="140" style="fill:#FF0000;font-family:Verdana;" font-size="32">
+d
+	</text>
+	<text transform="matrix(0.8677574 -0.5000001 0.5009999 0.8660255 -79.93977 47.17556)" x="20" y="180" style="fill:#008000;font-family:Verdana;" font-size="15">
+Aspose Verdana 11sz Green rotated 30
+	</text>
+</g>
+</svg>

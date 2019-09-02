@@ -16,22 +16,22 @@ import com.aspose.imaging.fileformats.psd.layers.filllayers.FillLayer;
 import com.aspose.imaging.fileformats.psd.layers.layerresources.SoCoResource;
 
 /**
- *
  * @author mfazi
  */
-public class SupportOfSoCoResource {
-    public static void main(String[] args)  {
-         
-         //ExStart:SupportOfSoCoResource
-     
-        String dataDir = Utils.getSharedDataDir(SupportOfSoCoResource.class) + "Photoshop/";
-        
+public class SupportOfSoCoResource
+{
+    public static void main(String[] args)
+    {
+        //ExStart:SupportOfSoCoResource
+
+        String dataDir = Utils.getSharedDataDir() + "Photoshop/";
+
         // Support of SoCoResource
-        String sourceFileName = dataDir +"ColorFillLayer.psd";
-        String exportPath = dataDir +"SoCoResource_Edited.psd";
- 
+        String sourceFileName = dataDir + "ColorFillLayer.psd";
+        String exportPath = dataDir + "SoCoResource_Edited.psd";
+
         PsdImage im = (PsdImage) Image.load(sourceFileName);
- 
+
         try
         {
             for (Layer layer : im.getLayers())

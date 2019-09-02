@@ -5,11 +5,11 @@ import com.aspose.imaging.examples.Utils;
 
 public class DrawingArc
 {
-    public static void main(String[] args) throws Exception
+    public static void main(String[] args)
     {
         // The path to the documents directory.
-        String dataDir = Utils.getSharedDataDir(DrawingArc.class) + "shapes/";
-       //ExStart:DrawingArc
+        String dataDir = Utils.getSharedDataDir() + "shapes/";
+        //ExStart:DrawingArc
         // Creates an instance of BmpOptions and set its various properties
         com.aspose.imaging.imageoptions.BmpOptions bmpCreateOptions = new com.aspose.imaging.imageoptions.BmpOptions();
         bmpCreateOptions.setBitsPerPixel(32);
@@ -18,31 +18,34 @@ public class DrawingArc
         bmpCreateOptions.setSource(new com.aspose.imaging.sources.StreamSource(new java.io.ByteArrayInputStream(new byte[100 * 100 * 4])));
 
         // Creates an instance of Image and call Create method by passing the BmpOptions object
-        com.aspose.imaging.Image image = com.aspose.imaging.Image.create(bmpCreateOptions, 100, 100);
+        try (com.aspose.imaging.Image image = com.aspose.imaging.Image.create(bmpCreateOptions, 100, 100))
+        {
 
-        // Create and initialize an instance of Graphics class
-        com.aspose.imaging.Graphics graphic = new com.aspose.imaging.Graphics(image);
+            // Create and initialize an instance of Graphics class
+            com.aspose.imaging.Graphics graphic = new com.aspose.imaging.Graphics(image);
 
-        // Clear the image surface with Yellow color
-        graphic.clear(com.aspose.imaging.Color.getYellow());
+            // Clear the image surface with Yellow color
+            graphic.clear(com.aspose.imaging.Color.getYellow());
 
-        // Draw a dotted arc shape by specifying the Pen object having red black
-        // color and coordinates, height, width, start & end angles
-        int width = 100;
-        int height = 200;
-        int startAngle = 45;
-        int sweepAngle = 270;
+            // Draw a dotted arc shape by specifying the Pen object having red black
+            // color and coordinates, height, width, start & end angles
+            int width = 100;
+            int height = 200;
+            int startAngle = 45;
+            int sweepAngle = 270;
 
-        // Draw arc to screen.
-        graphic.drawArc(new Pen(com.aspose.imaging.Color.getYellow()), 0, 0,width, height, startAngle, sweepAngle);
+            // Draw arc to screen.
+            graphic.drawArc(new Pen(com.aspose.imaging.Color.getYellow()), 0, 0, width, height, startAngle, sweepAngle);
 
-        // Save all changes.
-        image.save(dataDir + "DrawingArc_out.bmp");
+            // Save all changes.
+            image.save(dataDir + "DrawingArc_out.bmp");
+            bmpCreateOptions.close();
+        }
 
         // Display Status.
         System.out.println("Arc has been drawn in image successfully!");
 
-    //ExEnd:DrawingArc
+        //ExEnd:DrawingArc
     }
 }
 

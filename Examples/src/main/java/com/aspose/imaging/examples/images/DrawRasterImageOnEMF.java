@@ -14,25 +14,25 @@ import com.aspose.imaging.fileformats.emf.EmfImage;
 import com.aspose.imaging.fileformats.emf.graphics.EmfRecorderGraphics2D;
 
 /**
- *
  * @author mfazi
  */
-public class DrawRasterImageOnEMF {
-    
-    public static void main(String[] args)  {
-         
-         //ExStart:DrawRasterImageOnEMF
-     
-        String dir = Utils.getSharedDataDir(DrawRasterImageOnEMF.class) + "images/";
-        
-        RasterImage imageToDraw = (RasterImage)Image.load(dir + "asposenet_220_src01.png");
+public class DrawRasterImageOnEMF
+{
+    public static void main(String[] args)
+    {
+
+        //ExStart:DrawRasterImageOnEMF
+
+        String dir = Utils.getSharedDataDir() + "images/";
+
+        RasterImage imageToDraw = (RasterImage) Image.load(dir + "asposenet_220_src01.png");
         try
         {
             // Load the image for drawing on it (drawing surface)
-            EmfImage canvasImage = (EmfImage)Image.load(dir + "input.emf");
+            EmfImage canvasImage = (EmfImage) Image.load(dir + "input.emf");
             try
             {
-                EmfRecorderGraphics2D  graphics = EmfRecorderGraphics2D.fromEmfImage(canvasImage);
+                EmfRecorderGraphics2D graphics = EmfRecorderGraphics2D.fromEmfImage(canvasImage);
 
                 // Draw a rectagular part of the raster image within the specified bounds of the vector image (drawing surface).
                 // Note that because the source size is not equal to the destination one, the drawn image is stretched horizontally and vertically.
@@ -62,9 +62,9 @@ public class DrawRasterImageOnEMF {
         {
             imageToDraw.close();
         }
-        
+
         //ExEnd:DrawRasterImageOnEMF
-        
+
     }
-    
+
 }

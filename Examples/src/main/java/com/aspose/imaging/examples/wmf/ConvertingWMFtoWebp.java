@@ -7,39 +7,44 @@ import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.EmfRasterizationOptions;
 import com.aspose.imaging.imageoptions.WebPOptions;
 
-public class ConvertingWMFtoWebp {
-	public static void main(String... args) throws Exception {
-		String dataDir = Utils.getSharedDataDir(ConvertingWMFtoWebp.class) + "wmf/";
-               //ExStart:ConvertingWMFtoWebp
-                String inputFileName = dataDir + "sample.wmf";
-		String outFileName = dataDir + "ConvertingWMFtoWebp_out.webp";
-                
-		// Load an existing WMF image
-		  Image image = Image.load(dataDir);
-		try {
-			// Calculate new height
-			double k = (image.getWidth() * 1.00) / image.getHeight();
+public class ConvertingWMFtoWebp
+{
+    public static void main(String... args)
+    {
+		//ExStart:ConvertingWMFtoWebp
+		String dataDir = Utils.getSharedDataDir() + "wmf/";
+        String inputFileName = dataDir + "sample.wmf";
+        String outFileName = dataDir + "ConvertingWMFtoWebp_out.webp";
 
-			// Create an instance of EmfRasterizationOptions class and define
-			// settings
-                      EmfRasterizationOptions emf = new EmfRasterizationOptions();
-			emf.setPageWidth(400);
-			emf.setPageHeight((int) Math.round(400 / k));
-			emf.setBorderX(5);
-			emf.setBorderY(10);
-			emf.setBackgroundColor(Color.getWhiteSmoke());
+        // Load an existing WMF image
+        Image image = Image.load(inputFileName);
+        try
+        {
+            // Calculate new height
+            double k = (image.getWidth() * 1.00) / image.getHeight();
 
-			// Create an instance of WebPOptions class and provide rasterization
-			// option
-			ImageOptionsBase options = new WebPOptions();
-			options.setVectorRasterizationOptions(emf);
+            // Create an instance of EmfRasterizationOptions class and define
+            // settings
+            EmfRasterizationOptions emf = new EmfRasterizationOptions();
+            emf.setPageWidth(400);
+            emf.setPageHeight((int) Math.round(400 / k));
+            emf.setBorderX(5);
+            emf.setBorderY(10);
+            emf.setBackgroundColor(Color.getWhiteSmoke());
 
-			// Call the save method, provide output path and WebPOptions to
-			// convert the WMF file to Webp and save the output
-			image.save(outFileName, options);
-		} finally {
-			image.dispose();
-		}
-                //ExEnd:ConvertingWMFtoWebp
-	}
+            // Create an instance of WebPOptions class and provide rasterization
+            // option
+            ImageOptionsBase options = new WebPOptions();
+            options.setVectorRasterizationOptions(emf);
+
+            // Call the save method, provide output path and WebPOptions to
+            // convert the WMF file to Webp and save the output
+            image.save(outFileName, options);
+        }
+        finally
+        {
+            image.dispose();
+        }
+        //ExEnd:ConvertingWMFtoWebp
+    }
 }

@@ -16,7 +16,7 @@ Directory | Description
 ## How to Run the Examples
 - You can either clone the repository using your favorite GitHub client or download the ZIP file from here.
 - Extract the contents of the ZIP file to any folder on your computer. All the examples are located in the Examples folder.
-- Examples\src\main\resources folder contains input files used in code examples. It is mandatory that you download the Data folder along with the examples project.
+- Examples\src\main\resources folder contains input files used in code examples. It is mandatory that you download this folder along with the examples project.
 
 Please find more details for how to run the examples [here].
 

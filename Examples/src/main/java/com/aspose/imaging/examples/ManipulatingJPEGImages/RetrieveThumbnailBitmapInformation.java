@@ -9,40 +9,58 @@ import com.aspose.imaging.fileformats.jpeg.JpegImage;
 import com.aspose.imaging.imageoptions.BmpOptions;
 import com.aspose.imaging.sources.FileCreateSource;
 
-public class RetrieveThumbnailBitmapInformation {
-	public static void main(String... args) throws Exception {
-		// The path to the documents directory.
-		String dataDir = Utils.getSharedDataDir(RetrieveThumbnailBitmapInformation.class) + "ManipulatingJPEGImages/";
-//ExStart:RetrieveThumbnailBitmapInformation
-		
-		// Load the image in an instance of JpegImage
-		JpegImage image = (JpegImage) Image.load(dataDir + "aspose-logo.jpg");
+public class RetrieveThumbnailBitmapInformation
+{
+    public static void main(String... args)
+    {
+		//ExStart:RetrieveThumbnailBitmapInformation
 
-		// Get the image thumbnail information and save it in an instance of
-		// JpegImage
-		JpegImage thumbnail = (JpegImage) image.getExifData().getThumbnail();
+        // The path to the documents directory.
+        String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
 
-		// Retrieve the thumbnail bitmap information/Pixels in an array of type
-		// Color
-		Color[] pixels = thumbnail.loadPixels(new Rectangle(0, 0, thumbnail.getWidth(), thumbnail.getHeight()));
+        // Load the image in an instance of JpegImage
+        JpegImage image = (JpegImage) Image.load(dataDir + "aspose-logo.jpg");
 
-		// To save the thumbnail as BMP image, create an instance of BmpOptions
-		BmpOptions bmpOptions = new BmpOptions();
+		try
+		{
+			// Get the image thumbnail information and save it in an instance of
+			// JpegImage
+			JpegImage thumbnail = (JpegImage) image.getExifData().getThumbnail();
 
-		// Set file source in which the results will be stores; last Boolean
-		// parameter denotes isTemporal
-		bmpOptions.setSource(new FileCreateSource(dataDir + "RetrieveThumbnailBitmapInformation_out.jpg", false));
+			// Retrieve the thumbnail bitmap information/Pixels in an array of type
+			// Color
+			Color[] pixels = thumbnail.loadPixels(new Rectangle(0, 0, thumbnail.getWidth(), thumbnail.getHeight()));
 
-		// Create a BmpImage while using the instance of BmpOptions and
-		// providing resultant dimensions
-		BmpImage bmpImage = (BmpImage) Image.create(bmpOptions, thumbnail.getWidth(), thumbnail.getHeight());
+			// To save the thumbnail as BMP image, create an instance of BmpOptions
+			BmpOptions bmpOptions = new BmpOptions();
 
-		// Copy the thumbnail pixels onto the newly created canvas
-		bmpImage.savePixels(bmpImage.getBounds(), pixels);
+			// Set file source in which the results will be stores; last Boolean
+			// parameter denotes isTemporal
+			bmpOptions.setSource(new FileCreateSource(dataDir + "RetrieveThumbnailBitmapInformation_out.jpg", false));
 
-		// Save the results
-		bmpImage.save();
+			// Create a BmpImage while using the instance of BmpOptions and
+			// providing resultant dimensions
+			BmpImage bmpImage = (BmpImage) Image.create(bmpOptions, thumbnail.getWidth(), thumbnail.getHeight());
+
+			try
+			{
+				// Copy the thumbnail pixels onto the newly created canvas
+				bmpImage.savePixels(bmpImage.getBounds(), pixels);
+
+				// Save the results
+				bmpImage.save();
+			}
+			finally
+			{
+				bmpImage.close();
+				bmpOptions.close();
+			}
+		}
+		finally
+		{
+			image.close();
+		}
 		//ExEnd:RetrieveThumbnailBitmapInformation
-	}
+    }
 
 }

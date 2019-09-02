@@ -5,12 +5,7 @@
  */
 package com.aspose.imaging.examples.ModifyingImages;
 
-import com.aspose.imaging.Figure;
-import com.aspose.imaging.GraphicsPath;
-import com.aspose.imaging.Image;
-import com.aspose.imaging.PointF;
-import com.aspose.imaging.RasterImage;
-import com.aspose.imaging.RectangleF;
+import com.aspose.imaging.*;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.png.PngColorType;
 import com.aspose.imaging.imageoptions.PngOptions;
@@ -26,15 +21,16 @@ import com.aspose.imaging.shapes.RectangleShape;
 import com.aspose.imaging.sources.StreamSource;
 
 /**
- *
  * @author mfazi
  */
-public class ManualImageMasking {
-    
-    public static void main(String[] args) throws Exception {
-    //ExStart:ManualImageMasking
+public class ManualImageMasking
+{
+
+    public static void main(String[] args)
+    {
+        //ExStart:ManualImageMasking
         // The path to the documents directory.
-	String dataDir = Utils.getSharedDataDir(ManualImageMasking.class) + "ModifyingImages/";
+        String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         String sourceFileName = dataDir + "Colored by Faith_small.psd";
         String outputFileName = dataDir + "Colored by Faith_small_manual.png";
         GraphicsPath manualMask = new GraphicsPath();
@@ -45,35 +41,41 @@ public class ManualImageMasking {
         GraphicsPath subPath = new GraphicsPath();
         Figure secondFigure = new Figure();
         secondFigure.addShape(
-         new PolygonShape(new PointF[] {
-          new PointF(310, 100), new PointF(350, 200), new PointF(250, 200)
-         }, true));
+                new PolygonShape(new PointF[]{
+                        new PointF(310, 100), new PointF(350, 200), new PointF(250, 200)
+                }, true));
         secondFigure.addShape(new PieShape(new RectangleF(10, 10, 80, 80), 30, 120));
         subPath.addFigure(secondFigure);
         manualMask.addPath(subPath);
         RasterImage image = (RasterImage) Image.load(sourceFileName);
-        try {
-         MaskingOptions maskingOptions = new MaskingOptions();
-         maskingOptions.setMethod(SegmentationMethod.Manual);
-         maskingOptions.setDecompose(false);
-         ManualMaskingArgs argus = new ManualMaskingArgs();
-         argus.setMask(manualMask);
-         maskingOptions.setArgs(argus);
-         PngOptions options = new PngOptions();
-         options.setColorType(PngColorType.TruecolorWithAlpha);
-         options.setSource(new StreamSource());
-         maskingOptions.setExportOptions(options);
-         MaskingResult[] maskingResults = new ImageMasking(image).decompose(maskingOptions);
-         Image resultImage = maskingResults[1].getImage();
-         try {
-          resultImage.save(outputFileName);
-         } finally {
-          resultImage.close();
-         }
-        } finally {
-         image.close();
+        try
+        {
+            MaskingOptions maskingOptions = new MaskingOptions();
+            maskingOptions.setMethod(SegmentationMethod.Manual);
+            maskingOptions.setDecompose(false);
+            ManualMaskingArgs argus = new ManualMaskingArgs();
+            argus.setMask(manualMask);
+            maskingOptions.setArgs(argus);
+            PngOptions options = new PngOptions();
+            options.setColorType(PngColorType.TruecolorWithAlpha);
+            options.setSource(new StreamSource());
+            maskingOptions.setExportOptions(options);
+            MaskingResult[] maskingResults = new ImageMasking(image).decompose(maskingOptions);
+            Image resultImage = maskingResults[1].getImage();
+            try
+            {
+                resultImage.save(outputFileName);
+            }
+            finally
+            {
+                resultImage.close();
+            }
         }
-    //ExEnd:ManualImageMasking
+        finally
+        {
+            image.close();
+        }
+        //ExEnd:ManualImageMasking
     }
-    
+
 }

@@ -11,9 +11,13 @@ import java.lang.Math;
  *
  * @author mfazi
  */
-public class Assert {
+public final class Assert {
     public static void areEqual(Object left, Object right) {
         assert left.equals(right);
+    }
+
+    public static void areEqual(Object left, Object right, String msg) {
+        assert left.equals(right) : msg;
     }
 
     public static void areEqual(float left, float right, float epsilon) {
@@ -26,5 +30,9 @@ public class Assert {
     
     public static void assertTrue(boolean value) {
         assert value;
+    }
+
+    public static void assertTrue(boolean value, String msg) {
+        assert value : msg;
     }
 }

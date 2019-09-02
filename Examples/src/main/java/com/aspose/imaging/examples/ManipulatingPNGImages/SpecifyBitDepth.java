@@ -6,27 +6,37 @@ import com.aspose.imaging.fileformats.png.PngColorType;
 import com.aspose.imaging.fileformats.png.PngImage;
 import com.aspose.imaging.imageoptions.PngOptions;
 
-public class SpecifyBitDepth {
-	public static void main(String... args) throws Exception {
-		// The path to the documents directory.
-		String dataDir = Utils.getSharedDataDir(SpecifyBitDepth.class) + "ManipulatingPNGImages/";
-//ExStart:SpecifyBitDepth
-		
-		// Load an existing PNG image
-		PngImage pngImage = (PngImage) Image.load(dataDir + "aspose_logo.png");
+public class SpecifyBitDepth
+{
+    public static void main(String... args)
+    {
+		//ExStart:SpecifyBitDepth
 
-		// Create an instance of PngOptions
-		PngOptions options = new PngOptions();
+        // The path to the documents directory.
+        String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
 
-		// Set the desired ColorType
-		options.setColorType(PngColorType.Grayscale);
+        // Load an existing PNG image
+        PngImage pngImage = (PngImage) Image.load(dataDir + "aspose_logo.png");
 
-		// Set the BitDepth according to the specified ColorType
-		options.setBitDepth((byte) 1);
+		try
+		{
+			// Create an instance of PngOptions
+			PngOptions options = new PngOptions();
 
-		// Save changes to the disc
-		pngImage.save(dataDir + "SpecifyBitDepth_out.jpg", options);
+			// Set the desired ColorType
+			options.setColorType(PngColorType.Grayscale);
+
+			// Set the BitDepth according to the specified ColorType
+			options.setBitDepth((byte) 1);
+
+			// Save changes to the disc
+			pngImage.save(dataDir + "SpecifyBitDepth_out.jpg", options);
+		}
+		finally
+		{
+			pngImage.close();
+		}
 		//ExEnd:SpecifyBitDepth
-	}
+    }
 
 }

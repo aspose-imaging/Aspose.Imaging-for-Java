@@ -28,7 +28,7 @@ public class DrawVectorImageToRasterImage {
          
          //ExStart:DrawVectorImageToRasterImage
      
-        String dir = Utils.getSharedDataDir(DrawVectorImageToRasterImage.class) + "images/";
+        String dir = Utils.getSharedDataDir() + "images/";
         
         ByteArrayOutputStream drawnImageStream = new ByteArrayOutputStream();
         try

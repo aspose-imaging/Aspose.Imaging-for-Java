@@ -1,18 +1,19 @@
 package com.aspose.imaging.examples.metafile;
-import com.aspose.imaging.examples.Utils;
+
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.SizeF;
+import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.svg.FontStoreType;
 import com.aspose.imaging.fileformats.svg.FontStoringArgs;
 import com.aspose.imaging.fileformats.svg.SvgResourceKeeperCallback;
-import com.aspose.imaging.imageloadoptions.MetafileLoadOptions;
 import com.aspose.imaging.imageoptions.EmfRasterizationOptions;
 import com.aspose.imaging.imageoptions.PdfOptions;
 import com.aspose.imaging.imageoptions.SvgOptions;
 import com.aspose.imaging.imageoptions.SvgRasterizationOptions;
 import com.aspose.imaging.system.io.FileMode;
 import com.aspose.imaging.system.io.FileStream;
+
 import java.io.File;
 
 public class SvgFontTester
@@ -20,9 +21,19 @@ public class SvgFontTester
     //ExStart:SvgFontTester
     private static final String FontFolderName = "fonts";
     private static final String OutFolderName = "Out\\";
-    private static final String SourceFolder = "C:\\Temp\\Errors\\6\\";
+    private static String SourceFolder = Utils.getSharedDataDir() + "SvgFontTester/";
     private static String OutFolder = SourceFolder + OutFolderName;
     private static String FontFolder = OutFolder + "\\" + FontFolderName;
+
+    public static void main(String[] args)
+    {
+        SvgFontTester test = new SvgFontTester();
+        test.readFileWithEmbeddedFontsAndExportToPdf();
+        test.readFileWithExportedFontsAndExportToPdf();
+        test.saveWithEmbeddedFonts();
+        test.saveWithExportFonts();
+    }
+
     public void readFileWithEmbeddedFontsAndExportToPdf()
     {
         this.readAndExportToPdf("EmbeddedFonts.svg");
@@ -57,9 +68,9 @@ public class SvgFontTester
                         "mysvg.svg" // simple file
                 };
 
-        int[] expectedFontsCount = new int[] {
-                                    4, 4, 1
-                                } ;
+        int[] expectedFontsCount = new int[]{
+                4, 4, 1
+        };
 
         for (int i = 0; i < files.length; i++)
         {
@@ -76,7 +87,7 @@ public class SvgFontTester
         }
 
         String inputFile = SourceFolder + inputFileName;
-        String outFile = OutFolder  + "\\" +  inputFileName + ".pdf";
+        String outFile = OutFolder + "\\" + inputFileName + ".pdf";
         final Image image = Image.load(inputFile);
         try
         {
@@ -105,7 +116,7 @@ public class SvgFontTester
         String fontStoreType = useEmbedded ? "Embedded" : "Stream";
         String inputFile = SourceFolder + fileName;
         String outFileName = fileName + "_" + fontStoreType + ".svg";
-        String outputFile = OutFolder  + "\\" +  outFileName;
+        String outputFile = OutFolder + "\\" + outFileName;
         Image image = Image.load(inputFile);
         final String fontFolder;
         try
@@ -114,8 +125,8 @@ public class SvgFontTester
             emfRasterizationOptions.setBackgroundColor(Color.getWhite());
             emfRasterizationOptions.setPageWidth(image.getWidth());
             emfRasterizationOptions.setPageHeight(image.getHeight());
-            final String testingFileName = inputFile.substring(inputFile.lastIndexOf("\\")+1, inputFile.length() - 4);
-            fontFolder = FontFolder  + "\\" +  testingFileName;
+            final String testingFileName = inputFile.substring(inputFile.lastIndexOf("\\") + 1, inputFile.length() - 4);
+            fontFolder = FontFolder + "\\" + testingFileName;
             image.save(outputFile,
                     new SvgOptions()
                     {{
@@ -123,7 +134,7 @@ public class SvgFontTester
                         setCallback(
                                 new SvgCallbackFontTest(useEmbedded, fontFolder)
                                 {{
-                                    setLink(FontFolderName +"/"+testingFileName);
+                                    setLink(FontFolderName + "/" + testingFileName);
                                 }});
                     }});
         }
@@ -152,12 +163,12 @@ class SvgCallbackFontTest extends SvgResourceKeeperCallback
      * The out folder
      */
     private final String outFolder;
-    
+
     /**
      * The use embedded font
      */
     private final boolean useEmbeddedFont;
-    
+
     /**
      * The font counter
      */
@@ -165,8 +176,9 @@ class SvgCallbackFontTest extends SvgResourceKeeperCallback
 
     /**
      * Initializes a new instance of the {@see SvgTests.svgCallbackFontTest} class.
+     *
      * @param useEbeddedFont if set to true [use ebedded font].
-     * @param outFolder The out folder.
+     * @param outFolder      The out folder.
      */
     public SvgCallbackFontTest(boolean useEbeddedFont, String outFolder)
     {
@@ -196,9 +208,10 @@ class SvgCallbackFontTest extends SvgResourceKeeperCallback
 
     /**
      * Called when font resource ready to be saved to storage.
+     *
      * @param args The arguments.
      */
-   
+
     public void onFontResourceReady(FontStoringArgs args)
     {
         if (this.useEmbeddedFont)
@@ -224,7 +237,7 @@ class SvgCallbackFontTest extends SvgResourceKeeperCallback
             }
 
             String name = f.getName();
-            name = name.substring(name.indexOf('\\')+1);
+            name = name.substring(name.indexOf('\\') + 1);
             String fileName = fontFolder + "\\" + name;
 
             args.setDestFontStream(new FileStream(fileName, FileMode.OpenOrCreate));
@@ -232,5 +245,5 @@ class SvgCallbackFontTest extends SvgResourceKeeperCallback
             args.setFontFileUri("./" + this.getLink() + "/" + name);
         }
     }
- //ExEnd:SvgFontTester
-    }
+    //ExEnd:SvgFontTester
+}
