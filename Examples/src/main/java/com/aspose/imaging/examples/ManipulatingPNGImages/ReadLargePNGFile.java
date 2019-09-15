@@ -20,7 +20,7 @@ public class ReadLargePNGFile
 
         String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
 
-        Image image = Image.load(dataDir + "halfGigImage.png");
+        Image image = Image.load(dataDir + "halfGigImage.png"); // load image with size more or equals to 500Mb
 
         try
         {

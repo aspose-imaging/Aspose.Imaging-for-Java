@@ -32,6 +32,9 @@ import com.aspose.imaging.examples.files.CreatingAnImageBySettingPath;
 import com.aspose.imaging.examples.files.CreatingImageUsingStream;
 import com.aspose.imaging.examples.files.ReadingPixelValues;
 import com.aspose.imaging.examples.images.*;
+import com.aspose.imaging.examples.memorystrategies.OptimizationStrategyInDithering;
+import com.aspose.imaging.examples.memorystrategies.OptimizationStrategyInFilters;
+import com.aspose.imaging.examples.memorystrategies.OptimizationStrategyInResize;
 import com.aspose.imaging.examples.memorystrategies.OptimizationStrategyInRotate;
 import com.aspose.imaging.examples.metafile.*;
 import com.aspose.imaging.examples.wmf.ConvertWMFToSVG;
@@ -162,6 +165,17 @@ public class RunExamples
 		//// =====================================================
 
 		OptimizationStrategyInRotate.main(args);
+		OptimizationStrategyInFilters.main(args);
+		OptimizationStrategyInDithering.main(args);
+		OptimizationStrategyInResize.main(args);
+
+		//// =====================================================
+		//// =====================================================
+		////                        Deskew
+		//// =====================================================
+		//// =====================================================
+
+		Deskew.main(args);
 
 		//// =====================================================
 		//// =====================================================
@@ -245,7 +259,7 @@ public class RunExamples
 		CreateThumbnailsFromPSDFiles.main(args);
 		DetectFlattenedPSD.main(args);
 		ExportPSDLayerToRasterImage.main(args);
-		UpdateTextLayerInPSDFile.main(args); // required license
+		// UpdateTextLayerInPSDFile.main(args); // required license
 		MergePSDlayers.main(args);
 		UncompressedImageUsingFile.main(args);
 		UncompressedImageStreamObject.main(args);

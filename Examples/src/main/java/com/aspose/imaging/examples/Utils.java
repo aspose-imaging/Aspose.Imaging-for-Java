@@ -11,6 +11,13 @@ public final class Utils {
 		return dir.toString() + File.separator;
 	}
 
+	public static String getOutDir()
+	{
+		return outDir;
+	}
+
+	private static String outDir = System.getProperty("java.io.tmpdir") + File.separator;
+
 	private Utils() {
 		// Do nothings
 	}
