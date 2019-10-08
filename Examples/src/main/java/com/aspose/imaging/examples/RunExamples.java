@@ -32,10 +32,7 @@ import com.aspose.imaging.examples.files.CreatingAnImageBySettingPath;
 import com.aspose.imaging.examples.files.CreatingImageUsingStream;
 import com.aspose.imaging.examples.files.ReadingPixelValues;
 import com.aspose.imaging.examples.images.*;
-import com.aspose.imaging.examples.memorystrategies.OptimizationStrategyInDithering;
-import com.aspose.imaging.examples.memorystrategies.OptimizationStrategyInFilters;
-import com.aspose.imaging.examples.memorystrategies.OptimizationStrategyInResize;
-import com.aspose.imaging.examples.memorystrategies.OptimizationStrategyInRotate;
+import com.aspose.imaging.examples.memorystrategies.*;
 import com.aspose.imaging.examples.metafile.*;
 import com.aspose.imaging.examples.wmf.ConvertWMFToSVG;
 import com.aspose.imaging.examples.wmf.CropWMFFile;
@@ -168,6 +165,7 @@ public class RunExamples
 		OptimizationStrategyInFilters.main(args);
 		OptimizationStrategyInDithering.main(args);
 		OptimizationStrategyInResize.main(args);
+		OptimizationStrategyInJPEG.main(args);
 
 		//// =====================================================
 		//// =====================================================
