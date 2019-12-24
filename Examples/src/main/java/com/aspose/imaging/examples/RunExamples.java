@@ -3,6 +3,10 @@ package com.aspose.imaging.examples;
 import com.aspose.imaging.examples.CDR.SupportOfCDR;
 import com.aspose.imaging.examples.CMX.CMXToPNGConversion;
 import com.aspose.imaging.examples.ConvertingImages.*;
+import com.aspose.imaging.examples.ConvertingImages.memorystrategy.OptimizationStrategyInDJVU;
+import com.aspose.imaging.examples.ConvertingImages.memorystrategy.OptimizationStrategyInJPEG2000;
+import com.aspose.imaging.examples.ConvertingImages.otg.SupportOfFODG;
+import com.aspose.imaging.examples.ConvertingImages.svg.SvgNativeResize;
 import com.aspose.imaging.examples.EMF.CropEMFImage;
 import com.aspose.imaging.examples.InterruptMonitor.InterruptMonitorSupport;
 import com.aspose.imaging.examples.ManipulatingJPEGImages.*;
@@ -166,6 +170,10 @@ public class RunExamples
 		OptimizationStrategyInDithering.main(args);
 		OptimizationStrategyInResize.main(args);
 		OptimizationStrategyInJPEG.main(args);
+		OptimizationStrategyInDJVU.main(args);
+		OptimizationStrategyInJPEG2000.main(args);
+
+		DocumentConvertionProgress.main(args);
 
 		//// =====================================================
 		//// =====================================================
@@ -233,6 +241,8 @@ public class RunExamples
 		SVGToEMFConversion.main(args);
 		ConvertWMFToSVG.main(args);
 		SVGToBMPConversion.main(args);
+		SvgNativeResize.main(args);
+
 		//// =====================================================
 		//// =====================================================
 		////                        PNG
@@ -298,6 +308,15 @@ public class RunExamples
 		ConvertSpecificPortionOfDjVuPage.main(args);
 		ConvertDjVuToPDF.main(args);
 		ParallelDJVUImagesProcessingUsingMultithreading.main(args);
+
+		//// =====================================================
+		//// =====================================================
+		////                           Fodg
+		//// =====================================================
+		//// =====================================================
+
+		SupportOfFODG.main(args);
+
 		//// =====================================================
 		//// =====================================================
 		////                           CMX
@@ -319,7 +338,7 @@ public class RunExamples
 		//// =====================================================
 		SupportOfOTG.main(args);
 
-		System.out.println("Press any key to continue...");
+		System.out.println("Press ENTER to exit...");
 		System.in.read();
 	}
 }

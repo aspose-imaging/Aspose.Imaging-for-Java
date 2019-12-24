@@ -21,7 +21,7 @@ public class SupportOfGradientFillLayer
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "psd/";
         String sourceFileName = dataDir + "ComplexGradientFillLayer.psd";
-        String outputFile = dataDir + "ComplexGradientFillLayer_output.psd";
+        String outputFile = Utils.getOutDir() + "ComplexGradientFillLayer_output.psd";
 
         try(PsdImage im = (PsdImage) Image.load(sourceFileName))
         {

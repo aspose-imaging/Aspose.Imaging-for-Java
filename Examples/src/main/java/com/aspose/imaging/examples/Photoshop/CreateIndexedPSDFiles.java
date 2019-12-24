@@ -22,7 +22,7 @@ public class CreateIndexedPSDFiles
 		try (PsdOptions createOptions = new PsdOptions())
 		{
 			// Set source
-			createOptions.setSource(new FileCreateSource(dataDir + "output.psd", false));
+			createOptions.setSource(new FileCreateSource(Utils.getOutDir() + "output.psd", false));
 			// Set ColorMode to Indexed
 			createOptions.setColorMode(ColorModes.Indexed);
 			// Set PSD file version

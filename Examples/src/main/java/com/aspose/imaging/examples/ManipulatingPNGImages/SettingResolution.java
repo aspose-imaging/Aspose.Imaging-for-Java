@@ -40,7 +40,7 @@ public class SettingResolution
             // Create an instance of PngOptions, Set the horizontal & vertical resolutions and Save the result on disc
             PngOptions options = new PngOptions();
             options.setResolutionSettings(new ResolutionSetting(72, 96));
-            png.save(dataDir + "SettingResolution_output.png", options);
+            png.save(Utils.getOutDir() + "SettingResolution_output.png", options);
         }
         //ExEnd:SettingResolution
     }

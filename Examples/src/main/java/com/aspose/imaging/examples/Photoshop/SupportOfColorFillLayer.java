@@ -25,7 +25,7 @@ public class SupportOfColorFillLayer
 
         String dataDir = Utils.getSharedDataDir() + "Photoshop/";
         String sourceFileName = dataDir + "ColorFillLayer.psd";
-        String exportPath = dataDir + "ColorFillLayer_output.psd";
+        String exportPath = Utils.getOutDir() + "ColorFillLayer_output.psd";
 
         PsdImage im = (PsdImage) Image.load(sourceFileName);
 

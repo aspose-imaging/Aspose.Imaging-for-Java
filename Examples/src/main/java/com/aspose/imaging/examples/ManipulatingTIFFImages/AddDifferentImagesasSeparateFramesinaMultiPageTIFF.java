@@ -25,7 +25,7 @@ public class AddDifferentImagesasSeparateFramesinaMultiPageTIFF
         // Create an instance of TiffOptions with CCITTFAX3 compression
         TiffOptions outputSettings = new TiffOptions(TiffExpectedFormat.TiffCcittFax3);
         // Set source for the result
-        outputSettings.setSource(new FileCreateSource(dataDir + "output.tiff", false));
+        outputSettings.setSource(new FileCreateSource(Utils.getOutDir() + "output.tiff", false));
 
         // Declare Height and Width for the new TiffImage
         final int newWidth = 500;

@@ -24,7 +24,7 @@ public class SupportOfOTG {
                 OtgRasterizationOptions otgRasterizationOptions = new OtgRasterizationOptions();
                 otgRasterizationOptions.setPageSize(Size.to_SizeF(image.getSize()));
                 item.setVectorRasterizationOptions(otgRasterizationOptions);
-                image.save(dataDir + "output" + fileExt, item);
+                image.save(Utils.getOutDir() + "output" + fileExt, item);
             }
         }
     }

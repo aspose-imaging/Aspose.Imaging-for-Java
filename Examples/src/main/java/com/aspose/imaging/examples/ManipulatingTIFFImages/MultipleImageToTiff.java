@@ -71,7 +71,7 @@ public class MultipleImageToTiff
             }
 
             // save all changes
-            TiffImage.save(dataDir + "output.tiff");
+            TiffImage.save(Utils.getOutDir() + "output.tiff");
             tiffOptions.close();
         }
 
