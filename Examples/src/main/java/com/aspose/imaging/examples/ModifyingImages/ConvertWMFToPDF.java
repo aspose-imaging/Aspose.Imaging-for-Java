@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.PdfOptions;
 import com.aspose.imaging.imageoptions.WmfRasterizationOptions;
@@ -10,7 +11,7 @@ public class ConvertWMFToPDF
 {
     public static void main(String... args)
     {
-        //ExStart:ConvertWMFToPDF
+        Logger.startExample("ConvertWMFToPDF");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
@@ -28,8 +29,8 @@ public class ConvertWMFToPDF
             pdfOptions.setVectorRasterizationOptions(wmfRasterizationOptions);
 
             // Call the save method, provide output path and PdfOptions to convert the WMF file to PDF and save the output
-            image.save(dataDir + "ConvertWMFToPDF_out.pdf", pdfOptions);
+            image.save(Utils.getOutDir() + "ConvertWMFToPDF_out.pdf", pdfOptions);
         }
-        //ExEnd:ConvertWMFToPDF
+        Logger.endExample();
     }
 }

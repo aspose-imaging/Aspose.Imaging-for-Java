@@ -1,16 +1,17 @@
 package com.aspose.imaging.examples.Photoshop;
 
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class ImportanImageToPSDLayer
 {
     public static void main(String... args)
     {
-		//ExStart:ImportanImageToPSDLayer
+		Logger.startExample("ImportanImageToPSDLayer");
 		// Declare variables to store file paths for input and output.
 		String dataDir = Utils.getSharedDataDir() + "Photoshop/";
         String sourceFileName = dataDir + "samplePsd.psd";
-        String outputFileName = dataDir + "ImportanImageToPSDLayer_out.psd";
+        String outputFileName = Utils.getOutDir() + "ImportanImageToPSDLayer_out.psd";
 
         // Load a PSD file as an image and caste it into PsdImage
 		try (com.aspose.imaging.fileformats.psd.PsdImage image = (com.aspose.imaging.fileformats.psd.PsdImage) com.aspose.imaging.Image
@@ -32,7 +33,7 @@ public class ImportanImageToPSDLayer
 			// Save the results to output path.
 			image.save(outputFileName, new com.aspose.imaging.imageoptions.PsdOptions());
 		}
-		//ExEnd:ImportanImageToPSDLayer
+		Logger.endExample();
     }
 
 }

@@ -7,6 +7,7 @@ package com.aspose.imaging.examples.wmf;
 
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.SvgOptions;
 import com.aspose.imaging.imageoptions.WmfRasterizationOptions;
@@ -18,15 +19,14 @@ public class ConvertWMFToSVG
 {
     public static void main(String[] args)
     {
-        //ExStart:ConvertWMFToSVG
+        Logger.startExample("ConvertWMFToSVG");
 
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "svg/";
 
         String inputFileName = dataDir + "thistlegirl_wmfsample.wmf";
-        String outputFileNameSvg = dataDir + "thistlegirl_wmfsample.svg";
-        Image image = Image.load(inputFileName);
-        try
+        String outputFileNameSvg = Utils.getOutDir() + "thistlegirl_wmfsample.svg";
+        try (Image image = Image.load(inputFileName))
         {
             WmfRasterizationOptions rasterizationOptions = new WmfRasterizationOptions();
             rasterizationOptions.setBackgroundColor(Color.getWhiteSmoke());
@@ -38,10 +38,6 @@ public class ConvertWMFToSVG
 
             image.save(outputFileNameSvg, svgOptions);
         }
-        finally
-        {
-            image.close();
-        }
-        //ExEnd:ConvertWMFToSVG
+        Logger.endExample();
     }
 }

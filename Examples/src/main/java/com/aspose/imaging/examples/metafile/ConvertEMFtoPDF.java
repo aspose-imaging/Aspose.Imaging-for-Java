@@ -1,5 +1,6 @@
 package com.aspose.imaging.examples.metafile;
 
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.PdfOptions;
 
@@ -7,7 +8,7 @@ public class ConvertEMFtoPDF
 {
     public static void main(String... args)
     {
-        //ExStart:ConvertEMFtoPDF
+        Logger.startExample("ConvertEMFtoPDF");
         String dataDir = Utils.getSharedDataDir() + "metafile/";
         String[] filePaths = new String[]{dataDir + "FilledRectangleRotateMode_c.emf", dataDir + "image5.emf",
                 dataDir + "LinearGradientBrushCircuitMode.emf", dataDir + "Picture1.emf",
@@ -51,7 +52,7 @@ public class ConvertEMFtoPDF
                 image.dispose();
             }
         }
-        //ExEnd:ConvertEMFtoPDF
+        Logger.endExample();
     }
 
 }

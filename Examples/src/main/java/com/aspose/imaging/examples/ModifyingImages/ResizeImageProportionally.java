@@ -1,18 +1,17 @@
 package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class ResizeImageProportionally
 {
     public static void main(String... args)
     {
-		//ExStart:ResizeImageProportionally
+		Logger.startExample("ResizeImageProportionally");
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
-        Image image = Image.load(dataDir + "aspose-logo.jpg");
-
-		try
+		try (Image image = Image.load(dataDir + "aspose-logo.jpg"))
 		{
 			if (!image.isCached())
 			{
@@ -27,13 +26,9 @@ public class ResizeImageProportionally
 			image.resizeHeightProportionally(newHeight);
 
 			// saving result
-			image.save(dataDir + "ResizeImageProportionally_out.png");
+			image.save(Utils.getOutDir() + "ResizeImageProportionally_out.png");
 		}
-		finally
-		{
-			image.close();
-		}
-		//ExEnd:ResizeImageProportionally
+		Logger.endExample();
     }
 
 }

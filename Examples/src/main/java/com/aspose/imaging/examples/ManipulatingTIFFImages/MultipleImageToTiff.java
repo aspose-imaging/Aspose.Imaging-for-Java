@@ -4,6 +4,7 @@ package com.aspose.imaging.examples.ManipulatingTIFFImages;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
 import com.aspose.imaging.ResizeType;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.tiff.TiffFrame;
 import com.aspose.imaging.fileformats.tiff.TiffImage;
@@ -17,7 +18,7 @@ public class MultipleImageToTiff
 {
     public static void main(String... args)
     {
-        //ExStart:MultipleImageToTiff
+        Logger.startExample("MultipleImageToTiff");
 
         String dataDir = Utils.getSharedDataDir() + "ManipulatingTIFFImages/";
 
@@ -26,55 +27,51 @@ public class MultipleImageToTiff
         int height;
         width = tempImage.getWidth();
         height = tempImage.getHeight();
-        com.aspose.imaging.imageoptions.TiffOptions tiffOptions = new com.aspose.imaging.imageoptions.TiffOptions(TiffExpectedFormat.Default);
-        tiffOptions.setSource(new com.aspose.imaging.sources.FileCreateSource(dataDir + "MultiPage.tiff", false));
-
-        try
-                ( //Create an instance of Image and initialize it with instance of BmpOptions by calling Create method
-                  TiffImage TiffImage = (TiffImage) com.aspose.imaging.Image.create(tiffOptions, width, height))
+        try (com.aspose.imaging.imageoptions.TiffOptions tiffOptions = new com.aspose.imaging.imageoptions.TiffOptions(TiffExpectedFormat.Default))
         {
-            //do some image processing
-            File di = new File(dataDir);
-            String[] files = di.list(new FilenameFilter()
-            {
-                @Override
-                public boolean accept(File dir, String name)
-                {
-                    return name.endsWith(".img");
-                }
-            });
+            tiffOptions.setSource(new com.aspose.imaging.sources.FileCreateSource(dataDir + "MultiPage.tiff", false));
 
-            if (files == null)
-                return;
-
-            int index = 0;
-            for (String file : files)
+            try
+                    ( //Create an instance of Image and initialize it with instance of BmpOptions by calling Create method
+                      TiffImage tiffImage = (TiffImage) com.aspose.imaging.Image.create(tiffOptions, width, height))
             {
-                com.aspose.imaging.Image inputImage = com.aspose.imaging.Image.load(dataDir + file);
-                try
+                //do some image processing
+                File di = new File(dataDir);
+                String[] files = di.list(new FilenameFilter()
                 {
-                    inputImage.resize(width, height, ResizeType.NearestNeighbourResample);
-                    if (index > 0)
+                    @Override
+                    public boolean accept(File dir, String name)
                     {
-                        TiffFrame newframe = new TiffFrame(tiffOptions, width, height);
-                        TiffImage.addFrame(newframe);
+                        return name.endsWith(".img");
                     }
-                    TiffFrame frame = TiffImage.getFrames()[index];
-                    frame.savePixels(frame.getBounds(), ((RasterImage) inputImage).loadPixels(inputImage.getBounds()));
+                });
 
-                    index += 1;
-                }
-                finally
+                if (files == null)
+                    return;
+
+                int index = 0;
+                for (String file : files)
                 {
-                    inputImage.close();
-                }
-            }
+                    try (Image inputImage = Image.load(dataDir + file))
+                    {
+                        inputImage.resize(width, height, ResizeType.NearestNeighbourResample);
+                        if (index > 0)
+                        {
+                            TiffFrame newframe = new TiffFrame(tiffOptions, width, height);
+                            tiffImage.addFrame(newframe);
+                        }
+                        TiffFrame frame = tiffImage.getFrames()[index];
+                        frame.savePixels(frame.getBounds(), ((RasterImage) inputImage).loadPixels(inputImage.getBounds()));
 
-            // save all changes
-            TiffImage.save(Utils.getOutDir() + "output.tiff");
-            tiffOptions.close();
+                        index += 1;
+                    }
+                }
+
+                // save all changes
+                tiffImage.save(Utils.getOutDir() + "output.tiff");
+            }
         }
 
-        //ExEnd:MultipleImageToTiff   
+        Logger.endExample();
     }
 }

@@ -6,6 +6,7 @@
 package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.*;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.png.PngColorType;
 import com.aspose.imaging.imageoptions.PngOptions;
@@ -28,11 +29,11 @@ public class ManualImageMasking
 
     public static void main(String[] args)
     {
-        //ExStart:ManualImageMasking
+        Logger.startExample("ManualImageMasking");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         String sourceFileName = dataDir + "Colored by Faith_small.psd";
-        String outputFileName = dataDir + "Colored by Faith_small_manual.png";
+        String outputFileName = Utils.getOutDir() + "Colored by Faith_small_manual.png";
         GraphicsPath manualMask = new GraphicsPath();
         Figure firstFigure = new Figure();
         firstFigure.addShape(new EllipseShape(new RectangleF(100, 30, 40, 40)));
@@ -47,8 +48,7 @@ public class ManualImageMasking
         secondFigure.addShape(new PieShape(new RectangleF(10, 10, 80, 80), 30, 120));
         subPath.addFigure(secondFigure);
         manualMask.addPath(subPath);
-        RasterImage image = (RasterImage) Image.load(sourceFileName);
-        try
+        try (RasterImage image = (RasterImage) Image.load(sourceFileName))
         {
             MaskingOptions maskingOptions = new MaskingOptions();
             maskingOptions.setMethod(SegmentationMethod.Manual);
@@ -61,21 +61,12 @@ public class ManualImageMasking
             options.setSource(new StreamSource());
             maskingOptions.setExportOptions(options);
             MaskingResult[] maskingResults = new ImageMasking(image).decompose(maskingOptions);
-            Image resultImage = maskingResults[1].getImage();
-            try
+            try (Image resultImage = maskingResults[1].getImage())
             {
                 resultImage.save(outputFileName);
             }
-            finally
-            {
-                resultImage.close();
-            }
         }
-        finally
-        {
-            image.close();
-        }
-        //ExEnd:ManualImageMasking
+        Logger.endExample();
     }
 
 }

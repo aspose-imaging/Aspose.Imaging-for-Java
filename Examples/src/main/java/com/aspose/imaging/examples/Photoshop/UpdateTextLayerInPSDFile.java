@@ -1,18 +1,19 @@
 package com.aspose.imaging.examples.Photoshop;
 
 import com.aspose.imaging.License;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class UpdateTextLayerInPSDFile
 {
     public static void main(String... args)
     {
-		//ExStart:UpdateTextLayerInPSDFile
+        Logger.startExample("UpdateTextLayerInPSDFile");
         License lic = new License();
         lic.setLicense("full_path_to_licence_file");
 		String dataDir = Utils.getSharedDataDir() + "Photoshop/";
 		String sourceFileName = dataDir + "samplePsd.psd";
-		String outputFile = dataDir + "UpdateTextLayerInPSDFile.psd";
+		String outputFile = Utils.getOutDir() + "UpdateTextLayerInPSDFile.psd";
         com.aspose.imaging.Image image = com.aspose.imaging.Image.load(sourceFileName);
         try
         {
@@ -31,7 +32,7 @@ public class UpdateTextLayerInPSDFile
         {
             image.dispose();
         }
-        //ExEnd:UpdateTextLayerInPSDFile
+        Logger.endExample();
     }
 
 }

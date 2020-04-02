@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.djvu;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.Rectangle;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.djvu.DjvuImage;
 import com.aspose.imaging.fileformats.png.PngColorType;
@@ -10,14 +11,13 @@ import com.aspose.imaging.imageoptions.PngOptions;
 
 public class ConvertDjvuPagePortionToImage {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
+        Logger.startExample("ConvertDjvuPagePortionToImage");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "djvu/";
-        //ExStart:ConvertDjvuPagePortionToImage
-        //Load a DjVu image
-        DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");
 
-        try
+        //Load a DjVu image
+        try (DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu"))
         {
             //Create an instance of PngOptions
             PngOptions exportOptions = new PngOptions();
@@ -37,14 +37,10 @@ public class ConvertDjvuPagePortionToImage {
             exportOptions.setMultiPageOptions(new DjvuMultiPageOptions(exportPageIndex, exportArea));
 
             //Save the image
-            image.save(dataDir + "ConvertDjvuPagePortionToImage_out.png", exportOptions);
+            image.save(Utils.getOutDir() + "ConvertDjvuPagePortionToImage_out.png", exportOptions);
 
-            System.out.println("File converted");
+            Logger.println("File converted!");
         }
-        finally
-        {
-            image.close();
-        }
-        //ExEnd:ConvertDjvuPagePortionToImage
+        Logger.endExample();
     }
 }

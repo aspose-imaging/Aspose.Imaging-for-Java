@@ -9,6 +9,7 @@ import com.aspose.imaging.Image;
 import com.aspose.imaging.Point;
 import com.aspose.imaging.RasterImage;
 import com.aspose.imaging.Size;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.svg.SvgImage;
 import com.aspose.imaging.fileformats.svg.graphics.SvgGraphics2D;
@@ -24,18 +25,16 @@ import java.io.IOException;
  */
 public class DrawVectorImageToRasterImage {
     
-    public static void main(String[] args)  {
-         
-         //ExStart:DrawVectorImageToRasterImage
+    public static void main(String[] args) throws IOException
+    {
+        Logger.startExample("DrawVectorImageToRasterImage");
      
         String dir = Utils.getSharedDataDir() + "images/";
-        
-        ByteArrayOutputStream drawnImageStream = new ByteArrayOutputStream();
-        try
+
+        try (ByteArrayOutputStream drawnImageStream = new ByteArrayOutputStream())
         {
             // First, rasterize Svg to Png and write the result to a stream.
-            SvgImage svgImage = (SvgImage)Image.load(dir + "asposenet_220_src02.svg");
-            try
+            try (SvgImage svgImage = (SvgImage) Image.load(dir + "asposenet_220_src02.svg"))
             {
                 SvgRasterizationOptions rasterizationOptions = new SvgRasterizationOptions();
                 rasterizationOptions.setPageSize(Size.to_SizeF(svgImage.getSize()));
@@ -46,8 +45,7 @@ public class DrawVectorImageToRasterImage {
                 svgImage.save(drawnImageStream, saveOptions);
 
                 // Now load a Png image from stream for further drawing.
-                RasterImage imageToDraw = (RasterImage)Image.load(new ByteArrayInputStream(drawnImageStream.toByteArray()));
-                try
+                try (RasterImage imageToDraw = (RasterImage) Image.load(new ByteArrayInputStream(drawnImageStream.toByteArray())))
                 {
                     // Drawing on the existing Svg image.
                     SvgGraphics2D graphics = new SvgGraphics2D(svgImage);
@@ -61,36 +59,13 @@ public class DrawVectorImageToRasterImage {
                     graphics.drawImage(imageToDraw, origin, size);
 
                     // Save the result image
-                    SvgImage resultImage = graphics.endRecording();
-                    try
+                    try (SvgImage resultImage = graphics.endRecording())
                     {
-                        resultImage.save(dir + "asposenet_220_src02.DrawVectorImage.svg");
-                    }
-                    finally
-                    {
-                        resultImage.close();
+                        resultImage.save(Utils.getOutDir() + "asposenet_220_src02.DrawVectorImage.svg");
                     }
                 }
-                finally
-                {
-                    imageToDraw.close();
-                }
-            }
-            finally
-            {
-                svgImage.close();
             }
         }
-        finally
-        {
-            try
-            {
-                drawnImageStream.close();
-            }
-            catch (IOException ignore)
-            {
-            }
-        }
-        //ExEnd:DrawVectorImageToRasterImage
+        Logger.endExample();
     }
 }

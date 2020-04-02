@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.ColorPaletteHelper;
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.tiff.enums.TiffCompressions;
 import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
@@ -12,7 +13,7 @@ public class CompressingTIFFImagesWithLZWAlgorithm
 {
     public static void main(String... args)
     {
-        //ExStart:CompressingTIFFImagesWithLZWAlgorithm
+        Logger.startExample("CompressingTIFFImagesWithLZWAlgorithm");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 
@@ -27,7 +28,7 @@ public class CompressingTIFFImagesWithLZWAlgorithm
         outputSettings.setCompression(TiffCompressions.Lzw);
         outputSettings.setPhotometric(TiffPhotometrics.Palette);
         outputSettings.setPalette(ColorPaletteHelper.create4BitGrayscale(false));
-        image.save(dataDir + "SampleTiff_out.tiff", outputSettings);
-        //ExEnd:CompressingTIFFImagesWithLZWAlgorithm
+        image.save(Utils.getOutDir() + "SampleTiff_out.tiff", outputSettings);
+        Logger.endExample();
     }
 }

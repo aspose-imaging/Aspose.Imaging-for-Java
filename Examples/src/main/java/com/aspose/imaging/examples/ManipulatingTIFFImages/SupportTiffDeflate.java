@@ -3,6 +3,7 @@ package com.aspose.imaging.examples.ManipulatingTIFFImages;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
 import com.aspose.imaging.examples.Assert;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.png.PngColorType;
 import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
@@ -14,13 +15,12 @@ public class SupportTiffDeflate
 
     public static void main(String... args)
     {
-
-        //ExStart:SupportTiffDeflate
+        Logger.startExample("SupportTiffDeflate");
         String dataDir = Utils.getSharedDataDir() + "ManipulatingTIFFImages/";
 
         String inputFile = dataDir + "Alpha.png";
         String outputFileTiff = dataDir + "Alpha.tiff";
-        String outputFilePng = dataDir + "Alpha1.png";
+        String outputFilePng = Utils.getOutDir() + "Alpha1.png";
 
         try (Image image = Image.load(inputFile))
         {
@@ -35,6 +35,6 @@ public class SupportTiffDeflate
             options.setColorType(PngColorType.TruecolorWithAlpha);
             image.save(outputFilePng, options);
         }
-        //ExEnd:SupportTiffDeflate
+        Logger.endExample();
     }
 }

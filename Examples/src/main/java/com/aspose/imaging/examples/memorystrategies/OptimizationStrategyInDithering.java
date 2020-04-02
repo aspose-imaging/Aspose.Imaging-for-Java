@@ -4,12 +4,14 @@ import com.aspose.imaging.DitheringMethod;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.LoadOptions;
 import com.aspose.imaging.RasterImage;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class OptimizationStrategyInDithering
 {
     public static void main(String... args)
     {
+        Logger.startExample("OptimizationStrategyInDithering");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         String fileName = "SampleTiff1.tiff";
@@ -24,5 +26,6 @@ public class OptimizationStrategyInDithering
 
             image.save(Utils.getOutDir() + output);
         }
+        Logger.endExample();
     }
 }

@@ -3,6 +3,7 @@ package com.aspose.imaging.examples.ModifyingImages;
 import com.aspose.imaging.Graphics;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.Point;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.PngOptions;
 
@@ -10,7 +11,7 @@ public class AddSignatureToImage
 {
     public static void main(String... args)
     {
-        //ExStart:AddSignatureToImage
+        Logger.startExample("AddSignatureToImage");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
@@ -25,9 +26,9 @@ public class AddSignatureToImage
 
                 // Call the DrawImage method while passing the instance of secondary image and appropriate location. The following snippet tries to draw the secondary image at the right bottom of the primary image
                 graphics.drawImage(signature, new Point(canvas.getHeight() - signature.getHeight(), canvas.getWidth() - signature.getWidth()));
-                canvas.save(dataDir + "AddSignatureToImage_out.png", new PngOptions());
+                canvas.save(Utils.getOutDir() + "AddSignatureToImage_out.png", new PngOptions());
             }
         }
-        //ExStart:AddSignatureToImage
+        Logger.endExample();
     }
 }

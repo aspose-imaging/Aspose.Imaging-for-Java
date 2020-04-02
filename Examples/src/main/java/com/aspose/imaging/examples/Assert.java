@@ -20,6 +20,10 @@ public final class Assert {
         assert left.equals(right) : msg;
     }
 
+    public static void areEqual(long left, long right, String msg) {
+        assert left == right : msg;
+    }
+
     public static void areEqual(float left, float right, float epsilon) {
         assert Math.abs(left - right) < epsilon;
     }

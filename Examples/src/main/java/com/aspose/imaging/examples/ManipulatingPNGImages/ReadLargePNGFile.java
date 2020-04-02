@@ -6,6 +6,7 @@
 package com.aspose.imaging.examples.ManipulatingPNGImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.JpegOptions;
 
@@ -16,24 +17,19 @@ public class ReadLargePNGFile
 {
     public static void main(String[] args)
     {
-        //ExStart:ReadLargePNGFile
+        Logger.startExample("ReadLargePNGFile");
 
         String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
 
-        Image image = Image.load(dataDir + "halfGigImage.png"); // load image with size more or equals to 500Mb
-
-        try
+        // load image with size more or equals to 500Mb
+        try (Image image = Image.load(dataDir + "halfGigImage.png"))
         {
             // Create an instance of JpegOptions
             JpegOptions options = new JpegOptions();
 
-            image.save(dataDir + "halfGigImage.jpg", options);
-        }
-        finally
-        {
-            image.close();
+            image.save(Utils.getOutDir() + "halfGigImage.jpg", options);
         }
 
-        //ExEnd:ReadLargePNGFile
+        Logger.endExample();
     }
 }

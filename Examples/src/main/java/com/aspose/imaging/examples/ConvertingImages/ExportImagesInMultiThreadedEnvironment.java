@@ -1,10 +1,12 @@
 package com.aspose.imaging.examples.ConvertingImages;
 
+import com.aspose.imaging.examples.Logger;
+
 public class ExportImagesInMultiThreadedEnvironment
 {
     public static void main(String... args) throws Exception
     {
-        //ExStart:ExportImagesInMultiThreadedEnvironment
+        Logger.startExample("ExportImagesInMultiThreadedEnvironment");
 
         // Create temporary image.
         java.io.File tmp = java.io.File.createTempFile("image", "tes");
@@ -59,7 +61,7 @@ public class ExportImagesInMultiThreadedEnvironment
             fileStream = null;
         }
 
-        //ExEnd:ExportImagesInMultiThreadedEnvironment
+        Logger.endExample();
     }
 
 }

@@ -1,44 +1,43 @@
 package com.aspose.imaging.examples.metafile;
 
-import com.aspose.imaging.Image;
+import com.aspose.imaging.*;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
-import com.aspose.imaging.fileformats.metafile.EmfMetafileImage;
-import com.aspose.imaging.fileformats.metafile.EmfRecorderGraphics2D;
+import com.aspose.imaging.fileformats.emf.EmfImage;
+import com.aspose.imaging.fileformats.emf.graphics.EmfRecorderGraphics2D;
 
 public class AddRasterImagestoEMFImages
 {
     public static void main(String... args)
     {
-		//ExStart:AddRasterImagestoEMFImages
+        Logger.startExample("AddRasterImagestoEMFImages");
         String dataDir = Utils.getSharedDataDir() + "metafile/";
         // Load the image to be inserted
-        Image image = Image.load(dataDir + "aspose-logo.jpg");
+        RasterImage image = (RasterImage)Image.load(dataDir + "aspose-logo.jpg");
         try
         {
-            // Store the DPI value
-            float dpi = 200f;
             // Create an instance of Rectangle to store the dimensions of the
             // destination image
-            java.awt.Rectangle rectange = new java.awt.Rectangle(0, 0, image.getWidth(), image.getHeight());
+            Rectangle rectange = new Rectangle(0, 0, image.getWidth()*10, image.getHeight()*10);
             // Create an instance of Dimension to store the dimensions of the
             // source image
-            java.awt.Dimension dimension = new java.awt.Dimension(image.getWidth(), image.getHeight());
+            Size dimension = new Size(image.getWidth(), image.getHeight());
             // Create an instance of EmfRecorderGraphics2D
-            EmfRecorderGraphics2D emfRecorderGraphics = EmfMetafileImage.createEmfRecorderGraphics(rectange, dimension,
-                    dpi, dpi);
+            EmfRecorderGraphics2D emfRecorderGraphics = new EmfRecorderGraphics2D(rectange, dimension, new Size(1,1));
             // Draw the source image starting from top left corner
-            emfRecorderGraphics.drawImage(image, 0, 0, null);
-            // Create an instance of EmfMetafileImage
-            EmfMetafileImage emfMetafileImage = emfRecorderGraphics.endRecording();
-            // Save the result
-            emfMetafileImage.save(dataDir + "AddRasterImagestoEMFImages_out.emf");
-			emfMetafileImage.close();
+            emfRecorderGraphics.drawImage(image, new Point(0, 0));
+            // Create an instance of EmfImage
+            try(EmfImage emfMetafileImage = emfRecorderGraphics.endRecording())
+            {
+                // Save the result
+                emfMetafileImage.save(Utils.getOutDir() + "AddRasterImagestoEMFImages_out.emf");
+            }
         }
         finally
         {
             image.dispose();
         }
 
-        //ExEnd:AddRasterImagestoEMFImages 
+        Logger.endExample();
     }
 }

@@ -8,6 +8,7 @@ package com.aspose.imaging.examples.images;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
 import com.aspose.imaging.Rectangle;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.svg.SvgImage;
 import com.aspose.imaging.fileformats.svg.graphics.SvgGraphics2D;
@@ -19,17 +20,15 @@ import com.aspose.imaging.fileformats.svg.graphics.SvgGraphics2D;
 public class DrawRasterImageOnSVG {
     
     public static void main(String[] args)  {
-         
-         //ExStart:DrawRasterImageOnSVG
+
+        Logger.startExample("DrawRasterImageOnSVG");
      
         String dir = Utils.getSharedDataDir() + "images/";
-        
-        RasterImage imageToDraw = (RasterImage)Image.load(dir + "asposenet_220_src01.png");
-        try
+
+        try (RasterImage imageToDraw = (RasterImage) Image.load(dir + "asposenet_220_src01.png"))
         {
             // Load the image for drawing on it (drawing surface)
-            SvgImage  canvasImage = (SvgImage )Image.load(dir + "asposenet_220_src02.svg");
-            try
+            try (SvgImage canvasImage = (SvgImage) Image.load(dir + "asposenet_220_src02.svg"))
             {
                 SvgGraphics2D graphics = new SvgGraphics2D(canvasImage);
 
@@ -41,26 +40,13 @@ public class DrawRasterImageOnSVG {
                         imageToDraw);
 
                 // Save the result image
-                SvgImage  resultImage = graphics.endRecording();
-                try
+                try (SvgImage resultImage = graphics.endRecording())
                 {
-                    resultImage.save(dir + "asposenet_220_src02.DrawImage.svg");
-                }
-                finally
-                {
-                    resultImage.close();
+                    resultImage.save(Utils.getOutDir() + "asposenet_220_src02.DrawImage.svg");
                 }
             }
-            finally
-            {
-                canvasImage.close();
-            }
         }
-        finally
-        {
-            imageToDraw.close();
-        }
-        //ExEnd:DrawRasterImageOnSVG
+        Logger.endExample();
     }
     
 }

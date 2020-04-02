@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.PngOptions;
 
@@ -8,7 +9,7 @@ public class SimpleResizeImageProportionally
 {
     public static void main(String... args)
     {
-		//ExStart:SimpleResizeImageProportionally
+		Logger.startExample("SimpleResizeImageProportionally");
 
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
@@ -28,9 +29,9 @@ public class SimpleResizeImageProportionally
 			image.resizeHeightProportionally(newHeight);
 
 			// saving result
-			image.save(dataDir + "SimpleResizeImageProportionally_out.png", new PngOptions());
+			image.save(Utils.getOutDir() + "SimpleResizeImageProportionally_out.png", new PngOptions());
 		}
-		//ExEnd:SimpleResizeImageProportionally
+		Logger.endExample();
     }
 
 }

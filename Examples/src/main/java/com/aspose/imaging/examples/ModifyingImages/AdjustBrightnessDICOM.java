@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
 import com.aspose.imaging.fileformats.tiff.enums.TiffPhotometrics;
@@ -11,14 +12,12 @@ public class AdjustBrightnessDICOM
 {
     public static void main(String... args)
     {
-		//ExStart:AdjustBrightness
+		Logger.startExample("AdjustBrightnessDICOM");
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         Image image = Image.load(dataDir + "aspose-logo.jpg");
         // Cast object of Image to RasterImage
-        RasterImage rasterImage = (RasterImage) image;
-
-		try
+		try (RasterImage rasterImage = (RasterImage) image)
 		{
 			// Check if RasterImage is cached
 			if (!rasterImage.isCached())
@@ -37,13 +36,9 @@ public class AdjustBrightnessDICOM
 			tiffOptions.setPhotometric(TiffPhotometrics.Rgb);
 
 			// Save the resultant image to TIFF format
-			rasterImage.save(dataDir + "AdjustBrightness_out.tiff", tiffOptions);
+			rasterImage.save(Utils.getOutDir() + "AdjustBrightness_out.tiff", tiffOptions);
 		}
-		finally
-		{
-			rasterImage.close();
-		}
-		//ExEnd:AdjustBrightness
+		Logger.endExample();
     }
 
 }

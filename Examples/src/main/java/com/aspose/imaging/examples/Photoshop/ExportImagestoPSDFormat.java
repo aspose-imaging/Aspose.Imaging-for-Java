@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.Photoshop;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.psd.ColorModes;
 import com.aspose.imaging.fileformats.psd.CompressionMethod;
@@ -10,7 +11,7 @@ public class ExportImagestoPSDFormat
 {
     public static void main(String... args)
     {
-        //ExStart:ExportImagestoPSDFormat
+		Logger.startExample("ExportImagestoPSDFormat");
         String dataDir = Utils.getSharedDataDir() + "Photoshop/";
         String sourceFileName = dataDir + "sample.bmp";
 		try (Image image = Image.load(sourceFileName))
@@ -22,9 +23,9 @@ public class ExportImagestoPSDFormat
 			psdOptions.setVersion(4);
 
 			// Save image to disk in PSD format
-			image.save(dataDir + "ExportImagestoPSDFormat_out.psd", psdOptions);
+			image.save(Utils.getOutDir() + "ExportImagestoPSDFormat_out.psd", psdOptions);
 		}
-		//ExEnd:ExportImagestoPSDFormat
+		Logger.endExample();
     }
 
 }

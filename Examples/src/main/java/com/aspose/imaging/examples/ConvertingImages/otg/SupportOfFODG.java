@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ConvertingImages.otg;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.Size;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.OdgRasterizationOptions;
 import com.aspose.imaging.imageoptions.PngOptions;
@@ -10,6 +11,7 @@ public class SupportOfFODG
 {
     public static void main(String[] args)
     {
+        Logger.startExample("SupportOfFODG");
         String dataDir = Utils.getSharedDataDir() + "otg/";
         String outDir = Utils.getOutDir();
 
@@ -23,5 +25,6 @@ public class SupportOfFODG
             options.setVectorRasterizationOptions(vector);
             image.save(outputFile, options);
         }
+        Logger.endExample();
     }
 }

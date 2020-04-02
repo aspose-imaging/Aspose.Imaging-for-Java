@@ -4,6 +4,7 @@ import com.aspose.imaging.Image;
 import com.aspose.imaging.Rectangle;
 import com.aspose.imaging.ResizeType;
 import com.aspose.imaging.RotateFlipType;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.webp.WebPImage;
 
@@ -19,42 +20,27 @@ public class OpenWebPFile
 
     public static void main(String[] args) throws IOException
     {
-        //ExStart:OpenWebPFile
+        Logger.startExample("OpenWebPFile");
 
         String dataDir = Utils.getSharedDataDir() + "WebP/";
 
         String inputFile = dataDir + "Animation1.webp";
-        String outputFile = dataDir + "Animation2.webp";
-        ByteArrayOutputStream ms = new ByteArrayOutputStream();
-        try
+        String outputFile = Utils.getOutDir() + "Animation2.webp";
+        try (ByteArrayOutputStream ms = new ByteArrayOutputStream())
         {
-            WebPImage image = (WebPImage) Image.load(inputFile);
-            try
+            try (WebPImage image = (WebPImage) Image.load(inputFile))
             {
                 image.resize(300, 450, ResizeType.HighQualityResample);
                 image.crop(new Rectangle(10, 10, 200, 300));
                 image.rotateFlipAll(RotateFlipType.Rotate90FlipX);
                 image.save(ms);
             }
-            finally
-            {
-                image.close();
-            }
 
-            FileOutputStream fs = new FileOutputStream(outputFile);
-            try
+            try (FileOutputStream fs = new FileOutputStream(outputFile))
             {
                 fs.write(ms.toByteArray());
             }
-            finally
-            {
-                fs.close();
-            }
         }
-        finally
-        {
-            ms.close();
-        }
-        //ExEnd:OpenWebPFile
+        Logger.endExample();
     }
 }

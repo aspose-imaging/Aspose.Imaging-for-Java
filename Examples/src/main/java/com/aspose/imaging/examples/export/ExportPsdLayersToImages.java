@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.export;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.png.PngColorType;
 import com.aspose.imaging.fileformats.psd.PsdImage;
@@ -11,11 +12,10 @@ public class ExportPsdLayersToImages
 {
     public static void main(String[] args)
     {
+        Logger.startExample("ExportPsdLayersToImages");
         String dataDir = Utils.getSharedDataDir() + "export/";
-        //ExStart:ExportPsdLayersToImages
 
-        Image image = Image.load(dataDir + "sample.psd");
-        try
+        try (Image image = Image.load(dataDir + "sample.psd"))
         {
             PsdImage psdImage = (PsdImage) image;
             PngOptions pngOptions = new PngOptions();
@@ -25,14 +25,10 @@ public class ExportPsdLayersToImages
             Layer[] layers = psdImage.getLayers();
             for (int i = 0; i < layers.length; i++)
             {
-                layers[i].save(dataDir + "ExportPsdLayersToImages_out" + i + ".png", pngOptions);
+                layers[i].save(Utils.getOutDir() + "ExportPsdLayersToImages_out" + i + ".png", pngOptions);
             }
         }
-        finally
-        {
-            image.close();
-        }
 
-        //ExEnd:ExportPsdLayersToImages
+        Logger.endExample();
     }
 }

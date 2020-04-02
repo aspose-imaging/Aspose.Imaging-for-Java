@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ConvertingImages;
 
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.bmp.BmpImage;
 import com.aspose.imaging.fileformats.tiff.TiffFrame;
@@ -13,7 +14,7 @@ public class ExtractTIFFFramesToBMPImageFormat
 {
     public static void main(String... args)
     {
-        //ExStart:ExtractTIFFFramesToBMPImageFormat
+        Logger.startExample("ExtractTIFFFramesToBMPImageFormat");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 
@@ -36,7 +37,7 @@ public class ExtractTIFFFramesToBMPImageFormat
                     bmpCreateOptions.setBitsPerPixel(24);
 
                     // Set the Source of bmpCreateOptions as FileCreateSource by specifying the location where output will be saved
-                    bmpCreateOptions.setSource(new FileCreateSource(String.format("%s\\ConcatExtractTIFFFramesToBMP_out%d.bmp", dataDir, frameCounter), false));
+                    bmpCreateOptions.setSource(new FileCreateSource(String.format("%sConcatExtractTIFFFramesToBMP_out%d.bmp", Utils.getOutDir(), frameCounter), false));
 
                     // Create a new bmpImage
                     try (BmpImage bmpImage = (BmpImage) Image.create(bmpCreateOptions, tiffFrame.getWidth(), tiffFrame.getHeight()))
@@ -49,6 +50,6 @@ public class ExtractTIFFFramesToBMPImageFormat
                 frameCounter++;
             }
         }
-        //ExEnd:ExtractTIFFFramesToBMPImageFormat
+        Logger.endExample();
     }
 }

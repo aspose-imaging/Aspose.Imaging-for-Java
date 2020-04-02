@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.Photoshop;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.png.PngColorType;
 import com.aspose.imaging.fileformats.psd.PsdImage;
@@ -13,13 +14,13 @@ public class RenderingOfRotatedTextLayerByTransformMatrix
 {
     public static void main(String[] args)
     {
-        //ExStart:RenderingOfRotatedTextLayerByTransformMatrix
+        Logger.startExample("RenderingOfRotatedTextLayerByTransformMatrix");
 
         String dataDir = Utils.getSharedDataDir() + "Photoshop/";
 
         String sourceFileName = dataDir + "TransformedText.psd";
-        String exportPath = dataDir + "TransformedTextExport.psd";
-        String exportPathPng = dataDir + "TransformedTextExport.png";
+        String exportPath = Utils.getOutDir() + "TransformedTextExport.psd";
+        String exportPathPng = Utils.getOutDir() + "TransformedTextExport.png";
 
         try (PsdImage im = (PsdImage) Image.load(sourceFileName))
         {
@@ -30,6 +31,6 @@ public class RenderingOfRotatedTextLayerByTransformMatrix
                     }});
         }
 
-        //ExEnd:RenderingOfRotatedTextLayerByTransformMatrix
+        Logger.endExample();
     }
 }

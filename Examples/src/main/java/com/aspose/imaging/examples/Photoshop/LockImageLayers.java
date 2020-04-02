@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.Photoshop;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.psd.PsdImage;
 import com.aspose.imaging.fileformats.psd.layers.Layer;
@@ -9,11 +10,11 @@ public class LockImageLayers
 {
     public static void main(String... args)
     {
-        //ExStart:LockImageLayers
+        Logger.startExample("LockImageLayers");
         String dataDir = Utils.getSharedDataDir() + "Photoshop/";
 
         String sourceFile = dataDir + "layerLock.psd";
-        String outputFile = dataDir + "result.psd";
+        String outputFile = Utils.getOutDir() + "result.psd";
         PsdImage image = (PsdImage) Image.load(sourceFile);
         try
         {
@@ -31,7 +32,7 @@ public class LockImageLayers
         {
             image.dispose();
         }
-        //ExEnd:LockImageLayers
+        Logger.endExample();
     }
 
 }

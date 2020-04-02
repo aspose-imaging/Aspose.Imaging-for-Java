@@ -3,6 +3,7 @@ package com.aspose.imaging.examples.memorystrategies;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.LoadOptions;
 import com.aspose.imaging.RasterImage;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imagefilters.filteroptions.FilterOptionsBase;
 import com.aspose.imaging.imagefilters.filteroptions.MedianFilterOptions;
@@ -11,6 +12,7 @@ public class OptimizationStrategyInFilters
 {
     public static void main(String... args)
     {
+        Logger.startExample("OptimizationStrategyInFilters");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         String fileName = "SampleTiff1.tiff";
@@ -24,5 +26,6 @@ public class OptimizationStrategyInFilters
             image.filter(image.getBounds(), filterOptions);
             image.save(Utils.getOutDir() + output);
         }
+        Logger.endExample();
     }
 }

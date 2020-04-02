@@ -1,5 +1,6 @@
 package com.aspose.imaging.examples.export;
 
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
 import com.aspose.imaging.imageoptions.TiffOptions;
@@ -8,36 +9,31 @@ public class ExportImageToDifferentFormats
 {
     public static void main(String[] args)
     {
+        Logger.startExample("ExportImageToDifferentFormats");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "export/";
-        //ExStart:ExportImageToDifferentFormats
-        //Load an existing image (of type Gif) in an instance of Image class
-        com.aspose.imaging.Image image = com.aspose.imaging.Image.load(dataDir + "sample.gif");
+        String outDir = Utils.getOutDir();
 
-        try
+        //Load an existing image (of type Gif) in an instance of Image class
+        try (com.aspose.imaging.Image image = com.aspose.imaging.Image.load(dataDir + "sample.gif"))
         {
             //Export to BMP file format using the default options
-            image.save(dataDir + "ExportImageToDifferentFormats_out.bmp", new com.aspose.imaging.imageoptions.BmpOptions());
+            image.save(outDir + "ExportImageToDifferentFormats_out.bmp", new com.aspose.imaging.imageoptions.BmpOptions());
 
             //Export to JPEG file format using the default options
-            image.save(dataDir + "ExportImageToDifferentFormats_out.jpeg", new com.aspose.imaging.imageoptions.JpegOptions());
+            image.save(outDir + "ExportImageToDifferentFormats_out.jpeg", new com.aspose.imaging.imageoptions.JpegOptions());
 
             //Export to PNG file format using the default options
-            image.save(dataDir + "ExportImageToDifferentFormats_out.png", new com.aspose.imaging.imageoptions.PngOptions());
+            image.save(outDir + "ExportImageToDifferentFormats_out.png", new com.aspose.imaging.imageoptions.PngOptions());
 
             //Export to TIFF file format using the default options
-            image.save(dataDir + "ExportImageToDifferentFormats_out.tiff", new TiffOptions(TiffExpectedFormat.Default));
+            image.save(outDir + "ExportImageToDifferentFormats_out.tiff", new TiffOptions(TiffExpectedFormat.Default));
 
             // Display Status.
-            System.out.println("Image exported to BMP, JPG, PNG and TIFF formats successfully!");
-        }
-        finally
-        {
-            image.close();
+            Logger.println("Image exported to BMP, JPG, PNG and TIFF formats successfully!");
         }
 
-
-        //ExEnd:ExportImageToDifferentFormats
+        Logger.endExample();
     }
 }
 

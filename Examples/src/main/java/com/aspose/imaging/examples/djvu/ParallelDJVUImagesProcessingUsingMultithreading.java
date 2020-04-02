@@ -1,10 +1,10 @@
 package com.aspose.imaging.examples.djvu;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.PngOptions;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.concurrent.ExecutorService;
@@ -18,55 +18,35 @@ public class ParallelDJVUImagesProcessingUsingMultithreading
 {
     public static void main(String[] args) throws InterruptedException
     {
-
-        //ExStart:ParallelDJVUImagesProcessingUsingMultithreading
+        Logger.startExample("ParallelDJVUImagesProcessingUsingMultithreading");
 
         String dir = Utils.getSharedDataDir() + "djvu/";
 
         final String fileName = dir + "Sample.djvu";
+        final String outFile = Utils.getOutDir() + "Sample.djvu";
         int numThreads = 20;
 
         ExecutorService execServ = Executors.newFixedThreadPool(numThreads);
 
         for (int i = 0; i < numThreads; i++)
         {
-            final String outputFile = String.format("%s_task%d.png", fileName, i);
+            final String outputFile = String.format("%s_task%d.png", outFile, i);
             execServ.execute(new Runnable()
             {
                 @Override
                 public void run()
                 {
-                    RandomAccessFile fs;
-                    try
+                    try(RandomAccessFile fs = new RandomAccessFile(fileName, "r"))
                     {
-                        fs = new RandomAccessFile(fileName, "r");
-                    }
-                    catch (FileNotFoundException e)
-                    {
-                        throw new RuntimeException(e.getMessage(), e);
-                    }
-
-                    try
-                    {
-                        Image image = Image.load(fs);
-                        try
+                        try (Image image = Image.load(fs))
                         {
                             image.save(outputFile, new PngOptions());
                         }
-                        finally
-                        {
-                            image.close();
-                        }
                     }
-                    finally
+                    catch (IOException ex)
                     {
-                        try
-                        {
-                            fs.close();
-                        }
-                        catch (IOException ignore)
-                        {
-                        }
+                        Logger.println(ex.getMessage());
+                        ex.printStackTrace();
                     }
                 }
             });
@@ -77,6 +57,6 @@ public class ParallelDJVUImagesProcessingUsingMultithreading
         {
             Thread.yield();
         }
-        //ExEnd:ParallelDJVUImagesProcessingUsingMultithreading
+        Logger.endExample();
     }
 }

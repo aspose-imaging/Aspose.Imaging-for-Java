@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.jpeg.JpegCompressionColorMode;
 import com.aspose.imaging.imageoptions.JpegOptions;
@@ -10,11 +11,10 @@ public class ConvertImageWithGrayscale
 
     public static void main(String... args)
     {
-        //ExStart:ConvertImageWithGrayscale
+        Logger.startExample("ConvertImageWithGrayscale");
 
-        String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
-        String srcDir = dataDir;
-        String outputFolder = dataDir + "out/";
+        String srcDir = Utils.getSharedDataDir() + "ModifyingImages/";
+        String outputFolder = Utils.getOutDir();
 
         int[] colorTypes = new int[]
                 {
@@ -55,6 +55,6 @@ public class ConvertImageWithGrayscale
             }
         }
 
-        //ExEnd:ConvertImageWithGrayscale
+        Logger.endExample();
     }
 }

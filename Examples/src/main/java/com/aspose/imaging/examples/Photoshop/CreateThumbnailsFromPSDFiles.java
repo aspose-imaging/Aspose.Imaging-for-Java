@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.Photoshop;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.bmp.BmpImage;
 import com.aspose.imaging.fileformats.psd.PsdImage;
@@ -12,11 +13,11 @@ public class CreateThumbnailsFromPSDFiles
 {
     public static void main(String... args)
     {
-		//ExStart:CreateThumbnailsFromPSDFiles
+		Logger.startExample("CreateThumbnailsFromPSDFiles");
 		String dataDir = Utils.getSharedDataDir() + "Photoshop/";
 		// Load a PSD in an instance of PsdImage
         String sourceFileName = dataDir + "samplePsd.psd";
-        String outputFileName = dataDir + "result.psd";
+        String outputFileName = Utils.getOutDir() + "result.psd";
 		try (PsdImage image = (PsdImage) Image.load(sourceFileName))
 		{
 			// Iterate over the PSD resources
@@ -40,7 +41,7 @@ public class CreateThumbnailsFromPSDFiles
 				}
 			}
 		}
-		//ExEnd:CreateThumbnailsFromPSDFiles
+		Logger.endExample();
 	}
 
 }

@@ -8,6 +8,7 @@ package com.aspose.imaging.examples.ModifyingImages;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.Size;
 import com.aspose.imaging.TextRenderingHint;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.cdr.CdrImage;
 import com.aspose.imaging.fileformats.cmx.CmxImage;
@@ -24,7 +25,7 @@ public class SupportOfTextRenderingHint
 {
     public static void main(String[] args)
     {
-        //ExStart:SupportOfTextRenderingHint
+        Logger.startExample("SupportOfTextRenderingHint");
         // The path to the documents directory.
         String basePath = Utils.getSharedDataDir() + "ModifyingImages/";
 
@@ -42,8 +43,7 @@ public class SupportOfTextRenderingHint
         };
         for (String fileName : files)
         {
-            Image image = Image.load(basePath + fileName);
-            try
+            try (Image image = Image.load(basePath + fileName))
             {
                 VectorRasterizationOptions vectorRasterizationOptions;
                 if (image instanceof CdrImage)
@@ -77,19 +77,15 @@ public class SupportOfTextRenderingHint
                 vectorRasterizationOptions.setPageSize(Size.to_SizeF(image.getSize()));
                 for (int textRenderingHint : textRenderingHints)
                 {
-                    String outputFileName = basePath + String.format("image_%s%s.png", TextRenderingHint.toString(TextRenderingHint.class, textRenderingHint), fileName.substring(fileName.lastIndexOf('.')));
+                    String outputFileName = Utils.getOutDir() + String.format("image_%s%s.png", TextRenderingHint.toString(TextRenderingHint.class, textRenderingHint), fileName.substring(fileName.lastIndexOf('.')));
                     vectorRasterizationOptions.setTextRenderingHint(textRenderingHint);
                     PngOptions pngOptions = new PngOptions();
                     pngOptions.setVectorRasterizationOptions(vectorRasterizationOptions);
                     image.save(outputFileName, pngOptions);
                 }
             }
-            finally
-            {
-                image.close();
-            }
         }
-        //ExEnd:SupportOfTextRenderingHint
+        Logger.endExample();
     }
 
 }

@@ -1,15 +1,16 @@
 package com.aspose.imaging.examples.ConvertingImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.SvgOptions;
 import com.aspose.imaging.imageoptions.SvgRasterizationOptions;
 
 public class ConvertRasterFormatToSVG
 {
-    public static void main(String... args) throws Exception
+    public static void main(String... args)
     {
-		//ExStart:ConvertRasterFormatToSVG
+        Logger.startExample("ConvertRasterFormatToSVG");
 		String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
         String[] paths = new String[]
                 {
@@ -25,9 +26,9 @@ public class ConvertRasterFormatToSVG
 
         for (String path : paths)
         {
-            String destPath = dataDir + path + ".svg";
+            String destPath = Utils.getOutDir() + path + ".svg";
 
-            Image image = Image.load(path);
+            Image image = Image.load(dataDir + path);
             try
             {
                 SvgOptions svgOptions = new SvgOptions();
@@ -43,6 +44,6 @@ public class ConvertRasterFormatToSVG
                 image.dispose();
             }
         }
-        //ExEnd:ConvertRasterFormatToSVG
+        Logger.endExample();
     }
 }

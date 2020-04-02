@@ -15,8 +15,7 @@ public class ConvertRangeOfDjVuPagesToSeparateImages
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "djvu/";
         // Load a DjVu image
-        DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");
-		try
+		try (DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu"))
 		{
 			// Create an instance of BmpOptions
 			BmpOptions exportOptions = new BmpOptions();
@@ -31,12 +30,8 @@ public class ConvertRangeOfDjVuPagesToSeparateImages
 			{
 				// Save each page in separate file, as BMP do not support layering
 				exportOptions.setMultiPageOptions(new DjvuMultiPageOptions(range.getArrayOneItemFromIndex(counter)));
-				image.save(String.format("%d.bmp", counter++), exportOptions);
+				image.save(Utils.getOutDir() + (counter++) + ".bmp", exportOptions);
 			}
-		}
-		finally
-		{
-			image.close();
 		}
 		//ExEnd:ConvertRangeOfDjVuPagesToSeparateImages
     }

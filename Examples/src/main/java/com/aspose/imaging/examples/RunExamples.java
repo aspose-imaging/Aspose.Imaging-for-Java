@@ -14,6 +14,7 @@ import com.aspose.imaging.examples.ManipulatingPNGImages.*;
 import com.aspose.imaging.examples.ManipulatingTIFFImages.SupportTiffDeflate;
 import com.aspose.imaging.examples.ManipulatingTIFFImages.TiffOptionsConfiguration;
 import com.aspose.imaging.examples.ModifyingImages.*;
+import com.aspose.imaging.examples.ModifyingImages.dicom.ExportToDicom;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAllEXIFTags;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAndModifyJpegEXIFTags;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadSpecificEXIFTagsInformation;
@@ -21,11 +22,11 @@ import com.aspose.imaging.examples.ModifyingImages.psd.SupportLayerForPSD;
 import com.aspose.imaging.examples.ModifyingImages.psd.SupportOfGradientFillLayer;
 import com.aspose.imaging.examples.ModifyingImages.psd.UncompressedImageStreamObject;
 import com.aspose.imaging.examples.ModifyingImages.psd.UncompressedImageUsingFile;
+import com.aspose.imaging.examples.ModifyingImages.tiff.ExportTiffBatchMode;
 import com.aspose.imaging.examples.ModifyingImages.webp.*;
 import com.aspose.imaging.examples.Photoshop.*;
 import com.aspose.imaging.examples.SVG.SVGToBMPConversion;
 import com.aspose.imaging.examples.WebP.OpenWebPFile;
-import com.aspose.imaging.examples.dicom.CropbyShifts;
 import com.aspose.imaging.examples.dicom.*;
 import com.aspose.imaging.examples.djvu.*;
 import com.aspose.imaging.examples.export.Bradleythreshold;
@@ -37,6 +38,7 @@ import com.aspose.imaging.examples.files.CreatingImageUsingStream;
 import com.aspose.imaging.examples.files.ReadingPixelValues;
 import com.aspose.imaging.examples.images.*;
 import com.aspose.imaging.examples.memorystrategies.*;
+import com.aspose.imaging.examples.metafile.CropbyShifts;
 import com.aspose.imaging.examples.metafile.*;
 import com.aspose.imaging.examples.wmf.ConvertWMFToSVG;
 import com.aspose.imaging.examples.wmf.CropWMFFile;
@@ -49,9 +51,9 @@ public class RunExamples
 {
  	public static void main(String[] args) throws IOException, InterruptedException, InvocationTargetException, IllegalAccessException
 	{
-
-		System.out.println("Open public class RunExamples.java. \nIn main() method uncomment the example that you want to run.");
-		System.out.println("=====================================================");
+		Logger.println("Open public class RunExamples.java. \nIn main() method uncomment the example that you want to run.");
+		Logger.println("Output dir is ", Utils.getOutDir());
+		Logger.println("=====================================================");
 
 		// Uncomment the one you want to try out
 
@@ -84,7 +86,8 @@ public class RunExamples
 		////            Modifying And Converting Images
 		//// =====================================================
 		//// =====================================================
-
+		ExportTiffBatchMode.main(args);
+		ExportToDicom.main(args);
 		CroppingWMFFileWhileConvertingtoPNG.main(args);
 		ConvertingSVGToRasterImages.main(args);
 		AddWatermarkToImage.main(args);
@@ -338,7 +341,6 @@ public class RunExamples
 		//// =====================================================
 		SupportOfOTG.main(args);
 
-		System.out.println("Press ENTER to exit...");
-		System.in.read();
+		Logger.println("All examples have been finished!");
 	}
 }

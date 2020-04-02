@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.CMX;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.SmoothingMode;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.CmxRasterizationOptions;
 import com.aspose.imaging.imageoptions.PngOptions;
@@ -14,7 +15,7 @@ import com.aspose.imaging.imageoptions.PositioningTypes;
 public class CMXToPNGConversion {
 
     public static void main(String[] args) {
-        //ExStart:CMXToPNGConversion 
+        Logger.startExample("CMXToPNGConversion");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "CMX/";
         
@@ -38,10 +39,9 @@ public class CMXToPNGConversion {
                 cmxRasterizationOptions.setSmoothingMode(SmoothingMode.AntiAlias);
                 PngOptions options = new PngOptions();
                 options.setVectorRasterizationOptions(cmxRasterizationOptions);
-                image.save(dataDir + fileName + ".docpage.png", options);
+                image.save(Utils.getOutDir() + fileName + ".docpage.png", options);
             }
         }
-        //ExEnd:CMXToPNGConversion
+        Logger.endExample();
     }
-
 }

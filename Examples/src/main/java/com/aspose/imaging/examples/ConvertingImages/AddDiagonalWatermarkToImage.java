@@ -2,13 +2,15 @@ package com.aspose.imaging.examples.ConvertingImages;
 
 import com.aspose.imaging.*;
 import com.aspose.imaging.brushes.SolidBrush;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class AddDiagonalWatermarkToImage
 {
     public static void main(String... args)
     {
-        //ExStart:AddDiagonalWatermarkToImage
+        Logger.startExample("AddDiagonalWatermarkToImage");
+
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
@@ -49,6 +51,7 @@ public class AddDiagonalWatermarkToImage
             graphics.drawString(theString, font, brush, 0, 0, format);
             image.save(dataDir + "AddDiagonalWatermarkToImage_out.jpg");
         }
-        //ExStart:AddDiagonalWatermarkToImage
+
+        Logger.endExample();
     }
 }

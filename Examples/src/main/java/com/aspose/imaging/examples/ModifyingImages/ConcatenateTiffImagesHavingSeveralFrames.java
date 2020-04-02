@@ -1,22 +1,22 @@
 package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.tiff.TiffFrame;
 import com.aspose.imaging.fileformats.tiff.TiffImage;
 import com.aspose.imaging.fileformats.tiff.enums.*;
 import com.aspose.imaging.imageoptions.TiffOptions;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class ConcatenateTiffImagesHavingSeveralFrames
 {
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args)
     {
-        //ExStart:ConcatenateTiffImagesHavingSeveralFrames
+        Logger.startExample("ConcatenateTiffImagesHavingSeveralFrames");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         List<String> files = Arrays.asList(dataDir + "TestDemo.tiff", dataDir + "sample.tiff");
@@ -57,7 +57,7 @@ public class ConcatenateTiffImagesHavingSeveralFrames
                 if (output != null)
                 {
                     // Save the result
-                    output.save(dataDir + "ConcatenateTiffImagesHavingSeveralFrames_out.tif", createOptions);
+                    output.save(Utils.getOutDir() + "ConcatenateTiffImagesHavingSeveralFrames_out.tif", createOptions);
                 }
             }
             finally
@@ -72,5 +72,6 @@ public class ConcatenateTiffImagesHavingSeveralFrames
         {
 
         }
+        Logger.endExample();
     }
 }

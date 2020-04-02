@@ -9,6 +9,7 @@ import com.aspose.imaging.Image;
 import com.aspose.imaging.Size;
 import com.aspose.imaging.SmoothingMode;
 import com.aspose.imaging.TextRenderingHint;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.cdr.CdrImage;
 import com.aspose.imaging.fileformats.cmx.CmxImage;
@@ -26,7 +27,7 @@ public class SupportOfSmoothingMode
 
     public static void main(String[] args)
     {
-        //ExStart:SupportOfSmoothingMode
+        Logger.startExample("SupportOfSmoothingMode");
         // The path to the documents directory.
         String basePath = Utils.getSharedDataDir() + "ModifyingImages/";
 
@@ -43,8 +44,7 @@ public class SupportOfSmoothingMode
         };
         for (String fileName : files)
         {
-            Image image = Image.load(basePath + fileName);
-            try
+            try (Image image = Image.load(basePath + fileName))
             {
                 VectorRasterizationOptions vectorRasterizationOptions;
                 if (image instanceof CdrImage)
@@ -78,19 +78,17 @@ public class SupportOfSmoothingMode
                 vectorRasterizationOptions.setPageSize(Size.to_SizeF(image.getSize()));
                 for (int smoothingMode : smoothingModes)
                 {
-                    String outputFileName = basePath + String.format("image_%s%s.png", TextRenderingHint.toString(SmoothingMode.class, smoothingMode), fileName.substring(fileName.lastIndexOf('.')));
+                    String outputFileName = Utils.getOutDir() + String.format("image_%s%s.png"
+                            , TextRenderingHint.toString(SmoothingMode.class, smoothingMode)
+                            , fileName.substring(fileName.lastIndexOf('.')));
                     vectorRasterizationOptions.setSmoothingMode(smoothingMode);
                     PngOptions pngOptions = new PngOptions();
                     pngOptions.setVectorRasterizationOptions(vectorRasterizationOptions);
                     image.save(outputFileName, pngOptions);
                 }
             }
-            finally
-            {
-                image.close();
-            }
         }
-        //ExEnd:SupportOfSmoothingMode
+        Logger.endExample();
     }
 
 }

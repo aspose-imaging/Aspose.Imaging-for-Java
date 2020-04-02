@@ -1,6 +1,8 @@
 package com.aspose.imaging.examples.ManipulatingJPEGImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
+import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.jpeg.JpegCompressionColorMode;
 import com.aspose.imaging.fileformats.jpeg.JpegCompressionMode;
 import com.aspose.imaging.fileformats.jpeg.JpegImage;
@@ -14,7 +16,7 @@ public class SupportForCMYKAndYCCKColorModesInJPEGLossless
 {
     public static void main(String... args)
     {
-        //ExStart:SupportForCMYKAndYCCKColorModesInJPEGLossless
+        Logger.startExample("SupportForCMYKAndYCCKColorModesInJPEGLossless");
 
         // The path to the documents directory.
         ByteArrayOutputStream jpegStream_cmyk = new ByteArrayOutputStream();
@@ -50,7 +52,7 @@ public class SupportForCMYKAndYCCKColorModesInJPEGLossless
         image = (JpegImage) Image.load(new ByteArrayInputStream(jpegStream_cmyk.toByteArray()));
         try
         {
-            image.save("056_cmyk.png", new PngOptions());
+            image.save(Utils.getOutDir() + "056_cmyk.png", new PngOptions());
         }
         finally
         {
@@ -61,13 +63,13 @@ public class SupportForCMYKAndYCCKColorModesInJPEGLossless
         image = (JpegImage) Image.load(new ByteArrayInputStream(jpegStream_ycck.toByteArray()));
         try
         {
-            image.save("056_ycck.png", new PngOptions());
+            image.save(Utils.getOutDir() + "056_ycck.png", new PngOptions());
         }
         finally
         {
             image.dispose();
         }
-        //ExEnd:SupportForCMYKAndYCCKColorModesInJPEGLossless
+        Logger.endExample();
     }
 }
             

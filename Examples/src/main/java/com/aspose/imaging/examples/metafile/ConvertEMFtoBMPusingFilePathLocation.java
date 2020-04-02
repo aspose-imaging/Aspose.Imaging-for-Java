@@ -1,29 +1,26 @@
 package com.aspose.imaging.examples.metafile;
 
+import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
-import com.aspose.imaging.fileformats.metafile.EmfMetafileImage;
+import com.aspose.imaging.fileformats.emf.EmfImage;
 import com.aspose.imaging.imageoptions.BmpOptions;
 
 public class ConvertEMFtoBMPusingFilePathLocation
 {
-    public static void main(String... args) throws Exception
+    public static void main(String... args)
     {
-		//ExStart:ConvertEMFtoBMPusingFilePathLocation
+		Logger.startExample("ConvertEMFtoBMPusingFilePathLocation");
         String dataDir = Utils.getSharedDataDir() + "metafile/";
         String filePath = dataDir + "picture1.emf";
         // Load a Metafile in an instance of EmfMetafileImage class
-        EmfMetafileImage metafile = new EmfMetafileImage(filePath);
 
-		try
+		try (EmfImage metafile = (EmfImage) Image.load(filePath))
 		{
 			// Save image to BMP using BmpOptions object
-			metafile.save(dataDir + "ConvertEMFtoBMPusingFilePathLocation_out.bmp", new BmpOptions());
+			metafile.save(Utils.getOutDir() + "ConvertEMFtoBMPusingFilePathLocation_out.bmp", new BmpOptions());
 		}
-		finally
-		{
-			metafile.close();
-		}
-		//ExEnd:ConvertEMFtoBMPusingFilePathLocation
+		Logger.endExample();
     }
 
 }

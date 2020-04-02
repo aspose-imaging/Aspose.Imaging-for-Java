@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.EPS;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.eps.EpsBinaryImage;
 import com.aspose.imaging.fileformats.eps.EpsImage;
@@ -12,12 +13,10 @@ public class SupportForEPS
 {
     public static void main(String... args)
     {
-
-        //ExStart:SupportForEPS
+        Logger.startExample("SupportForEPS");
 
         String dataDir = Utils.getSharedDataDir() + "EPS/";
-        EpsImage epsImage = (EpsImage) Image.load(dataDir + "anyEpsFile.eps");
-        try
+        try (EpsImage epsImage = (EpsImage) Image.load(dataDir + "anyEpsFile.eps"))
         {
             // check if EPS image has any raster preview to proceed (for now only raster preview is supported)
             if (epsImage.hasRasterPreview())
@@ -25,7 +24,7 @@ public class SupportForEPS
                 if (epsImage.getPhotoshopThumbnail() != null)
                 {
                     // process Photoshop thumbnail if it's present
-                    System.out.println("process Photoshop thumbnail if it's present");
+                    Logger.println("process Photoshop thumbnail if it's present");
                 }
 
                 if (epsImage.getEpsType() == EpsType.Interchange)
@@ -35,7 +34,7 @@ public class SupportForEPS
 
                     if (epsInterchangeImage.getRasterPreview() != null)
                     {
-                        System.out.println("process black-and-white Interchange raster preview if it's present");
+                        Logger.println("process black-and-white Interchange raster preview if it's present");
                         // process black-and-white Interchange raster preview if it's present
                     }
                 }
@@ -47,24 +46,20 @@ public class SupportForEPS
                     if (epsBinaryImage.getTiffPreview() != null)
                     {
                         // process TIFF preview if it's present
-                        System.out.println("process TIFF preview if it's present");
+                        Logger.println("process TIFF preview if it's present");
                     }
 
                     if (epsBinaryImage.getWmfPreview() != null)
                     {
                         // process WMF preview if it's present
-                        System.out.println("process WMF preview if it's present");
+                        Logger.println("process WMF preview if it's present");
                     }
                 }
 
                 // export EPS image to PNG (by default, best available quality preview is used for export)
-                epsImage.save(dataDir + "anyEpsFile.png", new PngOptions());
+                epsImage.save(Utils.getOutDir() + "anyEpsFile.png", new PngOptions());
             }
         }
-        finally
-        {
-            epsImage.close();
-        }
-//ExEnd:SupportForEPS
+        Logger.endExample();
     }
 }

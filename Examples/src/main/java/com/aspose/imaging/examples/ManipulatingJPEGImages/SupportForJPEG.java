@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ManipulatingJPEGImages;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.Rectangle;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.jpeg.JpegCompressionMode;
 import com.aspose.imaging.fileformats.jpeg.JpegImage;
@@ -15,7 +16,7 @@ public class SupportForJPEG
 {
     public static void main(String... args)
     {
-        //ExStart:SupportForJPEG
+        Logger.startExample("SupportForJPEG");
 
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
@@ -31,11 +32,11 @@ public class SupportForJPEG
             JpegOptions jpegOptions = jpegImage.getJpegOptions();
 
             // You can read new options:
-            System.out.format("Compression type:           %s\n", JpegCompressionMode.getName(JpegCompressionMode.class, jpegOptions.getCompressionType()));
-            System.out.format("Allowed lossy error (NEAR): %d\n", jpegOptions.getJpegLsAllowedLossyError());
-            System.out.format("Interleaved mode (ILV):     %s\n", JpegLsInterleaveMode.getName(JpegLsInterleaveMode.class, jpegOptions.getJpegLsInterleaveMode()));
-            System.out.format("Horizontal sampling:        %s\n", arrayToString(jpegOptions.getHorizontalSampling()));
-            System.out.format("Vertical sampling:          %s\n", arrayToString(jpegOptions.getVerticalSampling()));
+            Logger.println("Compression type:           ", JpegCompressionMode.getName(JpegCompressionMode.class, jpegOptions.getCompressionType()));
+            Logger.println("Allowed lossy error (NEAR): ", jpegOptions.getJpegLsAllowedLossyError());
+            Logger.println("Interleaved mode (ILV):     ", JpegLsInterleaveMode.getName(JpegLsInterleaveMode.class, jpegOptions.getJpegLsInterleaveMode()));
+            Logger.println("Horizontal sampling:        ", arrayToString(jpegOptions.getHorizontalSampling()));
+            Logger.println("Vertical sampling:          ", arrayToString(jpegOptions.getVerticalSampling()));
 
             // Save the original JPEG-LS image to PNG.
             jpegImage.save(outputPngFileName, new PngOptions());
@@ -48,7 +49,7 @@ public class SupportForJPEG
         {
             jpegImage.dispose();
         }
-        //ExEnd:SupportForJPEG
+        Logger.endExample();
     }
 
     private static String arrayToString(byte[] array)

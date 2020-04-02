@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ModifyingImages.psd;
 
 import com.aspose.imaging.Graphics;
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.psd.CompressionMethod;
 import com.aspose.imaging.fileformats.psd.PsdImage;
@@ -11,7 +12,7 @@ public class UncompressedImageUsingFile
 {
     public static void main(String[] args)
     {
-        //ExStart:UncompressedImageUsingFile
+        Logger.startExample("UncompressedImageUsingFile");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "psd/";
 
@@ -20,16 +21,16 @@ public class UncompressedImageUsingFile
         {
             PsdOptions saveOptions = new PsdOptions();
             saveOptions.setCompressionMethod(CompressionMethod.Raw);
-            psdImage.save(dataDir + "uncompressed_out.psd", saveOptions);
+            psdImage.save(Utils.getOutDir() + "uncompressed_out.psd", saveOptions);
         }
 
         // Now reopen the newly created image.
-        try (PsdImage psdImage = (PsdImage)Image.load(dataDir + "uncompressed_out.psd"))
+        try (PsdImage psdImage = (PsdImage)Image.load(Utils.getOutDir() + "uncompressed_out.psd"))
         {
             Graphics graphics = new Graphics(psdImage);
             // Perform graphics operations.
 
         }
-        //ExEnd:UncompressedImageUsingFile
+        Logger.endExample();
     }
 }

@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imagefilters.filteroptions.GaussianBlurFilterOptions;
 
@@ -9,12 +10,11 @@ public class BluranImage
 {
     public static void main(String... args)
     {
-		//ExStart:BluranImage
+		Logger.startExample("BluranImage");
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
-        Image image = Image.load(dataDir + "aspose-logo.jpg");
 
-		try
+		try (Image image = Image.load(dataDir + "aspose-logo.jpg"))
 		{
 			// Convert the image into RasterImage.
 			RasterImage rasterImage = (RasterImage) image;
@@ -24,13 +24,9 @@ public class BluranImage
 			rasterImage.filter(rasterImage.getBounds(), new GaussianBlurFilterOptions(5, 5));
 
 			// Save the results to output path.
-			rasterImage.save(dataDir + "BluranImage_out.gif");
+			rasterImage.save(Utils.getOutDir() + "BluranImage_out.gif");
 		}
-		finally
-		{
-			image.close();
-		}
-		//ExEnd:BluranImage
+		Logger.endExample();
     }
 
 }

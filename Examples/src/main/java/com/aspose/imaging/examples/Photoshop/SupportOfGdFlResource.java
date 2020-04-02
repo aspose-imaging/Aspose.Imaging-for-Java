@@ -7,6 +7,7 @@ package com.aspose.imaging.examples.Photoshop;
 
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.psd.PsdImage;
 import com.aspose.imaging.fileformats.psd.layers.Layer;
@@ -29,15 +30,13 @@ public class SupportOfGdFlResource
 {
     public static void main(String[] args)
     {
-        //ExStart:SupportOfGdFlResource
+        Logger.startExample("SupportOfGdFlResource");
 
         String dataDir = Utils.getSharedDataDir() + "Photoshop/";
         String sourceFileName = dataDir + "ComplexGradientFillLayer.psd";
-        String exportPath = dataDir + "ComplexGradientFillLayer_after.psd";
+        String exportPath = Utils.getOutDir() + "ComplexGradientFillLayer_after.psd";
 
-        PsdImage im = (PsdImage) Image.load(sourceFileName);
-
-        try
+        try (PsdImage im = (PsdImage) Image.load(sourceFileName))
         {
             for (Layer layer : im.getLayers())
             {
@@ -135,11 +134,7 @@ public class SupportOfGdFlResource
                 }
             }
         }
-        finally
-        {
-            im.close();
-        }
+        Logger.endExample();
     }
-    //ExEnd:SupportOfGdFlResource
 }
 

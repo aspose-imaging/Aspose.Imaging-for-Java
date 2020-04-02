@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.djvu;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.IntRange;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.djvu.DjvuImage;
 import com.aspose.imaging.fileformats.pdf.PdfDocumentInfo;
@@ -10,16 +11,14 @@ import com.aspose.imaging.imageoptions.PdfOptions;
 
 public class ConvertDjVuToPDF
 {
-
     public static void main(String[] args)
     {
-        //ExStart:ConvertDjVuToPDF
+        Logger.startExample("ConvertDjVuToPDF");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "djvu/";
-        //Load a DjVu image
-        DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");
 
-        try
+        //Load a DjVu image
+        try (DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu"))
         {
             //Create an instance of PdfOptions
             PdfOptions exportOptions = new PdfOptions();
@@ -34,17 +33,13 @@ public class ConvertDjVuToPDF
             exportOptions.setMultiPageOptions(new DjvuMultiPageOptions(range));
 
             //Save the result in PDF format
-            image.save(dataDir + "ConvertDjVuToPDF_out.pdf", exportOptions);
+            image.save(Utils.getOutDir() + "ConvertDjVuToPDF_out.pdf", exportOptions);
 
             // Display Status.
-            System.out.println("File converted");
-        }
-        finally
-        {
-            image.close();
+            Logger.println("File converted");
         }
 
-        //ExEnd:ConvertDjVuToPDF
+        Logger.endExample();
     }
 }
 

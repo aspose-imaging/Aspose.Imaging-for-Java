@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ManipulatingJPEGImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.jpeg.JpegImage;
 
@@ -8,15 +9,14 @@ public class ReadJpegEXIFTags
 {
     public static void main(String... args)
     {
-		//ExStart:ReadJpegEXIFTags
+		Logger.startExample("ReadJpegEXIFTags");
 
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "images/";
 
         // Load the image in an instance of JpegImage
-        JpegImage image = (JpegImage) Image.load(dataDir + "aspose-logo.jpg");
 
-		try
+		try (JpegImage image = (JpegImage) Image.load(dataDir + "aspose-logo.jpg"))
 		{
 			if (image.getExifData() != null)
 			{
@@ -27,15 +27,10 @@ public class ReadJpegEXIFTags
 				if (thumbnail != null)
 				{
 					// Save the thumbnail to disk with a new name
-					thumbnail.save(dataDir + "ReadJpegEXIFTags_out.jpg");
+					thumbnail.save(Utils.getOutDir() + "ReadJpegEXIFTags_out.jpg");
 				}
 			}
 		}
-		finally
-		{
-			image.close();
-		}
-		//ExEnd:ReadJpegEXIFTags
+		Logger.endExample();
     }
-
 }

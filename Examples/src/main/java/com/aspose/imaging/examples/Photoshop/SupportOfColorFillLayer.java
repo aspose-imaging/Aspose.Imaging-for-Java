@@ -7,6 +7,7 @@ package com.aspose.imaging.examples.Photoshop;
 
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.psd.PsdImage;
 import com.aspose.imaging.fileformats.psd.layers.Layer;
@@ -21,15 +22,13 @@ public class SupportOfColorFillLayer
 {
     public static void main(String[] args)
     {
-        //ExStart:SupportOfColorFillLayer
+        Logger.startExample("SupportOfColorFillLayer");
 
         String dataDir = Utils.getSharedDataDir() + "Photoshop/";
         String sourceFileName = dataDir + "ColorFillLayer.psd";
         String exportPath = Utils.getOutDir() + "ColorFillLayer_output.psd";
 
-        PsdImage im = (PsdImage) Image.load(sourceFileName);
-
-        try
+        try (PsdImage im = (PsdImage) Image.load(sourceFileName))
         {
             for (Layer layer : im.getLayers())
             {
@@ -51,11 +50,7 @@ public class SupportOfColorFillLayer
                 }
             }
         }
-        finally
-        {
-            im.close();
-        }
-        //ExEnd:SupportOfColorFillLayer
 
+        Logger.endExample();
     }
 }

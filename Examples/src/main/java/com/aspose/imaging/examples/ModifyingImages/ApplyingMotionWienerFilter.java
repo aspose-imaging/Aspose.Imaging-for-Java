@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imagefilters.filteroptions.MotionWienerFilterOptions;
 
@@ -9,7 +10,7 @@ public class ApplyingMotionWienerFilter
 {
     public static void main(String... args)
     {
-        //ExStart:ApplyingMotionWienerFilter
+        Logger.startExample("ApplyingMotionWienerFilter");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 
@@ -22,8 +23,8 @@ public class ApplyingMotionWienerFilter
 
             // Apply MedianFilterOptions filter to RasterImage object and  Save the resultant image
             rasterImage.filter(rasterImage.getBounds(), options);
-            rasterImage.save(dataDir + "ApplyingMotionWienerFilter_out.gif");
+            rasterImage.save(Utils.getOutDir() + "ApplyingMotionWienerFilter_out.gif");
         }
-        //ExEnd:ApplyingMotionWienerFilter
+        Logger.endExample();
     }
 }

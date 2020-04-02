@@ -2,16 +2,16 @@ package com.aspose.imaging.examples.ConvertingImages;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imagefilters.filteroptions.MotionWienerFilterOptions;
 
 public class ApplyMotionWienerFilter {
 	public static void main(String... args) {
-		//ExStart:ApplyMotionWienerFilter
+		Logger.startExample("ApplyMotionWienerFilter");
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
-		Image image = Image.load(dataDir + "aspose-logo.gif");
-		try
+		try (Image image = Image.load(dataDir + "aspose-logo.gif"))
 		{
 			// caste the image into RasterImage
 			RasterImage rasterImage = (RasterImage) image;
@@ -25,13 +25,9 @@ public class ApplyMotionWienerFilter {
 			rasterImage.filter(image.getBounds(), options);
 
 			// Save the resultant image
-			image.save(dataDir + "ApplyingMotionWienerFilter_out.gif");
+			image.save(Utils.getOutDir() + "ApplyingMotionWienerFilter_out.gif");
 		}
-		finally
-		{
-			image.close();
-		}
-		//ExEnd:ApplyMotionWienerFilter
+		Logger.endExample();
 	}
 
 }

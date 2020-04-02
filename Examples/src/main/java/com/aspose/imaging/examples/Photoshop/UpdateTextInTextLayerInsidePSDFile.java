@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.Photoshop;
 
 import com.aspose.imaging.Color;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.psd.CompressionMethod;
 import com.aspose.imaging.fileformats.psd.layers.Layer;
@@ -9,10 +10,10 @@ public class UpdateTextInTextLayerInsidePSDFile
 {
     public static void main(String... args)
     {
-		//ExStart:UpdateTextInTextLayerInsidePSDFile
+        Logger.startExample("UpdateTextInTextLayerInsidePSDFile");
 		String dataDir = Utils.getSharedDataDir() + "Photoshop/";
 		String sourceFileName = dataDir + "samplePsd.psd";
-		String outputFile = dataDir + "UpdateTextInTextLayerInsidePSDFile_out.psd";
+		String outputFile = Utils.getOutDir() + "UpdateTextInTextLayerInsidePSDFile_out.psd";
         // Load an existing PSD file as Image
         com.aspose.imaging.Image image = com.aspose.imaging.Image.load(sourceFileName);
         try
@@ -53,6 +54,6 @@ public class UpdateTextInTextLayerInsidePSDFile
         {
             image.dispose();
         }
-        //ExEnd:UpdateTextInTextLayerInsidePSDFile
+        Logger.endExample();
     }
 }

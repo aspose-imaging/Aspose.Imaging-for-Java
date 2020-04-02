@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ModifyingImages.jpeg;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.exif.ExifData;
 import com.aspose.imaging.exif.enums.ExifWhiteBalance;
@@ -10,7 +11,7 @@ public class ReadSpecificEXIFTagsInformation
 {
     public static void main(String... args)
     {
-        //ExStart:ReadSpecificEXIFTagsInformation
+        Logger.startExample("ReadSpecificEXIFTagsInformation");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
         // Load an image using the factory method Load exposed by Image class
@@ -22,13 +23,13 @@ public class ReadSpecificEXIFTagsInformation
             // Check if image has any EXIF entries defined and Display a few EXIF entries
             if (exif != null)
             {
-                System.out.println("Exif WhiteBalance: " + ExifWhiteBalance.toString(ExifWhiteBalance.class, exif.getWhiteBalance()));
-                System.out.println("Exif PixelXDimension: " + exif.getPixelXDimension());
-                System.out.println("Exif PixelYDimension: " + exif.getPixelYDimension());
-                System.out.println("Exif ISOSpeed: " + exif.getISOSpeed());
-                System.out.println("Exif FocalLength: " + exif.getFocalLength());
+                Logger.println("Exif WhiteBalance: " + ExifWhiteBalance.toString(ExifWhiteBalance.class, exif.getWhiteBalance()));
+                Logger.println("Exif PixelXDimension: " + exif.getPixelXDimension());
+                Logger.println("Exif PixelYDimension: " + exif.getPixelYDimension());
+                Logger.println("Exif ISOSpeed: " + exif.getISOSpeed());
+                Logger.println("Exif FocalLength: " + exif.getFocalLength());
             }
         }
-        //ExEnd:ReadSpecificEXIFTagsInformation
+        Logger.endExample();
     }
 }

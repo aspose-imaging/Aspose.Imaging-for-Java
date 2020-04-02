@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ModifyingImages.psd;
 
 import com.aspose.imaging.Graphics;
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.psd.CompressionMethod;
 import com.aspose.imaging.fileformats.psd.PsdImage;
@@ -14,7 +15,7 @@ public class UncompressedImageStreamObject
 {
     public static void main(String[] args)
     {
-        //ExStart:UncompressedImageStreamObject
+        Logger.startExample("UncompressedImageStreamObject");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "psd/";
 
@@ -34,7 +35,6 @@ public class UncompressedImageStreamObject
             // Perform graphics operations.
 
         }
-        //ExEnd:UncompressedImageStreamObject
-
+        Logger.endExample();
     }
 }

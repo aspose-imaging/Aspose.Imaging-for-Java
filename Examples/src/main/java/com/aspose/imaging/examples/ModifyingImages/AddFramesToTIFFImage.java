@@ -3,6 +3,7 @@ package com.aspose.imaging.examples.ModifyingImages;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
 import com.aspose.imaging.ResizeType;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.tiff.TiffFrame;
 import com.aspose.imaging.fileformats.tiff.TiffImage;
@@ -19,6 +20,7 @@ public class AddFramesToTIFFImage
 {
     public static void main(String[] args)
     {
+        Logger.startExample("AddFramesToTIFFImage");
         // To get proper output please apply a valid Aspose.Imaging License. You can purchase full license or get 30 day temporary license from http:// Www.aspose.com/purchase/default.aspx.");
 
         // The path to the documents directory.
@@ -30,7 +32,7 @@ public class AddFramesToTIFFImage
         outputSettings.setSource(new StreamSource());
         int newWidth = 500;
         int newHeight = 500;
-        String path = dataDir + "AddFramesToTIFFImage_out.tif";
+        String path = Utils.getOutDir() + "AddFramesToTIFFImage_out.tif";
         try (TiffImage tiffImage = (TiffImage) Image.create(outputSettings, newWidth, newHeight))
         {
             int index = 0;
@@ -71,5 +73,6 @@ public class AddFramesToTIFFImage
             }
             tiffImage.save(path);
         }
+        Logger.endExample();
     }
 }

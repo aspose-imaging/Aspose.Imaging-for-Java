@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.memorystrategies;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.LoadOptions;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.jpeg.JpegCompressionColorMode;
 import com.aspose.imaging.fileformats.jpeg.JpegCompressionMode;
@@ -12,6 +13,7 @@ public class OptimizationStrategyInJPEG
 {
     public static void main(String[] args)
     {
+        Logger.startExample("OptimizationStrategyInJPEG");
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         String outDir = Utils.getOutDir();
 
@@ -43,5 +45,6 @@ public class OptimizationStrategyInJPEG
             jpegOptions.setJpegLsPreset(null);
             image.save(outDir + "outputFile_JpegLs.jpg", jpegOptions);
         }
+        Logger.endExample();
     }
 }

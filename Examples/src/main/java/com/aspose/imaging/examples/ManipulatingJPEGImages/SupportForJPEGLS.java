@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ManipulatingJPEGImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.jpeg.JpegCompressionColorMode;
 import com.aspose.imaging.fileformats.jpeg.JpegCompressionMode;
@@ -15,7 +16,7 @@ public class SupportForJPEGLS
 {
     public static void main(String... args)
     {
-        //ExStart:SupportForJPEGLS
+        Logger.startExample("SupportForJPEGLS");
 
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
@@ -49,13 +50,13 @@ public class SupportForJPEGLS
         image = (JpegImage) Image.load(new ByteArrayInputStream(jpegLsStream.toByteArray()));
         try
         {
-            image.save("056_cmyk.png", new PngOptions());
+            image.save(Utils.getOutDir() + "056_cmyk.png", new PngOptions());
         }
         finally
         {
             image.dispose();
         }
-        //ExEnd:SupportForJPEGLS
+        Logger.endExample();
     }
 
 }

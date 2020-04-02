@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
 import com.aspose.imaging.fileformats.tiff.enums.TiffPhotometrics;
@@ -11,11 +12,10 @@ public class AdjustContrast
 {
     public static void main(String... args)
     {
-		//ExStart:AdjustContrast
+		Logger.startExample("AdjustContrast");
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
-        Image image = Image.load(dataDir + "aspose-logo.jpg");
-		try
+		try (Image image = Image.load(dataDir + "aspose-logo.jpg"))
 		{
 			// Cast object of Image to RasterImage
 			RasterImage rasterImage = (RasterImage) image;
@@ -37,13 +37,9 @@ public class AdjustContrast
 			tiffOptions.setPhotometric(TiffPhotometrics.Rgb);
 
 			// Save the resultant image to TIFF format
-			rasterImage.save(dataDir + "AdjustContrast_out.tiff", tiffOptions);
+			rasterImage.save(Utils.getOutDir() + "AdjustContrast_out.tiff", tiffOptions);
 		}
-		finally
-		{
-			image.close();
-		}
-		//ExEnd:AdjustContrast
+		Logger.endExample();
     }
 
 }

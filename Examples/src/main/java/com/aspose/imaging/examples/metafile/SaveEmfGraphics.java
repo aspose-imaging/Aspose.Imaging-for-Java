@@ -8,6 +8,7 @@ package com.aspose.imaging.examples.metafile;
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Font;
 import com.aspose.imaging.FontStyle;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.emf.EmfImage;
 import com.aspose.imaging.imageoptions.EmfOptions;
@@ -17,7 +18,7 @@ public class SaveEmfGraphics
 
     public static void main(String... args)
     {
-        //ExStart:SaveEmfGraphics
+        Logger.startExample("SaveEmfGraphics");
 
         String dataDir = Utils.getSharedDataDir() + "metafile/";
         com.aspose.imaging.fileformats.emf.graphics.EmfRecorderGraphics2D graphics = new com.aspose.imaging.fileformats.emf.graphics.EmfRecorderGraphics2D(
@@ -36,7 +37,7 @@ public class SaveEmfGraphics
             EmfImage image = graphics.endRecording();
             try
             {
-                String path = dataDir + "Fonts.emf";
+                String path = Utils.getOutDir() + "Fonts.emf";
                 image.save(path, new EmfOptions());
             }
             finally
@@ -45,6 +46,6 @@ public class SaveEmfGraphics
             }
         }
 
-        //ExEnd:SaveEmfGraphics
+        Logger.endExample();
     }
 }

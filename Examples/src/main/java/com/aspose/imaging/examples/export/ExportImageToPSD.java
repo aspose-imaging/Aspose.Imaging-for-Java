@@ -1,5 +1,6 @@
 package com.aspose.imaging.examples.export;
 
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.psd.ColorModes;
 import com.aspose.imaging.fileformats.psd.CompressionMethod;
@@ -8,13 +9,12 @@ public class ExportImageToPSD
 {
     public static void main(String[] args)
     {
+        Logger.startExample("ExportImageToPSD");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "export/";
-        //ExStart:ExportImageToPSD
-        //Load an existing image
-        com.aspose.imaging.Image image = com.aspose.imaging.Image.load(dataDir + "sample.bmp");
 
-        try
+        //Load an existing image
+        try (com.aspose.imaging.Image image = com.aspose.imaging.Image.load(dataDir + "sample.bmp"))
         {
             //Create an instance of PsdSaveOptions class
             com.aspose.imaging.imageoptions.PsdOptions saveOptions = new com.aspose.imaging.imageoptions.PsdOptions();
@@ -27,18 +27,13 @@ public class ExportImageToPSD
             saveOptions.setColorMode(ColorModes.Rgb);
 
             //Save the image to disk location with supplied PsdOptions settings
-            image.save(dataDir + "ExportImageToPSD_out.psd", saveOptions);
+            image.save(Utils.getOutDir() + "ExportImageToPSD_out.psd", saveOptions);
 
             // Display Status.
-            System.out.println("Image exported to PSD successfully!");
-        }
-        finally
-        {
-            image.close();
+            Logger.println("Image exported to PSD successfully!");
         }
 
-
-        //ExEnd:ExportImageToPSD
+        Logger.endExample();
     }
 }
 

@@ -3,6 +3,7 @@ package com.aspose.imaging.examples.metafile;
 import com.aspose.imaging.*;
 import com.aspose.imaging.brushes.HatchBrush;
 import com.aspose.imaging.brushes.SolidBrush;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.emf.EmfImage;
 import com.aspose.imaging.fileformats.emf.graphics.EmfRecorderGraphics2D;
@@ -11,9 +12,9 @@ import com.aspose.imaging.imageoptions.PdfOptions;
 
 public class CreateEMFMetaFileImage
 {
-    //ExStart:CreateEMFMetaFileImage
     public static void main(String... args)
     {
+        Logger.startExample("CreateEMFMetaFileImage");
         // EmfRecorderGraphics2D class provides you the frame or canvas to draw shapes on it.
         // Create an instance of EmfRecorderGraphics2D class. The constructor takes in 3 parameters:
         // 1. Instance of Imaging Rectangle class
@@ -22,15 +23,14 @@ public class CreateEMFMetaFileImage
         EmfRecorderGraphics2D graphics = new EmfRecorderGraphics2D(new Rectangle(0, 0, 1000, 1000), new Size(1000, 1000)
                 , new Size(100, 100));
         {
-            String dataDir = Utils.getSharedDataDir() + "metafile/";
             // Create an instance of Imaging Pen class and mention its color.
-            Pen pen = new Pen(Color.getBisque().Clone());
+            Pen pen = new Pen(Color.getBisque());
 
             // Draw a line by calling DrawLine method and passing x,y coordinates of 1st point and same for 2nd point along with color info as Pen.
             graphics.drawLine(pen, 1, 1, 50, 50);
 
             // Reset the Pen color.
-            pen = new Pen(Color.getBlueViolet().Clone(), 3);
+            pen = new Pen(Color.getBlueViolet(), 3);
 
             // specify the end style of the line.
             pen.setEndCap(LineCap.Round);
@@ -77,9 +77,7 @@ public class CreateEMFMetaFileImage
 
             // Call EndRecording method to produce the final shape. EndRecording method will return the final shape as EmfImage.
             // So create an instance of EmfImage class and initialize it with EmfImage returned by EndRecording method.
-            final EmfImage image = graphics.endRecording();
-
-            try /*JAVA: was using*/
+            try (EmfImage image = graphics.endRecording())
             {
                 // Create an instance of PdfOptions class.
                 PdfOptions options = new PdfOptions();
@@ -87,18 +85,15 @@ public class CreateEMFMetaFileImage
                 // Create an instance of EmfRasterizationOptions class and define different settings.
                 EmfRasterizationOptions rasterizationOptions = new EmfRasterizationOptions();
                 options.setVectorRasterizationOptions(rasterizationOptions);
-                rasterizationOptions.setPageSize(com.aspose.imaging.Size.to_SizeF(image.getSize()));
+                rasterizationOptions.setPageSize(Size.to_SizeF(image.getSize()));
 
-                String outPath = dataDir + "Picture1.emf.pdf";
+                String outPath = Utils.getOutDir() + "Picture1.emf.pdf";
 
                 // Call the save method to convert the EMF metafile image to PDF.
                 image.save(outPath, options);
             }
-            finally
-            {
-				image.close();
-            }
         }
+        Logger.endExample();
     }
 
     //ExEnd:CreateEMFMetaFileImage

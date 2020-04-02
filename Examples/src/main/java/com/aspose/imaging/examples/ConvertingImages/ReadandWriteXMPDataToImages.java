@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ConvertingImages;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.Rectangle;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.tiff.TiffFrame;
 import com.aspose.imaging.fileformats.tiff.TiffImage;
@@ -21,8 +22,9 @@ public class ReadandWriteXMPDataToImages
 {
     public static void main(String... args)
     {
+        Logger.startExample("ReadandWriteXMPDataToImages");
         String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
-        //ExStart:ReadandWriteXMPDataToImages
+
         // Specify the size of image by defining a Rectangle
         Rectangle rect = new Rectangle(0, 0, 100, 200);
 
@@ -31,8 +33,7 @@ public class ReadandWriteXMPDataToImages
         tiffOptions.setBitsPerSample(new int[] { 8 });
 
         // create the brand new image just for sample purposes
-        TiffImage image = new TiffImage(new TiffFrame(tiffOptions, rect.getWidth(), rect.getHeight()));
-        try
+        try (TiffImage image = new TiffImage(new TiffFrame(tiffOptions, rect.getWidth(), rect.getHeight())))
         {
             // create an instance of XMP-Header
             XmpHeaderPi xmpHeader = new XmpHeaderPi();
@@ -40,7 +41,7 @@ public class ReadandWriteXMPDataToImages
             // create an instance of Xmp-TrailerPi
             XmpTrailerPi xmpTrailer = new XmpTrailerPi(true);
 
-            // create an instance of XMPmeta class to set different attributes
+            // create an instance of XMP meta class to set different attributes
             XmpMeta xmpMeta = new XmpMeta();
             xmpMeta.addAttribute("Author", "Mr Smith");
             xmpMeta.addAttribute("Description", "The fake metadata value");
@@ -48,7 +49,7 @@ public class ReadandWriteXMPDataToImages
             // create an instance of XmpPacketWrapper that contains all metadata
             XmpPacketWrapper xmpData = new XmpPacketWrapper(xmpHeader, xmpTrailer, xmpMeta);
 
-            // create an instacne of Photoshop package and set photoshop attributes
+            // create an instance of Photoshop package and set photoshop attributes
             PhotoshopPackage photoshopPackage = new PhotoshopPackage();
             photoshopPackage.setCity("London");
             photoshopPackage.setCountry("England");
@@ -57,7 +58,7 @@ public class ReadandWriteXMPDataToImages
             // add photoshop package into XMP metadata
             xmpData.addPackage(photoshopPackage);
 
-            // create an instacne of DublinCore package and set dublinCore attributes
+            // create an instance of DublinCore package and set dublinCore attributes
             DublinCorePackage dublinCorePackage = new DublinCorePackage();
             dublinCorePackage.setAuthor("Charles Bukowski");
             dublinCorePackage.setTitle("Confessions of a Man Insane Enough to Live With the Beasts");
@@ -73,7 +74,7 @@ public class ReadandWriteXMPDataToImages
             // Save image on the disk or in memory stream
             image.save(ms);
 
-            // Load the image from moemory stream or from disk to read/get the metadata
+            // Load the image from memory stream or from disk to read/get the metadata
             try (TiffImage img = (TiffImage) Image.load(new ByteArrayInputStream(ms.toByteArray())))
             {
                 // Getting the XMP metadata
@@ -84,11 +85,7 @@ public class ReadandWriteXMPDataToImages
                 }
             }
         }
-        finally
-        {
-            image.close();
-        }
 
-        //ExEnd:ReadandWriteXMPDataToImages
+        Logger.endExample();
     }
 }

@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.images;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.png.PngColorType;
 import com.aspose.imaging.fileformats.psd.PsdImage;
@@ -11,7 +12,7 @@ public class MissingFonts
 {
     public static void main(String[] args)
     {
-        //ExStart:MissingFonts
+        Logger.startExample("MissingFonts");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "images/";
         String fileName = dataDir + "testReplacementNotAvailableFonts.psd";
@@ -21,7 +22,7 @@ public class MissingFonts
                                 }});
         try
         {
-            image.save(dataDir + "result.png", new PngOptions()
+            image.save(Utils.getOutDir() + "result.png", new PngOptions()
             {{
                 setColorType(PngColorType.TruecolorWithAlpha);
             }});
@@ -30,7 +31,7 @@ public class MissingFonts
         {
             image.dispose();
         }
-        //ExEnd:MissingFonts
+        Logger.endExample();
     }
 }
 

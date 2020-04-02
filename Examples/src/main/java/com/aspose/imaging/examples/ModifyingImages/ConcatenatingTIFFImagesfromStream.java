@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.tiff.TiffFrame;
 import com.aspose.imaging.fileformats.tiff.TiffImage;
@@ -12,7 +13,7 @@ public class ConcatenatingTIFFImagesfromStream
 {
     public static void main(String[] args) throws IOException
     {
-        //ExStart:SupportLayerForPSD
+        Logger.startExample("ConcatenatingTIFFImagesfromStream");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "images/";
 
@@ -37,9 +38,10 @@ public class ConcatenatingTIFFImagesfromStream
                     }
 
                     // Save the image with changes
-                    image.save(dataDir + "ConcatenatingTIFFImagesfromStream_out.tif");
+                    image.save(Utils.getOutDir() + "ConcatenatingTIFFImagesfromStream_out.tif");
                 }
             }
         }
+        Logger.endExample();
     }
 }

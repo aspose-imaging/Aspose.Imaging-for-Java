@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.FontSettings;
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.EmfRasterizationOptions;
 import com.aspose.imaging.imageoptions.OdgRasterizationOptions;
@@ -16,7 +17,7 @@ public class SupportForReplacingMissingFonts
 
     public static void main(String... args)
     {
-        //ExStart:SupportForReplacingMissingFonts
+        Logger.startExample("SupportForReplacingMissingFonts");
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         FontSettings.setDefaultFontName("Comic Sans MS");
 
@@ -25,7 +26,7 @@ public class SupportForReplacingMissingFonts
 
         for (int i = 0; i < files.length; i++)
         {
-            String outFile = dataDir + files[i] + ".png";
+            String outFile = Utils.getOutDir() + files[i] + ".png";
 
             try (Image img = Image.load(dataDir + files[i]))
             {
@@ -36,6 +37,6 @@ public class SupportForReplacingMissingFonts
                 img.save(outFile, saveOptions);
             }
         }
-        //ExEnd:SupportForReplacingMissingFonts
+        Logger.endExample();
     }
 }

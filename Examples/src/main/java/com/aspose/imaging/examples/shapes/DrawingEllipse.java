@@ -1,15 +1,14 @@
 package com.aspose.imaging.examples.shapes;
 
 import com.aspose.imaging.Pen;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class DrawingEllipse
 {
     public static void main(String[] args)
     {
-        //ExStart:DrawingEllipse
-        // The path to the documents directory.
-        String dataDir = Utils.getSharedDataDir() + "shapes/";
+        Logger.startExample("DrawingEllipse");
 
         // Creates an instance of BmpOptions and set its various properties
         try (com.aspose.imaging.imageoptions.BmpOptions bmpCreateOptions = new com.aspose.imaging.imageoptions.BmpOptions())
@@ -36,13 +35,13 @@ public class DrawingEllipse
                 graphic.drawEllipse(new Pen(new com.aspose.imaging.brushes.SolidBrush(com.aspose.imaging.Color.getBlue())), new com.aspose.imaging.Rectangle(10, 30, 80, 40));
 
                 // Save all changes.
-                image.save(dataDir + "DrawingEllipse_out.bmp");
+                image.save(Utils.getOutDir() + "DrawingEllipse_out.bmp");
             }
         }
 
         // Display Status.
-        System.out.println("Ellipse has been drawn in image successfully!");
-        //ExEnd:DrawingEllipse
+        Logger.println("Ellipse has been drawn in image successfully!");
+        Logger.endExample();
     }
 }
 

@@ -2,13 +2,14 @@ package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class RotatingImageOnSpecificAngle
 {
     public static void main(String... args)
     {
-		//ExStart:RotatingImageOnSpecificAngle
+		Logger.startExample("RotatingImageOnSpecificAngle");
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 		try (RasterImage image = (RasterImage) Image.load(dataDir + "aspose-logo.jpg"))
@@ -24,9 +25,9 @@ public class RotatingImageOnSpecificAngle
 			image.rotate(20f);
 
 			// Save the result to a new file
-			image.save(dataDir + "RotatingImageOnSpecificAngle_out.jpg");
+			image.save(Utils.getOutDir() + "RotatingImageOnSpecificAngle_out.jpg");
 		}
-		//ExEnd:RotatingImageOnSpecificAngle
+		Logger.endExample();
     }
 
 }

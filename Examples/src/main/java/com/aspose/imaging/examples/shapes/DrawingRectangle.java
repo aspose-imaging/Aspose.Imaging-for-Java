@@ -1,15 +1,14 @@
 package com.aspose.imaging.examples.shapes;
 
 import com.aspose.imaging.Pen;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class DrawingRectangle
 {
     public static void main(String[] args)
     {
-        //ExStart:DrawingRectangle
-        // The path to the documents directory.
-        String dataDir = Utils.getSharedDataDir() + "shapes/";
+        Logger.startExample("DrawingRectangle");
         // Creates an instance of BmpOptions and set its various properties
         try (com.aspose.imaging.imageoptions.BmpOptions bmpCreateOptions = new com.aspose.imaging.imageoptions.BmpOptions())
         {
@@ -35,12 +34,12 @@ public class DrawingRectangle
                 graphic.drawRectangle(new Pen(new com.aspose.imaging.brushes.SolidBrush(com.aspose.imaging.Color.getBlue())), new com.aspose.imaging.Rectangle(10, 30, 80, 40));
 
                 // Save all changes.
-                image.save(dataDir + "DrawingRectangle_out.bmp");
+                image.save(Utils.getOutDir() + "DrawingRectangle_out.bmp");
             }
         }
 
         //Print message
-        System.out.println("Rectangle created successfully. Check output file.");
-        //ExEnd:DrawingRectangle
+        Logger.println("Rectangle created successfully. Check output file.");
+        Logger.endExample();
     }
 }

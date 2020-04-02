@@ -3,6 +3,7 @@ package com.aspose.imaging.examples.InterruptMonitor;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.ImageOptionsBase;
 import com.aspose.imaging.coreexceptions.OperationInterruptedException;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.PngOptions;
 import com.aspose.imaging.multithreading.InterruptMonitor;
@@ -16,13 +17,13 @@ public class InterruptMonitorSupport
 
     public static void main(String... args) throws InterruptedException
     {
-        //ExStart:InterruptMonitorSupport
+        Logger.startExample("InterruptMonitorSupport");
 
         String dataDir = Utils.getSharedDataDir() + "InterruptMonitor/";
         ImageOptionsBase saveOptions = new PngOptions();
 
         InterruptMonitor monitor = new InterruptMonitor();
-        SaveImageWorker worker = new SaveImageWorker(dataDir + "big.jpg", dataDir + "big_out.png", saveOptions, monitor);
+        SaveImageWorker worker = new SaveImageWorker(dataDir + "big.jpg", Utils.getOutDir() + "big_out.png", saveOptions, monitor);
 
         Thread thread = new Thread(worker);
 
@@ -34,7 +35,7 @@ public class InterruptMonitorSupport
             Thread.sleep(3000);
 
             // Interrupt the process
-            System.out.format("Interrupting the save thread #%d at %s\n", thread.getId(), new Date().toString());
+            Logger.printf("Interrupting the save thread #%d at %s", thread.getId(), new Date());
             monitor.interrupt();
 
             // Wait for interruption...
@@ -43,9 +44,10 @@ public class InterruptMonitorSupport
         finally
         {
             // If the file to be deleted does not exist, no exception is thrown.
-            File f = new File(dataDir + "big_out.png");
+            File f = new File(Utils.getOutDir() + "big_out.png");
             assert f.delete() : "Can not delete this file!";
         }
+        Logger.endExample();
     }
 
     /**
@@ -105,7 +107,7 @@ public class InterruptMonitorSupport
                 }
                 catch (OperationInterruptedException e)
                 {
-                    System.out.format("The save thread #%d finishes at %s\n", Thread.currentThread().getId(), new Date().toString());
+                    Logger.printf("The save thread #%d finishes at %s", Thread.currentThread().getId(), new Date());
                 }
                 catch (Exception e)
                 {

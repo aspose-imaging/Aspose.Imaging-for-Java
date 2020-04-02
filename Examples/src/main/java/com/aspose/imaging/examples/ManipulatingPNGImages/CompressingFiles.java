@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ManipulatingPNGImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.PngOptions;
 
@@ -8,12 +9,12 @@ public class CompressingFiles
 {
     public static void main(String... args)
     {
-		//ExStart:CompressingFiles
+		Logger.startExample("CompressingFiles");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
+        String outDir = Utils.getOutDir();
         // Load an image from file (or stream)
-        Image image = Image.load(dataDir + "aspose_logo.png");
-		try
+		try (Image image = Image.load(dataDir + "aspose_logo.png"))
 		{
 			// Loop over possible CompressionLevel range
 			for (int i = 0; i <= 9; i++)
@@ -23,14 +24,10 @@ public class CompressingFiles
 				// Set CompressionLevel
 				options.setCompressionLevel(i);
 				// Save result on disk (or stream)
-				image.save("CompressingFiles_out" + i + ".png", options);
+				image.save(outDir + "CompressingFiles_out" + i + ".png", options);
 			}
 		}
-		finally
-		{
-			image.close();
-		}
-		//ExEnd:CompressingFiles
+		Logger.endExample();
     }
 
 }

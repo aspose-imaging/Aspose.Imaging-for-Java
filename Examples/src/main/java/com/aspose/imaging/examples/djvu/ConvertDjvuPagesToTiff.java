@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.djvu;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.IntRange;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.djvu.DjvuImage;
 import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
@@ -13,13 +14,12 @@ public class ConvertDjvuPagesToTiff
 
     public static void main(String[] args)
     {
+        Logger.startExample("ConvertDjvuPagesToTiff");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "djvu/";
-        //ExStart:ConvertDjvuPagesToTiff 
-        //Load a DjVu image
-        DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");
 
-        try
+        //Load a DjVu image
+        try (DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu"))
         {
             //Create an instance of TiffOptions & use preset options for Black n While with Deflate compression
             TiffOptions exportOptions = new TiffOptions(TiffExpectedFormat.TiffDeflateBw);
@@ -31,16 +31,12 @@ public class ConvertDjvuPagesToTiff
             exportOptions.setMultiPageOptions(new DjvuMultiPageOptions(range));
 
             //Call Save method while passing instance of TiffOptions
-            image.save(dataDir + "ConvertDjvuPagesToTiff_out.tiff", exportOptions);
+            image.save(Utils.getOutDir() + "ConvertDjvuPagesToTiff_out.tiff", exportOptions);
 
             // Display Status.
-            System.out.println("File converted");
-        }
-        finally
-        {
-            image.close();
+            Logger.println("File converted");
         }
 
-        //ExEnd:ConvertDjvuPagesToTiff
+        Logger.endExample();
     }
 }

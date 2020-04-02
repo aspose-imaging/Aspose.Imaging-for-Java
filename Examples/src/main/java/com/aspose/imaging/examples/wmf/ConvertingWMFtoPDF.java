@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.wmf;
 
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.EmfRasterizationOptions;
 import com.aspose.imaging.imageoptions.PdfOptions;
@@ -10,13 +11,13 @@ public class ConvertingWMFtoPDF
 {
     public static void main(String... args)
     {
-		//ExStart:ConvertingWMFtoPDF
+		Logger.startExample("ConvertingWMFtoPDF");
 		String dataDir = Utils.getSharedDataDir() + "wmf/";
         String inputFileName = dataDir + "sample.wmf";
-        String outFileName = dataDir + "ConvertingWMFtoPDF_out.pdf";
+        String outFileName = Utils.getOutDir() + "ConvertingWMFtoPDF_out.pdf";
 
         // Load an existing WMF image
-		try (Image image = Image.load(dataDir))
+		try (Image image = Image.load(inputFileName))
 		{
 			final EmfRasterizationOptions emfRasterizationOptions = new EmfRasterizationOptions();
 			emfRasterizationOptions.setBackgroundColor(Color.getWhiteSmoke());

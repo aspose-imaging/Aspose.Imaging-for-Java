@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.metafile;
 
 import com.aspose.imaging.Size;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.EmfRasterizationOptions;
 import com.aspose.imaging.imageoptions.WmfOptions;
@@ -9,7 +10,7 @@ public class ConvertEMFToWMF
 {
     public static void main(String... args)
     {
-        //ExStart:ConvertEMFToWMF
+        Logger.startExample("ConvertEMFToWMF");
         // List of existing EMF images.
         String path = Utils.getSharedDataDir() + "metafile";
         String[] files = new String[]{"TestEmfRotatedText.emf", "TestEmfPlusFigures.emf", "TestEmfBezier.emf"};
@@ -31,7 +32,7 @@ public class ConvertEMFToWMF
                 {{
                     setPageSize(Size.to_SizeF(image.getSize()));
                 }});
-                image.save(filePath + "_out.wmf", imageOptionsBase);
+                image.save(Utils.getOutDir() + file + "_out.wmf", imageOptionsBase);
             }
             finally
             {
@@ -39,6 +40,6 @@ public class ConvertEMFToWMF
                 image.dispose();
             }
         }
-        //ExEnd:ConvertEMFToWMF
+        Logger.endExample();
     }
 }

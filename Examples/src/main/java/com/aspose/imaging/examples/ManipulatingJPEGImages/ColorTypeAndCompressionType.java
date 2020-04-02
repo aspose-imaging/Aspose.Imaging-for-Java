@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ManipulatingJPEGImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.jpeg.JpegCompressionColorMode;
 import com.aspose.imaging.fileformats.jpeg.JpegCompressionMode;
@@ -10,7 +11,7 @@ public class ColorTypeAndCompressionType
 {
     public static void main(String... args)
     {
-        //ExStart:ColorTypeAndCompressionType
+        Logger.startExample("ColorTypeAndCompressionType");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
         Image original = Image.load(dataDir + "ColorGif.gif");
@@ -21,13 +22,13 @@ public class ColorTypeAndCompressionType
                         setColorType(JpegCompressionColorMode.Grayscale);
                         setCompressionType(JpegCompressionMode.Progressive);
                     }};
-            original.save("result.jpg", jpegOptions);
+            original.save(Utils.getOutDir() + "result.jpg", jpegOptions);
         }
         finally
         {
             original.dispose();
         }
+        Logger.endExample();
     }
-    //ExEnd:ColorTypeAndCompressionType
 }
      

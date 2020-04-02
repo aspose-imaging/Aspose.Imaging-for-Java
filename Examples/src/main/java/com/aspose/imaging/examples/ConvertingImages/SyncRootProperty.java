@@ -1,11 +1,13 @@
 package com.aspose.imaging.examples.ConvertingImages;
 
+import com.aspose.imaging.examples.Logger;
+
 public class SyncRootProperty
 {
     public static void main(String... args)
     {
+        Logger.startExample("SyncRootProperty");
         // To get proper output please apply a valid Aspose.Imaging License. You can purchase full license or get 30 day temporary license from http:// Www.aspose.com/purchase/default.aspx."
-        //ExStart: SyncRootProperty
 
         // create new synchronized two-way stream
         com.aspose.imaging.StreamContainer streamContainer = new com.aspose.imaging.StreamContainer(new java.io.ByteArrayInputStream(new byte[0]));
@@ -23,7 +25,7 @@ public class SyncRootProperty
             streamContainer.dispose();
         }
 
-        //ExEnd: SyncRootProperty
+        Logger.endExample();
     }
 
 }

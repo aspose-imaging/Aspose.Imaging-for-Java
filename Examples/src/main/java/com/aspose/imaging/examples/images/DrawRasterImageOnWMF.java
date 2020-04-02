@@ -9,6 +9,7 @@ import com.aspose.imaging.GraphicsUnit;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
 import com.aspose.imaging.Rectangle;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.wmf.WmfImage;
 import com.aspose.imaging.fileformats.wmf.graphics.WmfRecorderGraphics2D;
@@ -20,18 +21,16 @@ import com.aspose.imaging.fileformats.wmf.graphics.WmfRecorderGraphics2D;
 public class DrawRasterImageOnWMF {
     
     public static void main(String[] args)  {
-         
-         //ExStart:DrawRasterImageOnWMF
+
+        Logger.startExample("DrawRasterImageOnWMF");
      
         String dir = Utils.getSharedDataDir() + "images/";
         
         // Load the image to be drawn
-        RasterImage imageToDraw = (RasterImage)Image.load(dir + "asposenet_220_src01.png");
-        try
+        try (RasterImage imageToDraw = (RasterImage) Image.load(dir + "asposenet_220_src01.png"))
         {
             // Load the image for drawing on it (drawing surface)
-            WmfImage canvasImage = (WmfImage)Image.load(dir + "asposenet_222_wmf_200.wmf");
-            try
+            try (WmfImage canvasImage = (WmfImage) Image.load(dir + "asposenet_222_wmf_200.wmf"))
             {
                 WmfRecorderGraphics2D graphics = WmfRecorderGraphics2D.fromWmfImage(canvasImage);
 
@@ -44,25 +43,12 @@ public class DrawRasterImageOnWMF {
                         GraphicsUnit.Pixel);
 
                 // Save the result image
-                WmfImage resultImage = graphics.endRecording();
-                try
+                try (WmfImage resultImage = graphics.endRecording())
                 {
-                    resultImage.save(dir + "asposenet_222_wmf_200.DrawImage.wmf");
-                }
-                finally
-                {
-                    resultImage.close();
+                    resultImage.save(Utils.getOutDir() + "asposenet_222_wmf_200.DrawImage.wmf");
                 }
             }
-            finally
-            {
-                canvasImage.close();
-            }
         }
-        finally
-        {
-            imageToDraw.close();
-        }
-        //ExEnd:DrawRasterImageOnWMF
+        Logger.endExample();
     }    
 }

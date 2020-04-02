@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ModifyingImages.webp;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.gif.GifImage;
 import com.aspose.imaging.fileformats.gif.IGifBlock;
@@ -13,7 +14,7 @@ public class ConvertGIFFImageFrame
 {
     public static void main(String[] args)
     {
-        //ExStart:ConvertGIFFImageFrame
+        Logger.startExample("ConvertGIFFImageFrame");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 
@@ -25,10 +26,9 @@ public class ConvertGIFFImageFrame
             {
                 // Loop through the GIFF frames
                 IGifBlock[] blocks = gif.getBlocks();
-                for (int i = 0; i < blocks.length; i++)
+                for (IGifBlock tmpBlock : blocks)
                 {
                     // Convert GIFF block to GIFF Frame
-                    IGifBlock tmpBlock = blocks[i];
                     if (!(tmpBlock instanceof GifFrameBlock))
                     {
                         continue;
@@ -39,9 +39,9 @@ public class ConvertGIFFImageFrame
                     // Create an instance of WebP Frame instance by passing GIFF frame to class constructor.
                     WebPFrameBlock block = new WebPFrameBlock(gifBlock)
                     {{
-                        setTop((short)gifBlock.getTop());
-                        setLeft((short)gifBlock.getLeft());
-                        setDuration((short)gifBlock.getControlBlock().getDelayTime());
+                        setTop((short) gifBlock.getTop());
+                        setLeft((short) gifBlock.getLeft());
+                        setDuration((short) gifBlock.getControlBlock().getDelayTime());
                     }};
 
                     // Add WebP frame to WebP image block list
@@ -56,9 +56,9 @@ public class ConvertGIFFImageFrame
                 options.setLossless(false);
 
                 // Save WebP image.
-                webp.save(dataDir + "ConvertGIFFImageFrame_out.webp");
+                webp.save(Utils.getOutDir() + "ConvertGIFFImageFrame_out.webp");
             }
         }
-        //ExEnd:ConvertGIFFImageFrame
+        Logger.endExample();
     }
 }

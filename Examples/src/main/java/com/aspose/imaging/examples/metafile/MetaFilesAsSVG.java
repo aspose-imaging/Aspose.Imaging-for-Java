@@ -10,11 +10,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-
 class MetaFilesAsSVG
-
 {
-    //ExStart:MetaFilesAsSVG
     private static final String ImageFolderName = "Images";
     private static final String OutFolderName = "Out\\";
     private static final String SourceFolder = "C:\\Temp\\Errors\\7\\";

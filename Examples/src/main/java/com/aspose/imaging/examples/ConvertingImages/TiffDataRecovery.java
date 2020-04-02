@@ -4,13 +4,14 @@ import com.aspose.imaging.Color;
 import com.aspose.imaging.DataRecoveryMode;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.LoadOptions;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class TiffDataRecovery
 {
     public static void main(String... args)
     {
-        //ExStart:TiffDataRecovery
+        Logger.startExample("TiffDataRecovery");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
@@ -24,6 +25,6 @@ public class TiffDataRecovery
         {
             // Do some work
         }
-        //ExEnd:TiffDataRecovery
+        Logger.endExample();
     }
 }

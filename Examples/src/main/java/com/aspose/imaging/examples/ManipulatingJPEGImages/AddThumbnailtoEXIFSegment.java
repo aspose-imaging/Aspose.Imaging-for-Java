@@ -1,5 +1,6 @@
 package com.aspose.imaging.examples.ManipulatingJPEGImages;
 
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.exif.JpegExifData;
 import com.aspose.imaging.fileformats.jpeg.JpegImage;
@@ -8,20 +9,13 @@ public class AddThumbnailtoEXIFSegment
 {
     public static void main(String... args)
     {
-		//ExStart:AddThumbnailtoEXIFSegment
-
-        // The path to the documents directory.
-        String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
+		Logger.startExample("AddThumbnailtoEXIFSegment");
 
         // Create an instance of JpegImage to store the thumbnail
-        JpegImage thumbnailImage = new JpegImage(100, 100);
-
-		try
+		try (JpegImage thumbnailImage = new JpegImage(100, 100))
 		{
 			// Create another instance of JpegImage as primary image
-			JpegImage image = new JpegImage(1000, 1000);
-
-			try
+			try (JpegImage image = new JpegImage(1000, 1000))
 			{
 				// Set the ExifData value as new JpegExifData
 				image.setExifData(new JpegExifData());
@@ -30,18 +24,10 @@ public class AddThumbnailtoEXIFSegment
 				image.getExifData().setThumbnail(thumbnailImage);
 
 				// Save the resultant image
-				image.save(dataDir + "AddThumbnailtoEXIFSegment_out.jpg");
-			}
-			finally
-			{
-				image.close();
+				image.save(Utils.getOutDir() + "AddThumbnailtoEXIFSegment_out.jpg");
 			}
 		}
-		finally
-		{
-			thumbnailImage.close();
-		}
-		//ExEnd:AddThumbnailtoEXIFSegment
+		Logger.endExample();
     }
 
 }

@@ -3,6 +3,7 @@ package com.aspose.imaging.examples.ManipulatingTIFFImages;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
 import com.aspose.imaging.ResizeType;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.tiff.TiffFrame;
 import com.aspose.imaging.fileformats.tiff.TiffImage;
@@ -17,7 +18,7 @@ public class AddDifferentImagesasSeparateFramesinaMultiPageTIFF
 {
     public static void main(String... args)
     {
-		//ExStart:AddDifferentImagesasSeparateFramesinaMultiPageTIFF
+		Logger.startExample("AddDifferentImagesasSeparateFramesinaMultiPageTIFF");
 
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingTIFFImages/";
@@ -33,7 +34,6 @@ public class AddDifferentImagesasSeparateFramesinaMultiPageTIFF
 
         // Create an instance of TiffImage using the object of TiffOptions and dimension
         TiffImage tiffImage = (TiffImage) Image.create(outputSettings, newWidth, newHeight);
-
 		try
 		{
 			// Initialize a variable to keep track of frames in the TiffImage
@@ -79,7 +79,7 @@ public class AddDifferentImagesasSeparateFramesinaMultiPageTIFF
 			tiffImage.close();
 			outputSettings.close();
 		}
-		//ExEnd:AddDifferentImagesasSeparateFramesinaMultiPageTIFF
+		Logger.endExample();
     }
 
 }

@@ -9,6 +9,7 @@ import com.aspose.imaging.GraphicsUnit;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
 import com.aspose.imaging.Rectangle;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.emf.EmfImage;
 import com.aspose.imaging.fileformats.emf.graphics.EmfRecorderGraphics2D;
@@ -20,17 +21,14 @@ public class DrawRasterImageOnEMF
 {
     public static void main(String[] args)
     {
-
-        //ExStart:DrawRasterImageOnEMF
+        Logger.startExample("DrawRasterImageOnEMF");
 
         String dir = Utils.getSharedDataDir() + "images/";
 
-        RasterImage imageToDraw = (RasterImage) Image.load(dir + "asposenet_220_src01.png");
-        try
+        try (RasterImage imageToDraw = (RasterImage) Image.load(dir + "asposenet_220_src01.png"))
         {
             // Load the image for drawing on it (drawing surface)
-            EmfImage canvasImage = (EmfImage) Image.load(dir + "input.emf");
-            try
+            try (EmfImage canvasImage = (EmfImage) Image.load(dir + "input.emf"))
             {
                 EmfRecorderGraphics2D graphics = EmfRecorderGraphics2D.fromEmfImage(canvasImage);
 
@@ -43,28 +41,14 @@ public class DrawRasterImageOnEMF
                         GraphicsUnit.Pixel);
 
                 // Save the result image
-                EmfImage resultImage = graphics.endRecording();
-                try
+                try (EmfImage resultImage = graphics.endRecording())
                 {
-                    resultImage.save(dir + "input.DrawImage.emf");
-                }
-                finally
-                {
-                    resultImage.close();
+                    resultImage.save(Utils.getOutDir() + "input.DrawImage.emf");
                 }
             }
-            finally
-            {
-                canvasImage.close();
-            }
-        }
-        finally
-        {
-            imageToDraw.close();
         }
 
-        //ExEnd:DrawRasterImageOnEMF
-
+        Logger.endExample();
     }
 
 }

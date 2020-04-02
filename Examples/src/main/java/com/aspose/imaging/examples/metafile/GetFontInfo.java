@@ -1,36 +1,39 @@
 package com.aspose.imaging.examples.metafile;
 
 import com.aspose.imaging.FontSettings;
+import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
-import com.aspose.imaging.fileformats.metafile.EmfMetafileImage;
-import com.aspose.imaging.fileformats.metafile.MetafileImage;
+import com.aspose.imaging.fileformats.emf.MetaImage;
 
 public class GetFontInfo
 {
-
-    public static void main(String... args) throws Exception
+    public static void main(String... args)
     {
+        Logger.startExample("GetFontInfo");
         String dataDir = Utils.getSharedDataDir() + "metafile/";
         //ExStart:GetFontInfo
-        System.out.println("Get list of font names accessible to Aspose.Imaging API");
+        Logger.println("Get list of font names accessible to Aspose.Imaging API");
         for (String f : FontSettings.getAllFonts())
         {
-            System.out.println("\t" + f);
+            Logger.println("\t" + f);
         }
 
-        System.out.println("Get list of font names used in the metafile");
-        MetafileImage metafile = new EmfMetafileImage(dataDir + "Sample1.emf");
-        for (String f : metafile.getUsedFonts())
+        Logger.println("Get list of font names used in the metafile");
+        try(MetaImage metafile = (MetaImage)Image.load(dataDir + "Sample1.emf"))
         {
-            System.out.println("\t" + f);
-        }
+            for (String f : metafile.getUsedFonts())
+            {
+                Logger.println("\t" + f);
+            }
 
-        System.out.println("Get list of font names that are missing");
-        for (String f : metafile.getMissedFonts())
-        {
-            System.out.println("\t" + f);
+            Logger.println("Get list of font names that are missing");
+            for (String f : metafile.getMissedFonts())
+            {
+                Logger.println("\t" + f);
+            }
         }
-        //ExEnd:GetFontInfo
+        Logger.endExample();
     }
 }
 

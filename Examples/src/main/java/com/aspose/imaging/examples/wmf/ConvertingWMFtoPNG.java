@@ -7,6 +7,7 @@ package com.aspose.imaging.examples.wmf;
 
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.PngOptions;
 import com.aspose.imaging.imageoptions.WmfRasterizationOptions;
@@ -19,15 +20,13 @@ public class ConvertingWMFtoPNG
 
     public static void main(String[] args)
     {
-
-        //ExStart:ConvertingWMFtoPNG
+        Logger.startExample("ConvertingWMFtoPNG");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "wmf/";
 
         String inputFileName = dataDir + "thistlegirl_wmfsample.wmf";
-        String outputFileNamePng = dataDir + "thistlegirl_wmfsample.png";
-        Image image = Image.load(inputFileName);
-        try
+        String outputFileNamePng = Utils.getOutDir() + "thistlegirl_wmfsample.png";
+        try (Image image = Image.load(inputFileName))
         {
             WmfRasterizationOptions rasterizationOptions = new WmfRasterizationOptions();
             rasterizationOptions.setBackgroundColor(Color.getWhiteSmoke());
@@ -40,11 +39,7 @@ public class ConvertingWMFtoPNG
             image.save(outputFileNamePng, pngOptions);
 
         }
-        finally
-        {
-            image.close();
-        }
-        //ExEnd:ConvertingWMFtoPNG
+        Logger.endExample();
     }
 
 }

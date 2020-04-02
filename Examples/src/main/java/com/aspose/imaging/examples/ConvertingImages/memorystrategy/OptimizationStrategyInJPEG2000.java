@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ConvertingImages.memorystrategy;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.LoadOptions;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Path;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.jpeg2000.Jpeg2000Codec;
@@ -12,6 +13,7 @@ public class OptimizationStrategyInJPEG2000
 {
     public static void main(String[] args)
     {
+        Logger.startExample("OptimizationStrategyInJPEG2000");
         String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
         String outDir = Utils.getOutDir();
 
@@ -52,5 +54,6 @@ public class OptimizationStrategyInJPEG2000
                 image.save(); // save to same location
             }
         }
+        Logger.endExample();
     }
 }

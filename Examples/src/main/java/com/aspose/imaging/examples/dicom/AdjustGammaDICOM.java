@@ -6,14 +6,12 @@ import com.aspose.imaging.examples.Utils;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class AdjustGammaDICOM
 {
     public static void main(String... args)
     {
-		//ExStart:AdjustingGamma
+        com.aspose.imaging.examples.Logger.startExample("AdjustGammaDICOM");
 
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "dicom/";
@@ -22,35 +20,24 @@ public class AdjustGammaDICOM
 
 
         File file = new File(inputFile);
-        FileInputStream fis = null;
-
-        try
+        try(FileInputStream fis = new FileInputStream(file);)
         {
-            fis = new FileInputStream(file);
-
             // Load a DICOM image in an instance of DicomImage
-            com.aspose.imaging.fileformats.dicom.DicomImage image = (com.aspose.imaging.fileformats.dicom.DicomImage)Image.load(fis);
+            try (com.aspose.imaging.fileformats.dicom.DicomImage image = (com.aspose.imaging.fileformats.dicom.DicomImage) Image.load(fis))
+            {
+                // Adjust the gamma
+                image.adjustGamma(50);
 
-			try
-			{
-				// Adjust the gamma
-				image.adjustGamma(50);
-
-				// Create an instance of BmpOptions for the resultant image and Save the
-				// resultant image
-				image.save(outputFile, new com.aspose.imaging.imageoptions.BmpOptions());
-			}
-			finally
-			{
-				image.close();
-			}
-
-			fis.close();
+                // Create an instance of BmpOptions for the resultant image and Save the
+                // resultant image
+                image.save(outputFile, new com.aspose.imaging.imageoptions.BmpOptions());
+            }
 		}
         catch (IOException ex)
         {
-            Logger.getLogger(AdjustingBrightness.class.getName()).log(Level.SEVERE, null, ex);
+            com.aspose.imaging.examples.Logger.println(ex.getMessage());
+            ex.printStackTrace();
         }
-        //ExEnd:AdjustingGamma
+        com.aspose.imaging.examples.Logger.endExample();
     }
 }

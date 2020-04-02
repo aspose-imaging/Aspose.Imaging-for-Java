@@ -1,15 +1,14 @@
 package com.aspose.imaging.examples.shapes;
 
 import com.aspose.imaging.Pen;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class DrawingArc
 {
     public static void main(String[] args)
     {
-        // The path to the documents directory.
-        String dataDir = Utils.getSharedDataDir() + "shapes/";
-        //ExStart:DrawingArc
+        Logger.startExample("DrawingArc");
         // Creates an instance of BmpOptions and set its various properties
         com.aspose.imaging.imageoptions.BmpOptions bmpCreateOptions = new com.aspose.imaging.imageoptions.BmpOptions();
         bmpCreateOptions.setBitsPerPixel(32);
@@ -38,14 +37,14 @@ public class DrawingArc
             graphic.drawArc(new Pen(com.aspose.imaging.Color.getYellow()), 0, 0, width, height, startAngle, sweepAngle);
 
             // Save all changes.
-            image.save(dataDir + "DrawingArc_out.bmp");
+            image.save(Utils.getOutDir() + "DrawingArc_out.bmp");
             bmpCreateOptions.close();
         }
 
         // Display Status.
-        System.out.println("Arc has been drawn in image successfully!");
+        Logger.println("Arc has been drawn in image successfully!");
 
-        //ExEnd:DrawingArc
+        Logger.endExample();
     }
 }
 

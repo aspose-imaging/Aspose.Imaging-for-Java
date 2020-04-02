@@ -8,6 +8,7 @@ package com.aspose.imaging.examples.ManipulatingJPEGImages;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.ResolutionSetting;
 import com.aspose.imaging.ResolutionUnit;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.tiff.TiffFrame;
 import com.aspose.imaging.fileformats.tiff.TiffImage;
@@ -22,12 +23,10 @@ public class ConvertTIFFToJPEG
 {
     public static void main(String[] args)
     {
-        //ExStart:ConvertTIFFToJPEG
+        Logger.startExample("ConvertTIFFToJPEG");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
-
-        TiffImage tiffImage = (TiffImage) Image.load(dataDir + "source2.tif");
-        try
+        try (TiffImage tiffImage = (TiffImage) Image.load(dataDir + "source2.tif"))
         {
             int i = 0;
             for (TiffFrame tiffFrame : tiffImage.getFrames())
@@ -60,15 +59,11 @@ public class ConvertTIFFToJPEG
 
                 String fileName = "source2.tif.frame." + (i++) + "."
                         + ResolutionUnit.toString(ResolutionUnit.class, saveOptions.getResolutionUnit()) + ".jpg";
-                tiffFrame.save(dataDir + fileName, saveOptions);
+                tiffFrame.save(Utils.getOutDir() + fileName, saveOptions);
             }
         }
-        finally
-        {
-            tiffImage.close();
-        }
 
-        //ExEnd:ConvertTIFFToJPEG
+        Logger.endExample();
     }
 
 }

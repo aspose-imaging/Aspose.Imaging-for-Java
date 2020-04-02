@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.ColorPaletteHelper;
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.tiff.enums.TiffCompressions;
 import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
@@ -12,8 +13,8 @@ public class CompressingTIFFImagesWithAdobeDeflateCompression
 {
     public static void main(String... args)
     {
+        Logger.startExample("CompressingTIFFImagesWithAdobeDeflateCompression");
         // To get proper output please apply a valid Aspose.Imaging License. You can purchase full license or get 30 day temporary license from http:// Www.aspose.com/purchase/default.aspx.");
-        //ExStart:CompressingTIFFImagesWithAdobeDeflateCompression
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 
@@ -30,9 +31,9 @@ public class CompressingTIFFImagesWithAdobeDeflateCompression
 
             // Set graycale palette
             outputSettings.setPalette(ColorPaletteHelper.create4BitGrayscale(false));
-            image.save(dataDir + "out_adobedeflate.tiff", outputSettings);
+            image.save(Utils.getOutDir() + "out_adobedeflate.tiff", outputSettings);
         }
 
-        //ExEnd:CompressingTIFFImagesWithAdobeDeflateCompression
+        Logger.endExample();
     }
 }

@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.djvu;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.djvu.DjvuImage;
 import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
@@ -12,13 +13,12 @@ public class ConvertDjvuToTiff
 
     public static void main(String[] args)
     {
+        Logger.startExample("ConvertDjvuToTiff");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "djvu/";
-        //ExStart:ConvertDjvuToTiff
-        //Load a DjVu image
-        DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");
 
-        try
+        //Load a DjVu image
+        try (DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu"))
         {
             //Create an instance of TiffOptions & use preset options for Black n While with Deflate compression
             TiffOptions exportOptions = new TiffOptions(TiffExpectedFormat.TiffDeflateBw);
@@ -30,14 +30,10 @@ public class ConvertDjvuToTiff
             image.save(dataDir + "ConvertDjvuToTiff_out.tiff", exportOptions);
 
             // Display Status.
-            System.out.println("File converted");
-        }
-        finally
-        {
-            image.close();
+            Logger.println("File converted");
         }
 
 
-        //ExEnd:ConvertDjvuToTiff
+        Logger.endExample();
     }
 }

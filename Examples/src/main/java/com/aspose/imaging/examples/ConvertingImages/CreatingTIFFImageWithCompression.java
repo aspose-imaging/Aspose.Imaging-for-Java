@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ConvertingImages;
 
 import com.aspose.imaging.Color;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.tiff.TiffFrame;
 import com.aspose.imaging.fileformats.tiff.TiffImage;
@@ -12,10 +13,7 @@ public class CreatingTIFFImageWithCompression
 {
     public static void main(String... args)
     {
-        //ExStart:CreatingTIFFImageWithCompression
-        // The path to the documents directory.
-        String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
-
+        Logger.startExample("CreatingTIFFImageWithCompression");
         // Create an instance of TiffOptions and set its various properties
         TiffOptions options = new TiffOptions(TiffExpectedFormat.Default);
         options.setBitsPerSample(new int[] { 8, 8, 8 });
@@ -40,8 +38,8 @@ public class CreatingTIFFImageWithCompression
                 tiffImage.getActiveFrame().setPixel(i, i, Color.getRed());
             }
             // Save resultant image
-            tiffImage.save(dataDir + "CreatingTIFFImageWithCompression.tiff");
+            tiffImage.save(Utils.getOutDir() + "CreatingTIFFImageWithCompression.tiff");
         }
-        //ExEnd:CreatingTIFFImageWithCompression
+        Logger.endExample();
     }
 }

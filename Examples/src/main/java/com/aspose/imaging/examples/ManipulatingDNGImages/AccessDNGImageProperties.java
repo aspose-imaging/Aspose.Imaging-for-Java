@@ -1,5 +1,6 @@
 package com.aspose.imaging.examples.ManipulatingDNGImages;
 
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.fileformats.dng.decoder.ImageOtherParameters;
 import com.aspose.imaging.fileformats.dng.decoder.ImageParameters;
 
@@ -7,35 +8,29 @@ public class AccessDNGImageProperties
 {
     public static void main(String[] args)
     {
-        //ExStart:AccessDNGImageProperties
+		Logger.startExample("AccessDNGImageProperties");
 
         //Declare variables to store file path for input image.
         String sourceFiles = "Path_to_source_folder\\Source\\HDR - 3c.dng";
 
         // Create an instance of Image class and load an exiting DNG file.
         // Convert the image to DngImage object.
-        com.aspose.imaging.fileformats.dng.DngImage objimage = (com.aspose.imaging.fileformats.dng.DngImage)
-                com.aspose.imaging.Image.load(sourceFiles);
-
-		try
+		try (com.aspose.imaging.fileformats.dng.DngImage objimage = (com.aspose.imaging.fileformats.dng.DngImage)
+				com.aspose.imaging.Image.load(sourceFiles))
 		{
 			ImageParameters imageDataParameters = objimage.getImgData().getImageDataParameters();
-			System.out.println("Camera model:" + imageDataParameters.getModel());
-			System.out.println("Camera manufacturer:" + imageDataParameters.getCameraManufacturer());
-			System.out.println("Software:" + imageDataParameters.getSoftware());
-			System.out.println("Colors count:" + imageDataParameters.getColorsCount());
+			Logger.println("Camera model:" + imageDataParameters.getModel());
+			Logger.println("Camera manufacturer:" + imageDataParameters.getCameraManufacturer());
+			Logger.println("Software:" + imageDataParameters.getSoftware());
+			Logger.println("Colors count:" + imageDataParameters.getColorsCount());
 			ImageOtherParameters imageOtherParameters = objimage.getImgData().getImageOtherParameters();
-			System.out.println("Artist:" + imageOtherParameters.getArtist());
-			System.out.println("Aperture:" + imageOtherParameters.getAperture());
-			System.out.println("Focal length:" + imageOtherParameters.getFocalLength());
-			System.out.println("Iso speed:" + imageOtherParameters.getIsoSpeed());
-		}
-		finally
-		{
-			objimage.close();
+			Logger.println("Artist:" + imageOtherParameters.getArtist());
+			Logger.println("Aperture:" + imageOtherParameters.getAperture());
+			Logger.println("Focal length:" + imageOtherParameters.getFocalLength());
+			Logger.println("Iso speed:" + imageOtherParameters.getIsoSpeed());
 		}
 
-		//ExEnd:AccessDNGImageProperties
+		Logger.endExample();
     }
 
 }

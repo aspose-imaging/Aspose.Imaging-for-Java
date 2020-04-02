@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ManipulatingPNGImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.png.PngColorType;
 import com.aspose.imaging.fileformats.png.PngImage;
@@ -10,15 +11,13 @@ public class SpecifyBitDepth
 {
     public static void main(String... args)
     {
-		//ExStart:SpecifyBitDepth
+		Logger.startExample("SpecifyBitDepth");
 
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
 
         // Load an existing PNG image
-        PngImage pngImage = (PngImage) Image.load(dataDir + "aspose_logo.png");
-
-		try
+		try (PngImage pngImage = (PngImage) Image.load(dataDir + "aspose_logo.png"))
 		{
 			// Create an instance of PngOptions
 			PngOptions options = new PngOptions();
@@ -30,13 +29,9 @@ public class SpecifyBitDepth
 			options.setBitDepth((byte) 1);
 
 			// Save changes to the disc
-			pngImage.save(dataDir + "SpecifyBitDepth_out.jpg", options);
+			pngImage.save(Utils.getOutDir() + "SpecifyBitDepth_out.jpg", options);
 		}
-		finally
-		{
-			pngImage.close();
-		}
-		//ExEnd:SpecifyBitDepth
+		Logger.endExample();
     }
 
 }

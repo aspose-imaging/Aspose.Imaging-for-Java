@@ -4,6 +4,7 @@ import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
 import com.aspose.imaging.Rectangle;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.png.PngColorType;
 import com.aspose.imaging.fileformats.png.PngImage;
@@ -12,7 +13,7 @@ public class SpecifyTransparency
 {
     public static void main(String... args)
     {
-		//ExStart:SpecifyTransparency
+		Logger.startExample("SpecifyTransparency");
 
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
@@ -25,8 +26,7 @@ public class SpecifyTransparency
         Color[] pixels;
 
         // Create an instance of RasterImage and load a BMP image
-        RasterImage raster = (RasterImage) Image.load(dataDir + "aspose-logo.jpg");
-		try
+		try (RasterImage raster = (RasterImage) Image.load(dataDir + "aspose-logo.jpg"))
 		{
 			// Store the width & height in variables for later use
 			width = raster.getWidth();
@@ -36,8 +36,7 @@ public class SpecifyTransparency
 			pixels = raster.loadPixels(new Rectangle(0, 0, width, height));
 
 			// Create & initialize an instance of PngImage while specifying size and PngColorType
-			PngImage png = new PngImage(width, height, PngColorType.TruecolorWithAlpha);
-			try
+			try (PngImage png = new PngImage(width, height, PngColorType.TruecolorWithAlpha))
 			{
 				// Save the previously loaded pixels on to the new PngImage
 				png.savePixels(new Rectangle(0, 0, width, height), pixels);
@@ -46,18 +45,10 @@ public class SpecifyTransparency
 				png.setTransparentColor(Color.getBlack());
 
 				// Save the result on disc
-				png.save(dataDir + "SpecifyTransparency_out.jpg");
-			}
-			finally
-			{
-				png.close();
+				png.save(Utils.getOutDir() + "SpecifyTransparency_out.jpg");
 			}
 		}
-		finally
-		{
-			raster.close();
-		}
-		//ExEnd:SpecifyTransparency
+		Logger.endExample();
     }
 
 }

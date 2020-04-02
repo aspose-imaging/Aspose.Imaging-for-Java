@@ -1,69 +1,64 @@
 package com.aspose.imaging.examples.images;
 
 import com.aspose.imaging.Pen;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class DrawingLines
 {
     public static void main(String[] args)
-    {
-        // The path to the documents directory.
-        String dataDir = Utils.getSharedDataDir() + "images/";
-        // Creates an instance of BmpOptions and set its various properties
-        //ExStart:DrawingLines
-        com.aspose.imaging.imageoptions.BmpOptions bmpCreateOptions = new com.aspose.imaging.imageoptions.BmpOptions();
-        bmpCreateOptions.setBitsPerPixel(32);
+	{
+		Logger.startExample("DrawingLines");
+		// Creates an instance of BmpOptions and set its various properties
 
-        // Define the source property for the instance of BmpOptions
-        bmpCreateOptions.setSource(
-                new com.aspose.imaging.sources.StreamSource(new java.io.ByteArrayInputStream(new byte[100 * 100 * 4])));
-
-        // Creates an instance of Image and call create method by passing the
-        // bmpCreateOptions object
-        com.aspose.imaging.Image image = com.aspose.imaging.Image.create(bmpCreateOptions, 100, 100);
-
-		try
+		try (com.aspose.imaging.imageoptions.BmpOptions bmpCreateOptions = new com.aspose.imaging.imageoptions.BmpOptions())
 		{
-			// Create and initialize an instance of Graphics class
-			com.aspose.imaging.Graphics graphic = new com.aspose.imaging.Graphics(image);
+			bmpCreateOptions.setBitsPerPixel(32);
 
-			// Clear the image surface with Yellow color
-			graphic.clear(com.aspose.imaging.Color.getYellow());
+			// Define the source property for the instance of BmpOptions
+			bmpCreateOptions.setSource(
+					new com.aspose.imaging.sources.StreamSource(new java.io.ByteArrayInputStream(new byte[100 * 100 * 4])));
 
-			// Draw a dotted line by specifying the Pen object having blue color and
-			// co-ordinate Points
-			graphic.drawLine(new Pen(com.aspose.imaging.Color.getBlue()), 9, 9, 90, 90);
-			graphic.drawLine(new Pen(com.aspose.imaging.Color.getBlue()), 9, 90, 90, 9);
+			// Creates an instance of Image and call create method by passing the
+			// bmpCreateOptions object
+			try (com.aspose.imaging.Image image = com.aspose.imaging.Image.create(bmpCreateOptions, 100, 100))
+			{
+				// Create and initialize an instance of Graphics class
+				com.aspose.imaging.Graphics graphic = new com.aspose.imaging.Graphics(image);
 
-			// Draw a continuous line by specifying the Pen object having Solid
-			// Brush with red color and two point structures
-			graphic.drawLine(new Pen(new com.aspose.imaging.brushes.SolidBrush(com.aspose.imaging.Color.getRed())),
-					new com.aspose.imaging.Point(9, 9), new com.aspose.imaging.Point(9, 90));
+				// Clear the image surface with Yellow color
+				graphic.clear(com.aspose.imaging.Color.getYellow());
 
-			// Draw a continuous line by specifying the Pen object having Solid
-			// Brush with aqua color and two point structures
-			graphic.drawLine(new Pen(new com.aspose.imaging.brushes.SolidBrush(com.aspose.imaging.Color.getAqua())),
-					new com.aspose.imaging.Point(9, 90), new com.aspose.imaging.Point(90, 90));
+				// Draw a dotted line by specifying the Pen object having blue color and
+				// co-ordinate Points
+				graphic.drawLine(new Pen(com.aspose.imaging.Color.getBlue()), 9, 9, 90, 90);
+				graphic.drawLine(new Pen(com.aspose.imaging.Color.getBlue()), 9, 90, 90, 9);
 
-			// Draw a continuous line by specifying the Pen object having Solid
-			// Brush with black color and two point structures
-			graphic.drawLine(new Pen(new com.aspose.imaging.brushes.SolidBrush(com.aspose.imaging.Color.getBlack())),
-					new com.aspose.imaging.Point(90, 90), new com.aspose.imaging.Point(90, 9));
+				// Draw a continuous line by specifying the Pen object having Solid
+				// Brush with red color and two point structures
+				graphic.drawLine(new Pen(new com.aspose.imaging.brushes.SolidBrush(com.aspose.imaging.Color.getRed())),
+						new com.aspose.imaging.Point(9, 9), new com.aspose.imaging.Point(9, 90));
 
-			// Draw a continuous line by specifying the Pen object having Solid
-			// Brush with white color and two point structures
-			graphic.drawLine(new Pen(new com.aspose.imaging.brushes.SolidBrush(com.aspose.imaging.Color.getWhite())),
-					new com.aspose.imaging.Point(90, 9), new com.aspose.imaging.Point(9, 9));
+				// Draw a continuous line by specifying the Pen object having Solid
+				// Brush with aqua color and two point structures
+				graphic.drawLine(new Pen(new com.aspose.imaging.brushes.SolidBrush(com.aspose.imaging.Color.getAqua())),
+						new com.aspose.imaging.Point(9, 90), new com.aspose.imaging.Point(90, 90));
 
-			// Save all changes.
-			image.save(dataDir + "DrawingLines_out.bmp");
+				// Draw a continuous line by specifying the Pen object having Solid
+				// Brush with black color and two point structures
+				graphic.drawLine(new Pen(new com.aspose.imaging.brushes.SolidBrush(com.aspose.imaging.Color.getBlack())),
+						new com.aspose.imaging.Point(90, 90), new com.aspose.imaging.Point(90, 9));
+
+				// Draw a continuous line by specifying the Pen object having Solid
+				// Brush with white color and two point structures
+				graphic.drawLine(new Pen(new com.aspose.imaging.brushes.SolidBrush(com.aspose.imaging.Color.getWhite())),
+						new com.aspose.imaging.Point(90, 9), new com.aspose.imaging.Point(9, 9));
+
+				// Save all changes.
+				image.save(Utils.getOutDir() + "DrawingLines_out.bmp");
+			}
 		}
-		finally
-		{
-			image.close();
-			bmpCreateOptions.close();
-		}
-		//ExEnd:DrawingLines
+		Logger.endExample();
     }
 
 }

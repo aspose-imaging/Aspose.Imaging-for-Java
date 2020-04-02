@@ -3,6 +3,7 @@ package com.aspose.imaging.examples.ManipulatingPNGImages;
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.PngOptions;
 
@@ -10,15 +11,13 @@ public class ConvertanyLoadedImageDirectlyToPNGformat
 {
     public static void main(String... args)
     {
-		//ExStart:ConvertanyLoadedImageDirectlyToPNGformat
+		Logger.startExample("ConvertanyLoadedImageDirectlyToPNGformat");
 
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
 
         // Load the source image (any format) in an instance of RasterImage
-        RasterImage image = (RasterImage) Image.load(dataDir + "aspose-logo.jpg");
-
-		try
+		try (RasterImage image = (RasterImage) Image.load(dataDir + "aspose-logo.jpg"))
 		{
 			// Set the background color for the image
 			image.setBackgroundColor(Color.getWhite());
@@ -31,13 +30,9 @@ public class ConvertanyLoadedImageDirectlyToPNGformat
 			image.setTransparentColor(true);
 
 			// Save the image on disc in PNG format
-			image.save(dataDir + "ConvertanyLoadedImageDirectlyToPNGformat_out.jpg", new PngOptions());
+			image.save(Utils.getOutDir() + "ConvertanyLoadedImageDirectlyToPNGformat_out.jpg", new PngOptions());
 		}
-		finally
-		{
-			image.close();
-		}
-		//ExEnd:ConvertanyLoadedImageDirectlyToPNGformat
+		Logger.endExample();
     }
 
 }

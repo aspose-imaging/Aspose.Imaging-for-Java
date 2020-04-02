@@ -3,6 +3,7 @@ package com.aspose.imaging.examples.metafile;
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.SizeF;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.svg.FontStoreType;
 import com.aspose.imaging.fileformats.svg.FontStoringArgs;
@@ -27,11 +28,13 @@ public class SvgFontTester
 
     public static void main(String[] args)
     {
+        Logger.startExample("SvgFontTester");
         SvgFontTester test = new SvgFontTester();
         test.readFileWithEmbeddedFontsAndExportToPdf();
         test.readFileWithExportedFontsAndExportToPdf();
         test.saveWithEmbeddedFonts();
         test.saveWithExportFonts();
+        Logger.endExample();
     }
 
     public void readFileWithEmbeddedFontsAndExportToPdf()

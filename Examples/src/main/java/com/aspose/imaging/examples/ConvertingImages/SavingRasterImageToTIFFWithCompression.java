@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ConvertingImages;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.tiff.TiffFrame;
 import com.aspose.imaging.fileformats.tiff.TiffImage;
@@ -13,7 +14,7 @@ public class SavingRasterImageToTIFFWithCompression
 {
     public static void main(String... args)
     {
-        //ExStart:SavingRasterImageToTIFFWithCompression
+        Logger.startExample("SavingRasterImageToTIFFWithCompression");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
@@ -37,9 +38,9 @@ public class SavingRasterImageToTIFFWithCompression
             // Create a new TiffImage from the RasterImage and Save the resultant image while passing the instance of TiffOptions
             try (TiffImage tiffImage = new TiffImage(new TiffFrame(image)))
             {
-                tiffImage.save(dataDir + "SavingRasterImage_out.tiff", options);
+                tiffImage.save(Utils.getOutDir() + "SavingRasterImage_out.tiff", options);
             }
         }
-        //ExEnd:SavingRasterImageToTIFFWithCompression
+        Logger.endExample();
     }
 }

@@ -4,6 +4,7 @@ import com.aspose.imaging.ColorPaletteHelper;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.IntRange;
 import com.aspose.imaging.ResolutionSetting;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.djvu.DjvuImage;
 import com.aspose.imaging.imageoptions.DjvuMultiPageOptions;
@@ -14,13 +15,12 @@ public class ConvertDjvuPagesToGif
 
     public static void main(String[] args)
     {
+        Logger.startExample("ConvertDjvuPagesToGif");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "djvu/";
-        //ExStart:ConvertDjvuPagesToGif 
-        //Load a DjVu image
-        DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");
 
-        try
+        //Load a DjVu image
+        try (DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu"))
         {
             //Create an instance of GifOptions with its default constructor
             GifOptions exportOptions = new GifOptions();
@@ -41,14 +41,10 @@ public class ConvertDjvuPagesToGif
             exportOptions.setMultiPageOptions(new DjvuMultiPageOptions(range));
 
             //Call Save method while passing instance of GifOptions
-            image.save(dataDir + "ConvertDjvuPagesToGif_out.gif", exportOptions);
+            image.save(Utils.getOutDir() + "ConvertDjvuPagesToGif_out.gif", exportOptions);
 
-            System.out.println("File converted");
+            Logger.println("File converted");
         }
-        finally
-        {
-            image.close();
-        }
-        //ExEnd:ConvertDjvuPagesToGif
+        Logger.endExample();
     }
 }

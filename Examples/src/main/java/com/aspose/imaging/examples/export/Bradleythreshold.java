@@ -1,21 +1,21 @@
 package com.aspose.imaging.examples.export;
 
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class Bradleythreshold
 {
     public static void main(String[] args)
     {
+		Logger.startExample("Bradleythreshold");
         String dataDir = Utils.getSharedDataDir() + "export/";
-        //ExStart:Bradleythreshold
+
         String sourcepath = dataDir + "aspose_logo.png";
-        String outputPath = dataDir + "UseBradleythresholding_out.png";
+        String outputPath = Utils.getOutDir() + "UseBradleythresholding_out.png";
 
         // Load an existing image.
-        com.aspose.imaging.fileformats.png.PngImage objimage = (com.aspose.imaging.fileformats.png.PngImage) com.aspose.imaging.Image
-                .load(sourcepath);
-
-		try
+		try (com.aspose.imaging.fileformats.png.PngImage objimage = (com.aspose.imaging.fileformats.png.PngImage) com.aspose.imaging.Image
+				.load(sourcepath))
 		{
 			// Define threshold value
 			double threshold = 0.15;
@@ -26,11 +26,7 @@ public class Bradleythreshold
 			// Save the output image
 			objimage.save(outputPath);
 		}
-		finally
-		{
-			objimage.close();
-		}
 
-		//ExEnd:Bradleythreshold
+		Logger.endExample();
     }
 }

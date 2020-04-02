@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ManipulatingJPEGImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.jpeg.JpegCompressionMode;
 import com.aspose.imaging.fileformats.jpeg.JpegImage;
@@ -12,7 +13,7 @@ public class SupportFor2
 {
     public static void main(String... args)
     {
-        //ExStart:SupportFor2
+        Logger.startExample("SupportFor2");
 
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
@@ -23,7 +24,7 @@ public class SupportFor2
         String originPngFileName = dataDir + "lena24b.png";
 
         // The output JPEG-LS with 2 bits per sample.
-        String outputJpegFileName = dataDir + "lena24b " + bpp + "-bit Gold.jls";
+        String outputJpegFileName = Utils.getOutDir() + "lena24b " + bpp + "-bit Gold.jls";
 
         PngImage pngImage = (PngImage) Image.load(originPngFileName);
         try
@@ -39,7 +40,7 @@ public class SupportFor2
         }
 
         // The output PNG is produced from JPEG-LS to check image visually.
-        String outputPngFileName = "lena24b " + bpp + "-bit Gold.png";
+        String outputPngFileName = Utils.getOutDir() + "lena24b " + bpp + "-bit Gold.png";
         JpegImage jpegImage = (JpegImage) Image.load(outputJpegFileName);
         try
         {
@@ -49,7 +50,7 @@ public class SupportFor2
         {
             jpegImage.dispose();
         }
-        //ExEnd:SupportFor2
+        Logger.endExample();
     }
 
 }

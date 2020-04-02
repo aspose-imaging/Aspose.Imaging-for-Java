@@ -1,13 +1,14 @@
 package com.aspose.imaging.examples.images;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class CombineImages
 {
     public static void main(String[] args)
     {
-		//ExStart:CombineImages
+		Logger.startExample("CombineImages");
 
         String dataDir = Utils.getSharedDataDir() + "DrawingAndFormattingImages/";
         // Create an instance of JpegOptions and set its various properties
@@ -16,7 +17,7 @@ public class CombineImages
         // Create an instance of FileCreateSource and assign it to Source
         // property
         imageOptions.setSource(
-                new com.aspose.imaging.sources.FileCreateSource(dataDir + "two_images_result.jpeg", false));
+                new com.aspose.imaging.sources.FileCreateSource(Utils.getOutDir() + "two_images_result.jpeg", false));
 
         // Create an instance of Image
         com.aspose.imaging.Image image = com.aspose.imaging.Image.create(imageOptions, 600, 600);
@@ -48,7 +49,7 @@ public class CombineImages
 			imageOptions.close();
 		}
 
-		//ExEnd:CombineImages
+		Logger.endExample();
     }
 
 }

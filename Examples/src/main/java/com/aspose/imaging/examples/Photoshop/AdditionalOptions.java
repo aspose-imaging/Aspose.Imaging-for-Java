@@ -1,5 +1,6 @@
 package com.aspose.imaging.examples.Photoshop;
 
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.psd.CompressionMethod;
 import com.aspose.imaging.fileformats.psd.layers.Layer;
@@ -8,10 +9,10 @@ public class AdditionalOptions
 {
     public static void main(String... args)
     {
-		//ExStart:AdditionalOptions
+        Logger.startExample("AdditionalOptions");
 		String dataDir = Utils.getSharedDataDir() + "Photoshop/";
 		String sourceFileName = dataDir + "samplePsd.psd";
-        String outputFile = dataDir + "AdditionalOptions_out.psd";
+        String outputFile = Utils.getOutDir() + "AdditionalOptions_out.psd";
 
         // Load an existing PSD file as Image
         com.aspose.imaging.Image image = com.aspose.imaging.Image.load(sourceFileName);
@@ -55,7 +56,7 @@ public class AdditionalOptions
         {
             image.dispose();
         }
-        //ExEnd:AdditionalOptions
+        Logger.endExample();
     }
 
 }

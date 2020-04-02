@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.jpeg.JpegImage;
 import com.aspose.imaging.sources.StreamSource;
@@ -12,7 +13,7 @@ public class ColorConversionUsingDefaultProfiles
 {
     public static void main(String... args) throws FileNotFoundException
     {
-        //ExStart:ColorConversionUsingDefaultProfiles
+        Logger.startExample("ColorConversionUsingDefaultProfiles");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
@@ -23,8 +24,8 @@ public class ColorConversionUsingDefaultProfiles
             StreamSource cmykprofile = new StreamSource(new RandomAccessFile(dataDir + "cmyk.icc", "r"));
             image.setDestinationRgbColorProfile(rgbprofile);
             image.setDestinationCmykColorProfile(cmykprofile);
-            image.save(dataDir + "ColorConversionUsingDefaultProfiles_out.icc");
+            image.save(Utils.getOutDir() + "ColorConversionUsingDefaultProfiles_out.icc");
         }
-        //ExStart:ColorConversionUsingDefaultProfiles
+        Logger.endExample();
     }
 }

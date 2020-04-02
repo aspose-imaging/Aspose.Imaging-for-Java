@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ModifyingImages.webp;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.WebPOptions;
 
@@ -8,7 +9,7 @@ public class ExportToWebP
 {
     public static void main(String... args)
     {
-        //ExStart:ExportToWebP
+        Logger.startExample("ExportToWebP");
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
         // Create an instance of image class.
@@ -18,8 +19,8 @@ public class ExportToWebP
             WebPOptions options = new WebPOptions();
             options.setQuality(50);
             options.setLossless(false);
-            image.save(dataDir + "ExportToWebP_out.webp", options);
+            image.save(Utils.getOutDir() + "ExportToWebP_out.webp", options);
         }
-        //ExEnd:ExportToWebP
+        Logger.endExample();
     }
 }

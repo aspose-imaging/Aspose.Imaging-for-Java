@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ModifyingImages.jpeg;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.exif.JpegExifData;
 import com.aspose.imaging.fileformats.jpeg.JpegImage;
@@ -12,7 +13,7 @@ public class ReadAndModifyJpegEXIFTags
 {
     public static void main(String... args) throws InvocationTargetException, IllegalAccessException
     {
-        //ExStart:ReadAndModifyJpegEXIFTags
+        Logger.startExample("ReadAndModifyJpegEXIFTags");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
 
@@ -23,20 +24,27 @@ public class ReadAndModifyJpegEXIFTags
             if (exifData == null)
                 return;
 
-            Class type = exifData.getClass();
+            Class<?> type = exifData.getClass();
             Method[] methods = type.getMethods();
 
             for (Method m : methods)
             {
                 if (m.getParameterTypes().length == 0 &&
                         (m.getName().startsWith("get") || m.getName().startsWith("is")
-                                || (m.getName().startsWith("has") && !m.getName().equals("hashCode"))))
+                                || (m.getName().startsWith("has")) && !m.getName().equals("hashCode") && !m.getName().equals("getClass")))
                 {
-                    System.out.println(m.getName() + " : " + m.invoke(exifData));
+                    Object result = m.invoke(exifData);
+                    if (result != null)
+                    {
+                        if (result.getClass().isArray())
+                            Logger.printlnArray(m.getName() + " : ", result);
+                        else
+                            Logger.println(m.getName() + " : " + result);
+                    }
                 }
             }
         }
-        //ExEnd:ReadAndModifyJpegEXIFTags
+        Logger.endExample();
     }
 
 }

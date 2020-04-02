@@ -4,13 +4,14 @@ import com.aspose.imaging.Color;
 import com.aspose.imaging.DataRecoveryMode;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.LoadOptions;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class DataRecovery
 {
     public static void main(String... args)
     {
-		//ExStart:DataRecovery
+        Logger.startExample("DataRecovery");
 
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingTIFFImages/";
@@ -28,7 +29,7 @@ public class DataRecovery
         // instance of LoadOptions
         Image image = Image.load(dataDir + "DataRecovery_out.tif", loadOptions);
         image.close();
-        //ExEnd:DataRecovery
+        Logger.endExample();
     }
 
 }

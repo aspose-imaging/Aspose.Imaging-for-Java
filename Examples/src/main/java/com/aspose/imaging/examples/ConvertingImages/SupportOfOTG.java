@@ -3,6 +3,7 @@ package com.aspose.imaging.examples.ConvertingImages;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.ImageOptionsBase;
 import com.aspose.imaging.Size;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.OtgRasterizationOptions;
 import com.aspose.imaging.imageoptions.PdfOptions;
@@ -12,6 +13,7 @@ public class SupportOfOTG {
 
     public static void main(String... args) {
 
+        Logger.startExample("SupportOfOTG");
         String dataDir = Utils.getSharedDataDir() + "OTG/";
         String fileName = "VariousObjectsMultiPage.otg";
         String inputFileName = dataDir + fileName;
@@ -27,5 +29,6 @@ public class SupportOfOTG {
                 image.save(Utils.getOutDir() + "output" + fileExt, item);
             }
         }
+        Logger.endExample();
     }
 }

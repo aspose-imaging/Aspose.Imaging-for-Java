@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ManipulatingJPEGImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.jpeg.JpegCompressionColorMode;
 import com.aspose.imaging.fileformats.jpeg.JpegCompressionMode;
@@ -17,7 +18,7 @@ public class SupportForCMYKAndYCCKColorModesInJPEGLosslessUsingRGBProfile
 {
     public static void main(String... args) throws Exception
     {
-        //ExStart:SupportForCMYKAndYCCKColorModesInJPEGLosslessUsingRGBProfile
+        Logger.startExample("SupportForCMYKAndYCCKColorModesInJPEGLosslessUsingRGBProfile");
 
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
@@ -33,8 +34,8 @@ public class SupportForCMYKAndYCCKColorModesInJPEGLosslessUsingRGBProfile
             options.setCompressionType(JpegCompressionMode.Lossless);
 
             // Save with specified profiles
-            StreamSource rgbColorProfile = new StreamSource(new RandomAccessFile("eciRGB_v2.icc", "r"));
-            StreamSource cmykColorProfile = new StreamSource(new RandomAccessFile("ISOcoated_v2_FullGamut4.icc", "r"));
+            StreamSource rgbColorProfile = new StreamSource(new RandomAccessFile(dataDir + "eciRGB_v2.icc", "r"));
+            StreamSource cmykColorProfile = new StreamSource(new RandomAccessFile(dataDir + "ISOcoated_v2_FullGamut4.icc", "r"));
 
             // The default profiles will be used.
             options.setRgbColorProfile(rgbColorProfile);
@@ -59,7 +60,7 @@ public class SupportForCMYKAndYCCKColorModesInJPEGLosslessUsingRGBProfile
         image = (JpegImage) Image.load(new ByteArrayInputStream(jpegStream_cmyk.toByteArray()));
         try
         {
-            image.save("056_cmyk_profile.png", new PngOptions());
+            image.save(Utils.getOutDir() + "056_cmyk_profile.png", new PngOptions());
         }
         finally
         {
@@ -70,13 +71,13 @@ public class SupportForCMYKAndYCCKColorModesInJPEGLosslessUsingRGBProfile
         image = (JpegImage) Image.load(new ByteArrayInputStream(jpegStream_ycck.toByteArray()));
         try
         {
-            image.save("056_ycck_profile.png", new PngOptions());
+            image.save(Utils.getOutDir() + "056_ycck_profile.png", new PngOptions());
         }
         finally
         {
             image.dispose();
         }
-        //ExEnd:SupportForCMYKAndYCCKColorModesInJPEGLosslessUsingRGBProfile
+        Logger.endExample();
     }
 
 }

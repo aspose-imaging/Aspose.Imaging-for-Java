@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.Photoshop;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.StreamContainer;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.psd.PsdImage;
 import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
@@ -11,10 +12,9 @@ import com.aspose.imaging.sources.StreamSource;
 
 public class ICCProfileExtraction
 {
-    //ExStart:ICCProfileExtraction
-
     public static void main(String... args)
     {
+        Logger.startExample("ICCProfileExtraction");
         String dataDir = Utils.getSharedDataDir() + "Photoshop/";
         PsdImage psdImage = (PsdImage) Image.load(dataDir + "gray-d15.psd");
         try
@@ -29,13 +29,14 @@ public class ICCProfileExtraction
             psdImage.save(dataDir + "gray-d15.psd.noprofile.tif", saveOptions);
             // Embed ICC profile
             saveOptions.setIccProfile(toMemoryStream(grayProfile));
-            psdImage.save(dataDir + "gray-d15.psd.tif", saveOptions);
+            psdImage.save(Utils.getOutDir() + "gray-d15.psd.tif", saveOptions);
         }
 
         finally
         {
             psdImage.dispose();
         }
+        Logger.endExample();
     }
 
     private static byte[] toMemoryStream(StreamSource streamSource)
@@ -50,5 +51,4 @@ public class ICCProfileExtraction
             sc.dispose();
         }
     }
-    //ExEnd:ICCProfileExtraction
 }

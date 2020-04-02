@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.SVG;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.BmpOptions;
 import com.aspose.imaging.imageoptions.SvgRasterizationOptions;
@@ -14,7 +15,7 @@ public class SVGToBMPConversion
     public static void main(String[] args)
     {
 
-        //ExStart:SVGToBMPConversion
+        Logger.startExample("SVGToBMPConversion");
 
         String dataDir = Utils.getSharedDataDir() + "SVG/";
 
@@ -28,9 +29,8 @@ public class SVGToBMPConversion
 
             options.setVectorRasterizationOptions(svgOptions);
 
-            image.save(dataDir + "test.svg_out.bmp", options);
+            image.save(Utils.getOutDir() + "test.svg_out.bmp", options);
         }
-        //ExEnd:SVGToBMPConversion
-
+        Logger.endExample();
     }
 }

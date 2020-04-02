@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ManipulatingPNGImages;
 
 import com.aspose.imaging.*;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.png.PngImage;
 import com.aspose.imaging.imageoptions.PngOptions;
@@ -9,16 +10,16 @@ public class SettingResolution
 {
     public static void main(String... args)
     {
-        //ExStart:SettingResolution
+        Logger.startExample("SettingResolution");
 
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
         // Initialize variables to hold width & height values
-        int width = 0;
-        int height = 0;
+        int width;
+        int height;
 
         // Initialize an array of type Color to hold the pixel data
-        Color[] pixels = null;
+        Color[] pixels;
 
         // Create an instance of RasterImage and load a BMP image
         try (RasterImage raster = (RasterImage) Image.load(dataDir + "aspose_logo.png"))
@@ -42,6 +43,6 @@ public class SettingResolution
             options.setResolutionSettings(new ResolutionSetting(72, 96));
             png.save(Utils.getOutDir() + "SettingResolution_output.png", options);
         }
-        //ExEnd:SettingResolution
+        Logger.endExample();
     }
 }

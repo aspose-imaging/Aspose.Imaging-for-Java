@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
 import com.aspose.imaging.fileformats.tiff.enums.TiffPhotometrics;
@@ -11,12 +12,11 @@ public class AdjustGamma
 {
     public static void main(String... args)
     {
-		//ExStart:AdjustGamma
+		Logger.startExample("AdjustGamma");
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
-        Image image = Image.load(dataDir + "aspose-logo.jpg");
 
-		try
+		try (Image image = Image.load(dataDir + "aspose-logo.jpg"))
 		{
 			// Cast object of Image to RasterImage
 			RasterImage rasterImage = (RasterImage) image;
@@ -38,13 +38,9 @@ public class AdjustGamma
 			tiffOptions.setPhotometric(TiffPhotometrics.Rgb);
 
 			// Save the resultant image to TIFF format
-			rasterImage.save(dataDir + "AdjustGamma_out.tiff", tiffOptions);
+			rasterImage.save(Utils.getOutDir() + "AdjustGamma_out.tiff", tiffOptions);
 		}
-		finally
-		{
-			image.close();
-		}
-		//ExEnd:AdjustGamma
+		Logger.endExample();
     }
 
 }

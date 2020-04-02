@@ -3,6 +3,7 @@ package com.aspose.imaging.examples.ConvertingImages;
 import com.aspose.imaging.*;
 import com.aspose.imaging.brushes.HatchBrush;
 import com.aspose.imaging.brushes.SolidBrush;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.wmf.WmfImage;
 import com.aspose.imaging.fileformats.wmf.graphics.WmfRecorderGraphics2D;
@@ -11,6 +12,7 @@ public class CreateWMFMetaFileImage
 {
     public static void main(String... args)
     {
+        Logger.startExample("CreateWMFMetaFileImage");
         // WmfRecorderGraphics2D class provides you the frame or canvas to draw shapes on it.  Create an instance of WmfRecorderGraphics2D class. The constructor takes in 2 parameters:  1. Instance of Imaging Rectangle class 2. An integer value for inches
         //ExStart:CreateWMFMetaFileImage
         // The path to the documents directory.
@@ -83,8 +85,8 @@ public class CreateWMFMetaFileImage
         // Call end recording of graphics object and save WMF image by calling Save method.
         try (WmfImage image = graphics.endRecording())
         {
-            image.save(dataDir + "CreateWMFMetaFileImage.wmf");
+            image.save(Utils.getOutDir() + "CreateWMFMetaFileImage.wmf");
         }
-        //ExEnd:CreateWMFMetaFileImage
+        Logger.endExample();
     }
 }

@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.metafile;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.Size;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.emf.MetaImage;
 import com.aspose.imaging.imageoptions.EmfRasterizationOptions;
@@ -11,12 +12,10 @@ public class CropbyShifts
 {
     public static void main(String... args)
     {
-		//ExStart:CropbyShifts
+		Logger.startExample("CropbyShifts");
         String dataDir = Utils.getSharedDataDir() + "metafile/";
         // Load an EMF file in an instance of MetafileImage
-        final MetaImage metaImage = (MetaImage) Image.load(dataDir + "Picture1.emf");
-
-		try
+		try (MetaImage metaImage = (MetaImage) Image.load(dataDir + "Picture1.emf"))
 		{
 			// Define shift values for all four sides
 			int leftShift = 10;
@@ -30,13 +29,12 @@ public class CropbyShifts
 
 			// Save the result in PNG format
 			PngOptions pngOptions = new PngOptions();
-			pngOptions.setVectorRasterizationOptions(new EmfRasterizationOptions() {{ setPageSize(Size.to_SizeF(metaImage.getSize())); }});
-			metaImage.save(dataDir + "CropbyShifts_out.png", pngOptions);
+			pngOptions.setVectorRasterizationOptions(new EmfRasterizationOptions()
+			{{
+				setPageSize(Size.to_SizeF(metaImage.getSize()));
+			}});
+			metaImage.save(Utils.getOutDir() + "CropbyShifts_out.png", pngOptions);
 		}
-		finally
-		{
-			metaImage.close();
-		}
-		//ExEnd:CropbyShifts
+		Logger.endExample();
     }
 }

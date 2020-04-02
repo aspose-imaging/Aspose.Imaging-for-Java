@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.jpeg.JpegImage;
 import com.aspose.imaging.sources.StreamSource;
@@ -13,7 +14,7 @@ public class ColorConversionUsingICCProfiles
 {
     public static void main(String... args) throws FileNotFoundException
     {
-        //ExStart:ColorConversionUsingICCProfiles
+        Logger.startExample("ColorConversionUsingICCProfiles");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
@@ -26,6 +27,6 @@ public class ColorConversionUsingICCProfiles
             image.setCmykColorProfile(cmykprofile);
             Color[] colors = image.loadPixels(image.getBounds());
         }
-        //ExStart:ColorConversionUsingICCProfiles
+        Logger.endExample();
     }
 }

@@ -1,15 +1,14 @@
 package com.aspose.imaging.examples.shapes;
 
 import com.aspose.imaging.Pen;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class DrawingLines
 {
-    public static void main(String[] args) throws Exception
+    public static void main(String[] args)
     {
-        // The path to the documents directory.
-        String dataDir = Utils.getSharedDataDir() + "shapes/";
-        //ExStart:DrawingLines
+        Logger.startExample("DrawingLines");
         //Creates an instance of BmpOptions and set its various properties
         try (com.aspose.imaging.imageoptions.BmpOptions bmpCreateOptions = new com.aspose.imaging.imageoptions.BmpOptions())
         {
@@ -53,16 +52,12 @@ public class DrawingLines
                 graphic.endUpdate();
 
                 //Save all changes.
-                image.save(dataDir + "DrawingLines_out.bmp");
+                image.save(Utils.getOutDir() + "DrawingLines_out.bmp");
             }
         }
 
         // Display Status.
-        System.out.println("Lines have been drawn in image successfully!");
-        //ExEnd:DrawingLines
+        Logger.println("Lines have been drawn in image successfully!");
+        Logger.endExample();
     }
 }
-
-
-
-

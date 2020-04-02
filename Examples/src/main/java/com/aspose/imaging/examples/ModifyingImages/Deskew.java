@@ -3,12 +3,14 @@ package com.aspose.imaging.examples.ModifyingImages;
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class Deskew
 {
     public static void main(String... args)
     {
+        Logger.startExample("Deskew");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
@@ -22,5 +24,6 @@ public class Deskew
             image.normalizeAngle(false /*do not resize*/, Color.getLightGray() /*background color*/);
             image.save(Utils.getOutDir() + output);
         }
+        Logger.endExample();
     }
 }

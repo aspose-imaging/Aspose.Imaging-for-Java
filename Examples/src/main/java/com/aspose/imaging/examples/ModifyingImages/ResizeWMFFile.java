@@ -3,6 +3,7 @@ package com.aspose.imaging.examples.ModifyingImages;
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.ImageOptionsBase;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.PngOptions;
 import com.aspose.imaging.imageoptions.WmfRasterizationOptions;
@@ -11,7 +12,7 @@ public class ResizeWMFFile
 {
     public static void main(String... args)
     {
-        //ExStart:ResizeWMFFile
+        Logger.startExample("ResizeWMFFile");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
@@ -37,8 +38,8 @@ public class ResizeWMFFile
             imageOptions.setVectorRasterizationOptions(wmfRasterization);
 
             // Call the save method, provide output path and PngOptions to convert the WMF file to PNG and save the output
-            image.save(dataDir + "CreateEMFMetaFileImage_out.png", imageOptions);
-            //ExStart:ResizeWMFFile
+            image.save(Utils.getOutDir() + "CreateEMFMetaFileImage_out.png", imageOptions);
+            Logger.endExample();
         }
     }
 }

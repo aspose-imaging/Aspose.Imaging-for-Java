@@ -3,6 +3,7 @@ package com.aspose.imaging.examples.wmf;
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.ImageOptionsBase;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.EmfRasterizationOptions;
 import com.aspose.imaging.imageoptions.WebPOptions;
@@ -11,10 +12,10 @@ public class ConvertingWMFtoWebp
 {
     public static void main(String... args)
     {
-		//ExStart:ConvertingWMFtoWebp
+        Logger.startExample("ConvertingWMFtoWebp");
 		String dataDir = Utils.getSharedDataDir() + "wmf/";
         String inputFileName = dataDir + "sample.wmf";
-        String outFileName = dataDir + "ConvertingWMFtoWebp_out.webp";
+        String outFileName = Utils.getOutDir() + "ConvertingWMFtoWebp_out.webp";
 
         // Load an existing WMF image
         Image image = Image.load(inputFileName);
@@ -45,6 +46,6 @@ public class ConvertingWMFtoWebp
         {
             image.dispose();
         }
-        //ExEnd:ConvertingWMFtoWebp
+        Logger.endExample();
     }
 }

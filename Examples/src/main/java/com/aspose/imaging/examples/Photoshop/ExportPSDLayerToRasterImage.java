@@ -1,5 +1,6 @@
 package com.aspose.imaging.examples.Photoshop;
 
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.psd.layers.Layer;
 
@@ -7,7 +8,7 @@ public class ExportPSDLayerToRasterImage
 {
     public static void main(String... args)
     {
-		//ExStart:ExportPSDLayerToRasterImage
+		Logger.startExample("ExportPSDLayerToRasterImage");
 		String dataDir = Utils.getSharedDataDir() + "Photoshop/";
 		String sourceFileName = dataDir + "samplePsd.psd";
         // Create an instance of Image class and load PSD file as image.
@@ -27,11 +28,11 @@ public class ExportPSDLayerToRasterImage
 			for (int i = 0; i < layers.length; i++)
 			{
 				// convert and save the layer to PNG file format.
-				layers[i].save("ExportPSDLayertoRasterImage_out" + i + 1 + ".png", pngOptions);
+				layers[i].save(Utils.getOutDir() + "ExportPSDLayertoRasterImage_out" + (i + 1) + ".png", pngOptions);
 			}
 		}
 
-        //ExEnd:ExportPSDLayerToRasterImage
+		Logger.endExample();
     }
 
 }

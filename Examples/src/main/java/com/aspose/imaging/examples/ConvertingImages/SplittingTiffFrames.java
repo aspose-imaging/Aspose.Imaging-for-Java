@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ConvertingImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.tiff.TiffFrame;
 import com.aspose.imaging.fileformats.tiff.TiffImage;
@@ -11,7 +12,7 @@ public class SplittingTiffFrames
 {
     public static void main(String... args)
     {
-        //ExStart:SplittingTiffFrames
+        Logger.startExample("SplittingTiffFrames");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         // Create an instance of TiffImage and load the file from disc
@@ -21,9 +22,9 @@ public class SplittingTiffFrames
             int i = 0;
             for (TiffFrame tiffFrame : multiImage.getFrames())
             {
-                tiffFrame.save(dataDir + i + "_out.tiff", new TiffOptions(TiffExpectedFormat.TiffJpegRgb));
+                tiffFrame.save(Utils.getOutDir() + i + "_out.tiff", new TiffOptions(TiffExpectedFormat.TiffJpegRgb));
             }
         }
-        //ExEnd:SplittingTiffFrames
+        Logger.endExample();
     }
 }

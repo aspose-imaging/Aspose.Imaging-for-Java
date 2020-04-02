@@ -1,5 +1,6 @@
 package com.aspose.imaging.examples.Photoshop;
 
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.JpegOptions;
 
@@ -11,7 +12,7 @@ public class MergePSDlayers
 {
     public static void main(String... args) throws IOException
 	{
-		//ExStart:MergePSDlayers
+		Logger.startExample("MergePSDlayers");
 		String dataDir = Utils.getSharedDataDir() + "psd/";
         String sourceFileName = dataDir + "PsdImage.psd";
 
@@ -23,14 +24,14 @@ public class MergePSDlayers
 			psdImage = (com.aspose.imaging.fileformats.psd.PsdImage) image;
 
 			// Create a JPG file stream
-			try (OutputStream stream = new FileOutputStream(sourceFileName.replace(".psd", ".jpg")))
+			try (OutputStream stream = new FileOutputStream(Utils.getOutDir() + "PsdImage.psd.jpg"))
 			{
 				// Create JPEG option class object, Set the source property to jpg file stream and save image
 				JpegOptions jpgOptions = new JpegOptions();
 				psdImage.save(stream, jpgOptions);
 			}
 		}
-        //ExEnd:MergePSDlayers
+		Logger.endExample();
     }
 
 }

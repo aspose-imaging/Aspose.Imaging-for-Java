@@ -16,9 +16,8 @@ public class ConvertDjvuPagesToImages
         String dataDir = Utils.getSharedDataDir() + "djvu/";
         //ExStart:ConvertDjvuPagesToImages
         //Load a DjVu image
-        DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu");
 
-        try
+        try (DjvuImage image = (DjvuImage) Image.load(dataDir + "Sample.djvu"))
         {
             //Create an instance of BmpOptions
             BmpOptions exportOptions = new BmpOptions();
@@ -40,10 +39,6 @@ public class ConvertDjvuPagesToImages
 
             // Display Status.
             System.out.println("File converted");
-        }
-        finally
-        {
-            image.close();
         }
         //ExEnd:ConvertDjvuPagesToImages
     }

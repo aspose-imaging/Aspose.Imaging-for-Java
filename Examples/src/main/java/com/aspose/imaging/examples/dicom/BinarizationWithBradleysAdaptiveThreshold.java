@@ -1,22 +1,21 @@
 package com.aspose.imaging.examples.dicom;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class BinarizationWithBradleysAdaptiveThreshold
 {
     public static void main(String... args)
     {
-		//ExStart:BinarizationWithBradleysAdaptiveThreshold
+		Logger.startExample("BinarizationWithBradleysAdaptiveThreshold");
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir() + "dicom/";
         String inputFile = dataDir + "image.dcm";
-        String outputFile = dataDir + "BinarizationwithBradleyAdaptiveThreshold_out.bmp";
+        String outputFile = Utils.getOutDir() + "BinarizationwithBradleyAdaptiveThreshold_out.bmp";
 
 		// Load a DICOM image in an instance of DicomImage
-		com.aspose.imaging.fileformats.dicom.DicomImage image = (com.aspose.imaging.fileformats.dicom.DicomImage) Image.load(inputFile);
-
-		try
+		try (com.aspose.imaging.fileformats.dicom.DicomImage image = (com.aspose.imaging.fileformats.dicom.DicomImage) Image.load(inputFile))
 		{
 			// Binarize image with bradley's adaptive threshold.
 			image.binarizeBradley(10);
@@ -24,11 +23,7 @@ public class BinarizationWithBradleysAdaptiveThreshold
 			// Save the resultant image.
 			image.save(outputFile, new com.aspose.imaging.imageoptions.BmpOptions());
 		}
-		finally
-		{
-			image.close();
-		}
 
-		//ExEnd:BinarizationWithBradleysAdaptiveThreshold
+		Logger.endExample();
     }
 }

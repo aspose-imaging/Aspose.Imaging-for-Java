@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.metafile;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.emf.EmfImage;
 import com.aspose.imaging.imageoptions.PngOptions;
@@ -14,7 +15,7 @@ public class ConvertEMFtoPNGusingByteArray
 {
     public static void main(String... args) throws Exception
     {
-		//ExStart:ConvertEMFtoPNGusingByteArray
+		Logger.startExample("ConvertEMFtoPNGusingByteArray");
 
         String dataDir = Utils.getSharedDataDir() + "metafile/";
         // Read all bytes from an EMF file
@@ -25,9 +26,7 @@ public class ConvertEMFtoPNGusingByteArray
 
         // Use the instance of ByteArrayInputStream to load the image into an
         // instance of EmfImage
-        EmfImage metafile = (EmfImage) Image.load(inputStream);
-
-		try
+		try (EmfImage metafile = (EmfImage) Image.load(inputStream))
 		{
 			// Create an instance of ByteArrayOutputStream to store the results
 			ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -40,11 +39,7 @@ public class ConvertEMFtoPNGusingByteArray
 			// Convert the data in ByteArrayOutputStream to an array of bytes
 			byte[] outputBytes = outputStream.toByteArray();
 		}
-		finally
-		{
-			metafile.close();
-		}
 
-		//ExEnd:ConvertEMFtoPNGusingByteArray
+		Logger.endExample();
     }
 }

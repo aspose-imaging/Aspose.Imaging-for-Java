@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ModifyingImages.psd;
 
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.psd.PsdImage;
 import com.aspose.imaging.fileformats.psd.layers.Layer;
@@ -17,7 +18,7 @@ public class SupportOfGradientFillLayer
 {
     public static void main(String... args)
     {
-        //ExStart:SupportOfGradientFillLayer
+        Logger.startExample("SupportOfGradientFillLayer");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "psd/";
         String sourceFileName = dataDir + "ComplexGradientFillLayer.psd";
@@ -99,6 +100,6 @@ public class SupportOfGradientFillLayer
             }
         }
 
-        //ExEnd:SupportOfGradientFillLayer
+        Logger.endExample();
     }
 }

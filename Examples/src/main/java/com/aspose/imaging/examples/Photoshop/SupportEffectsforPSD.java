@@ -2,6 +2,7 @@
 package com.aspose.imaging.examples.Photoshop;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.png.PngColorType;
 import com.aspose.imaging.fileformats.psd.PsdImage;
@@ -12,9 +13,9 @@ public class SupportEffectsforPSD
 {
     public static void main(String... args)
     {
-        //ExStart:SupportEffectsforPSD
+        Logger.startExample("SupportEffectsforPSD");
         String dataDir = Utils.getSharedDataDir() + "psd/";
-        String output = "dropShadow.png";
+        String output = Utils.getOutDir() + "dropShadow.png";
 
         PsdLoadOptions psdLoadOptions = new PsdLoadOptions();
         psdLoadOptions.setLoadEffectsResource(true);
@@ -32,6 +33,6 @@ public class SupportEffectsforPSD
             image.dispose();
         }
 
-        //ExEnd:SupportEffectsforPSD
+        Logger.endExample();
     }
 }

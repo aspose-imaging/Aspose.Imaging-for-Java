@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.Photoshop;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.Point;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.psd.PsdImage;
 import com.aspose.imaging.fileformats.psd.layers.Layer;
@@ -17,16 +18,14 @@ public class SupportOfVmskResource
 
     public static void main(String[] args)
     {
-        //ExStart:SupportOfVmskResource
+        Logger.startExample("SupportOfVmskResource");
 
         String dataDir = Utils.getSharedDataDir() + "Photoshop/";
 
         String sourceFileName = dataDir + "Rectangle.psd";
-        String exportPath = dataDir + "Rectangle_changed.psd";
+        String exportPath = Utils.getOutDir() + "Rectangle_changed.psd";
 
-        PsdImage im = (PsdImage) Image.load(sourceFileName);
-
-        try
+        try (PsdImage im = (PsdImage) Image.load(sourceFileName))
         {
             VmskResource resource = getVmskResource(im);
 
@@ -76,25 +75,20 @@ public class SupportOfVmskResource
             subpathLength.setClosed(false);
             im.save(exportPath);
         }
-        finally
-        {
-            im.close();
-        }
-        //ExEnd:SupportOfVmskResource
+        Logger.endExample();
     }
 
-    //ExStart:VmskResource
     private static VmskResource getVmskResource(PsdImage image)
     {
         Layer layer = image.getLayers()[1];
 
         VmskResource resource = null;
         LayerResource[] resources = layer.getResources();
-        for (int i = 0; i < resources.length; i++)
+        for (LayerResource layerResource : resources)
         {
-            if (resources[i] instanceof VmskResource)
+            if (layerResource instanceof VmskResource)
             {
-                resource = (VmskResource) resources[i];
+                resource = (VmskResource) layerResource;
                 break;
             }
         }
@@ -106,5 +100,5 @@ public class SupportOfVmskResource
 
         return resource;
     }
-    //ExEnd:VmskResource
+
 }

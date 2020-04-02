@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ConvertingImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.gif.GifImage;
 import com.aspose.imaging.fileformats.gif.IGifBlock;
@@ -10,21 +11,21 @@ import com.aspose.imaging.imageoptions.TiffOptions;
 
 public class ConvertGIFImageLayersToTIFF {
 	public static void main(String... args) {
-		//ExStart:ConvertGIFImageLayersToTIFF
+		Logger.startExample("ConvertGIFImageLayersToTIFF");
 		String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 		// Load a GIF image
-		Image objImage = Image.load(dataDir + "aspose-logo.gif");
-
-		try
+		try (Image objImage = Image.load(dataDir + "aspose-logo.gif"))
 		{
 			// Convert the image to GIF image
 			GifImage gif = (GifImage) objImage;
 
 			// iterate through arry of blocks in the GIF image
 			IGifBlock[] blocks = gif.getBlocks();
-			for (int i = 0; i < blocks.length; i++) {
+			for (int i = 0; i < blocks.length; i++)
+			{
 				// Check if gif block is then ignore it
-				if (!(blocks[i] instanceof GifFrameBlock)) {
+				if (!(blocks[i] instanceof GifFrameBlock))
+				{
 					continue;
 				}
 
@@ -35,14 +36,10 @@ public class ConvertGIFImageLayersToTIFF {
 				TiffOptions objTiff = new TiffOptions(TiffExpectedFormat.Default);
 
 				// Save the GIFF block as TIFF image
-				gifBlock.save(dataDir + "asposelogo" + i + "_out.tif", objTiff);
+				gifBlock.save(Utils.getOutDir() + "asposelogo" + i + "_out.tif", objTiff);
 			}
 		}
-		finally
-		{
-			objImage.close();
-		}
-		//ExEnd:ConvertGIFImageLayersToTIFF
+		Logger.endExample();
 	}
   
 }

@@ -4,6 +4,7 @@ import com.aspose.imaging.Image;
 import com.aspose.imaging.Point;
 import com.aspose.imaging.RasterImage;
 import com.aspose.imaging.Rectangle;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.png.PngColorType;
 import com.aspose.imaging.imageoptions.PngOptions;
@@ -26,7 +27,7 @@ public class AutoImageMasking
 
     public static void main(String[] args) throws IOException
     {
-        //ExStart:AutoImageMasking
+        Logger.startExample("AutoImageMasking");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         String sourceFileName = dataDir + "Colored by Faith_small.psd";
@@ -34,9 +35,8 @@ public class AutoImageMasking
         String inputPointsFileName = dataDir + "Java_ColoredByFaith_small.dat";
         AutoMaskingArgs maskingArgs = new AutoMaskingArgs();
         fillInputPoints(inputPointsFileName, maskingArgs);
-        String outputFileName = dataDir + "Colored by Faith_small_auto.png";
-        RasterImage image = (RasterImage) Image.load(sourceFileName);
-        try
+        String outputFileName = Utils.getOutDir() + "Colored by Faith_small_auto.png";
+        try (RasterImage image = (RasterImage) Image.load(sourceFileName))
         {
             MaskingOptions maskingOptions = new MaskingOptions();
             maskingOptions.setMethod(SegmentationMethod.GraphCut);
@@ -47,29 +47,19 @@ public class AutoImageMasking
             options.setSource(new StreamSource());
             maskingOptions.setExportOptions(options);
             MaskingResult[] maskingResults = new ImageMasking(image).decompose(maskingOptions);
-            Image resultImage = maskingResults[1].getImage();
-            try
+            try (Image resultImage = maskingResults[1].getImage())
             {
                 resultImage.save(outputFileName);
             }
-            finally
-            {
-                resultImage.close();
-            }
         }
-        finally
-        {
-            image.close();
-        }
-        //ExEnd:AutoImageMasking
+        Logger.endExample();
     }
 
     //ExStart:fillInputPoints
     private static void fillInputPoints(String filePath, AutoMaskingArgs autoMaskingArgs) throws IOException
     {
 
-        InputStream inputStream = new FileInputStream(filePath);
-        try
+        try (InputStream inputStream = new FileInputStream(filePath))
         {
             LEIntegerReader reader = new LEIntegerReader(inputStream);
             boolean hasObjectRectangles = inputStream.read() != 0;
@@ -111,10 +101,6 @@ public class AutoImageMasking
                 }
                 autoMaskingArgs.setObjectsPoints(points);
             }
-        }
-        finally
-        {
-            inputStream.close();
         }
     }
     //ExEnd:FillInputPoints

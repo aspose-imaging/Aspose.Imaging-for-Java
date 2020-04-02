@@ -4,6 +4,7 @@ import com.aspose.imaging.Color;
 import com.aspose.imaging.Graphics;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.Pen;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.BmpOptions;
 import com.aspose.imaging.sources.FileCreateSource;
@@ -12,9 +13,7 @@ public class DrawingBezier
 {
     public static void main(String[] args)
     {
-        //ExStart:DrawingBezier
-        // The path to the documents directory.
-        String dataDir = Utils.getSharedDataDir() + "images/";
+        Logger.startExample("DrawingBezier");
 
         // Create an instance of BmpOptions and set its various properties
         try (BmpOptions saveOptions = new BmpOptions())
@@ -22,7 +21,7 @@ public class DrawingBezier
             saveOptions.setBitsPerPixel(32);
 
             // Set the Source for BmpOptions and Create an instance of Image
-            saveOptions.setSource(new FileCreateSource(dataDir + "DrawingBezier_out.bmp"));
+            saveOptions.setSource(new FileCreateSource(Utils.getOutDir() + "DrawingBezier_out.bmp"));
             try (Image image = Image.create(saveOptions, 100, 100))
             {
                 // Create and initialize an instance of Graphics class and clear Graphics surface
@@ -46,6 +45,6 @@ public class DrawingBezier
             }
         }
 
-        //ExEnd:DrawingBezier
+        Logger.endExample();
     }
 }

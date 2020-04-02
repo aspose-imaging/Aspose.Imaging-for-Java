@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ConvertingImages;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.Size;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Path;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.EmfOptions;
@@ -14,7 +15,7 @@ public class SVGToEMFConversion
 {
     public static void main(String... args)
     {
-        //ExStart:SVGToEMFConversion
+        Logger.startExample("SVGToEMFConversion");
         String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 
         String[] testFiles = new String[]
@@ -46,6 +47,6 @@ public class SVGToEMFConversion
                 }});
             }
         }
-        //ExEnd:SVGToEMFConversion
+        Logger.endExample();
     }
 }

@@ -3,6 +3,7 @@ package com.aspose.imaging.examples.wmf;
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.ImageOptionsBase;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.EmfRasterizationOptions;
 import com.aspose.imaging.imageoptions.PngOptions;
@@ -11,10 +12,10 @@ public class ResizingWMFfileWhileConvertingtoPNG
 {
     public static void main(String... args)
     {
-		//ExStart:ResizingWMFfileWhileConvertingtoPNG
+        Logger.startExample("ResizingWMFfileWhileConvertingtoPNG");
 		String dataDir = Utils.getSharedDataDir() + "wmf/";
 		String inputFileName = dataDir + "sample.wmf";
-		String outFileName = dataDir + "ResizingWMFfileWhileConvertingtoPNG_out.png";
+		String outFileName = Utils.getOutDir() + "ResizingWMFfileWhileConvertingtoPNG_out.png";
         // Load an existing WMF image
         Image image = Image.load(inputFileName);
         try
@@ -48,6 +49,6 @@ public class ResizingWMFfileWhileConvertingtoPNG
         {
             image.dispose();
         }
-		//ExEnd:ResizingWMFfileWhileConvertingtoPNG
+        Logger.endExample();
     }
 }

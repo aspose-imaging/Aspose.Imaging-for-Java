@@ -3,6 +3,7 @@ package com.aspose.imaging.examples.ModifyingImages;
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.ImageOptionsBase;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.WebPOptions;
 import com.aspose.imaging.imageoptions.WmfRasterizationOptions;
@@ -11,7 +12,7 @@ public class ConvertWMFToWebp
 {
     public static void main(String... args)
     {
-        //ExStart:ConvertWMFToWebp
+        Logger.startExample("ConvertWMFToWebp");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         // Load an existing WMF image
@@ -34,8 +35,8 @@ public class ConvertWMFToWebp
             imageOptions.setVectorRasterizationOptions(wmfRasterization);
 
             // Call the save method, provide output path and WebPOptions to convert the WMF file to Webp and save the output
-            image.save(dataDir + "ConvertWMFToWebp_out.webp", imageOptions);
-            //ExStart:ConvertWMFToWebp
+            image.save(Utils.getOutDir() + "ConvertWMFToWebp_out.webp", imageOptions);
+            Logger.endExample();
         }
     }
 }

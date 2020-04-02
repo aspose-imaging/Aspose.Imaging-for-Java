@@ -4,12 +4,15 @@ import com.aspose.imaging.Image;
 import com.aspose.imaging.LoadOptions;
 import com.aspose.imaging.RasterImage;
 import com.aspose.imaging.RotateFlipType;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class OptimizationStrategyInRotate
 {
     public static void main(String... args)
     {
+        Logger.startExample("OptimizationStrategyInRotate");
+
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
@@ -25,5 +28,6 @@ public class OptimizationStrategyInRotate
             // perform Rotate operation
             ((RasterImage) image).rotate(60); // rotate 60 degrees clockwise
         }
+        Logger.endExample();
     }
 }

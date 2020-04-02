@@ -2,13 +2,14 @@ package com.aspose.imaging.examples.ConvertingImages;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imagefilters.filteroptions.GaussWienerFilterOptions;
 
 public class ApplyGaussWienerFilter
 {
 	public static void main(String... args) {
-		//ExStart:ApplyGaussWienerFilter
+		Logger.startExample("ApplyGaussWienerFilter");
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 		Image image = Image.load(dataDir + "aspose-logo.gif");
@@ -29,13 +30,13 @@ public class ApplyGaussWienerFilter
 			rasterImage.filter(image.getBounds(), options);
 
 			// Save the resultant image
-			image.save(dataDir + "ApplyGaussWienerFilter_out.gif");
+			image.save(Utils.getOutDir() + "ApplyGaussWienerFilter_out.gif");
 		}
 		finally
 		{
 			image.close();
 		}
-		//ExEnd:ApplyGaussWienerFilter
+		Logger.endExample();
 	}
 
 }

@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
 import com.aspose.imaging.imageoptions.TiffOptions;
@@ -11,11 +12,10 @@ import java.io.IOException;
 
 public class CMYKPSDToCMYKTiff
 {
-    //ExStart:CMYKPSDToCMYKTiff
 
     public static void main(String... args) throws IOException
-
     {
+        Logger.startExample("CMYKPSDToCMYKTiff");
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
         //With IccProfile
@@ -23,6 +23,7 @@ public class CMYKPSDToCMYKTiff
 
         //Without IccProfile
         CMYKPSDToCMYKTiff.psdToTiffCmyk(dataDir, false);
+        Logger.endExample();
     }
 
     private static void psdToTiffCmyk(String folder, boolean isIccProfile) throws IOException
@@ -62,5 +63,4 @@ public class CMYKPSDToCMYKTiff
             image.dispose();
         }
     }
-    //ExEnd:CMYKPSDToCMYKTiff
 }

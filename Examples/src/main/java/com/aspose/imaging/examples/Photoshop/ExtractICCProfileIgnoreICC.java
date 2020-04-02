@@ -3,6 +3,7 @@ package com.aspose.imaging.examples.Photoshop;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.LoadOptions;
 import com.aspose.imaging.StreamContainer;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.psd.PsdImage;
 import com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat;
@@ -12,13 +13,12 @@ import com.aspose.imaging.sources.StreamSource;
 
 public class ExtractICCProfileIgnoreICC
 {
-    //ExStart:ExtractICCProfileIgnoreICC
-
     public static void main(String... args)
     {
+        Logger.startExample("ExtractICCProfileIgnoreICC");
         String dataDir = Utils.getSharedDataDir() + "Photoshop/";
         String sourcePath = dataDir + "gray-d15.psd";
-        String outputPath = dataDir + "gray-d15.psd.ignore-icc.tif";
+        String outputPath = Utils.getOutDir() + "gray-d15.psd.ignore-icc.tif";
 
         // Save to grayscale TIFF
         TiffOptions saveOptions = new TiffOptions(TiffExpectedFormat.Default);
@@ -42,6 +42,7 @@ public class ExtractICCProfileIgnoreICC
         {
             psdImage.dispose();
         }
+        Logger.endExample();
     }
 
     private static byte[] toMemoryStream(StreamSource streamSource)
@@ -56,5 +57,4 @@ public class ExtractICCProfileIgnoreICC
             sc.dispose();
         }
     }
-    //ExEnd:ExtractICCProfileIgnoreICC
 }

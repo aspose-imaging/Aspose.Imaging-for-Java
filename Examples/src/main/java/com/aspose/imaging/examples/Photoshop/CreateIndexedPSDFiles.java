@@ -4,6 +4,7 @@ import com.aspose.imaging.Color;
 import com.aspose.imaging.Graphics;
 import com.aspose.imaging.Pen;
 import com.aspose.imaging.Rectangle;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.psd.ColorModes;
 import com.aspose.imaging.fileformats.psd.CompressionMethod;
@@ -15,7 +16,7 @@ public class CreateIndexedPSDFiles
 {
     public static void main(String... args)
     {
-		//ExStart:CreateIndexedPSDFiles
+		Logger.startExample("CreateIndexedPSDFiles");
 
 		String dataDir = Utils.getSharedDataDir() + "Photoshop/";
 		// Create an instance of PsdOptions and set it's properties
@@ -44,7 +45,7 @@ public class CreateIndexedPSDFiles
 				psd.save();
 			}
 		}
-		//ExEnd:CreateIndexedPSDFiles
+		Logger.endExample();
     }
 
 }

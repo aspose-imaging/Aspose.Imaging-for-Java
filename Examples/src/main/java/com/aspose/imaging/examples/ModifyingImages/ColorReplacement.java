@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.png.PngColorType;
 import com.aspose.imaging.fileformats.psd.PsdImage;
@@ -15,11 +16,12 @@ public class ColorReplacement
 {
     public static void main(String... args)
     {
-        //ExStart:ColorReplacement
+        Logger.startExample("ColorReplacement");
 
         String dataDir = Utils.getSharedDataDir() + "psd/";
 
-        String fileName = dataDir + "photooverlay_5_new";
+        String tmpFileName = "photooverlay_5_new";
+        String fileName = dataDir + tmpFileName;
         PngOptions pngOptions = new PngOptions()
         {{
             setColorType(PngColorType.TruecolorWithAlpha);
@@ -33,8 +35,8 @@ public class ColorReplacement
                 {
                     layer.replaceNonTransparentColors(Orange);
                     //      replaceNonTransparentColors(Color.getOrange());
-                    input.save(fileName + "_nonTransparentColors_result.png", pngOptions);
-                    input.save(fileName + "_nonTransparentColors_result.psd");
+                    input.save(Utils.getOutDir() + tmpFileName + "_nonTransparentColors_result.png", pngOptions);
+                    input.save(Utils.getOutDir() + tmpFileName + "_nonTransparentColors_result.psd");
                     break;
                 }
             }
@@ -53,8 +55,8 @@ public class ColorReplacement
                 {
                     layer.replaceColor(LightGreen, (byte) 40, Orange);
 
-                    input.save(fileName + "_specificColor_result.png", pngOptions);
-                    input.save(fileName + "_specificColor_result.psd");
+                    input.save(Utils.getOutDir() + tmpFileName + "_specificColor_result.png", pngOptions);
+                    input.save(Utils.getOutDir() + tmpFileName + "_specificColor_result.psd");
                     break;
                 }
             }
@@ -64,7 +66,7 @@ public class ColorReplacement
             input.dispose();
 
         }
-        //ExEnd:ColorReplacement
+        Logger.endExample();
     }
 }
 

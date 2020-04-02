@@ -2,31 +2,24 @@ package com.aspose.imaging.examples.ConvertingImages;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.RasterImage;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 public class ApplyCorrectionFilterOnImage {
 	public static void main(String... args)  {
+		Logger.startExample("ApplyCorrectionFilterOnImage");
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
-	//ExStart:ApplyCorrectionFilterOnImage
-	
-		Image image = Image.load(dataDir + "aspose-logo.jpg");
 
-		try
+		try (RasterImage rasterImage = (RasterImage)Image.load(dataDir + "aspose-logo.jpg"))
 		{
-			// Convert the image into RasterImage.
-			RasterImage rasterImage = (RasterImage) image;
-
-			if (rasterImage == null) {
-				return;
-			}
 			// Get Bounds[rectangle] of image.
-			com.aspose.imaging.Rectangle rect = image.getBounds();
+			com.aspose.imaging.Rectangle rect = rasterImage.getBounds();
 
 			// Create an instance of BilateralSmoothingFilterOptions class with size
 			// parameter.
-			com.aspose.imaging.imagefilters.filteroptions.BilateralSmoothingFilterOptions bilateralOptions = new com.aspose.imaging.imagefilters.filteroptions.BilateralSmoothingFilterOptions(
-					3);
+			com.aspose.imaging.imagefilters.filteroptions.BilateralSmoothingFilterOptions bilateralOptions =
+					new com.aspose.imaging.imagefilters.filteroptions.BilateralSmoothingFilterOptions(3);
 
 			// Create an instance of SharpenFilterOptions class.
 			com.aspose.imaging.imagefilters.filteroptions.SharpenFilterOptions sharpenOptions = new com.aspose.imaging.imagefilters.filteroptions.SharpenFilterOptions();
@@ -42,13 +35,9 @@ public class ApplyCorrectionFilterOnImage {
 			rasterImage.binarizeBradley(80);
 
 			// Save the results to output path.
-			rasterImage.save(dataDir + "a1_out.jpg");
+			rasterImage.save(Utils.getOutDir() + "a1_out.jpg");
 		}
-		finally
-		{
-			image.close();
-		}
-		//ExEnd:ApplyCorrectionFilterOnImage
+		Logger.endExample();
 	}
 
 }

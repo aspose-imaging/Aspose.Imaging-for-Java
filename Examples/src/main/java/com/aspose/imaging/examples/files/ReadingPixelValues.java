@@ -4,6 +4,7 @@ import com.aspose.imaging.Image;
 import com.aspose.imaging.LoadOptions;
 import com.aspose.imaging.RasterImage;
 import com.aspose.imaging.Rectangle;
+import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
 
@@ -12,7 +13,7 @@ public class ReadingPixelValues
 
     public static void main(String... args)
     {
-        //ExStart:ReadingPixelVaules
+        Logger.startExample("ReadingPixelValues");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "files/";
         //String dir = "C:\\Errors\\1006\\";
@@ -45,7 +46,7 @@ public class ReadingPixelValues
                     green = (int) ((color64 >> 16) & 0xffff);
                     blue = (int) (color64 & 0xffff);
 
-                    System.out.format("A=%X, R=%X, G=%X, B=%X\n", alpha, red, green, blue);
+                    Logger.printf("A=%X, R=%X, G=%X, B=%X", alpha, red, green, blue);
                 }
             }
         }
@@ -53,6 +54,6 @@ public class ReadingPixelValues
         {
             image.dispose();
         }
-        //ExEnd:ReadingPixelVaules
+        Logger.endExample();
     }
 }
