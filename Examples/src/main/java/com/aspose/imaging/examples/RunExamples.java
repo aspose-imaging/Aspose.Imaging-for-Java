@@ -8,6 +8,7 @@ import com.aspose.imaging.examples.ConvertingImages.memorystrategy.OptimizationS
 import com.aspose.imaging.examples.ConvertingImages.otg.SupportOfFODG;
 import com.aspose.imaging.examples.ConvertingImages.svg.SvgNativeResize;
 import com.aspose.imaging.examples.EMF.CropEMFImage;
+import com.aspose.imaging.examples.Html5Canvas.ExportToHtml5Canvas;
 import com.aspose.imaging.examples.InterruptMonitor.InterruptMonitorSupport;
 import com.aspose.imaging.examples.ManipulatingJPEGImages.*;
 import com.aspose.imaging.examples.ManipulatingPNGImages.*;
@@ -18,13 +19,9 @@ import com.aspose.imaging.examples.ModifyingImages.dicom.ExportToDicom;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAllEXIFTags;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAndModifyJpegEXIFTags;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadSpecificEXIFTagsInformation;
-import com.aspose.imaging.examples.ModifyingImages.psd.SupportLayerForPSD;
-import com.aspose.imaging.examples.ModifyingImages.psd.SupportOfGradientFillLayer;
-import com.aspose.imaging.examples.ModifyingImages.psd.UncompressedImageStreamObject;
-import com.aspose.imaging.examples.ModifyingImages.psd.UncompressedImageUsingFile;
 import com.aspose.imaging.examples.ModifyingImages.tiff.ExportTiffBatchMode;
 import com.aspose.imaging.examples.ModifyingImages.webp.*;
-import com.aspose.imaging.examples.Photoshop.*;
+import com.aspose.imaging.examples.Photoshop.ExportImagestoPSDFormat;
 import com.aspose.imaging.examples.SVG.SVGToBMPConversion;
 import com.aspose.imaging.examples.WebP.OpenWebPFile;
 import com.aspose.imaging.examples.dicom.*;
@@ -32,7 +29,6 @@ import com.aspose.imaging.examples.djvu.*;
 import com.aspose.imaging.examples.export.Bradleythreshold;
 import com.aspose.imaging.examples.export.ExportImageToDifferentFormats;
 import com.aspose.imaging.examples.export.ExportImageToPSD;
-import com.aspose.imaging.examples.export.ExportPsdLayersToImages;
 import com.aspose.imaging.examples.files.CreatingAnImageBySettingPath;
 import com.aspose.imaging.examples.files.CreatingImageUsingStream;
 import com.aspose.imaging.examples.files.ReadingPixelValues;
@@ -86,6 +82,8 @@ public class RunExamples
 		////            Modifying And Converting Images
 		//// =====================================================
 		//// =====================================================
+		ExportToHtml5Canvas.main(args);
+		CompressedVectorFormats.main(args);
 		ExportTiffBatchMode.main(args);
 		ExportToDicom.main(args);
 		CroppingWMFFileWhileConvertingtoPNG.main(args);
@@ -126,7 +124,6 @@ public class RunExamples
 		ExtractTIFFFramesToBMPImageFormat.main(args);
 		ExportImageToDifferentFormats.main(args);
 		ExportImageToPSD.main(args);
-		ExportPsdLayersToImages.main(args);
 		Grayscaling.main(args);
 		ReadandWriteXMPDataToImages.main(args);
 		ResizeImageWithResizeTypeEnumeration.main(args);
@@ -168,6 +165,7 @@ public class RunExamples
 		//// =====================================================
 		//// =====================================================
 
+		OptimizationStrategyInWebP.main(args);
 		OptimizationStrategyInRotate.main(args);
 		OptimizationStrategyInFilters.main(args);
 		OptimizationStrategyInDithering.main(args);
@@ -265,27 +263,7 @@ public class RunExamples
 		////                        PSD
 		//// =====================================================
 		//// =====================================================
-
-		CreateIndexedPSDFiles.main(args);
-		CreateThumbnailsFromPSDFiles.main(args);
-		DetectFlattenedPSD.main(args);
-		ExportPSDLayerToRasterImage.main(args);
-		// UpdateTextLayerInPSDFile.main(args); // required license
-		MergePSDlayers.main(args);
-		UncompressedImageUsingFile.main(args);
-		UncompressedImageStreamObject.main(args);
-		PSDtoPDF.main(args);
-		SupportLayerForPSD.main(args);
-		SetFontsFolder.main(args);
-		SupportOfSoCoResource.main(args);
-		SupportOfGdFlResource.main(args);
-		SupportOfVmskResource.main(args);
-		SupportOfColorFillLayer.main(args);
-		SupportOfGradientFillLayer.main(args);
-		RenderingOfRotatedTextLayerByTransformMatrix.main(args);
-		ICCProfileExtraction.main(args);
-		ExtractICCProfileIgnoreICC.main(args);
-		LockImageLayers.main(args);
+		ExportImagestoPSDFormat.main(args);
 
 		//// =====================================================
 		//// =====================================================

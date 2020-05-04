@@ -19,7 +19,6 @@ public class ConvertRasterFormatToSVG
                         "3.JPG",
                         "test.j2k",
                         "Rings.png",
-                        "3layers_maximized_comp.psd",
                         "img4.TIF",
                         "Lossy5.webp"
                 };

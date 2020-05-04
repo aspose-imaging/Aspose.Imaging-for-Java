@@ -2,6 +2,8 @@ package com.aspose.imaging.examples.metafile;
 
 import com.aspose.imaging.Color;
 import com.aspose.imaging.Image;
+import com.aspose.imaging.examples.Logger;
+import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.svg.SvgResourceKeeperCallback;
 import com.aspose.imaging.imageoptions.EmfRasterizationOptions;
 import com.aspose.imaging.imageoptions.SvgOptions;
@@ -13,26 +15,34 @@ import java.io.IOException;
 class MetaFilesAsSVG
 {
     private static final String ImageFolderName = "Images";
-    private static final String OutFolderName = "Out\\";
-    private static final String SourceFolder = "C:\\Temp\\Errors\\7\\";
-    private static String OutFolder = SourceFolder + OutFolderName;
-    private static String ImageFolder = OutFolder + "\\" + ImageFolderName;
+    private static final String OutFolderName = Utils.getOutDir();
+    private static final String SourceFolder = Utils.getSharedDataDir() + "djvu\\";
+    private static final String ImageFolder = OutFolderName + ImageFolderName;
 
-    public void saveWithEmbeddedImages() throws Exception
+    public static void main(String[] args) throws Exception
     {
+        saveWithEmbeddedImages();
+        saveWithExportImages();
+    }
+
+    public static void saveWithEmbeddedImages() throws Exception
+    {
+        Logger.startExample("saveWithEmbeddedImages");
         String[] files = new String[]
                 {
                         "auto.svg"
                 };
 
-        for (int i = 0; i < files.length; i++)
+        for (String file : files)
         {
-            this.save(true, files[i], null);
+            save(true, file, null);
         }
+        Logger.endExample();
     }
 
-    public void saveWithExportImages() throws Exception
+    public static void saveWithExportImages() throws Exception
     {
+        Logger.startExample("saveWithExportImages");
         String[] files = new String[]
                 {
                         "auto.svg"
@@ -51,13 +61,14 @@ class MetaFilesAsSVG
 
         for (int i = 0; i < files.length; i++)
         {
-            this.save(false, files[i], expectedImages[i]);
+            save(false, files[i], expectedImages[i]);
         }
+        Logger.endExample();
     }
 
-    private void save(final boolean useEmbedded, String fileName, String[] expectedImages) throws Exception
+    private static void save(final boolean useEmbedded, String fileName, String[] expectedImages) throws Exception
     {
-        File f = new File(OutFolder);
+        File f = new File(ImageFolder);
         if (!f.exists())
         {
             f.mkdir();
@@ -65,7 +76,7 @@ class MetaFilesAsSVG
         String fontStoreType = useEmbedded ? "Embedded" : "Stream";
         String inputFile = SourceFolder + fileName;
         String outFileName = fileName + "_" + fontStoreType + ".svg";
-        String outputFile = OutFolder + "\\" + outFileName;
+        String outputFile = ImageFolder + "\\" + outFileName;
         Image image = Image.load(inputFile);
         final String imageFolder;
         try

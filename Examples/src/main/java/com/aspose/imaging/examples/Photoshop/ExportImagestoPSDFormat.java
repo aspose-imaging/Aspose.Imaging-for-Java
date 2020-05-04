@@ -12,7 +12,7 @@ public class ExportImagestoPSDFormat
     public static void main(String... args)
     {
 		Logger.startExample("ExportImagestoPSDFormat");
-        String dataDir = Utils.getSharedDataDir() + "Photoshop/";
+        String dataDir = Utils.getSharedDataDir() + "export\\";
         String sourceFileName = dataDir + "sample.bmp";
 		try (Image image = Image.load(sourceFileName))
 		{

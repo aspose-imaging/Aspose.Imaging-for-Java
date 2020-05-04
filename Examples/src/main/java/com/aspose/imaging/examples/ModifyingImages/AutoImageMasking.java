@@ -30,7 +30,7 @@ public class AutoImageMasking
         Logger.startExample("AutoImageMasking");
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
-        String sourceFileName = dataDir + "Colored by Faith_small.psd";
+        String sourceFileName = dataDir + "Colored by Faith_small.png";
 
         String inputPointsFileName = dataDir + "Java_ColoredByFaith_small.dat";
         AutoMaskingArgs maskingArgs = new AutoMaskingArgs();
