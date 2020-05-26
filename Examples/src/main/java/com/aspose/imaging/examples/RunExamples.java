@@ -12,10 +12,12 @@ import com.aspose.imaging.examples.Html5Canvas.ExportToHtml5Canvas;
 import com.aspose.imaging.examples.InterruptMonitor.InterruptMonitorSupport;
 import com.aspose.imaging.examples.ManipulatingJPEGImages.*;
 import com.aspose.imaging.examples.ManipulatingPNGImages.*;
+import com.aspose.imaging.examples.ManipulatingTIFFImages.SupportExtractingPathsFromTiff;
 import com.aspose.imaging.examples.ManipulatingTIFFImages.SupportTiffDeflate;
 import com.aspose.imaging.examples.ManipulatingTIFFImages.TiffOptionsConfiguration;
 import com.aspose.imaging.examples.ModifyingImages.*;
 import com.aspose.imaging.examples.ModifyingImages.dicom.ExportToDicom;
+import com.aspose.imaging.examples.ModifyingImages.gif.SupportOfFullFrameGif;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAllEXIFTags;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAndModifyJpegEXIFTags;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadSpecificEXIFTagsInformation;
@@ -77,11 +79,16 @@ public class RunExamples
 		DrawRasterImageOnEMF.main(args);
 		DrawRasterImageOnSVG.main(args);
 		DrawVectorImageToRasterImage.main(args);
+
 		//// =====================================================
 		//// =====================================================
 		////            Modifying And Converting Images
 		//// =====================================================
 		//// =====================================================
+
+		Logger.println("Running modifying and converting images tests:");
+		SupportOfFullFrameGif.main(args);
+		SupportExtractingPathsFromTiff.main(args);
 		ExportToHtml5Canvas.main(args);
 		CompressedVectorFormats.main(args);
 		ExportTiffBatchMode.main(args);
@@ -165,6 +172,9 @@ public class RunExamples
 		//// =====================================================
 		//// =====================================================
 
+		Logger.println("Running memory strategies tests:");
+
+		OptimizationStrategyInDicom.main(args);
 		OptimizationStrategyInWebP.main(args);
 		OptimizationStrategyInRotate.main(args);
 		OptimizationStrategyInFilters.main(args);
