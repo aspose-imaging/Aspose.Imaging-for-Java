@@ -49,7 +49,7 @@ public class AddDiagonalWatermarkToImage
 
             // Draw the string on Image Save output to disk
             graphics.drawString(theString, font, brush, 0, 0, format);
-            image.save(dataDir + "AddDiagonalWatermarkToImage_out.jpg");
+            image.save(Utils.getOutDir() + "AddDiagonalWatermarkToImage_out.jpg");
         }
 
         Logger.endExample();

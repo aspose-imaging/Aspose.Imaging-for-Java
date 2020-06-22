@@ -5,23 +5,24 @@
  */
 package com.aspose.imaging.examples;
 
-import java.lang.Math;
-
 /**
  *
  * @author mfazi
  */
 public final class Assert {
     public static void areEqual(Object left, Object right) {
-        assert left.equals(right);
+        if (!left.equals(right))
+            throw new AssertionError(left + " != " + right);
     }
 
     public static void areEqual(Object left, Object right, String msg) {
-        assert left.equals(right) : msg;
+        if (!left.equals(right))
+            throw new AssertionError(msg);
     }
 
     public static void areEqual(long left, long right, String msg) {
-        assert left == right : msg;
+        if (left != right)
+            throw new AssertionError(left + " != " + right);
     }
 
     public static void areEqual(float left, float right, float epsilon) {
@@ -33,7 +34,9 @@ public final class Assert {
     }
     
     public static void assertTrue(boolean value) {
-        assert value;
+        if (!value)
+            throw new AssertionError("value is false");
+
     }
 
     public static void assertTrue(boolean value, String msg) {

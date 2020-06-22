@@ -45,7 +45,8 @@ public class InterruptMonitorSupport
         {
             // If the file to be deleted does not exist, no exception is thrown.
             File f = new File(Utils.getOutDir() + "big_out.png");
-            assert f.delete() : "Can not delete this file!";
+            if (!f.delete())
+                f.deleteOnExit();
         }
         Logger.endExample();
     }

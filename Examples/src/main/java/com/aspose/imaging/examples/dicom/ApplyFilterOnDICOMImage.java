@@ -17,7 +17,7 @@ public class ApplyFilterOnDICOMImage
         // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir() + "dicom/";
         String inputFile = dataDir + "image.dcm";
-        String outputFile = dataDir + "ApplyFilterOnDICOMImage_out.bmp";
+        String outputFile = Utils.getOutDir() + "ApplyFilterOnDICOMImage_out.bmp";
         File file = new File(inputFile);
         try(FileInputStream fis = new FileInputStream(file))
         {

@@ -16,6 +16,14 @@ import com.aspose.imaging.examples.ManipulatingTIFFImages.SupportExtractingPaths
 import com.aspose.imaging.examples.ManipulatingTIFFImages.SupportTiffDeflate;
 import com.aspose.imaging.examples.ManipulatingTIFFImages.TiffOptionsConfiguration;
 import com.aspose.imaging.examples.ModifyingImages.*;
+import com.aspose.imaging.examples.ModifyingImages.apng.CreateAPNGAnimationFromGraphics;
+import com.aspose.imaging.examples.ModifyingImages.apng.CreateAPNGAnimationFromSinglePageImage;
+import com.aspose.imaging.examples.ModifyingImages.apng.CreateAnimationFromMultipageImage;
+import com.aspose.imaging.examples.ModifyingImages.apng.ExportAPNGToGif;
+import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPngExample;
+import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPsdMultipageExample;
+import com.aspose.imaging.examples.ModifyingImages.cmx.CmxToPdfExample;
+import com.aspose.imaging.examples.ModifyingImages.dicom.DicomToPngExample;
 import com.aspose.imaging.examples.ModifyingImages.dicom.ExportToDicom;
 import com.aspose.imaging.examples.ModifyingImages.gif.SupportOfFullFrameGif;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAllEXIFTags;
@@ -49,6 +57,10 @@ public class RunExamples
 {
  	public static void main(String[] args) throws IOException, InterruptedException, InvocationTargetException, IllegalAccessException
 	{
+		// If you have a license, please uncomment followed lines
+//		License lic = new License();
+//		lic.setLicense("fileOfYourLicense.lic");
+
 		Logger.println("Open public class RunExamples.java. \nIn main() method uncomment the example that you want to run.");
 		Logger.println("Output dir is ", Utils.getOutDir());
 		Logger.println("=====================================================");
@@ -87,6 +99,10 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		ExportAPNGToGif.main(args);
+		CreateAnimationFromMultipageImage.main(args);
+		CreateAPNGAnimationFromSinglePageImage.main(args);
+		CreateAPNGAnimationFromGraphics.main(args);
 		SupportOfFullFrameGif.main(args);
 		SupportExtractingPathsFromTiff.main(args);
 		ExportToHtml5Canvas.main(args);
@@ -200,6 +216,7 @@ public class RunExamples
 		//// =====================================================
 		//// =====================================================
 
+		DicomToPngExample.main(args);
 		AdjustBrightnessDICOM.main(args);
 		AdjustContrastDICOM.main(args);
 		AdjustGammaDICOM.main(args);
@@ -281,6 +298,8 @@ public class RunExamples
 		//// =====================================================
 		//// =====================================================
 
+		WebPToPdfExample.main(args);
+		WebPToGifExample.main(args);
 		ConvertGIFFImageFrame.main(args);
 		CreatingWebPImage.main(args);
 		ExportToWebP.main(args);
@@ -313,6 +332,7 @@ public class RunExamples
 		////                           CMX
 		//// =====================================================
 		//// =====================================================
+		CmxToPdfExample.main(args);
 		CMXToPNGConversion.main(args);
 
 		//// =====================================================
@@ -321,6 +341,8 @@ public class RunExamples
 		//// =====================================================
 		//// =====================================================
 		SupportOfCDR.main(args);
+		CdrToPsdMultipageExample.main(args);
+		CdrToPngExample.main(args);
 
 		//// =====================================================
 		//// =====================================================

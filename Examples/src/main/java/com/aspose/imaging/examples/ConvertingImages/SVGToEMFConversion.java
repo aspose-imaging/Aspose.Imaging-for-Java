@@ -30,7 +30,10 @@ public class SVGToEMFConversion
         String outputPath = Path.combine(Utils.getOutDir(), "output/");
 
         File dir = new File(outputPath);
-        assert dir.exists() || dir.mkdirs() : "Can not create output directory!";
+        if (!dir.exists() && !dir.mkdirs())
+        {
+            throw new AssertionError("Can not create output directory!");
+        }
 
         for (String fileName : testFiles)
         {

@@ -27,7 +27,7 @@ public class ConvertDjvuToTiff
             exportOptions.setMultiPageOptions(new DjvuMultiPageOptions());
 
             //Call Save method while passing instance of TiffOptions
-            image.save(dataDir + "ConvertDjvuToTiff_out.tiff", exportOptions);
+            image.save(Utils.getOutDir() + "ConvertDjvuToTiff_out.tiff", exportOptions);
 
             // Display Status.
             Logger.println("File converted");

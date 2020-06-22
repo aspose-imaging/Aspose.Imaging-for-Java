@@ -35,6 +35,7 @@ public final class Logger
         System.out.println(currentExample);
         currentExample = null;
         idents = "";
+        Utils.deleteAllOutputFiles();
     }
 
     public static void println(String text)
@@ -57,7 +58,7 @@ public final class Logger
     public static void println(int value)
     {
         System.out.print(idents);
-        System.out.println(String.valueOf(value));
+        System.out.println(value);
     }
 
     public static void println(String text, int value)
@@ -65,7 +66,7 @@ public final class Logger
         System.out.print(idents);
         System.out.print(text);
         System.out.print(" ");
-        System.out.println(String.valueOf(value));
+        System.out.println(value);
     }
 
     public static void printf(String text, Object ... args)
