@@ -29,24 +29,20 @@ Aspose.Imaging for Java offers robust image compression and high processing spee
 - De-skew & transform images.
 - Set image properties.
 
-## Compact Framework Off Notice
+For the detailed notes, please visit [Aspose.Imaging for Java 20.7 - Release notes](https://docs.aspose.com/display/imagingjava/Aspose.Imaging+for+Java+20.7+-+Release+notes ).
 
-Please note, since 20.6 release of Aspose.Imaging support of .NET Compact Framework has been removed.
-
-For the detailed notes, please visit [Aspose.Imaging for Java 20.6 - Release notes](https://docs.aspose.com/display/imagingjava/Aspose.Imaging+for+Java+20.6+-+Release+notes).
-
-## Read & Write Image Formats
+## Load & Save Image Formats
 
 **Raster Formats:** JPEG2000, JPEG, BMP, TIFF, GIF, PNG
 **Metafiles:** EMF, WMF
 **Other:** WEBP, SVG
 
-## Save Images As
+## Save Images Formats
 
 **Fixed:** PDF
 **Photoshop:** PSD
 
-## Read Image Formats
+## Load Image Formats
 
 **Various:** DICOM, DjVu, DNG, ODG, CMX, CDR, DIB, OTG, FODG, EPS (raster preview only)
 
@@ -63,7 +59,7 @@ Simply get it from [Aspose.Imaging for Java page](https://downloads.aspose.com/i
 	<dependency>
 		<groupId>com.aspose</groupId>
 		<artifactId>aspose-imaging</artifactId>
-		<version>20.6</version>
+		<version>20.7</version>
 		<classifier>jdk16</classifier>
 		<type>jar</type>
 	</dependency>
@@ -91,6 +87,44 @@ try (Image image = Image.load(dir + "template.jpg"))
 {
     image.resize(300, 300);
     image.save(dir + "output.jpg");
+}
+```
+
+## Create png image, manipulate it and save - Java
+
+Using Aspose.Imaging for Java you can easily create images with specified parameters, manipulate them and save.
+
+```java
+// Image width and height
+int width = 500;
+int height = 300;
+
+// Where created image to store
+String path = "C:/createdImage.png";
+// Create options
+try (PngOptions options = new PngOptions())
+{
+	options.setSource(new FileCreateSource(path, false));
+	
+	try (PngImage image = (PngImage)Image.create(options, width, height))
+	{          
+		 // Create and initialize an instance of Graphics class 
+		 // and Clear Graphics surface
+		 Graphics graphic = new Graphics(image);
+		 graphic.clear(Color.getGreen());
+		 // Draw line on image
+		 graphic.drawLine(new Pen(Color.getBlue()), 9, 9, 90, 90);        
+
+		 // Resize image
+		 int newWidth = 400;
+		 image.resizeWidthProportionally(newWidth, ResizeType.LanczosResample);  
+
+		 // Crop the image to specified area
+		com.aspose.imaging.Rectangle area = new com.aspose.imaging.Rectangle(10, 10, 200, 200);
+		image.crop(area);
+	   
+		image.save();
+	}
 }
 ```
 

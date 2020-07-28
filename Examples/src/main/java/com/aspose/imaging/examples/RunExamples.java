@@ -99,12 +99,13 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		ConvertTo1BitPng.main(args);
 		ExportAPNGToGif.main(args);
 		CreateAnimationFromMultipageImage.main(args);
+		SupportExtractingPathsFromTiff.main(args);
 		CreateAPNGAnimationFromSinglePageImage.main(args);
 		CreateAPNGAnimationFromGraphics.main(args);
 		SupportOfFullFrameGif.main(args);
-		SupportExtractingPathsFromTiff.main(args);
 		ExportToHtml5Canvas.main(args);
 		CompressedVectorFormats.main(args);
 		ExportTiffBatchMode.main(args);
