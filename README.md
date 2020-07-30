@@ -1,23 +1,19 @@
-## Aspose.Imaging for Java
-
-This package contains Java example code for [Aspose.Imaging for Java](https://products.aspose.com/imaging/java).
-
-<p align="center">
-  <a title="Download ZIP" href="https://github.com/asposeimaging/Aspose_Imaging_Java/archive/master.zip">
-     <img src="http://i.imgur.com/hwNhrGZ.png" />
-  </a>
-</p>
-
-Directory | Description
---------- | -----------
-[Examples](Examples)  |  Examples for Aspose.Imaging for Java
-[Plugins](Plugins)  |  Third-party integration plugins for Aspose.Imaging for Java
-
 # Java API for Image Processing
 
 It is a [standalone Imaging API](https://products.aspose.com/imaging/java) consists of Java routines that enable your Java applications to draw as well as perform basic to advanced level processing of raster & vector images.
 
 Aspose.Imaging for Java offers robust image compression and high processing speed through native byte access and a range of efficient algorithms. It not only manipulate, export and convert images but also lets you dynamically draw objects using pixel manipulation and Graphics Path.
+
+Directory | Description
+--------- | -----------
+[Examples](https://github.com/aspose-imaging/Aspose.Imaging-for-Java/tree/master/Examples) | A collection of Java examples that help you learn the product features.
+[Plugins](https://github.com/aspose-imaging/Aspose.Imaging-for-Java/tree/master/Plugins) | Plugins that will demonstrate one or more features of Aspose.Imaging for Java.
+
+<p align="center">
+  <a title="Download ZIP" href="https://github.com/asposeimaging/Aspose_Imaging_Java/archive/master.zip">
+     <img src="https://raw.githubusercontent.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
+  </a>
+</p>
 
 ## Imaging API Features
 
@@ -29,120 +25,52 @@ Aspose.Imaging for Java offers robust image compression and high processing spee
 - De-skew & transform images.
 - Set image properties.
 
-For the detailed notes, please visit [Aspose.Imaging for Java 20.7 - Release notes](https://docs.aspose.com/display/imagingjava/Aspose.Imaging+for+Java+20.7+-+Release+notes ).
+## Read & Write Image Formats
 
-## Load & Save Image Formats
+**Raster Formats:** JPEG2000, JPEG, BMP, TIFF, GIF, PNG, APNG\
+**Metafiles:** EMF, EMZ, WMF, WMZ\
+**Other:** SVG, SVGZ, DICOM
 
-**Raster Formats:** JPEG2000, JPEG, BMP, TIFF, GIF, PNG
-**Metafiles:** EMF, WMF
-**Other:** WEBP, SVG
+## Save Images As
 
-## Save Images Formats
+**Fixed:** PDF\
+**Photoshop:** PSD\
+**Markup:** HTML5 Canvas
 
-**Fixed:** PDF
-**Photoshop:** PSD
+## Read Image Formats
 
-## Load Image Formats
+**Various:** DjVu, DNG, ODG, CMX, CDR, DIB, OTG, FODG, EPS (raster preview only), WEBP
 
-**Various:** DICOM, DjVu, DNG, ODG, CMX, CDR, DIB, OTG, FODG, EPS (raster preview only)
+## Supported Operating Systems
 
-## Platform Independence
+Aspose.Imaging for Java can be virtually run in any OS where Java is installed (since JDK 1.6)
 
-Aspose.Imaging for Java can be used to develop applications on any Java platform (except Android) starting from JRE 1.6.
+- Windows (since 7)
+- Linux
+- MacOS
+- Any OS where Java is installed.
 
-## Getting Started with Aspose.Imaging for Java
+Aspose.Imaging works for both x86 and x64 versions of the above listed operating systems.
 
-Are you ready to give Aspose.Imaging for Java a try? 
-Simply get it from [Aspose.Imaging for Java page](https://downloads.aspose.com/imaging/java) or integrate it to your maven project such way:
-``` xml
-<dependencies>
-	<dependency>
-		<groupId>com.aspose</groupId>
-		<artifactId>aspose-imaging</artifactId>
-		<version>20.7</version>
-		<classifier>jdk16</classifier>
-		<type>jar</type>
-	</dependency>
-</dependencies>
+**Note:** In Linux OS, it is recommended to install the package with Microsoft compatible fonts (e.g. `sudo apt-get install ttf-mscorefonts-installer`).
 
-<repositories>
-	<repository>
-		<id>aspose-maven-repository</id>
-		 <url>https://repository.aspose.com/repo/</url>
-	</repository>
-	<repository>
-		<id>com.springsource.repository.bundles.external</id>
-		<name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
-		<url>http://repository.springsource.com/maven/bundles/external</url>
-	</repository>
-</repositories>
-```
+## Get Started with Aspose.Imaging for Java
 
-## Resize a JPG Image via java Code
+Aspose hosts all Java APIs at the [Aspose Repository](https://repository.aspose.com/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-imaging). You can easily use Aspose.BarCode for Java API directly in your Maven projects with simple configurations. For the detailed instructions please visit [Installing Aspose.Imaging for Java from Maven Repository](https://docs.aspose.com/display/imagingjava/Installation#Installation-InstallingAspose.ImagingforJavafromMavenRepository) documentation page.
 
-Execute below code snippet to see how Aspose.Imaging performs in your environment or check the [GitHub Repository](https://github.com/aspose-imaging/Aspose.Imaging-for-Java) for other common usage scenarios. 
-
-``` java
-try (Image image = Image.load(dir + "template.jpg"))
-{
-    image.resize(300, 300);
-    image.save(dir + "output.jpg");
-}
-```
-
-## Create png image, manipulate it and save - Java
-
-Using Aspose.Imaging for Java you can easily create images with specified parameters, manipulate them and save.
+## Crop EMF Image by Rectangle using Java
 
 ```java
-// Image width and height
-int width = 500;
-int height = 300;
+MetafileImage metaImage = (MetafileImage) Image.load(dataDir + "Picture1.emf");
 
-// Where created image to store
-String path = "C:/createdImage.png";
-// Create options
-try (PngOptions options = new PngOptions())
-{
-	options.setSource(new FileCreateSource(path, false));
-	
-	try (PngImage image = (PngImage)Image.create(options, width, height))
-	{          
-		 // Create and initialize an instance of Graphics class 
-		 // and Clear Graphics surface
-		 Graphics graphic = new Graphics(image);
-		 graphic.clear(Color.getGreen());
-		 // Draw line on image
-		 graphic.drawLine(new Pen(Color.getBlue()), 9, 9, 90, 90);        
+// Create an instance of Rectangle class with desired size
+Rectangle rectangle = new Rectangle(10, 10, 100, 100);
 
-		 // Resize image
-		 int newWidth = 400;
-		 image.resizeWidthProportionally(newWidth, ResizeType.LanczosResample);  
+// Perform the crop operation on object of Rectangle class
+metaImage.crop(rectangle);
 
-		 // Crop the image to specified area
-		com.aspose.imaging.Rectangle area = new com.aspose.imaging.Rectangle(10, 10, 200, 200);
-		image.crop(area);
-	   
-		image.save();
-	}
-}
+// Save the result in PNG format
+metaImage.save(dataDir + "CropbyRectangle_out.png", new PngOptions());
 ```
 
-## Recover a Broken TIFF
-
-You can programmatically recover a damaged TIFF file with the help of Aspose.Imaging for Java API as demonstrated below.
-
-``` java
-// create an instance of LoadOptions and set LoadOptions properties
-LoadOptions loadOptions = new LoadOptions();
-loadOptions.setDataRecoveryMode(DataRecoveryMode.ConsistentRecover);
-loadOptions.setDataBackgroundColor(Color.getRed());
-
-// create an instance of Image and load a damaged image by passing the instance of LoadOptions
-try (Image image = Image.load(dir + "template.tiff", loadOptions))
-{
-    // do processing
-}
-```
-
-[Product Page](https://products.aspose.com/imaging/java) | [Docs](https://docs.aspose.com/display/imagingjava/Home) | [Demos](https://products.aspose.app/imaging/family) | [API Reference](https://apireference.aspose.com/imaging/java) | [Examples](https://github.com/aspose-imaging/Aspose.Imaging-for-Java) | [Blog](https://blog.aspose.com/category/imaging/) | [Free Support](https://forum.aspose.com/c/imaging) | [Temporary License](https://purchase.aspose.com/temporary-license)
+[Product Page](https://products.aspose.com/imaging/java) | [Docs](https://docs.aspose.com/display/imagingjava/Home) | [Demos](https://products.aspose.app/imaging/family) | [API Reference](https://apireference.aspose.com/java/imaging) | [Examples](https://github.com/aspose-imaging/Aspose.Imaging-for-Java) | [Blog](https://blog.aspose.com/category/imaging/) | [Free Support](https://forum.aspose.com/c/imaging) | [Temporary License](https://purchase.aspose.com/temporary-license)
