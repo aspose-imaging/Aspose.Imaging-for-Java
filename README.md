@@ -20,7 +20,7 @@ Directory | Description
 - Draw raster images with graphics.
 - Draw vector images.
 - Converting images to various formats.
-- [Apply masking](https://docs.aspose.com/display/imagingjava/Applying+Masking+to+Images) as well as [Median & Wiener](https://docs.aspose.com/display/imagingjava/Applying+Median+and+Wiener+Filters) filters.
+- [Apply masking](https://docs.aspose.com/imaging/java/applying-masking-to-images/) as well as [Median & Wiener](https://docs.aspose.com/imaging/java/applying-median-and-wiener-filters/) filters.
 - Crop, rotate & resize images via API.
 - De-skew & transform images.
 - Set image properties.
