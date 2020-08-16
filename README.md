@@ -1,6 +1,6 @@
 # Java API for Image Processing
 
-It is a [standalone Imaging API](https://products.aspose.com/imaging/java) consists of Java routines that enable your Java applications to draw as well as perform basic to advanced level processing of raster & vector images.
+It is a standalone [Imaging API](https://products.aspose.com/imaging/java) consisting of Java routines that enable your Java applications to draw as well as perform basic to advanced level processing of raster & vector images.
 
 Aspose.Imaging for Java offers robust image compression and high processing speed through native byte access and a range of efficient algorithms. It not only manipulate, export and convert images but also lets you dynamically draw objects using pixel manipulation and Graphics Path.
 
@@ -58,18 +58,18 @@ Aspose.Imaging works for both x86 and x64 versions of the above listed operating
 
 Aspose hosts all Java APIs at the [Aspose Repository](https://repository.aspose.com/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-imaging). You can easily use Aspose.BarCode for Java API directly in your Maven projects with simple configurations. For the detailed instructions please visit [Installing Aspose.Imaging for Java from Maven Repository](https://docs.aspose.com/imaging/java/installation/) documentation page.
 
-## Crop EMF Image by Rectangle using Java
+## Crop EMF Image by Rectangle
 
 ```java
 MetafileImage metaImage = (MetafileImage) Image.load(dataDir + "Picture1.emf");
 
-// Create an instance of Rectangle class with desired size
+// create an instance of Rectangle class with desired size
 Rectangle rectangle = new Rectangle(10, 10, 100, 100);
 
-// Perform the crop operation on object of Rectangle class
+// perform the crop operation on object of Rectangle class
 metaImage.crop(rectangle);
 
-// Save the result in PNG format
+// save the result in PNG format
 metaImage.save(dataDir + "CropbyRectangle_out.png", new PngOptions());
 ```
 
