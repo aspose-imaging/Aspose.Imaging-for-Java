@@ -73,4 +73,4 @@ metaImage.crop(rectangle);
 metaImage.save(dataDir + "CropbyRectangle_out.png", new PngOptions());
 ```
 
-[Home](https://www.aspose.com/) | [Product Page](https://products.aspose.com/imaging/java) | [Docs](https://docs.aspose.com/imaging/java/) | [Demos](https://products.aspose.app/imaging/family) | [API Reference](https://apireference.aspose.com/java/imaging) | [Examples](https://github.com/aspose-imaging/Aspose.Imaging-for-Java) | [Blog](https://blog.aspose.com/category/imaging/) | [Free Support](https://forum.aspose.com/c/imaging) | [Temporary License](https://purchase.aspose.com/temporary-license)
+[Home](https://www.aspose.com/) | [Product Page](https://products.aspose.com/imaging/java) | [Docs](https://docs.aspose.com/imaging/java/) | [Demos](https://products.aspose.app/imaging/family) | [API Reference](https://apireference.aspose.com/imaging/java) | [Examples](https://github.com/aspose-imaging/Aspose.Imaging-for-Java) | [Blog](https://blog.aspose.com/category/imaging/) | [Free Support](https://forum.aspose.com/c/imaging) | [Temporary License](https://purchase.aspose.com/temporary-license)
