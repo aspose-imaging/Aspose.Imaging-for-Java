@@ -25,10 +25,12 @@ import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPsdMultipageExample;
 import com.aspose.imaging.examples.ModifyingImages.cmx.CmxToPdfExample;
 import com.aspose.imaging.examples.ModifyingImages.dicom.DicomToPngExample;
 import com.aspose.imaging.examples.ModifyingImages.dicom.ExportToDicom;
+import com.aspose.imaging.examples.ModifyingImages.eps.ExportEps;
 import com.aspose.imaging.examples.ModifyingImages.gif.SupportOfFullFrameGif;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAllEXIFTags;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAndModifyJpegEXIFTags;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadSpecificEXIFTagsInformation;
+import com.aspose.imaging.examples.ModifyingImages.tiff.CreateGraphicsPathFromPathTiffResourcesAndViceVersa;
 import com.aspose.imaging.examples.ModifyingImages.tiff.ExportTiffBatchMode;
 import com.aspose.imaging.examples.ModifyingImages.webp.*;
 import com.aspose.imaging.examples.Photoshop.ExportImagestoPSDFormat;
@@ -99,6 +101,8 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		ExportEps.main(args);
+		CreateGraphicsPathFromPathTiffResourcesAndViceVersa.main(args);
 		ConvertTo1BitPng.main(args);
 		ExportAPNGToGif.main(args);
 		CreateAnimationFromMultipageImage.main(args);

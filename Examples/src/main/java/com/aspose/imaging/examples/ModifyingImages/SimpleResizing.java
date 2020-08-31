@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.ModifyingImages;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.ResizeType;
 import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 
@@ -17,6 +18,12 @@ public class SimpleResizing
 			image.resize(300, 300);
 			image.save(Utils.getOutDir() + "SimpleResizing_out.jpg");
 		}
+
+		try (Image image = Image.load(dataDir + "aspose-logo.jpg"))
+		{
+			image.resize(200, 200, ResizeType.CatmullRom);
+		}
+
 		Logger.endExample();
     }
 

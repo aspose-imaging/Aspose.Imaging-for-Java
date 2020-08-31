@@ -37,6 +37,7 @@ public final class Utils {
 			{
 				sb.append(File.separator).append(subdir);
 			}
+			sb.append(File.separator);
 			String s = sb.toString();
 
 			File f = new File(s);

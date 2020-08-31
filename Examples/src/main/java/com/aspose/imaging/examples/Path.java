@@ -14,4 +14,11 @@ public class Path
         
         return dataDir + File.separator + dir;
     }
+
+    public static void deleteFile(String name)
+    {
+        File f = new File(name);
+        if (!f.delete())
+            f.deleteOnExit();
+    }
 }
