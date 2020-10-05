@@ -23,6 +23,7 @@ import com.aspose.imaging.examples.ModifyingImages.apng.ExportAPNGToGif;
 import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPngExample;
 import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPsdMultipageExample;
 import com.aspose.imaging.examples.ModifyingImages.cmx.CmxToPdfExample;
+import com.aspose.imaging.examples.ModifyingImages.dicom.DicomCompression;
 import com.aspose.imaging.examples.ModifyingImages.dicom.DicomToPngExample;
 import com.aspose.imaging.examples.ModifyingImages.dicom.ExportToDicom;
 import com.aspose.imaging.examples.ModifyingImages.eps.ExportEps;
@@ -30,6 +31,7 @@ import com.aspose.imaging.examples.ModifyingImages.gif.SupportOfFullFrameGif;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAllEXIFTags;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAndModifyJpegEXIFTags;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadSpecificEXIFTagsInformation;
+import com.aspose.imaging.examples.ModifyingImages.tga.ConvertToTGA;
 import com.aspose.imaging.examples.ModifyingImages.tiff.CreateGraphicsPathFromPathTiffResourcesAndViceVersa;
 import com.aspose.imaging.examples.ModifyingImages.tiff.ExportTiffBatchMode;
 import com.aspose.imaging.examples.ModifyingImages.webp.*;
@@ -215,12 +217,21 @@ public class RunExamples
 
 		Deskew.main(args);
 
+		// =====================================================
+		// =====================================================
+		//                        TGA
+		// =====================================================
+		// =====================================================
+
+		ConvertToTGA.main(args);
+
 		//// =====================================================
 		//// =====================================================
 		////                        DICOM
 		//// =====================================================
 		//// =====================================================
 
+		DicomCompression.main(args);
 		DicomToPngExample.main(args);
 		AdjustBrightnessDICOM.main(args);
 		AdjustContrastDICOM.main(args);
@@ -311,6 +322,7 @@ public class RunExamples
 		ExportWebPToOtherImageFormats.main(args);
 		ExtractFrameFromWebPImage.main(args);
 		OpenWebPFile.main(args);
+
 		//// =====================================================
 		//// =====================================================
 		////                           DjVu
