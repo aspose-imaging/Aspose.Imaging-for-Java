@@ -20,9 +20,11 @@ import com.aspose.imaging.examples.ModifyingImages.apng.CreateAPNGAnimationFromG
 import com.aspose.imaging.examples.ModifyingImages.apng.CreateAPNGAnimationFromSinglePageImage;
 import com.aspose.imaging.examples.ModifyingImages.apng.CreateAnimationFromMultipageImage;
 import com.aspose.imaging.examples.ModifyingImages.apng.ExportAPNGToGif;
+import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPdfExample;
 import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPngExample;
 import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPsdMultipageExample;
 import com.aspose.imaging.examples.ModifyingImages.cmx.CmxToPdfExample;
+import com.aspose.imaging.examples.ModifyingImages.cmx.CmxToTiffExample;
 import com.aspose.imaging.examples.ModifyingImages.dicom.DicomCompression;
 import com.aspose.imaging.examples.ModifyingImages.dicom.DicomToPngExample;
 import com.aspose.imaging.examples.ModifyingImages.dicom.ExportToDicom;
@@ -349,6 +351,7 @@ public class RunExamples
 		////                           CMX
 		//// =====================================================
 		//// =====================================================
+		CmxToTiffExample.main(args);
 		CmxToPdfExample.main(args);
 		CMXToPNGConversion.main(args);
 
@@ -357,6 +360,7 @@ public class RunExamples
 		////                           CDR
 		//// =====================================================
 		//// =====================================================
+		CdrToPdfExample.main(args);
 		SupportOfCDR.main(args);
 		CdrToPsdMultipageExample.main(args);
 		CdrToPngExample.main(args);

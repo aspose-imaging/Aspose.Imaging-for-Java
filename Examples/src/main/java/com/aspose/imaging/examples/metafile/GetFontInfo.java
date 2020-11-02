@@ -1,6 +1,5 @@
 package com.aspose.imaging.examples.metafile;
 
-import com.aspose.imaging.FontSettings;
 import com.aspose.imaging.Image;
 import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
@@ -12,12 +11,6 @@ public class GetFontInfo
     {
         Logger.startExample("GetFontInfo");
         String dataDir = Utils.getSharedDataDir() + "metafile/";
-        //ExStart:GetFontInfo
-        Logger.println("Get list of font names accessible to Aspose.Imaging API");
-        for (String f : FontSettings.getAllFonts())
-        {
-            Logger.println("\t" + f);
-        }
 
         Logger.println("Get list of font names used in the metafile");
         try(MetaImage metafile = (MetaImage)Image.load(dataDir + "Sample1.emf"))
