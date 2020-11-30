@@ -13,6 +13,15 @@ public final class Logger
     private static String currentExample;
     private static String idents = "";
 
+    public static void startExample()
+    {
+        Throwable e = new Throwable();
+        String className = e.getStackTrace()[1].getClassName();
+        if (className.contains("."))
+            className = className.substring(className.lastIndexOf('.')+1);
+        startExample(className);
+    }
+
     public static void startExample(String name)
     {
         if (currentExample != null)

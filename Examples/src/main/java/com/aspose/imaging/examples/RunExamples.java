@@ -29,10 +29,12 @@ import com.aspose.imaging.examples.ModifyingImages.dicom.DicomCompression;
 import com.aspose.imaging.examples.ModifyingImages.dicom.DicomToPngExample;
 import com.aspose.imaging.examples.ModifyingImages.dicom.ExportToDicom;
 import com.aspose.imaging.examples.ModifyingImages.eps.ExportEps;
+import com.aspose.imaging.examples.ModifyingImages.gif.CreateGifUsingAddPage;
 import com.aspose.imaging.examples.ModifyingImages.gif.SupportOfFullFrameGif;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAllEXIFTags;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAndModifyJpegEXIFTags;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadSpecificEXIFTagsInformation;
+import com.aspose.imaging.examples.ModifyingImages.removebackground.GraphCutAutoMasking;
 import com.aspose.imaging.examples.ModifyingImages.tga.ConvertToTGA;
 import com.aspose.imaging.examples.ModifyingImages.tiff.CreateGraphicsPathFromPathTiffResourcesAndViceVersa;
 import com.aspose.imaging.examples.ModifyingImages.tiff.ExportTiffBatchMode;
@@ -105,6 +107,7 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		CreateGifUsingAddPage.main(args);
 		ExportEps.main(args);
 		CreateGraphicsPathFromPathTiffResourcesAndViceVersa.main(args);
 		ConvertTo1BitPng.main(args);
@@ -217,6 +220,8 @@ public class RunExamples
 		//// =====================================================
 		//// =====================================================
 
+		System.out.println("Running additional features tests:");
+		GraphCutAutoMasking.main(args);
 		Deskew.main(args);
 
 		// =====================================================

@@ -1,6 +1,7 @@
 package com.aspose.imaging.examples.Html5Canvas;
 
 import com.aspose.imaging.Image;
+import com.aspose.imaging.Size;
 import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.imageoptions.Html5CanvasOptions;
@@ -17,7 +18,7 @@ public class ExportToHtml5Canvas
         try (Image image = Image.load(dataDir + "Sample.svg"))
         {
             VectorRasterizationOptions vectorRasterizationOptions = new SvgRasterizationOptions();
-            //vectorRasterizationOptions.setPageSize(Size.to_SizeF(image.getSize()));
+            vectorRasterizationOptions.setPageSize(Size.to_SizeF(image.getSize()));
             Html5CanvasOptions htmlOptions = new Html5CanvasOptions();
             htmlOptions.setVectorRasterizationOptions(vectorRasterizationOptions);
             image.save(Utils.getOutDir() + "Sample.html", htmlOptions);
