@@ -1,3 +1,4 @@
+![GitHub all releases](https://img.shields.io/github/downloads/aspose-imaging/Aspose.imaging-for-Java/total) ![GitHub](https://img.shields.io/github/license/aspose-imaging/Aspose.imaging-for-java)
 # Java API for Image Processing
 
 It is a standalone [Imaging API](https://products.aspose.com/imaging/java) consisting of Java routines that enable your Java applications to draw as well as perform basic to advanced level processing of raster & vector images.
