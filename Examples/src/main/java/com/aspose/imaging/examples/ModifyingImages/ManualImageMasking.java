@@ -60,13 +60,14 @@ public class ManualImageMasking
             options.setColorType(PngColorType.TruecolorWithAlpha);
             options.setSource(new StreamSource());
             maskingOptions.setExportOptions(options);
-            MaskingResult[] maskingResults = new ImageMasking(image).decompose(maskingOptions);
-            try (Image resultImage = maskingResults[1].getImage())
+            try (MaskingResult maskingResults = new ImageMasking(image).decompose(maskingOptions))
             {
-                resultImage.save(outputFileName);
+                try (Image resultImage = maskingResults.get_Item(1).getImage())
+                {
+                    resultImage.save(outputFileName);
+                }
             }
         }
         Logger.endExample();
     }
-
 }

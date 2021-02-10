@@ -21,7 +21,7 @@ public class ConcatenatingTIFFImagesfromStream
         // Note the better performance you get using RandomAccessFile or string path
         try (FileInputStream fileStream = new FileInputStream(dataDir + "TestDemo.tif"))
         {
-            try (FileInputStream fileStream1 = new FileInputStream(dataDir + "sample.tif"))
+            try (FileInputStream fileStream1 = new FileInputStream(dataDir + "sample1.tif"))
             {
 
                 // Create an instance of TiffImage and load the destination image from filestream

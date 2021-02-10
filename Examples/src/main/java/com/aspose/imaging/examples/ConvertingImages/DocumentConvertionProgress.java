@@ -8,7 +8,6 @@ import com.aspose.imaging.examples.Path;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.jpeg.JpegCompressionMode;
 import com.aspose.imaging.imageoptions.JpegOptions;
-import com.aspose.imaging.progressmanagement.EventType;
 import com.aspose.imaging.progressmanagement.ProgressEventHandlerInfo;
 
 public class DocumentConvertionProgress
@@ -56,11 +55,11 @@ public class DocumentConvertionProgress
 
     static void progressCallback(ProgressEventHandlerInfo info)
     {
-        Logger.printf("Progress %s : %d/%d", EventType.toString(EventType.class, info.getEventType()), info.getValue(), info.getMaxValue());
+        Logger.printf("Progress %s : %d/%d", info.getEventType(), info.getValue(), info.getMaxValue());
     }
 
     static void exportProgressCallback(ProgressEventHandlerInfo info)
     {
-        Logger.printf("Export event %s : %d/%d", EventType.toString(EventType.class, info.getEventType()), info.getValue(), info.getMaxValue());
+        Logger.printf("Export event %s : %d/%d", info.getEventType(), info.getValue(), info.getMaxValue());
     }
 }

@@ -46,10 +46,12 @@ public class AutoImageMasking
             options.setColorType(PngColorType.TruecolorWithAlpha);
             options.setSource(new StreamSource());
             maskingOptions.setExportOptions(options);
-            MaskingResult[] maskingResults = new ImageMasking(image).decompose(maskingOptions);
-            try (Image resultImage = maskingResults[1].getImage())
+            try (MaskingResult maskingResults = new ImageMasking(image).decompose(maskingOptions))
             {
-                resultImage.save(outputFileName);
+                try (Image resultImage = maskingResults.get_Item(1).getImage())
+                {
+                    resultImage.save(outputFileName);
+                }
             }
         }
         Logger.endExample();
@@ -108,8 +110,8 @@ public class AutoImageMasking
     //ExStart:LEIntegerReader
     private static class LEIntegerReader
     {
-        private InputStream stream;
-        private byte[] buffer = new byte[4];
+        private final InputStream stream;
+        private final byte[] buffer = new byte[4];
 
         LEIntegerReader(InputStream stream)
         {

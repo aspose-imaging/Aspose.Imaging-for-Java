@@ -25,7 +25,7 @@ public class GraphCutAutoMasking
 
         String inputFile = dataDir + "input.png";
 
-        MaskingResult[] results;
+        MaskingResult results;
         try (RasterImage image = (RasterImage) Image.load(inputFile))
         {
             // To use Graph Cut with auto calculated strokes, AutoMaskingGraphCutOptions is used.
@@ -45,13 +45,15 @@ public class GraphCutAutoMasking
             results = new ImageMasking(image).decompose(options);
         }
 
-        try (RasterImage resultImage = (RasterImage)results[1].getImage())
+        try (RasterImage resultImage = results.get_Item(1).getImage())
         {
             final PngOptions options = new PngOptions();
             options.setColorType(PngColorType.TruecolorWithAlpha);
 
             resultImage.save(outDir + "output.png", options);
         }
+
+        results.close();
 
         Utils.deleteFile(outDir + "output.png");
 

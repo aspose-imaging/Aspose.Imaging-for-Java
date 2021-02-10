@@ -20,6 +20,7 @@ import com.aspose.imaging.examples.ModifyingImages.apng.CreateAPNGAnimationFromG
 import com.aspose.imaging.examples.ModifyingImages.apng.CreateAPNGAnimationFromSinglePageImage;
 import com.aspose.imaging.examples.ModifyingImages.apng.CreateAnimationFromMultipageImage;
 import com.aspose.imaging.examples.ModifyingImages.apng.ExportAPNGToGif;
+import com.aspose.imaging.examples.ModifyingImages.bmp.BmpRLE4;
 import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPdfExample;
 import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPngExample;
 import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPsdMultipageExample;
@@ -34,6 +35,7 @@ import com.aspose.imaging.examples.ModifyingImages.gif.SupportOfFullFrameGif;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAllEXIFTags;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAndModifyJpegEXIFTags;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadSpecificEXIFTagsInformation;
+import com.aspose.imaging.examples.ModifyingImages.multipage.MultipageFromImages;
 import com.aspose.imaging.examples.ModifyingImages.removebackground.GraphCutAutoMasking;
 import com.aspose.imaging.examples.ModifyingImages.tga.ConvertToTGA;
 import com.aspose.imaging.examples.ModifyingImages.tiff.CreateGraphicsPathFromPathTiffResourcesAndViceVersa;
@@ -107,6 +109,8 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		BmpRLE4.main(args);
+		MultipageFromImages.main(args);
 		CreateGifUsingAddPage.main(args);
 		ExportEps.main(args);
 		CreateGraphicsPathFromPathTiffResourcesAndViceVersa.main(args);
