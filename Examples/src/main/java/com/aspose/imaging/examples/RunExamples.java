@@ -40,6 +40,7 @@ import com.aspose.imaging.examples.ModifyingImages.removebackground.GraphCutAuto
 import com.aspose.imaging.examples.ModifyingImages.tga.ConvertToTGA;
 import com.aspose.imaging.examples.ModifyingImages.tiff.CreateGraphicsPathFromPathTiffResourcesAndViceVersa;
 import com.aspose.imaging.examples.ModifyingImages.tiff.ExportTiffBatchMode;
+import com.aspose.imaging.examples.ModifyingImages.tiff.SetDPIInExportedPdf;
 import com.aspose.imaging.examples.ModifyingImages.webp.*;
 import com.aspose.imaging.examples.Photoshop.ExportImagestoPSDFormat;
 import com.aspose.imaging.examples.SVG.SVGToBMPConversion;
@@ -122,6 +123,7 @@ public class RunExamples
 		CreateAPNGAnimationFromGraphics.main(args);
 		SupportOfFullFrameGif.main(args);
 		ExportToHtml5Canvas.main(args);
+		SetDPIInExportedPdf.main(args);
 		CompressedVectorFormats.main(args);
 		ExportTiffBatchMode.main(args);
 		ExportToDicom.main(args);
