@@ -5,6 +5,7 @@ import com.aspose.imaging.examples.CMX.CMXToPNGConversion;
 import com.aspose.imaging.examples.ConvertingImages.*;
 import com.aspose.imaging.examples.ConvertingImages.memorystrategy.OptimizationStrategyInDJVU;
 import com.aspose.imaging.examples.ConvertingImages.memorystrategy.OptimizationStrategyInJPEG2000;
+import com.aspose.imaging.examples.ConvertingImages.otg.DefaultFontUsageImprove;
 import com.aspose.imaging.examples.ConvertingImages.otg.SupportOfFODG;
 import com.aspose.imaging.examples.ConvertingImages.svg.SvgNativeResize;
 import com.aspose.imaging.examples.EMF.CropEMFImage;
@@ -29,6 +30,7 @@ import com.aspose.imaging.examples.ModifyingImages.cmx.CmxToTiffExample;
 import com.aspose.imaging.examples.ModifyingImages.dicom.DicomCompression;
 import com.aspose.imaging.examples.ModifyingImages.dicom.DicomToPngExample;
 import com.aspose.imaging.examples.ModifyingImages.dicom.ExportToDicom;
+import com.aspose.imaging.examples.ModifyingImages.dxf.ExportToDxf;
 import com.aspose.imaging.examples.ModifyingImages.eps.ExportEps;
 import com.aspose.imaging.examples.ModifyingImages.gif.CreateGifUsingAddPage;
 import com.aspose.imaging.examples.ModifyingImages.gif.SupportOfFullFrameGif;
@@ -232,6 +234,14 @@ public class RunExamples
 
 		// =====================================================
 		// =====================================================
+		//                        DXF
+		// =====================================================
+		// =====================================================
+
+		ExportToDxf.main(args);
+
+		// =====================================================
+		// =====================================================
 		//                        TGA
 		// =====================================================
 		// =====================================================
@@ -382,6 +392,7 @@ public class RunExamples
 		//// =====================================================
 		//// =====================================================
 		SupportOfOTG.main(args);
+		DefaultFontUsageImprove.main(args);
 
 		Logger.println("All examples have been finished!");
 	}
