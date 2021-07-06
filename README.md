@@ -62,16 +62,17 @@ Aspose hosts all Java APIs at the [Aspose Repository](https://repository.aspose.
 ## Crop EMF Image by Rectangle
 
 ```java
-MetafileImage metaImage = (MetafileImage) Image.load(dataDir + "Picture1.emf");
+try (MetafileImage metaImage = (MetafileImage) Image.load(dataDir + "Picture1.emf"))
+{
+	// create an instance of Rectangle class with desired size
+	Rectangle rectangle = new Rectangle(10, 10, 100, 100);
 
-// create an instance of Rectangle class with desired size
-Rectangle rectangle = new Rectangle(10, 10, 100, 100);
+	// perform the crop operation on object of Rectangle class
+	metaImage.crop(rectangle);
 
-// perform the crop operation on object of Rectangle class
-metaImage.crop(rectangle);
-
-// save the result in PNG format
-metaImage.save(dataDir + "CropbyRectangle_out.png", new PngOptions());
+	// save the result in PNG format
+	metaImage.save(dataDir + "CropbyRectangle_out.png", new PngOptions());
+}
 ```
 
 [Home](https://www.aspose.com/) | [Product Page](https://products.aspose.com/imaging/java) | [Docs](https://docs.aspose.com/imaging/java/) | [Demos](https://products.aspose.app/imaging/family) | [API Reference](https://apireference.aspose.com/imaging/java) | [Examples](https://github.com/aspose-imaging/Aspose.Imaging-for-Java) | [Blog](https://blog.aspose.com/category/imaging/) | [Free Support](https://forum.aspose.com/c/imaging) | [Temporary License](https://purchase.aspose.com/temporary-license)

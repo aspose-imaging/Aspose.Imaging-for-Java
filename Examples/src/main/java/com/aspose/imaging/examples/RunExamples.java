@@ -17,10 +17,7 @@ import com.aspose.imaging.examples.ManipulatingTIFFImages.SupportExtractingPaths
 import com.aspose.imaging.examples.ManipulatingTIFFImages.SupportTiffDeflate;
 import com.aspose.imaging.examples.ManipulatingTIFFImages.TiffOptionsConfiguration;
 import com.aspose.imaging.examples.ModifyingImages.*;
-import com.aspose.imaging.examples.ModifyingImages.apng.CreateAPNGAnimationFromGraphics;
-import com.aspose.imaging.examples.ModifyingImages.apng.CreateAPNGAnimationFromSinglePageImage;
-import com.aspose.imaging.examples.ModifyingImages.apng.CreateAnimationFromMultipageImage;
-import com.aspose.imaging.examples.ModifyingImages.apng.ExportAPNGToGif;
+import com.aspose.imaging.examples.ModifyingImages.apng.*;
 import com.aspose.imaging.examples.ModifyingImages.bmp.BmpRLE4;
 import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPdfExample;
 import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPngExample;
@@ -33,6 +30,7 @@ import com.aspose.imaging.examples.ModifyingImages.dicom.ExportToDicom;
 import com.aspose.imaging.examples.ModifyingImages.dxf.ExportToDxf;
 import com.aspose.imaging.examples.ModifyingImages.eps.ExportEps;
 import com.aspose.imaging.examples.ModifyingImages.gif.CreateGifUsingAddPage;
+import com.aspose.imaging.examples.ModifyingImages.gif.SupportGifFrameDurationAndNumberOfCycles;
 import com.aspose.imaging.examples.ModifyingImages.gif.SupportOfFullFrameGif;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAllEXIFTags;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAndModifyJpegEXIFTags;
@@ -231,6 +229,24 @@ public class RunExamples
 		System.out.println("Running additional features tests:");
 		GraphCutAutoMasking.main(args);
 		Deskew.main(args);
+
+		System.out.println("Running file formats tests:");
+
+		// =====================================================
+		// =====================================================
+		//                        Gif
+		// =====================================================
+		// =====================================================
+
+		SupportGifFrameDurationAndNumberOfCycles.main(args);
+
+		// =====================================================
+		// =====================================================
+		//                        Apng
+		// =====================================================
+		// =====================================================
+
+		GetOriginalOptions.main(args);
 
 		// =====================================================
 		// =====================================================
