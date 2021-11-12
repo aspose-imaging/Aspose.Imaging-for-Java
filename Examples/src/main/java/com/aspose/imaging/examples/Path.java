@@ -21,4 +21,13 @@ public class Path
         if (!f.delete())
             f.deleteOnExit();
     }
+
+    public static String getFileNameWithoutExtension(String name)
+    {
+        int p = name.lastIndexOf('.');
+        if (p > 0)
+            return name.substring(0, p);
+
+        return name;
+    }
 }

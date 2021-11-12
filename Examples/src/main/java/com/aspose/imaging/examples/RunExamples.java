@@ -14,6 +14,7 @@ import com.aspose.imaging.examples.InterruptMonitor.InterruptMonitorSupport;
 import com.aspose.imaging.examples.ManipulatingJPEGImages.*;
 import com.aspose.imaging.examples.ManipulatingPNGImages.*;
 import com.aspose.imaging.examples.ManipulatingTIFFImages.SupportExtractingPathsFromTiff;
+import com.aspose.imaging.examples.ManipulatingTIFFImages.SupportOfGetOriginalOptions;
 import com.aspose.imaging.examples.ManipulatingTIFFImages.SupportTiffDeflate;
 import com.aspose.imaging.examples.ManipulatingTIFFImages.TiffOptionsConfiguration;
 import com.aspose.imaging.examples.ModifyingImages.*;
@@ -22,6 +23,7 @@ import com.aspose.imaging.examples.ModifyingImages.bmp.BmpRLE4;
 import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPdfExample;
 import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPngExample;
 import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPsdMultipageExample;
+import com.aspose.imaging.examples.ModifyingImages.cdr.PantoneGoeCoatedPalette;
 import com.aspose.imaging.examples.ModifyingImages.cmx.CmxToPdfExample;
 import com.aspose.imaging.examples.ModifyingImages.cmx.CmxToTiffExample;
 import com.aspose.imaging.examples.ModifyingImages.dicom.DicomCompression;
@@ -84,6 +86,7 @@ public class RunExamples
 		// =====================================================
 		// =====================================================
 
+		GraphicsMeasureString.main(args);
 		DrawingUsingGraphics.main(args);
 		DrawingUsingGraphicsPath.main(args);
 		DrawingRectangle.main(args);
@@ -110,6 +113,7 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		ImageScopedFonts.main(args);
 		BmpRLE4.main(args);
 		MultipageFromImages.main(args);
 		CreateGifUsingAddPage.main(args);
@@ -264,6 +268,13 @@ public class RunExamples
 
 		ConvertToTGA.main(args);
 
+		// =====================================================
+		// =====================================================
+		//                        TIFF
+		// =====================================================
+		// =====================================================
+		SupportOfGetOriginalOptions.main(args);
+
 		//// =====================================================
 		//// =====================================================
 		////                        DICOM
@@ -397,6 +408,7 @@ public class RunExamples
 		////                           CDR
 		//// =====================================================
 		//// =====================================================
+		PantoneGoeCoatedPalette.main(args);
 		CdrToPdfExample.main(args);
 		SupportOfCDR.main(args);
 		CdrToPsdMultipageExample.main(args);
