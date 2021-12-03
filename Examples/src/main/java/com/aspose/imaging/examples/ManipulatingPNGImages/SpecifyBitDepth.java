@@ -2,6 +2,7 @@ package com.aspose.imaging.examples.ManipulatingPNGImages;
 
 import com.aspose.imaging.Image;
 import com.aspose.imaging.examples.Logger;
+import com.aspose.imaging.examples.Path;
 import com.aspose.imaging.examples.Utils;
 import com.aspose.imaging.fileformats.png.PngColorType;
 import com.aspose.imaging.fileformats.png.PngImage;
@@ -29,7 +30,7 @@ public class SpecifyBitDepth
 			options.setBitDepth((byte) 1);
 
 			// Save changes to the disc
-			pngImage.save(Utils.getOutDir() + "SpecifyBitDepth_out.jpg", options);
+			pngImage.save(Path.combine(Utils.getOutDir(), "SpecifyBitDepth_out.png"), options);
 		}
 		Logger.endExample();
     }

@@ -8,7 +8,7 @@ public class ApplyFilterMethod
     public static void main(String... args)
     {
 		Logger.startExample("ApplyFilterMethod");
-        // The path to the documents directory.
+        // The path to the documents' directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
 
 		try (com.aspose.imaging.fileformats.png.PngImage png = (com.aspose.imaging.fileformats.png.PngImage) com.aspose.imaging.Image
@@ -21,7 +21,7 @@ public class ApplyFilterMethod
 			options.setFilterType(com.aspose.imaging.fileformats.png.PngFilterType.Paeth);
 
 			// Save changes to the disc
-			png.save(Utils.getOutDir() + "ApplyFilterMethod_out.jpg", options);
+			png.save(Utils.getOutDir() + "ApplyFilterMethod_out.png", options);
 		}
 		Logger.endExample();
     }

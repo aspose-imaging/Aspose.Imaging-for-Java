@@ -22,7 +22,7 @@ public class SpecifyTransparencyUsingRasterImage
             image.setTransparentColor(Color.getBlack());
             image.setTransparentColor(true);
             image.setBackgroundColor(true);
-            image.save(Utils.getOutDir() + "SpecifyTransparencyforPNGImagesUsingRasterImage_out.jpg", new PngOptions());
+            image.save(Utils.getOutDir() + "SpecifyTransparencyforPNGImagesUsingRasterImage_out.png", new PngOptions());
         }
         Logger.endExample();
     }
