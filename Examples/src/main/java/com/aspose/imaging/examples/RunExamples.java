@@ -113,6 +113,7 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		PixelPerfectTextAlignment.main(args);
 		FileExtensionAwareSave.main(args);
 		ImageScopedFonts.main(args);
 		BmpRLE4.main(args);
