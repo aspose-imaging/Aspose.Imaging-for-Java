@@ -20,10 +20,7 @@ import com.aspose.imaging.examples.ManipulatingTIFFImages.TiffOptionsConfigurati
 import com.aspose.imaging.examples.ModifyingImages.*;
 import com.aspose.imaging.examples.ModifyingImages.apng.*;
 import com.aspose.imaging.examples.ModifyingImages.bmp.BmpRLE4;
-import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPdfExample;
-import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPngExample;
-import com.aspose.imaging.examples.ModifyingImages.cdr.CdrToPsdMultipageExample;
-import com.aspose.imaging.examples.ModifyingImages.cdr.PantoneGoeCoatedPalette;
+import com.aspose.imaging.examples.ModifyingImages.cdr.*;
 import com.aspose.imaging.examples.ModifyingImages.cmx.CmxToPdfExample;
 import com.aspose.imaging.examples.ModifyingImages.cmx.CmxToTiffExample;
 import com.aspose.imaging.examples.ModifyingImages.dicom.DicomCompression;
@@ -113,6 +110,7 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		ApsToPsd.main(args);
 		PixelPerfectTextAlignment.main(args);
 		FileExtensionAwareSave.main(args);
 		ImageScopedFonts.main(args);
