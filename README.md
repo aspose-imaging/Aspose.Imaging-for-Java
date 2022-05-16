@@ -1,9 +1,8 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/aspose-imaging/Aspose.imaging-for-Java/total) ![GitHub](https://img.shields.io/github/license/aspose-imaging/Aspose.imaging-for-java)
+
 # Java API for Image Processing
 
-It is a standalone [Imaging API](https://products.aspose.com/imaging/java) consisting of Java routines that enable your Java applications to draw as well as perform basic to advanced level processing of raster & vector images.
-
-Aspose.Imaging for Java offers robust image compression and high processing speed through native byte access and a range of efficient algorithms. It not only manipulate, export and convert images but also lets you dynamically draw objects using pixel manipulation and Graphics Path.
+[Imaging API](https://products.aspose.com/imaging/java) is a library offering advanced image processing features. Developers can create, edit or convert images in their own application. Also Aspose. Imaging library supports drawing and work with graphic primitives. Image export and conversion (including uniform multi-page image processing) is the one of API core features along with image transformations (resize, crop, flip&rotate, binarization, grayscale, adjust), advanced image manipulation features (filtering, dithering, masking, deskewing) and memory optimization strategies.
 
 Directory | Description
 --------- | -----------
@@ -16,33 +15,42 @@ Directory | Description
   </a>
 </p>
 
+Directory | Description
+--------- | -----------
+[Examples](Examples)  | A collection of Java examples that help you learn the product features.
+[Plugins](Plugins)  | Plugins related to Aspose.Imaging for Java product.
+
+
 ## Imaging API Features
 
-- Draw raster images with graphics.
-- Draw vector images.
-- Converting images to various formats.
+- [Draw raster images with graphics](https://docs.aspose.com/imaging/java/drawing-images-using-graphics/).
+- [Draw vector images](https://docs.aspose.com/imaging/java/drawing-vector-images/).
+- [Convert images to various formats](https://docs.aspose.com/imaging/java/converting-images/).
 - [Apply masking](https://docs.aspose.com/imaging/java/applying-masking-to-images/) as well as [Median & Wiener](https://docs.aspose.com/imaging/java/applying-median-and-wiener-filters/) filters.
-- Crop, rotate & resize images via API.
-- De-skew & transform images.
-- Set image properties.
+- [Crop, rotate & resize images via API](https://docs.aspose.com/imaging/java/crop-rotate-and-resize-images/).
+- [De-skew & transform images](https://docs.aspose.com/imaging/java/deskew-image/).
+- [Set image properties](https://docs.aspose.com/imaging/java/setting-properties-on-images/).
+- [Work with multipage image formats](https://docs.aspose.com/imaging/java/working-with-multipage-image-formats/).
 
-## Read & Write Image Formats
+## Load & Save Image Formats
 
-**Raster Formats:** JPEG2000, JPEG, BMP, TIFF, GIF, PNG, APNG\
-**Metafiles:** EMF, EMZ, WMF, WMZ\
-**Other:** SVG, SVGZ, DICOM
+**Raster Formats:** JPEG2000, JPEG, BMP, TIFF, GIF, PNG, DICOM\
+**Metafiles:** EMF, WMF\
+**Compressed metafiles:** EMZ, WMZ\
+**Other:** WebP, Svg, Svgz (compressed Svg)\
+**Animation:** Apng
 
 ## Save Images As
-
-**Fixed:** PDF\
+**Fixed-layout:** PDF\
 **Photoshop:** PSD\
-**Markup:** HTML5 Canvas
+**Web:** Html5 Canvas
 
-## Read Image Formats
+## Load Images
 
-**Various:** DjVu, DNG, ODG, CMX, CDR, DIB, OTG, FODG, EPS (raster preview only), WEBP
+**Various:** DjVu, DNG, ODG, EPS(raster preview only), CMX, CDR, DIB, OTG, FODG
 
-## Supported Operating Systems
+
+## Platform Independence
 
 Aspose.Imaging for Java can be virtually run in any OS where Java is installed (since JDK 1.6)
 
@@ -59,19 +67,48 @@ Aspose.Imaging works for both x86 and x64 versions of the above listed operating
 
 Aspose hosts all Java APIs at the [Aspose Repository](https://repository.aspose.com/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-imaging). You can easily use Aspose.BarCode for Java API directly in your Maven projects with simple configurations. For the detailed instructions please visit [Installing Aspose.Imaging for Java from Maven Repository](https://docs.aspose.com/imaging/java/installation/) documentation page.
 
-## Crop EMF Image by Rectangle
+## Resize a JPG Image
 
-```java
-try (MetafileImage metaImage = (MetafileImage) Image.load(dataDir + "Picture1.emf"))
+``` java
+try (Image image = Image.load(dir + "template.jpg"))
 {
-	// create an instance of Rectangle class with desired size
-	Rectangle rectangle = new Rectangle(10, 10, 100, 100);
+    image.resize(300, 300);
+    image.save(dir + "output.jpg");
+}
+```
 
-	// perform the crop operation on object of Rectangle class
-	metaImage.crop(rectangle);
+## Create & Manipulate PNG via API
 
-	// save the result in PNG format
-	metaImage.save(dataDir + "CropbyRectangle_out.png", new PngOptions());
+``` java
+// image width and height
+int width = 500;
+int height = 300;
+
+// where created image to store
+String path = "createdImage.png";
+// create options
+try (PngOptions options = new PngOptions())
+{
+	options.setSource(new FileCreateSource(path, false));
+	try (PngImage image = (PngImage)Image.create(options, width, height))
+	{          
+		// create and initialize an instance of Graphics class 
+		// and Clear Graphics surface
+		Graphics graphic = new Graphics(image);
+		graphic.clear(Color.getGreen());
+		// draw line on image
+		graphic.drawLine(new Pen(Color.getBlue()), 9, 9, 90, 90);        
+
+		// resize image
+		int newWidth = 400;
+		image.resizeWidthProportionally(newWidth, ResizeType.LanczosResample);  
+
+		// crop the image to specified area
+		com.aspose.imaging.Rectangle area = new com.aspose.imaging.Rectangle(10,10,200,200);    
+		image.crop(area);
+	   
+		image.save();
+	}
 }
 ```
 

@@ -26,6 +26,7 @@ import com.aspose.imaging.examples.ModifyingImages.cmx.CmxToTiffExample;
 import com.aspose.imaging.examples.ModifyingImages.dicom.DicomCompression;
 import com.aspose.imaging.examples.ModifyingImages.dicom.DicomToPngExample;
 import com.aspose.imaging.examples.ModifyingImages.dicom.ExportToDicom;
+import com.aspose.imaging.examples.ModifyingImages.dicom.SupportStoringXmpTags;
 import com.aspose.imaging.examples.ModifyingImages.dxf.ExportToDxf;
 import com.aspose.imaging.examples.ModifyingImages.eps.ExportEps;
 import com.aspose.imaging.examples.ModifyingImages.gif.CreateGifUsingAddPage;
@@ -280,7 +281,7 @@ public class RunExamples
 		////                        DICOM
 		//// =====================================================
 		//// =====================================================
-
+		SupportStoringXmpTags.main(args);
 		DicomCompression.main(args);
 		DicomToPngExample.main(args);
 		AdjustBrightnessDICOM.main(args);
