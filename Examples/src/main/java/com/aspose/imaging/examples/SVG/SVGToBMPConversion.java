@@ -11,13 +11,11 @@ import com.aspose.imaging.imageoptions.SvgRasterizationOptions;
  */
 public class SVGToBMPConversion
 {
-
     public static void main(String[] args)
     {
-
         Logger.startExample("SVGToBMPConversion");
 
-        String dataDir = Utils.getSharedDataDir() + "SVG/";
+        String dataDir = Utils.getSharedDataDir() + "svg/";
 
         try (Image image = Image.load(dataDir + "test.svg"))
         {

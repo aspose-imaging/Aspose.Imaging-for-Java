@@ -44,6 +44,7 @@ import com.aspose.imaging.examples.ModifyingImages.tiff.SetDPIInExportedPdf;
 import com.aspose.imaging.examples.ModifyingImages.webp.*;
 import com.aspose.imaging.examples.Photoshop.ExportImagestoPSDFormat;
 import com.aspose.imaging.examples.SVG.SVGToBMPConversion;
+import com.aspose.imaging.examples.SVG.UnifyExtractionOfRasterImagesEmbeddedInVectorFormats;
 import com.aspose.imaging.examples.WebP.OpenWebPFile;
 import com.aspose.imaging.examples.dicom.*;
 import com.aspose.imaging.examples.djvu.*;
@@ -111,6 +112,7 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		UnifyExtractionOfRasterImagesEmbeddedInVectorFormats.main(args);
 		ApsToPsd.main(args);
 		PixelPerfectTextAlignment.main(args);
 		FileExtensionAwareSave.main(args);
