@@ -32,6 +32,7 @@ import com.aspose.imaging.examples.ModifyingImages.eps.ExportEps;
 import com.aspose.imaging.examples.ModifyingImages.gif.CreateGifUsingAddPage;
 import com.aspose.imaging.examples.ModifyingImages.gif.SupportGifFrameDurationAndNumberOfCycles;
 import com.aspose.imaging.examples.ModifyingImages.gif.SupportOfFullFrameGif;
+import com.aspose.imaging.examples.ModifyingImages.ico.ConvertIcoToTiff;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.JpegSavedQualityEstimation;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAllEXIFTags;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAndModifyJpegEXIFTags;
@@ -113,6 +114,7 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		ConvertIcoToTiff.main(args);
 		JpegSavedQualityEstimation.main(args);
 		UnifyExtractionOfRasterImagesEmbeddedInVectorFormats.main(args);
 		ApsToPsd.main(args);
