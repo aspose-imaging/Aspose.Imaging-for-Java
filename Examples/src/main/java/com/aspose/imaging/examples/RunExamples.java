@@ -114,6 +114,7 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		Support16BitChannel64BitPng.main(args);
 		ConvertIcoToTiff.main(args);
 		JpegSavedQualityEstimation.main(args);
 		UnifyExtractionOfRasterImagesEmbeddedInVectorFormats.main(args);
