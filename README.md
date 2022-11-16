@@ -34,7 +34,7 @@ Directory | Description
 
 ## Load & Save Image Formats
 
-**Raster Formats:** JPEG2000, JPEG, BMP, TIFF, GIF, PNG, DICOM\
+**Raster Formats:** JPEG2000, JPEG, BMP, TIFF, GIF, PNG, DICOM, TGA, ICO\
 **Metafiles:** EMF, WMF\
 **Compressed metafiles:** EMZ, WMZ\
 **Other:** WebP, Svg, Svgz (compressed Svg)\
@@ -43,11 +43,12 @@ Directory | Description
 ## Save Images As
 **Fixed-layout:** PDF\
 **Photoshop:** PSD\
-**Web:** Html5 Canvas
+**Web:** Html5 Canvas\
+**Dxf:** Dxf
 
 ## Load Images
 
-**Various:** DjVu, DNG, ODG, EPS(raster preview only), CMX, CDR, DIB, OTG, FODG
+**Various:** DjVu, DNG, ODG, EPS, CMX, CDR, DIB, OTG, FODG
 
 
 ## Platform Independence

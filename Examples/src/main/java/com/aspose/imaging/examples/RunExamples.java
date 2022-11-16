@@ -29,6 +29,7 @@ import com.aspose.imaging.examples.ModifyingImages.dicom.ExportToDicom;
 import com.aspose.imaging.examples.ModifyingImages.dicom.SupportStoringXmpTags;
 import com.aspose.imaging.examples.ModifyingImages.dxf.ExportToDxf;
 import com.aspose.imaging.examples.ModifyingImages.eps.ExportEps;
+import com.aspose.imaging.examples.ModifyingImages.fonts.SpecifyFont;
 import com.aspose.imaging.examples.ModifyingImages.gif.CreateGifUsingAddPage;
 import com.aspose.imaging.examples.ModifyingImages.gif.SupportGifFrameDurationAndNumberOfCycles;
 import com.aspose.imaging.examples.ModifyingImages.gif.SupportOfFullFrameGif;
@@ -114,6 +115,7 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		SpecifyFont.main(args);
 		Support16BitChannel64BitPng.main(args);
 		ConvertIcoToTiff.main(args);
 		JpegSavedQualityEstimation.main(args);
