@@ -19,7 +19,7 @@ public class ReadLargePNGFile
     {
         Logger.startExample("ReadLargePNGFile");
 
-        String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
+        String dataDir = Utils.getSharedDataDir() + "Png/";
 
         // load image with size more or equals to 500Mb
         try (Image image = Image.load(dataDir + "halfGigImage.png"))

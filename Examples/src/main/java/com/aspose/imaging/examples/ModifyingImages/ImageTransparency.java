@@ -12,7 +12,7 @@ public class ImageTransparency
         Logger.startExample("ImageTransparency");
         // The path to the documents directory.
 
-        String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
+        String dataDir = Utils.getSharedDataDir() + "Png/";
 
         String filePath = dataDir + "aspose_logo.png"; // specify your path
         try (PngImage image = (PngImage) Image.load(filePath))

@@ -15,7 +15,7 @@ public class SpecifyBitDepth
 		Logger.startExample("SpecifyBitDepth");
 
         // The path to the documents directory.
-        String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
+        String dataDir = Utils.getSharedDataDir() + "Png/";
 
         // Load an existing PNG image
 		try (PngImage pngImage = (PngImage) Image.load(dataDir + "aspose_logo.png"))

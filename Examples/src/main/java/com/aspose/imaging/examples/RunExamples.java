@@ -115,6 +115,7 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		KeepTransparencyWhenIndexingPngImage.main(args);
 		SpecifyFont.main(args);
 		Support16BitChannel64BitPng.main(args);
 		ConvertIcoToTiff.main(args);

@@ -44,7 +44,7 @@ Directory | Description
 **Fixed-layout:** PDF\
 **Photoshop:** PSD\
 **Web:** Html5 Canvas\
-**Dxf:** Dxf
+**AutoCAD:** Dxf
 
 ## Load Images
 

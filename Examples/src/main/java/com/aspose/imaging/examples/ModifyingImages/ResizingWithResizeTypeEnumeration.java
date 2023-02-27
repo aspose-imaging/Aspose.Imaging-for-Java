@@ -11,7 +11,7 @@ public class ResizingWithResizeTypeEnumeration
     {
         Logger.startExample("ResizingWithResizeTypeEnumeration");
         // The path to the documents directory.
-        String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
+        String dataDir = Utils.getSharedDataDir() + "Png/";
         try (Image image = Image.load(dataDir + "aspose_logo.png"))
         {
             image.resize(300, 300, ResizeType.LanczosResample);

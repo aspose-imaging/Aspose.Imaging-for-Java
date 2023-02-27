@@ -13,7 +13,7 @@ public class SettingResolution
         Logger.startExample("SettingResolution");
 
         // The path to the documents directory.
-        String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
+        String dataDir = Utils.getSharedDataDir() + "Png/";
         // Initialize variables to hold width & height values
         int width;
         int height;

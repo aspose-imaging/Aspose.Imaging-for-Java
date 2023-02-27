@@ -12,7 +12,7 @@ public class PNGToPDF
     public static void main(String... args)
     {
         Logger.startExample("PNGToPDF");
-        String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
+        String dataDir = Utils.getSharedDataDir() + "Png/";
         try (PngImage pngImage = (PngImage) Image.load(dataDir + "aspose_logo.png"))
         {
             PdfOptions exportOptions = new PdfOptions();

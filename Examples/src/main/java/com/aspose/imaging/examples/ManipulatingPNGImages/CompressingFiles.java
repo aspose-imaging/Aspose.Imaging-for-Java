@@ -11,7 +11,7 @@ public class CompressingFiles
     {
 		Logger.startExample("CompressingFiles");
         // The path to the documents directory.
-        String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
+        String dataDir = Utils.getSharedDataDir() + "Png/";
         String outDir = Utils.getOutDir();
         // Load an image from file (or stream)
 		try (Image image = Image.load(dataDir + "aspose_logo.png"))

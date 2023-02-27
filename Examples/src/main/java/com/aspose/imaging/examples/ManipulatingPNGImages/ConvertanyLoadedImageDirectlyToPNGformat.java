@@ -14,7 +14,7 @@ public class ConvertanyLoadedImageDirectlyToPNGformat
 		Logger.startExample("ConvertanyLoadedImageDirectlyToPNGformat");
 
         // The path to the documents directory.
-        String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
+        String dataDir = Utils.getSharedDataDir() + "Png/";
 
         // Load the source image (any format) in an instance of RasterImage
 		try (RasterImage image = (RasterImage) Image.load(dataDir + "aspose-logo.jpg"))

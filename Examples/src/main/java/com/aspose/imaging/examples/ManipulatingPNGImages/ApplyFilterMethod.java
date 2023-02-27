@@ -9,7 +9,7 @@ public class ApplyFilterMethod
     {
 		Logger.startExample("ApplyFilterMethod");
         // The path to the documents' directory.
-        String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
+        String dataDir = Utils.getSharedDataDir() + "Png/";
 
 		try (com.aspose.imaging.fileformats.png.PngImage png = (com.aspose.imaging.fileformats.png.PngImage) com.aspose.imaging.Image
 				.load(dataDir + "aspose_logo.png"))

@@ -11,7 +11,7 @@ public class ChangeBackgroundColor
 		Logger.startExample("ChangeBackgroundColor");
 
         // The path to the documents directory.
-        String dataDir = Utils.getSharedDataDir() + "ManipulatingPNGImages/";
+        String dataDir = Utils.getSharedDataDir() + "Png/";
 
         // Create an instance of Image class and load a PNG image
 		try (com.aspose.imaging.Image img = com.aspose.imaging.Image.load(dataDir + "aspose_logo.png"))
