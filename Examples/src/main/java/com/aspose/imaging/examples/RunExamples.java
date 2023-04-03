@@ -13,10 +13,7 @@ import com.aspose.imaging.examples.Html5Canvas.ExportToHtml5Canvas;
 import com.aspose.imaging.examples.InterruptMonitor.InterruptMonitorSupport;
 import com.aspose.imaging.examples.ManipulatingJPEGImages.*;
 import com.aspose.imaging.examples.ManipulatingPNGImages.*;
-import com.aspose.imaging.examples.ManipulatingTIFFImages.SupportExtractingPathsFromTiff;
-import com.aspose.imaging.examples.ManipulatingTIFFImages.SupportOfGetOriginalOptions;
-import com.aspose.imaging.examples.ManipulatingTIFFImages.SupportTiffDeflate;
-import com.aspose.imaging.examples.ManipulatingTIFFImages.TiffOptionsConfiguration;
+import com.aspose.imaging.examples.ManipulatingTIFFImages.*;
 import com.aspose.imaging.examples.ModifyingImages.*;
 import com.aspose.imaging.examples.ModifyingImages.apng.*;
 import com.aspose.imaging.examples.ModifyingImages.bmp.BmpRLE4;
@@ -115,6 +112,7 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		BigTiffLoadExample.main(args);
 		KeepTransparencyWhenIndexingPngImage.main(args);
 		SpecifyFont.main(args);
 		Support16BitChannel64BitPng.main(args);

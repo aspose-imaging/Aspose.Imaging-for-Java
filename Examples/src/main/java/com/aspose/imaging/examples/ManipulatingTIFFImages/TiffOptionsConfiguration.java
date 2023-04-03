@@ -12,7 +12,7 @@ public class TiffOptionsConfiguration
     {
 		Logger.startExample("TiffOptionsConfiguration");
 
-        // The path to the documents directory.
+        // The path to the documents' directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingTIFFImages/";
 
         // Load an image through file path location or stream
