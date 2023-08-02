@@ -23,7 +23,7 @@ public class DocumentConvertionProgress
         // Example of use of separate operation progress event handlers for load/export operations
         try (Image image = Image.load(inputFileName, new LoadOptions()
         {{
-            setProgressEventHandler(new ProgressEventHandler()
+            setIProgressEventHandler(new ProgressEventHandler()
             {
                 @Override
                 public void invoke(ProgressEventHandlerInfo info)
