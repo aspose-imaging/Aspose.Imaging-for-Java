@@ -112,6 +112,7 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		MagicWandToolTest.main(args);
 		AddAlphaBlendingForImage.main(args);
 		BigTiffLoadExample.main(args);
 		KeepTransparencyWhenIndexingPngImage.main(args);

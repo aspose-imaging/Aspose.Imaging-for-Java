@@ -9,21 +9,16 @@ public class GraphicsMeasureString
     public static void main(String[] args)
     {
         Logger.startExample();
-        String dataDir = Utils.getSharedDataDir() + "gif/";
+        String dataDir = Utils.getSharedDataDir() + "jpeg/";
         // Declare variable to store file path for input image
-        String path = dataDir + "ezgif.com-gif-maker(1)___.gif";
+        String path = dataDir + "input.jpg";
 
-        com.aspose.imaging.RasterImage backgroundImage = (com.aspose.imaging.RasterImage) Image.load(path);
-        try
+        try (RasterImage backgroundImage = (RasterImage) Image.load(path))
         {
             Graphics gr = new Graphics(backgroundImage);
             StringFormat format = new StringFormat();
             SizeF size = gr.measureString("Test", new Font("Arial", 10), SizeF.getEmpty(), format);
             System.out.println("Size: " + size);
-        }
-        finally
-        {
-            backgroundImage.close();
         }
         Logger.endExample();
     }
