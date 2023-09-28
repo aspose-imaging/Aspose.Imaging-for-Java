@@ -112,6 +112,7 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		RemoveWatermarkFilter.main(args);
 		MagicWandToolTest.main(args);
 		AddAlphaBlendingForImage.main(args);
 		BigTiffLoadExample.main(args);
