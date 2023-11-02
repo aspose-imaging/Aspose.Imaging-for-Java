@@ -9,6 +9,7 @@ import com.aspose.imaging.examples.ConvertingImages.otg.DefaultFontUsageImprove;
 import com.aspose.imaging.examples.ConvertingImages.otg.SupportOfFODG;
 import com.aspose.imaging.examples.ConvertingImages.svg.SvgNativeResize;
 import com.aspose.imaging.examples.EMF.CropEMFImage;
+import com.aspose.imaging.examples.EPS.SupportForEPS;
 import com.aspose.imaging.examples.Html5Canvas.ExportToHtml5Canvas;
 import com.aspose.imaging.examples.InterruptMonitor.InterruptMonitorSupport;
 import com.aspose.imaging.examples.ManipulatingJPEGImages.*;
@@ -155,7 +156,7 @@ public class RunExamples
 		SupportForJPEG.main(args);
 		ReadingPixelValues.main(args);
 		RasterImageToPDF.main(args);
-		SupportForEPSFormat.main(args);
+		SupportForEPS.main(args);
 		ConvertEMFToWMF.main(args);
 		AlignHorizontalAndVeticalResolutionsOfImage.main(args);
 		ApplyGaussWienerFilter.main(args);
