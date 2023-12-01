@@ -426,6 +426,7 @@ public class RunExamples
 		SupportOfCDR.main(args);
 		CdrToPsdMultipageExample.main(args);
 		CdrToPngExample.main(args);
+		SupportTextStylesItalicUnderline.main(args);
 
 		//// =====================================================
 		//// =====================================================
