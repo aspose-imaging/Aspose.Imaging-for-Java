@@ -38,6 +38,7 @@ import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAndModifyJpegEXIFTag
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadSpecificEXIFTagsInformation;
 import com.aspose.imaging.examples.ModifyingImages.multipage.MultipageFromImages;
 import com.aspose.imaging.examples.ModifyingImages.removebackground.GraphCutAutoMasking;
+import com.aspose.imaging.examples.ModifyingImages.removebackground.RemoveBackgroundVectors;
 import com.aspose.imaging.examples.ModifyingImages.tga.ConvertToTGA;
 import com.aspose.imaging.examples.ModifyingImages.tiff.CreateGraphicsPathFromPathTiffResourcesAndViceVersa;
 import com.aspose.imaging.examples.ModifyingImages.tiff.ExportTiffBatchMode;
@@ -113,9 +114,10 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		RemoveBackgroundVectors.main(args);
+		AddAlphaBlendingForImage.main(args);
 		RemoveWatermarkFilter.main(args);
 		MagicWandToolTest.main(args);
-		AddAlphaBlendingForImage.main(args);
 		BigTiffLoadExample.main(args);
 		KeepTransparencyWhenIndexingPngImage.main(args);
 		SpecifyFont.main(args);

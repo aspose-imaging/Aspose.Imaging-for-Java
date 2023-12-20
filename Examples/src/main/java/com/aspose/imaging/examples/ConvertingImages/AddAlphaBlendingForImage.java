@@ -5,6 +5,8 @@ import com.aspose.imaging.Point;
 import com.aspose.imaging.RasterImage;
 import com.aspose.imaging.examples.Logger;
 import com.aspose.imaging.examples.Utils;
+import com.aspose.imaging.fileformats.png.PngColorType;
+import com.aspose.imaging.imageoptions.PngOptions;
 
 public class AddAlphaBlendingForImage
 {
@@ -22,7 +24,9 @@ public class AddAlphaBlendingForImage
                 Point center = new Point((background.getWidth() - overlay.getWidth()) / 2,
                         (background.getHeight() - overlay.getHeight()) / 2);
                 background.blend(center, overlay, overlay.getBounds(), (byte) 127);
-                background.save(outDir + "/blended.png");
+                background.save(outDir + "/blended.png", new PngOptions() {{
+                    setColorType(PngColorType.TruecolorWithAlpha);
+                }});
             }
         }
         Utils.deleteFile(outDir + "/blended.png");
