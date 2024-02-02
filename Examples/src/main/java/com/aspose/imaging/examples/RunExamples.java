@@ -114,6 +114,7 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		KernelFilters.main(args);
 		RemoveBackgroundVectors.main(args);
 		AddAlphaBlendingForImage.main(args);
 		RemoveWatermarkFilter.main(args);
