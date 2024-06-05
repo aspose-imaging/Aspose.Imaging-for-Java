@@ -29,19 +29,21 @@ public class ApsToPsd
         //properties is as simple as the following snippet:
         try (Image image = Image.load(inputFileName))
         {
-            VectorRasterizationOptions vectorRasterizationOptions = new VectorRasterizationOptions();
-            vectorRasterizationOptions.setPageWidth(image.getWidth());
-            vectorRasterizationOptions.setPageHeight(image.getHeight());
+            try (VectorRasterizationOptions vectorRasterizationOptions = new VectorRasterizationOptions())
+            {
+                vectorRasterizationOptions.setPageWidth(image.getWidth());
+                vectorRasterizationOptions.setPageHeight(image.getHeight());
 
-            PsdVectorizationOptions psdOptions = new PsdVectorizationOptions();
-            psdOptions.setVectorDataCompositionMode(VectorDataCompositionMode.SeparateLayers);
+                PsdVectorizationOptions psdOptions = new PsdVectorizationOptions();
+                psdOptions.setVectorDataCompositionMode(VectorDataCompositionMode.SeparateLayers);
 
-            PsdOptions imageOptions = new PsdOptions();
-            imageOptions.setVectorRasterizationOptions(vectorRasterizationOptions);
-            imageOptions.setVectorizationOptions(psdOptions);
+                PsdOptions imageOptions = new PsdOptions();
+                imageOptions.setVectorRasterizationOptions(vectorRasterizationOptions);
+                imageOptions.setVectorizationOptions(psdOptions);
 
-            // Export image to PSD format
-            image.save(outFile, imageOptions);
+                // Export image to PSD format
+                image.save(outFile, imageOptions);
+            }
         }
 
         Utils.deleteFile(outFile);

@@ -21,10 +21,7 @@ import com.aspose.imaging.examples.ModifyingImages.bmp.BmpRLE4;
 import com.aspose.imaging.examples.ModifyingImages.cdr.*;
 import com.aspose.imaging.examples.ModifyingImages.cmx.CmxToPdfExample;
 import com.aspose.imaging.examples.ModifyingImages.cmx.CmxToTiffExample;
-import com.aspose.imaging.examples.ModifyingImages.dicom.DicomCompression;
-import com.aspose.imaging.examples.ModifyingImages.dicom.DicomToPngExample;
-import com.aspose.imaging.examples.ModifyingImages.dicom.ExportToDicom;
-import com.aspose.imaging.examples.ModifyingImages.dicom.SupportStoringXmpTags;
+import com.aspose.imaging.examples.ModifyingImages.dicom.*;
 import com.aspose.imaging.examples.ModifyingImages.dxf.ExportToDxf;
 import com.aspose.imaging.examples.ModifyingImages.eps.ExportEps;
 import com.aspose.imaging.examples.ModifyingImages.fonts.SpecifyFont;
@@ -114,6 +111,8 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		RemoveAndSaveWithMetadata.main(args);
+		ModifyDicomTags.main(args);
 		KernelFilters.main(args);
 		RemoveBackgroundVectors.main(args);
 		AddAlphaBlendingForImage.main(args);

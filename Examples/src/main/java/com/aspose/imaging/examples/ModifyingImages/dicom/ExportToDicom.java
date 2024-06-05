@@ -12,7 +12,7 @@ public class ExportToDicom
     {
         Logger.startExample("ExportToDicom");
         // The path to the documents directory.
-        String dataDir = Utils.getSharedDataDir() + "dicom/";;
+        String dataDir = Utils.getSharedDataDir() + "dicom/";
         String outDir = Utils.getOutDir();
         String fileName = "sample.jpg";
         String inputFileNameSingle = Path.combine(dataDir, fileName);

@@ -16,7 +16,7 @@ public class ReadAllEXIFTags
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
         try (JpegImage image = (JpegImage) Image.load(dataDir + "aspose-logo.jpg"))
         {
-            JpegExifData exifData = image.getExifData();
+            JpegExifData exifData = image.getJpegExifData();
 
             if (exifData == null)
                 return;

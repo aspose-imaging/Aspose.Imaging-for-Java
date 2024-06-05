@@ -21,7 +21,7 @@ public class AddThumbnailtoEXIFSegment
 				image.setExifData(new JpegExifData());
 
 				// Store the thumbnail in the Exif segment
-				image.getExifData().setThumbnail(thumbnailImage);
+				image.getJpegExifData().setThumbnail(thumbnailImage);
 
 				// Save the resultant image
 				image.save(Utils.getOutDir() + "AddThumbnailtoEXIFSegment_out.jpg");

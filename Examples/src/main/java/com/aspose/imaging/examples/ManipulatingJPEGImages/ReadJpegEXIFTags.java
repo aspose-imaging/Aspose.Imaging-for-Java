@@ -22,7 +22,7 @@ public class ReadJpegEXIFTags
 			{
 				// Get the image thumbnail information and save it in an instance of
 				// JpegImage
-				JpegImage thumbnail = (JpegImage) image.getExifData().getThumbnail();
+				JpegImage thumbnail = (JpegImage) image.getJpegExifData().getThumbnail();
 
 				if (thumbnail != null)
 				{
