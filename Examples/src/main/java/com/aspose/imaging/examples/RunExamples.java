@@ -111,6 +111,7 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		SupportDicomYBR422.main(args);
 		RemoveAndSaveWithMetadata.main(args);
 		ModifyDicomTags.main(args);
 		KernelFilters.main(args);
