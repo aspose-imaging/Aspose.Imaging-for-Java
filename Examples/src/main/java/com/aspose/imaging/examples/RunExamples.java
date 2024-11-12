@@ -1,5 +1,6 @@
 package com.aspose.imaging.examples;
 
+import com.aspose.imaging.License;
 import com.aspose.imaging.examples.CDR.SupportOfCDR;
 import com.aspose.imaging.examples.CMX.CMXToPNGConversion;
 import com.aspose.imaging.examples.ConvertingImages.*;
@@ -45,6 +46,7 @@ import com.aspose.imaging.examples.Photoshop.ExportImagestoPSDFormat;
 import com.aspose.imaging.examples.SVG.SVGToBMPConversion;
 import com.aspose.imaging.examples.SVG.UnifyExtractionOfRasterImagesEmbeddedInVectorFormats;
 import com.aspose.imaging.examples.WebP.OpenWebPFile;
+import com.aspose.imaging.examples.avif.LoadAvif;
 import com.aspose.imaging.examples.dicom.*;
 import com.aspose.imaging.examples.djvu.*;
 import com.aspose.imaging.examples.export.Bradleythreshold;
@@ -68,9 +70,12 @@ public class RunExamples
 {
  	public static void main(String[] args) throws IOException, InterruptedException, InvocationTargetException, IllegalAccessException
 	{
-		// If you have a license, please uncomment followed lines
-//		License lic = new License();
-//		lic.setLicense("fileOfYourLicense.lic");
+		// If you have a license, please pass it as a first argument in the command line
+		if (args.length > 0 && args[0].endsWith(".lic"))
+		{
+			License lic = new License();
+			lic.setLicense(args[0]);
+		}
 
 		Logger.println("Open public class RunExamples.java. \nIn main() method uncomment the example that you want to run.");
 		Logger.println("Output dir is ", Utils.getOutDir());
@@ -111,6 +116,7 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		LoadAvif.main(args);
 		SupportDicomYBR422.main(args);
 		RemoveAndSaveWithMetadata.main(args);
 		ModifyDicomTags.main(args);

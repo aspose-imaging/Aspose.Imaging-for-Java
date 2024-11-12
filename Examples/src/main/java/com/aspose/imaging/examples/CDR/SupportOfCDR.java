@@ -25,6 +25,7 @@ public class SupportOfCDR {
         long realFileFormat = Image.getFileFormat(inputFileName);
 
         Assert.areEqual(expectedFileFormat, realFileFormat, "File format is incorrect!");
+        Logger.endExample();
     }
     //ExEnd:SupportOfCDR
 }
