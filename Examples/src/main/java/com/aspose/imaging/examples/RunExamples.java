@@ -116,6 +116,7 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		UnifyUsageOfCommonOperations.main(args);
 		LoadAvif.main(args);
 		SupportDicomYBR422.main(args);
 		RemoveAndSaveWithMetadata.main(args);
