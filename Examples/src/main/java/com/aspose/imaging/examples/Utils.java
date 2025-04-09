@@ -10,7 +10,7 @@ public final class Utils {
 
 	public static String getSharedDataDir() {
 		File dir = new File(System.getProperty("user.dir"));
-		dir = new File(dir, "src/main/resources");
+		dir = new File(dir, "Examples/src/main/resources");
 
 		return dir.toString() + File.separator;
 	}
