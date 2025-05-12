@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.aspose</groupId>
     <artifactId>imaging-java-examples</artifactId>
-    <version>25.4</version>
+    <version>25.5</version>
     <packaging>jar</packaging>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -15,12 +15,12 @@
 		<dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-imaging</artifactId>
-            <version>25.4</version>
+            <version>25.5</version>
         </dependency>
 		<dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-imaging</artifactId>
-            <version>25.4</version>
+            <version>25.5</version>
             <classifier>javadoc</classifier>
         </dependency>
     </dependencies>

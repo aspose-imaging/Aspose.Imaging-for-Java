@@ -15,7 +15,7 @@ public class CdrToPngExample
     public static void main(String... args)
     {
         Logger.startExample("CdrToPngExample");
-        // The path to the documents directory.
+        // The path to the documents' directory.
         String dataDir = Utils.getSharedDataDir() + "CDR/";
         String inputFileName = dataDir + "SimpleShapes.cdr";
         String outputFilePath = Utils.getOutDir() + "SimpleShapes.png";
@@ -27,7 +27,8 @@ public class CdrToPngExample
             options.setColorType(PngColorType.TruecolorWithAlpha);
 
             // Set rasterization options for fileformat
-            VectorRasterizationOptions defaultOptions = (VectorRasterizationOptions) image.getDefaultOptions(new Object[]{Color.getWhite(), image.getWidth(), image.getHeight()});
+            VectorRasterizationOptions defaultOptions = image.getDefaultOptions(new Object[]{Color.getWhite(), image.getWidth(), image.getHeight()})
+                                                             .getVectorRasterizationOptions();
             options.setVectorRasterizationOptions(defaultOptions);
             defaultOptions.setTextRenderingHint(TextRenderingHint.SingleBitPerPixel);
             defaultOptions.setSmoothingMode(SmoothingMode.None);

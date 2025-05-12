@@ -26,7 +26,8 @@ public class CmxToPdfExample
             options.setPdfDocumentInfo(new PdfDocumentInfo());
 
             // Set rasterization options for fileformat
-            VectorRasterizationOptions defaultOptions = (VectorRasterizationOptions) image.getDefaultOptions(new Object[]{Color.getWhite(), image.getWidth(), image.getHeight()});
+            VectorRasterizationOptions defaultOptions = image.getDefaultOptions(new Object[]{Color.getWhite(), image.getWidth(), image.getHeight()})
+                    .getVectorRasterizationOptions();
             options.setVectorRasterizationOptions(defaultOptions);
             defaultOptions.setTextRenderingHint(TextRenderingHint.SingleBitPerPixel);
             defaultOptions.setSmoothingMode(SmoothingMode.None);

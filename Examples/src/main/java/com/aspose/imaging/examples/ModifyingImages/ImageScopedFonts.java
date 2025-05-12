@@ -41,7 +41,8 @@ public class ImageScopedFonts
         try (Image img = Image.load(Path.combine(inputPath, fileName), loadOptions))
         {
             VectorRasterizationOptions vectorRasterizationOptions =
-                    (VectorRasterizationOptions)img.getDefaultOptions(new Object[] { Color.getWhite(), img.getWidth(), img.getHeight() });
+                    img.getDefaultOptions(new Object[] { Color.getWhite(), img.getWidth(), img.getHeight() })
+                            .getVectorRasterizationOptions();
             vectorRasterizationOptions.setTextRenderingHint(TextRenderingHint.SingleBitPerPixel);
             vectorRasterizationOptions.setSmoothingMode(SmoothingMode.None);
 
