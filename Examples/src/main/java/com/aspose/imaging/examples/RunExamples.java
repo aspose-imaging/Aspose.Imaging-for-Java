@@ -367,6 +367,7 @@ public class RunExamples
 		//// =====================================================
 		//// =====================================================
 
+		PngCompressionLevelExample.main(args);
 		ApplyFilterMethod.main(args);
 		ChangeBackgroundColor.main(args);
 		CompressingFiles.main(args);
