@@ -43,6 +43,7 @@ import com.aspose.imaging.examples.ModifyingImages.tiff.ExportTiffBatchMode;
 import com.aspose.imaging.examples.ModifyingImages.tiff.SetDPIInExportedPdf;
 import com.aspose.imaging.examples.ModifyingImages.webp.*;
 import com.aspose.imaging.examples.Photoshop.ExportImagestoPSDFormat;
+import com.aspose.imaging.examples.SVG.CommonGraphicsEngineForSvgEmfWmf;
 import com.aspose.imaging.examples.SVG.SVGToBMPConversion;
 import com.aspose.imaging.examples.SVG.UnifyExtractionOfRasterImagesEmbeddedInVectorFormats;
 import com.aspose.imaging.examples.WebP.OpenWebPFile;
@@ -355,6 +356,7 @@ public class RunExamples
 		SaveEmfGraphics.main(args);
 
 		////SVG----------
+		CommonGraphicsEngineForSvgEmfWmf.main(args);
 		ConvOfOtherFormatsToSVG.main(args);
 		SVGToEMFConversion.main(args);
 		ConvertWMFToSVG.main(args);
