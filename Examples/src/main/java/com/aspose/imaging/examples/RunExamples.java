@@ -117,6 +117,7 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+        ExtendExifMetadataForRasterImage.main(args);
         SupportOfDigitalSignature.main(args);
 		AutoAdjustImageBrightness.main(args);
 		UnifyUsageOfCommonOperations.main(args);
