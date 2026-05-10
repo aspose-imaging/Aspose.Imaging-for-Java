@@ -22,9 +22,9 @@ public class CreateAPNGAnimationFromGraphics
     {
         Logger.startExample("CreateAPNGAnimationFromGraphics");
 
-        // preparing the animation scene
+        // Preparing the animation scene
         final int SceneWidth = 400;
-        final int SceneHeigth = 400;
+        final int SceneHeight = 400;
         // Act duration, in milliseconds
         final long ActDuration = 1000;
         // Total duration, in milliseconds
@@ -34,7 +34,7 @@ public class CreateAPNGAnimationFromGraphics
         Scene scene = new Scene();
         final Ellipse[] ellipse = { new Ellipse() };
         ellipse[0].setFillColor(Color.fromArgb(128, 128, 128));
-        ellipse[0].setCenterPoint(new PointF(SceneWidth / 2f, SceneHeigth / 2f));
+        ellipse[0].setCenterPoint(new PointF(SceneWidth / 2f, SceneHeight / 2f));
         ellipse[0].setRadiusX(80);
         ellipse[0].setRadiusY(80);
         scene.addObject(ellipse[0]);
@@ -45,22 +45,22 @@ public class CreateAPNGAnimationFromGraphics
         line[0].setEndPoint(new PointF(SceneWidth - 30, 30));
         scene.addObject(line[0]);
         IAnimation lineAnimation1 = new LinearAnimation(progress -> {
-            line[0].setStartPoint(new PointF(30 + (progress * (SceneWidth - 60)), 30 + (progress * (SceneHeigth - 60))));
+            line[0].setStartPoint(new PointF(30 + (progress * (SceneWidth - 60)), 30 + (progress * (SceneHeight - 60))));
             line[0].setColor(Color.fromArgb((int)((progress * 255)), 0, 255 - (int)((progress * 255))));
         });
         lineAnimation1.setDuration(ActDuration);
         IAnimation lineAnimation2 = new LinearAnimation(progress -> {
-            line[0].setEndPoint(new PointF(SceneWidth - 30 - (progress * (SceneWidth - 60)), 30 + (progress * (SceneHeigth - 60))));
+            line[0].setEndPoint(new PointF(SceneWidth - 30 - (progress * (SceneWidth - 60)), 30 + (progress * (SceneHeight - 60))));
             line[0].setColor(Color.fromArgb(255, (int)((progress * 255)), 0));
         });
         lineAnimation2.setDuration(ActDuration);
         IAnimation lineAnimation3 = new LinearAnimation(progress -> {
-            line[0].setStartPoint(new PointF(SceneWidth - 30 - (progress * (SceneWidth - 60)), SceneHeigth - 30 - (progress * (SceneHeigth - 60))));
+            line[0].setStartPoint(new PointF(SceneWidth - 30 - (progress * (SceneWidth - 60)), SceneHeight - 30 - (progress * (SceneHeight - 60))));
             line[0].setColor(Color.fromArgb(255 - (int)((progress * 255)), 255, 0));
         });
         lineAnimation3.setDuration(ActDuration);
         IAnimation lineAnimation4 = new LinearAnimation(progress -> {
-            line[0].setEndPoint(new PointF(30 + (progress * (SceneWidth - 60)), SceneHeigth - 30 - (progress * (SceneHeigth - 60))));
+            line[0].setEndPoint(new PointF(30 + (progress * (SceneWidth - 60)), SceneHeight - 30 - (progress * (SceneHeight - 60))));
             line[0].setColor(Color.fromArgb(0, 255 - (int)((progress * 255)), (int)((progress * 255))));
         });
         lineAnimation4.setDuration(ActDuration);
@@ -99,12 +99,12 @@ public class CreateAPNGAnimationFromGraphics
         tmp0.add(fullLineAnimation);
         tmp0.add(fullEllipseAnimation);
         scene.setAnimation(tmp0);
-        // playing the scene on the newly created ApngImage
+        // Playing the scene on the newly created APNG image
         try (ApngOptions createOptions = new ApngOptions())
         {
             createOptions.setSource(new FileCreateSource(Utils.getOutDir() + "vector_animation.png", false));
             createOptions.setColorType(PngColorType.TruecolorWithAlpha);
-            try (ApngImage image = (ApngImage) Image.create(createOptions, SceneWidth, SceneHeigth))
+            try (ApngImage image = (ApngImage) Image.create(createOptions, SceneWidth, SceneHeight))
             {
                 image.setDefaultFrameTime(FrameDuration);
                 scene.play(image, TotalDuration);
@@ -608,7 +608,7 @@ class LinearAnimation implements IAnimation
 /////////////////////////// Delay.java /////////////////////////////
 /**
  * <p>
- * The simple delay between other animations
+ * A simple delay between other animations
  * </p>
  */
 class Delay implements IAnimation
@@ -652,7 +652,7 @@ class Delay implements IAnimation
     @Override
     public final void update(long elapsed)
     {
-        // Do nothing
+        // No operation
     }
 }
 

@@ -17,7 +17,7 @@ public class SupportOfCDR {
     public static void main(String[] args)
     {
         Logger.startExample("SupportOfCDR");
-        // The path to the documents directory.
+        // The path to the document directory.
         String baseFolder = Utils.getSharedDataDir() + "CDR/";
         String inputFileName = baseFolder + "test.cdr";
         

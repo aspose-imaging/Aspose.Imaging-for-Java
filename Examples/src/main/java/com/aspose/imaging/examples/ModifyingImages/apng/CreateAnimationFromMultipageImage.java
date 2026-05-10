@@ -17,7 +17,7 @@ public class CreateAnimationFromMultipageImage
 
         try (Image image = Image.load(inputFilePath))
         {
-            // Setting up the default frame duration
+            // Set the default frame duration.
             ApngOptions op = new ApngOptions();
             op.setDefaultFrameTime(500); // 500 ms
             image.save(outputFilePath, op);

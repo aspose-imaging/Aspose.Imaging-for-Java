@@ -12,7 +12,7 @@ public class TiffDataRecovery
     public static void main(String... args)
     {
         Logger.startExample("TiffDataRecovery");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
         // Create an instance of LoadOptions and set LoadOptions properties

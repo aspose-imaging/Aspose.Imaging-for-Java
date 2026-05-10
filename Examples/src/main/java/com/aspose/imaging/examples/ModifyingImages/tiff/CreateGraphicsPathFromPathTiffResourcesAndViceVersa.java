@@ -17,7 +17,7 @@ public class CreateGraphicsPathFromPathTiffResourcesAndViceVersa
     {
         Logger.startExample("CreateGraphicsPathFromPathTiffResourcesAndViceVersa");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "/Tiff/";
         String outDir = Utils.getOutDir("Tiff");
 

@@ -15,7 +15,7 @@ public class SupportFor2
     {
         Logger.startExample("SupportFor2");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
 
         int bpp = 2; // Set 2 bits per sample to see the difference in size and quality

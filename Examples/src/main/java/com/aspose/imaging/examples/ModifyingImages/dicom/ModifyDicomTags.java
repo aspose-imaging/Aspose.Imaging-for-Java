@@ -18,9 +18,9 @@ public class ModifyDicomTags
         try (DicomImage image = (DicomImage) Image.load(dataDir + "file.dcm"))
         {
             final DicomImageInfo fileInfo = image.getFileInfo();
-            fileInfo.updateTagAt(33, "Test Patient"); // "Patient's Name"
+            fileInfo.updateTagAt(33, "Test Patient"); // Patient's Name
             fileInfo.addTag("Angular View Vector", 234);
-            fileInfo.removeTagAt(29); // "Station Name"
+            fileInfo.removeTagAt(29); // Station Name
 
             image.save(outDir + "output.dcm");
         }

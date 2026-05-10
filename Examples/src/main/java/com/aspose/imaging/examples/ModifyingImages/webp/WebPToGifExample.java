@@ -10,7 +10,7 @@ public class WebPToGifExample
     public static void main(String... args)
     {
         Logger.startExample("WebPToGifExample");
-        // The path to the documents directory.
+        // Get the path to the data directory.
         String dataDir = Utils.getSharedDataDir() + "WebP/";
         String inputFile = dataDir + "Animation.webp";
         String outputFile = Utils.getOutDir() + "Animation.gif";

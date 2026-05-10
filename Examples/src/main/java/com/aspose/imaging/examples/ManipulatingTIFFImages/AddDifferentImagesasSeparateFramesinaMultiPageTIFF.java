@@ -20,7 +20,7 @@ public class AddDifferentImagesasSeparateFramesinaMultiPageTIFF
     {
 		Logger.startExample("AddDifferentImagesasSeparateFramesinaMultiPageTIFF");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingTIFFImages/";
 
         // Create an instance of TiffOptions with CCITTFAX3 compression

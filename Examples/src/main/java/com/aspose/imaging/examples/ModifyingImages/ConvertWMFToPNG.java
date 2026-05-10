@@ -13,7 +13,7 @@ public class ConvertWMFToPNG
     public static void main(String... args)
     {
         Logger.startExample("ConvertWMFToPNG");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
         String inputFileName = dataDir + "thistlegirl_wmfsample.wmf";

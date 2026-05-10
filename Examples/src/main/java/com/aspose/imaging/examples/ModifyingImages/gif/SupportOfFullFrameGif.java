@@ -15,7 +15,7 @@ public class SupportOfFullFrameGif
     public static void main(String... args)
     {
         Logger.startExample("SupportOfFullFrameGif");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         String fileName = "Animation.gif";
         String inputFilePath = dataDir + fileName;

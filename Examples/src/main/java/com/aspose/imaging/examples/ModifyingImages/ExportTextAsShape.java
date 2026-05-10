@@ -12,7 +12,7 @@ public class ExportTextAsShape
     public static void main(String... args)
     {
         Logger.startExample("ExportTextAsShape");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         try (Image image = Image.load(dataDir + "Picture1.emf"))
         {

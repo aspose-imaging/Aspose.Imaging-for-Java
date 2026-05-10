@@ -16,7 +16,7 @@ public class ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality
     {
 		Logger.startExample("ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingTIFFImages/";
 
 		try (TiffImage multiImage = (TiffImage) Image.load(dataDir + "sample.tif"))

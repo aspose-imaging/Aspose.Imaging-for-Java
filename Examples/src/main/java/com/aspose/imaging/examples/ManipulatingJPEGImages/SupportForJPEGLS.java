@@ -18,7 +18,7 @@ public class SupportForJPEGLS
     {
         Logger.startExample("SupportForJPEGLS");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
 
         ByteArrayOutputStream jpegLsStream = new ByteArrayOutputStream();

@@ -13,7 +13,7 @@ public class ConvertanyLoadedImageDirectlyToPNGformat
     {
 		Logger.startExample("ConvertanyLoadedImageDirectlyToPNGformat");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "Png/";
 
         // Load the source image (any format) in an instance of RasterImage

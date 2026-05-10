@@ -13,7 +13,7 @@ public class OptimizationStrategyInJPEG
 {
     public static void main(String[] args)
     {
-        Logger.startExample("OptimizationStrategyInJPEG");
+        Logger.startExample();
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         String outDir = Utils.getOutDir();
 

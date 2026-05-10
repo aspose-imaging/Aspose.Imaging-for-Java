@@ -15,7 +15,7 @@ public class SpecifyTransparency
     {
 		Logger.startExample("SpecifyTransparency");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 
         // Initialize variables to hold width & height values

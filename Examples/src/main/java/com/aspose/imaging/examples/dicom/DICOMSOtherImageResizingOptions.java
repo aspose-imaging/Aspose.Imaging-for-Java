@@ -12,7 +12,7 @@ public class DICOMSOtherImageResizingOptions
     public static void main(String... args)
     {
         Logger.startExample("DICOMSOtherImageResizingOptions");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "dicom/";
 
         try (DicomImage image = (DicomImage)Image.load(dataDir + "image.dcm"))

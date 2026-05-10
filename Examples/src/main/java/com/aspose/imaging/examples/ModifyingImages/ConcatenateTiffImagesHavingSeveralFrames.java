@@ -17,7 +17,7 @@ public class ConcatenateTiffImagesHavingSeveralFrames
     public static void main(String[] args)
     {
         Logger.startExample("ConcatenateTiffImagesHavingSeveralFrames");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         List<String> files = Arrays.asList(dataDir + "TestDemo.tiff", dataDir + "sample.tiff");
         TiffOptions createOptions = new TiffOptions(TiffExpectedFormat.Default);

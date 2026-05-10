@@ -12,16 +12,16 @@ public class OptimizationStrategyInResize
     public static void main(String... args)
     {
         Logger.startExample("OptimizationStrategyInResize");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         String fileName = "SampleTiff1.tiff";
         String output = Utils.getOutDir() + "SampleTiff1.out.tiff";
         String inputFileName = dataDir + fileName;
 
-        // Setting a memory limit of 50 megabytes for target loaded image
+        // Set a memory limit of 50MB for the loaded image.
         try (RasterImage image = (RasterImage) Image.load(inputFileName, new LoadOptions() {{ setBufferSizeHint(50); }}))
         {
-            // perform Resize operation
+            // Perform resize operation.
             image.resize(300, 200, ResizeType.LanczosResample);
             image.save(output);
         }

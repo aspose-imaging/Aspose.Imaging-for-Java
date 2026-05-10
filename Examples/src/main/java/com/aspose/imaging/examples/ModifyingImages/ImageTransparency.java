@@ -10,14 +10,14 @@ public class ImageTransparency
     public static void main(String[] args)
     {
         Logger.startExample("ImageTransparency");
-        // The path to the documents directory.
+        // The path to the document directory.
 
         String dataDir = Utils.getSharedDataDir() + "Png/";
 
         String filePath = dataDir + "aspose_logo.png"; // specify your path
         try (PngImage image = (PngImage) Image.load(filePath))
         {
-            float opacity = image.getImageOpacity(); // opacity = 0,470798
+            float opacity = image.getImageOpacity(); // opacity = 0.470798
             Logger.printf("opacity : %f", opacity);
             if (opacity == 0)
             {

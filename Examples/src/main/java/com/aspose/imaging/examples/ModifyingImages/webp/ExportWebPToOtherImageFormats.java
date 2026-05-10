@@ -10,7 +10,7 @@ public class ExportWebPToOtherImageFormats
     public static void main(String... args)
     {
         Logger.startExample("ExportWebPToOtherImageFormats");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
         // Load WebP image into the instance of image class.

@@ -16,7 +16,7 @@ public class ConvertDjvuPagesToGif
     public static void main(String[] args)
     {
         Logger.startExample("ConvertDjvuPagesToGif");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "djvu/";
 
         //Load a DjVu image

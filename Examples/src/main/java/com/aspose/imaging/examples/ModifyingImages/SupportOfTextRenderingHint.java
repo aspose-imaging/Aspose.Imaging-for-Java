@@ -26,7 +26,7 @@ public class SupportOfTextRenderingHint
     public static void main(String[] args)
     {
         Logger.startExample("SupportOfTextRenderingHint");
-        // The path to the documents directory.
+        // The path to the document directory.
         String basePath = Utils.getSharedDataDir() + "ModifyingImages/";
 
         String[] files = new String[]{

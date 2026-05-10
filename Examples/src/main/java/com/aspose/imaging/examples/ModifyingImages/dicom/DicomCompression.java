@@ -15,7 +15,7 @@ public class DicomCompression
     public static void main(String[] args)
     {
         Logger.startExample("DicomCompression");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "dicom/";
         String outDir = Utils.getOutDir("dicom");
 

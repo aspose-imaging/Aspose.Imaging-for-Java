@@ -8,7 +8,7 @@ import com.aspose.imaging.examples.Utils;
 public class ApplyCorrectionFilterOnImage {
 	public static void main(String... args)  {
 		Logger.startExample("ApplyCorrectionFilterOnImage");
-		// The path to the documents directory.
+		// The path to the document directory.
 		String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 
 		try (RasterImage rasterImage = (RasterImage)Image.load(dataDir + "aspose-logo.jpg"))

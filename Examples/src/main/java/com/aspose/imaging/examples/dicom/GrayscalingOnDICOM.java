@@ -9,13 +9,12 @@ public class GrayscalingOnDICOM
     public static void main(String... args)
     {
 		Logger.startExample("GrayscalingOnDICOM");
-		// The path to the documents directory.
+		// The path to the document directory.
 		String dataDir = Utils.getSharedDataDir() + "dicom/";
         String inputFile = dataDir + "image.dcm";
         String outputFile = Utils.getOutDir() + "Grayscaling_out.bmp";
 
-        // Load an existing image.
-        // Load a DICOM image in an instance of DicomImage
+        // Load a DICOM image into an instance of DicomImage
 		try (com.aspose.imaging.fileformats.dicom.DicomImage image = (com.aspose.imaging.fileformats.dicom.DicomImage) Image.load(inputFile))
 		{
 			// Transform image to its grayscale representation

@@ -13,7 +13,7 @@ public class DataRecovery
     {
         Logger.startExample("DataRecovery");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingTIFFImages/";
 
         // Create an instance of LoadOptions

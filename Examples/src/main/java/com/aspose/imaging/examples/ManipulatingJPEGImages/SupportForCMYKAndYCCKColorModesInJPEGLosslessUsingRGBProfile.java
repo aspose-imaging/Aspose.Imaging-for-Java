@@ -20,7 +20,7 @@ public class SupportForCMYKAndYCCKColorModesInJPEGLosslessUsingRGBProfile
     {
         Logger.startExample("SupportForCMYKAndYCCKColorModesInJPEGLosslessUsingRGBProfile");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
 
         ByteArrayOutputStream jpegStream_cmyk = new ByteArrayOutputStream();

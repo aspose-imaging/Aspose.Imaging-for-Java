@@ -12,7 +12,7 @@ public class ExportToHtml5Canvas
     public static void main(String... args)
     {
         Logger.startExample("ExportToHtml5Canvas");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "svg/";
         try (Image image = Image.load(dataDir + "Sample.svg"))
         {

@@ -10,7 +10,7 @@ public class ChangeBackgroundColor
     {
 		Logger.startExample("ChangeBackgroundColor");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "Png/";
 
         // Create an instance of Image class and load a PNG image

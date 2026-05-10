@@ -10,7 +10,7 @@ public class ResizeWidthProportionally
     public static void main(String... args)
     {
 		Logger.startExample("ResizeWidthProportionally");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "dicom/";
         String inputFile = dataDir + "image.dcm";
         String outputFile = Utils.getOutDir() + "ResizeWidthProportionally_out.bmp";

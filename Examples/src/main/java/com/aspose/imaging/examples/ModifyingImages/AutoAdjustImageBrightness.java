@@ -15,7 +15,7 @@ public class AutoAdjustImageBrightness
 
         String outputFilePath = Utils.getOutDir() + "result.png";
         String outputFilePath2 = Utils.getOutDir() + "result2.png";
-        // Load an existing JPG image
+        // Load an existing PNG image
         try (RasterImage image = (RasterImage) Image.load(dataDir + "sample.png"))
         {
             image.normalizeHistogram();

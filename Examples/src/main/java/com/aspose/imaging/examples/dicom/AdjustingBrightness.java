@@ -12,7 +12,7 @@ public class AdjustingBrightness
     {
         Logger.startExample("AdjustingBrightness");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "dicom/";
         String inputFile = dataDir + "image.dcm";
         String outputFile = Utils.getOutDir() + "AdjustingBrightness_out.bmp";

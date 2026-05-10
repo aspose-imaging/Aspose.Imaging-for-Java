@@ -10,7 +10,7 @@ public class DicomToPngExample
     public static void main(String[] args)
     {
         Logger.startExample("DicomToPngExample");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "dicom/";
         String outFile = Utils.getOutDir() + "MultiframePage1.png";
 

@@ -9,7 +9,7 @@ public class RotateDICOMImage
     public static void main(String... args)
     {
 		Logger.startExample("RotateDICOMImage");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "dicom/";
         String inputFile = dataDir + "image.dcm";
         String outputFile = Utils.getOutDir() + "RotateDICOMImage_out.bmp";

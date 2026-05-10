@@ -9,7 +9,7 @@ public class ImplementationOfLossyGIFCompressor
     public static void main(String[] args)
     {
         Logger.startExample("ImplementationOfLossyGIFCompressor");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "images/";
 
         // Sets the maximum allowed pixel difference. If greater than zero, lossy compression will be used.

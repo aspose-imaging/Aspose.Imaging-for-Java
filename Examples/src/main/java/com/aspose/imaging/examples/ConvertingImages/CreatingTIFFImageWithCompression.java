@@ -37,7 +37,7 @@ public class CreatingTIFFImageWithCompression
             {
                 tiffImage.getActiveFrame().setPixel(i, i, Color.getRed());
             }
-            // Save resultant image
+            // Save the resulting image
             tiffImage.save(Utils.getOutDir() + "CreatingTIFFImageWithCompression.tiff");
         }
         Logger.endExample();

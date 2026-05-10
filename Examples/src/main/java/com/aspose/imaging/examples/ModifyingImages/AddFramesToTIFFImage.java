@@ -23,7 +23,7 @@ public class AddFramesToTIFFImage
         Logger.startExample("AddFramesToTIFFImage");
         // To get proper output please apply a valid Aspose.Imaging License. You can purchase full license or get 30 day temporary license from http:// Www.aspose.com/purchase/default.aspx.");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";;
         TiffOptions outputSettings = new TiffOptions(TiffExpectedFormat.Default);
         outputSettings.setBitsPerSample(new int[] { 1 });

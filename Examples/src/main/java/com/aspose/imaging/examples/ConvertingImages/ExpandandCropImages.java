@@ -19,7 +19,7 @@ public class ExpandandCropImages
 			// setting for image data to be cashed
 			rasterImage.cacheData();
 
-			// Create an instance of Rectangle class and define X,Y and Width, height of the rectangle.
+            // Create a Rectangle that defines the X, Y, width, and height of the rectangle.
 			Rectangle destRect = new Rectangle(200, 200, 300, 300);
 
 			// Save output image by passing output file name, image options and rectangle object.

@@ -11,7 +11,7 @@ public class ExportToDicom
     public static void main(String[] args)
     {
         Logger.startExample("ExportToDicom");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "dicom/";
         String outDir = Utils.getOutDir();
         String fileName = "sample.jpg";
@@ -20,13 +20,13 @@ public class ExportToDicom
         String outputFileNameSingleDcm = Path.combine(outDir, "ExportToDicom_output.dcm");
         String outputFileNameMultipageDcm = Path.combine(outDir, "ExportToDicom_outputMultipage.dcm");
 
-        // The next code sample converts JPEG image to DICOM file format
+        // The next code sample converts a JPEG image to the DICOM file format.
         try (Image image = Image.load(inputFileNameSingle))
         {
             image.save(outputFileNameSingleDcm, new DicomOptions());
         }
 
-        // DICOM format supports multipage images. You can convert GIF or TIFF images to DICOM in the same way as JPEG images
+        // DICOM format supports multi‑page images. You can convert GIF or TIFF images to DICOM in the same way as JPEG images.
         try (Image image = Image.load(inputFileNameMultipage))
         {
             image.save(outputFileNameMultipageDcm, new DicomOptions());

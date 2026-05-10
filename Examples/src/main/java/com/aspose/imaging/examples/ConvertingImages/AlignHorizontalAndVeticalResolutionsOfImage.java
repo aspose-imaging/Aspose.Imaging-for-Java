@@ -10,7 +10,7 @@ public class AlignHorizontalAndVeticalResolutionsOfImage
     public static void main(String... args)
     {
         Logger.startExample("AlignHorizontalAndVeticalResolutionsOfImage");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 
         try (TiffImage image = (TiffImage) com.aspose.imaging.Image.load(dataDir + "sample.tiff"))

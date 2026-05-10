@@ -11,7 +11,7 @@ public class ConvertingSVGToRasterImages
     public static void main(String[] args)
     {
         Logger.startExample("ConvertingSVGToRasterImages");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";;
 
         // Load the image

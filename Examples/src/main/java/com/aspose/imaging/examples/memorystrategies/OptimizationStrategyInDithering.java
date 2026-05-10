@@ -12,16 +12,16 @@ public class OptimizationStrategyInDithering
     public static void main(String... args)
     {
         Logger.startExample("OptimizationStrategyInDithering");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         String fileName = "SampleTiff1.tiff";
         String output = "SampleTiff1.out.tiff";
         String inputFileName = dataDir + fileName;
 
-        // Setting a memory limit of 50 megabytes for target loaded image
+        // Setting a memory limit of 50 megabytes for the target loaded image
         try (RasterImage image = (RasterImage) Image.load(inputFileName, new LoadOptions() {{ setBufferSizeHint(50); }}))
         {
-            // perform dithering operation
+            // Perform a dithering operation
             image.dither(DitheringMethod.FloydSteinbergDithering, 1);
 
             image.save(Utils.getOutDir() + output);

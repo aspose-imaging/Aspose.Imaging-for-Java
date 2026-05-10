@@ -13,7 +13,7 @@ public class AdjustBrightnessDICOM
     public static void main(String... args)
     {
 		Logger.startExample("AdjustBrightnessDICOM");
-		// The path to the documents directory.
+		// The path to the document directory.
 		String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         Image image = Image.load(dataDir + "aspose-logo.jpg");
         // Cast object of Image to RasterImage

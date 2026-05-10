@@ -11,7 +11,7 @@ public class ExportToDxf
     {
         Logger.startExample();
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "/eps/";
         final String outDir = Utils.getOutDir("dxf");
 

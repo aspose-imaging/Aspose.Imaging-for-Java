@@ -13,21 +13,17 @@ public class GetLastModifiedDate
         // Declare variable to store file path for input image
         String path = dataDir + "aspose-logo.jpg";
 
-        com.aspose.imaging.RasterImage image = (com.aspose.imaging.RasterImage) Image.load(path);
-        try
+        try (com.aspose.imaging.RasterImage image = (com.aspose.imaging.RasterImage) Image.load(path))
         {
-            // gets the date from [FileInfo]
-            String modifyDate = image.getModifyDate(true).toString();
+            // Gets the date from the file system.
+            String modifyDate = image.getModifyDate(true)
+                                     .toString();
             Logger.printf("Last modify date using FileInfo: %s", modifyDate);
 
-            // gets the date from XMP metadata of [FileInfo] as long as it's not
-            // default case
-            modifyDate = image.getModifyDate(false).toString();
+            // Gets the date from XMP metadata when it is available; otherwise falls back to the file system.
+            modifyDate = image.getModifyDate(false)
+                              .toString();
             Logger.printf("Last modify date using info from FileInfo and XMP metadata: %s", modifyDate);
-        }
-        finally
-        {
-            image.dispose();
         }
         Logger.endExample();
     }

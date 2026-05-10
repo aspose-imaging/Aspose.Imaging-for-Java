@@ -11,7 +11,7 @@ public class ApplyingMotionWienerFilter
     public static void main(String... args)
     {
         Logger.startExample("ApplyingMotionWienerFilter");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 
         // Load the image

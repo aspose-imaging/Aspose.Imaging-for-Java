@@ -14,7 +14,7 @@ public class SpecifyBitDepth
     {
 		Logger.startExample("SpecifyBitDepth");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "Png/";
 
         // Load an existing PNG image

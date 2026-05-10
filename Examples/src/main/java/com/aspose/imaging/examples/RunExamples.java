@@ -29,6 +29,7 @@ import com.aspose.imaging.examples.ModifyingImages.fonts.SpecifyFont;
 import com.aspose.imaging.examples.ModifyingImages.gif.CreateGifUsingAddPage;
 import com.aspose.imaging.examples.ModifyingImages.gif.SupportGifFrameDurationAndNumberOfCycles;
 import com.aspose.imaging.examples.ModifyingImages.gif.SupportOfFullFrameGif;
+import com.aspose.imaging.examples.ModifyingImages.hdr.SupportOfHdrImages;
 import com.aspose.imaging.examples.ModifyingImages.ico.ConvertIcoToTiff;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.JpegSavedQualityEstimation;
 import com.aspose.imaging.examples.ModifyingImages.jpeg.ReadAllEXIFTags;
@@ -262,6 +263,7 @@ public class RunExamples
 		Deskew.main(args);
 
 		System.out.println("Running file formats tests:");
+		SupportOfHdrImages.main(args);
 
 		// =====================================================
 		// =====================================================

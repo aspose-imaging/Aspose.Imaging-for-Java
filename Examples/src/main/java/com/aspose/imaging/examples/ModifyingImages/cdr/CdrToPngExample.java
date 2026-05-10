@@ -26,7 +26,7 @@ public class CdrToPngExample
 
             options.setColorType(PngColorType.TruecolorWithAlpha);
 
-            // Set rasterization options for fileformat
+            // Set rasterization options for the file format.
             VectorRasterizationOptions defaultOptions = image.getDefaultOptions(new Object[]{Color.getWhite(), image.getWidth(), image.getHeight()})
                                                              .getVectorRasterizationOptions();
             options.setVectorRasterizationOptions(defaultOptions);

@@ -15,7 +15,7 @@ public class ExtractTIFFFramesToBMPImageFormat
     public static void main(String... args)
     {
         Logger.startExample("ExtractTIFFFramesToBMPImageFormat");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 
         try (TiffImage multiImage = (TiffImage) Image.load(dataDir + "sample.tiff"))

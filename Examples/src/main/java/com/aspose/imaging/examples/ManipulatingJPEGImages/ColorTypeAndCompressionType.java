@@ -12,7 +12,7 @@ public class ColorTypeAndCompressionType
     public static void main(String... args)
     {
         Logger.startExample("ColorTypeAndCompressionType");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
         Image original = Image.load(dataDir + "ColorGif.gif");
         try

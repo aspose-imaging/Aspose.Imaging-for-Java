@@ -12,14 +12,14 @@ public class ExpandOrCropAnImage
     public static void main(String... args)
     {
         Logger.startExample("ExpandOrCropAnImage");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 
-        // Load an image in an instance of Image and Setting for image data to be cashed
+        // Load an image into an Image instance and cache its data.
         try (RasterImage rasterImage = (RasterImage) Image.load(dataDir + "aspose-logo.jpg"))
         {
             rasterImage.cacheData();
-            // Create an instance of Rectangle class and define X,Y and Width, height of the rectangle, and Save output image
+            // Create a Rectangle that defines the X, Y, width, and height of the region, then save the output image.
             Rectangle destRect = new Rectangle(-200, -200, 300, 300);
             rasterImage.save(Utils.getOutDir() + "Grayscaling_out.jpg", new JpegOptions(), destRect);
         }

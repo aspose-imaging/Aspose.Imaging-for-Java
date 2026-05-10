@@ -8,7 +8,7 @@ public class OpeningImagefilesfromdisk
     public static void main(String[] args)
     {
         Logger.startExample("OpeningImagefilesfromdisk");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "files/";
         //Create an Image object and load an existing file using the file path
         com.aspose.imaging.Image image = com.aspose.imaging.Image.load(dataDir + "sample.bmp");

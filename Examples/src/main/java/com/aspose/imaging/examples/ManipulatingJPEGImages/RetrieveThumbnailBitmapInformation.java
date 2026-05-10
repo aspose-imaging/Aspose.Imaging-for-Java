@@ -16,7 +16,7 @@ public class RetrieveThumbnailBitmapInformation
     {
 		Logger.startExample("RetrieveThumbnailBitmapInformation");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
 
         // Load the image in an instance of JpegImage

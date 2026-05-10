@@ -18,7 +18,7 @@ public class SupportForCMYKAndYCCKColorModesInJPEGLossless
     {
         Logger.startExample("SupportForCMYKAndYCCKColorModesInJPEGLossless");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         ByteArrayOutputStream jpegStream_cmyk = new ByteArrayOutputStream();
         ByteArrayOutputStream jpegStream_ycck = new ByteArrayOutputStream();
 

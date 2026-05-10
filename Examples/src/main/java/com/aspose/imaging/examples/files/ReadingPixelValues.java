@@ -14,7 +14,7 @@ public class ReadingPixelValues
     public static void main(String... args)
     {
         Logger.startExample("ReadingPixelValues");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "files/";
         //String dir = "C:\\Errors\\1006\\";
         String fileName = "16bit Uncompressed, BigEndian, Rgb, Contiguous Gamma1.0.tif";

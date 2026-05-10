@@ -11,7 +11,7 @@ public class AddThumbnailtoJFIFSegment
     {
 		Logger.startExample("AddThumbnailtoJFIFSegment");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getOutDir();
 
         //Create an instance of JpegImage to store the thumbnail

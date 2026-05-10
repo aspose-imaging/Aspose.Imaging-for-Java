@@ -15,7 +15,7 @@ public class SavingRasterImageToTIFFWithCompression
     public static void main(String... args)
     {
         Logger.startExample("SavingRasterImageToTIFFWithCompression");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
         // Create an instance of TiffOptions and set its various properties
@@ -32,7 +32,7 @@ public class SavingRasterImageToTIFFWithCompression
         // Or Deflate
         // Options.Compression = TiffCompressions.Deflate;
 
-        // Load an existing image in an instance of RasterImage
+        // Load an existing image into an instance of RasterImage
         try (RasterImage image = (RasterImage) Image.load(dataDir + "SampleTiff1.tiff"))
         {
             // Create a new TiffImage from the RasterImage and Save the resultant image while passing the instance of TiffOptions

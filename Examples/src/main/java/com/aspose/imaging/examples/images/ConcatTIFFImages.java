@@ -10,7 +10,7 @@ public class ConcatTIFFImages
     public static void main(String[] args)
     {
 		Logger.startExample("ConcatTIFFImages");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "images/";
         // Create an instance of TiffImage and load the copied destination image
 

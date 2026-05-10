@@ -14,7 +14,7 @@ public class MultipageFromImages
     public static void main(String[] args)
     {
         Logger.startExample();
-        // The path to the documents directory.
+        // Path to the document directory.
         String dataDir = Utils.getSharedDataDir();
 
         String baseFolder = dataDir + "Multipage/";

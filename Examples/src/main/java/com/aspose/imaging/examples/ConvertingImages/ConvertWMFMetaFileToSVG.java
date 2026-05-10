@@ -11,7 +11,7 @@ public class ConvertWMFMetaFileToSVG
     public static void main(String... args)
     {
         Logger.startExample("ConvertWMFMetaFileToSVG");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
         // Create an instance of Image class by loading an existing .

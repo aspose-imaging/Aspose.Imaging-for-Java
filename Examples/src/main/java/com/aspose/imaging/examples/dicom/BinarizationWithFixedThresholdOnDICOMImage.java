@@ -10,7 +10,7 @@ public class BinarizationWithFixedThresholdOnDICOMImage
     {
 		Logger.startExample("BinarizationWithFixedThresholdOnDICOMImage");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "dicom/";
         String inputFile = dataDir + "image.dcm";
         String outputFile = Utils.getOutDir() + "BinarizationWithFixedThresholdOnDICOMImage_out.bmp";
@@ -19,7 +19,7 @@ public class BinarizationWithFixedThresholdOnDICOMImage
 
 		try (com.aspose.imaging.fileformats.dicom.DicomImage image = (com.aspose.imaging.fileformats.dicom.DicomImage) Image.load(inputFile))
 		{
-			// Binarize image with predefined fixed threshold.
+            // Binarize the image with a predefined fixed threshold and save the resulting image.
 			image.binarizeFixed((byte) 100);
 
 			// Save the resultant image.

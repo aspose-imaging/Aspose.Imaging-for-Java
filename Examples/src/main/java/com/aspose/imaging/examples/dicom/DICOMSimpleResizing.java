@@ -10,7 +10,7 @@ public class DICOMSimpleResizing
     {
 		Logger.startExample("DICOMSimpleResizing");
 
-		// The path to the documents directory.
+		// The path to the document directory.
 		String dataDir = Utils.getSharedDataDir() + "dicom/";
         String inputFile = dataDir + "image.dcm";
         String outputFile = Utils.getOutDir() + "SimpleResizing_out.bmp";

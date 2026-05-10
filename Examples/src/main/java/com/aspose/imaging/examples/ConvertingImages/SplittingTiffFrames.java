@@ -13,7 +13,7 @@ public class SplittingTiffFrames
     public static void main(String... args)
     {
         Logger.startExample("SplittingTiffFrames");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         // Create an instance of TiffImage and load the file from disc
         try (TiffImage multiImage = (TiffImage) Image.load(dataDir + "SampleTiff1.tiff"))

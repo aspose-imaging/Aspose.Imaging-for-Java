@@ -19,7 +19,7 @@ public class GraphCutAutoMasking
     {
         Logger.startExample();
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "Png/";
         String outDir = Utils.getOutDir("Png");
 

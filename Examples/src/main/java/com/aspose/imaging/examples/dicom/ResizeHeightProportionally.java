@@ -10,7 +10,7 @@ public class ResizeHeightProportionally
     public static void main(String... args)
     {
 		Logger.startExample("ResizeHeightProportionally");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "dicom/";
         String inputFile = dataDir + "image.dcm";
         String outputFile = Utils.getOutDir() + "ResizeHeightProportionally_out.bmp";

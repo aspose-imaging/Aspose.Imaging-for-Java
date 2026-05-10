@@ -9,7 +9,7 @@ public class ResizeImageProportionally
     public static void main(String... args)
     {
 		Logger.startExample("ResizeImageProportionally");
-		// The path to the documents directory.
+		// The path to the document directory.
 		String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 		try (Image image = Image.load(dataDir + "aspose-logo.jpg"))
 		{

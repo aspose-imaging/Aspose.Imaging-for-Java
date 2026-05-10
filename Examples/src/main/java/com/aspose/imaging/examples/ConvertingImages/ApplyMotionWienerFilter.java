@@ -9,7 +9,7 @@ import com.aspose.imaging.imagefilters.filteroptions.MotionWienerFilterOptions;
 public class ApplyMotionWienerFilter {
 	public static void main(String... args) {
 		Logger.startExample("ApplyMotionWienerFilter");
-		// The path to the documents directory.
+		// The path to the document directory.
 		String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 		try (Image image = Image.load(dataDir + "aspose-logo.gif"))
 		{

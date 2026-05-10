@@ -10,7 +10,7 @@ public class DitheringForDICOMImage
     {
 		Logger.startExample("DitheringForDICOMImage");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "dicom/";
         String inputFile = dataDir + "image.dcm";
         String outputFile = Utils.getOutDir() + "DitheringForDICOMImage_out.bmp";
@@ -18,7 +18,7 @@ public class DitheringForDICOMImage
         // Load a DICOM image in an instance of DicomImage
 		try (com.aspose.imaging.fileformats.dicom.DicomImage image = (com.aspose.imaging.fileformats.dicom.DicomImage) Image.load(inputFile))
 		{
-			// Peform Threshold dithering on the image
+			// Perform Threshold dithering on the image
 			image.dither(com.aspose.imaging.DitheringMethod.ThresholdDithering, 1);
 
 			// Save the image

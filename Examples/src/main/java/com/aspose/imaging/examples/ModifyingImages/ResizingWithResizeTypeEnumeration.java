@@ -10,7 +10,7 @@ public class ResizingWithResizeTypeEnumeration
     public static void main(String... args)
     {
         Logger.startExample("ResizingWithResizeTypeEnumeration");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "Png/";
         try (Image image = Image.load(dataDir + "aspose_logo.png"))
         {

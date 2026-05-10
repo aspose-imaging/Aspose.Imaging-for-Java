@@ -11,7 +11,7 @@ public class SimpleResizeImageProportionally
     {
 		Logger.startExample("SimpleResizeImageProportionally");
 
-		// The path to the documents directory.
+		// The path to the document directory.
 		String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 		try (Image image = Image.load(dataDir + "aspose-logo.jpg"))
 		{
@@ -21,10 +21,11 @@ public class SimpleResizeImageProportionally
 				image.cacheData();
 			}
 
-			// specifying width and height
+            // Specify a new width and resize proportionally.
 			int newWidth = image.getWidth() / 2;
 			image.resizeWidthProportionally(newWidth);
 
+            // Specify a new height and resize proportionally.
 			int newHeight = image.getHeight() / 2;
 			image.resizeHeightProportionally(newHeight);
 

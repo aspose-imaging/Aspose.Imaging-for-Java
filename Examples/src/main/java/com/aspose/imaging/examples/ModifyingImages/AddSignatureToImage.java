@@ -12,7 +12,7 @@ public class AddSignatureToImage
     public static void main(String... args)
     {
         Logger.startExample("AddSignatureToImage");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
         // Create an instance of Image and load the primary image

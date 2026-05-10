@@ -24,7 +24,7 @@ public class ConvertTIFFToJPEG
     public static void main(String[] args)
     {
         Logger.startExample("ConvertTIFFToJPEG");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
         try (TiffImage tiffImage = (TiffImage) Image.load(dataDir + "source2.tif"))
         {

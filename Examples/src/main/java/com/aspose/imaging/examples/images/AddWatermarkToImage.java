@@ -11,7 +11,7 @@ public class AddWatermarkToImage
     {
         Logger.startExample("AddWatermarkToImage");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "images/";
         //Create an instance of Image and load an existing image.
 

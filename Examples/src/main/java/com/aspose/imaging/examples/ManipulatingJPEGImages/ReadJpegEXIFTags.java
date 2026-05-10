@@ -11,7 +11,7 @@ public class ReadJpegEXIFTags
     {
 		Logger.startExample("ReadJpegEXIFTags");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "images/";
 
         // Load the image in an instance of JpegImage

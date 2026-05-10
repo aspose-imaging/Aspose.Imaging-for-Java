@@ -17,7 +17,7 @@ public class CreatingWebPImage
         imageOptions.setLossless(true);
         imageOptions.setSource(new FileCreateSource(Utils.getOutDir() + "CreatingWebPImage_out.webp", false));
 
-        // Create an instance of image class by using WebOptions instance that you have just created.
+        // Create an instance of image class by using the WebOptions instance that you have just created.
         try (Image image = Image.create(imageOptions, 500, 500))
         {
             image.save();

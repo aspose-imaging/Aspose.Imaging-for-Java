@@ -11,17 +11,17 @@ public class Deskew
     public static void main(String... args)
     {
         Logger.startExample("Deskew");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
         String fileName = "skewed.png";
         String output = "skewed.out.png";
         String inputFileName = dataDir + fileName;
 
-        // Get rid of the skewed scan with default parameters
+        // Remove the skew from the scanned image using default parameters
         try (RasterImage image = (RasterImage) Image.load(inputFileName))
         {
-            image.normalizeAngle(false /*do not resize*/, Color.getLightGray() /*background color*/);
+            image.normalizeAngle(false /* do not resize */, Color.getLightGray() /* background color */);
             image.save(Utils.getOutDir() + output);
         }
         Logger.endExample();

@@ -21,7 +21,7 @@ public class ConvertWMFToSVG
     {
         Logger.startExample("ConvertWMFToSVG");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "svg/";
 
         String inputFileName = dataDir + "thistlegirl_wmfsample.wmf";

@@ -10,11 +10,10 @@ public class BinarizationwithFixedThreshold
     public static void main(String... args)
     {
         Logger.startExample("BinarizationwithFixedThreshold");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 
-        // Load an image in an instance of Image
-
+        // Load an image into an Image instance
         try (Image image = Image.load(dataDir + "aspose-logo.jpg"))
         {
             // Cast the image to RasterCachedImage

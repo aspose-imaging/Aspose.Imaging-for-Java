@@ -15,8 +15,9 @@ public class ConvertToTGA
 {
     public static void main(String[] args)
     {
+        // To get proper output, please apply a valid Aspose.Imaging license. You can purchase a full license or obtain a 30‑day temporary license from https://www.aspose.com/purchase/default.aspx.
         Logger.startExample("DicomCompression");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "tga/";
         String outDir = Utils.getOutDir("tga");
 

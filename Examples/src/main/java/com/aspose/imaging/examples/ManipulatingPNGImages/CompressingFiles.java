@@ -10,7 +10,7 @@ public class CompressingFiles
     public static void main(String... args)
     {
 		Logger.startExample("CompressingFiles");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "Png/";
         String outDir = Utils.getOutDir();
         // Load an image from file (or stream)

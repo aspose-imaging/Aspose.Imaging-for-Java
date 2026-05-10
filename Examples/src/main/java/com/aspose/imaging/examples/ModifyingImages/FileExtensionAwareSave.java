@@ -11,16 +11,17 @@ public class FileExtensionAwareSave
     {
         Logger.startExample();
 
-        // The path to the documents' directory.
+        // The path to the document directory.
         String dataDir = Path.combine(Utils.getSharedDataDir(), "jpeg");
         String outputPath = Path.combine(Utils.getOutDir(), "output.png");
 
-        // Loading and Rotating Image
+        // Loading and saving the image.
         try (Image image = Image.load(Path.combine(dataDir, "aspose-logo.jpg")))
         {
             image.save(outputPath);
         }
 
+        // Delete the temporary file.
         Utils.deleteFile(outputPath);
 
         Logger.endExample();

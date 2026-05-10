@@ -14,7 +14,7 @@ public class SupportOfDIB
     public static void main(String[] args)
     {
         Logger.startExample("SupportOfDIB");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
         try (Image image = Image.load(dataDir + "sample.dib"))

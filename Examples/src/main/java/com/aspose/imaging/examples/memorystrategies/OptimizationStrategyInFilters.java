@@ -13,7 +13,7 @@ public class OptimizationStrategyInFilters
     public static void main(String... args)
     {
         Logger.startExample("OptimizationStrategyInFilters");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         String fileName = "SampleTiff1.tiff";
         String output = "SampleTiff1.out.tiff";
@@ -22,7 +22,8 @@ public class OptimizationStrategyInFilters
         // Setting a memory limit of 50 megabytes for target loaded image
         try (RasterImage image = (RasterImage) Image.load(inputFileName, new LoadOptions() {{ setBufferSizeHint(50); }}))
         {
-            FilterOptionsBase filterOptions = new MedianFilterOptions(6 /*size*/);
+            // Median filter size
+            FilterOptionsBase filterOptions = new MedianFilterOptions(6);
             image.filter(image.getBounds(), filterOptions);
             image.save(Utils.getOutDir() + output);
         }

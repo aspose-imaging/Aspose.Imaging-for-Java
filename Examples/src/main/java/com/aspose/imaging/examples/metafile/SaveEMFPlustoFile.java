@@ -16,14 +16,9 @@ public class SaveEMFPlustoFile
         String dataDir = Utils.getSharedDataDir() + "metafile/";
 
         String path = dataDir + "TestEmfPlusFigures.emf";
-        EmfImage image = (EmfImage) Image.load(path);
-        try
+        try (EmfImage image = (EmfImage) Image.load(path))
         {
             image.save(Utils.getOutDir() + "TestEmfPlusFigures.emf.emf", new EmfOptions());
-        }
-        finally
-        {
-            image.dispose();
         }
 
         Logger.endExample();

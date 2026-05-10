@@ -14,7 +14,7 @@ public class ConcatenatingTIFFImagesfromStream
     public static void main(String[] args) throws IOException
     {
         Logger.startExample("ConcatenatingTIFFImagesfromStream");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "images/";
 
         // Create instances of FileStream and initialize with Tiff images

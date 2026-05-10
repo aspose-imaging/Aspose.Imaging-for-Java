@@ -11,7 +11,7 @@ public class AutoCorrectOrientationOfJPEGImages
     {
 		Logger.startExample("AutoCorrectOrientationOfJPEGImages");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
 
         //Load a Jpeg image from file path location or stream

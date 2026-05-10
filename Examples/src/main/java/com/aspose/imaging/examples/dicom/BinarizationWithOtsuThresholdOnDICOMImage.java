@@ -10,7 +10,7 @@ public class BinarizationWithOtsuThresholdOnDICOMImage
     {
         Logger.startExample("BinarizationWithOtsuThresholdOnDICOMImage");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "dicom/";
         String inputFile = dataDir + "image.dcm";
         String outputFile = Utils.getOutDir() + "BinarizationWithOtsuThresholdOnDICOMImage_out.bmp";

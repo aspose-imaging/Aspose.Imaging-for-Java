@@ -10,7 +10,7 @@ public class CropbyShifts
     {
 		Logger.startExample("CropbyShifts");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "dicom/";
         String inputFile = dataDir + "image.dcm";
         String outputFile = Utils.getOutDir() + "CropbyShifts_out.bmp";

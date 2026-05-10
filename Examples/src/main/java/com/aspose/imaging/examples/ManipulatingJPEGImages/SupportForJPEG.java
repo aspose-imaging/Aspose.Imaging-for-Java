@@ -18,7 +18,7 @@ public class SupportForJPEG
     {
         Logger.startExample("SupportForJPEG");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
 
         String sourceJpegFileName = dataDir + "lena24b.jls";

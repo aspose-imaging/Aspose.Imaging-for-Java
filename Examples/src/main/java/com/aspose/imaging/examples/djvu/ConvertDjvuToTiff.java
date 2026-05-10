@@ -14,7 +14,7 @@ public class ConvertDjvuToTiff
     public static void main(String[] args)
     {
         Logger.startExample("ConvertDjvuToTiff");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "djvu/";
 
         //Load a DjVu image

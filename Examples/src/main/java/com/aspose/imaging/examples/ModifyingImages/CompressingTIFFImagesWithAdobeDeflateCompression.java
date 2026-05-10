@@ -15,7 +15,7 @@ public class CompressingTIFFImagesWithAdobeDeflateCompression
     {
         Logger.startExample("CompressingTIFFImagesWithAdobeDeflateCompression");
         // To get proper output please apply a valid Aspose.Imaging License. You can purchase full license or get 30 day temporary license from http:// Www.aspose.com/purchase/default.aspx.");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 
         // Load an image through file path location or stream

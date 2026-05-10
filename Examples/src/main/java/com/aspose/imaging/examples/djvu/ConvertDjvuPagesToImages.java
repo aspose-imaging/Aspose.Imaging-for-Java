@@ -12,7 +12,7 @@ public class ConvertDjvuPagesToImages
 
     public static void main(String[] args)
     {
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "djvu/";
         //ExStart:ConvertDjvuPagesToImages
         //Load a DjVu image

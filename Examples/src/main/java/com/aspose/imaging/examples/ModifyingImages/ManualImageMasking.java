@@ -30,7 +30,7 @@ public class ManualImageMasking
     public static void main(String[] args)
     {
         Logger.startExample("ManualImageMasking");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
         String sourceFileName = dataDir + "Colored by Faith_small.png";
         String outputFileName = Utils.getOutDir() + "Colored by Faith_small_manual.png";

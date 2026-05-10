@@ -13,7 +13,7 @@ public class AdjustGammaDICOM
     {
         com.aspose.imaging.examples.Logger.startExample("AdjustGammaDICOM");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "dicom/";
         String inputFile = dataDir + "image.dcm";
         String outputFile = dataDir + "AdjustingGamma.bmp";

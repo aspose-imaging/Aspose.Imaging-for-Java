@@ -17,7 +17,7 @@ public class WritingAndModifyingEXIFData
 	{
 		Logger.startExample("WritingAndModifyingEXIFData");
 
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
 
         // Load an image using the factory method load exposed by Image class

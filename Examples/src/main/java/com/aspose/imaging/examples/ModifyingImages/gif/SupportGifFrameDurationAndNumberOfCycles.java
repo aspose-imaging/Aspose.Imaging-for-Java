@@ -13,7 +13,7 @@ public class SupportGifFrameDurationAndNumberOfCycles
     public static void main(String... args)
     {
         Logger.startExample();
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "GIF";
         String filepath = Path.combine(dataDir, "ezgif.com-gif-maker(1)___.gif");
         String outputPath = Utils.getOutDir() + "output.gif";

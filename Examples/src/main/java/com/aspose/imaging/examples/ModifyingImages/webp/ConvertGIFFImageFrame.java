@@ -15,7 +15,7 @@ public class ConvertGIFFImageFrame
     public static void main(String[] args)
     {
         Logger.startExample("ConvertGIFFImageFrame");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 
         // Load GIFF image into the instance of image class.

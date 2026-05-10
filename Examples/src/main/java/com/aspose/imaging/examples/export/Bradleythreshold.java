@@ -13,7 +13,7 @@ public class Bradleythreshold
         String sourcepath = dataDir + "aspose_logo.png";
         String outputPath = Utils.getOutDir() + "UseBradleythresholding_out.png";
 
-        // Load an existing image.
+        // Load an existing image (of type PNG) into an instance of the Image class.
 		try (com.aspose.imaging.fileformats.png.PngImage objimage = (com.aspose.imaging.fileformats.png.PngImage) com.aspose.imaging.Image
 				.load(sourcepath))
 		{

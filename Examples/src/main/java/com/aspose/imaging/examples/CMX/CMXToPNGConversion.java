@@ -16,7 +16,7 @@ public class CMXToPNGConversion {
 
     public static void main(String[] args) {
         Logger.startExample("CMXToPNGConversion");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "CMX/";
         
         

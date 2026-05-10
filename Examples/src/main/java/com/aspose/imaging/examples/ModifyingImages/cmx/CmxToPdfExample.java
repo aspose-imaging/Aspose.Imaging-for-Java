@@ -15,7 +15,7 @@ public class CmxToPdfExample
     public static void main(String... args)
     {
         Logger.startExample("CmxToPdfExample");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "CMX/";
         String inputFileName = dataDir + "MultiPage.cmx";
         String outFile = Utils.getOutDir() + "MultiPage.pdf";
@@ -25,7 +25,7 @@ public class CmxToPdfExample
             PdfOptions options = new PdfOptions();
             options.setPdfDocumentInfo(new PdfDocumentInfo());
 
-            // Set rasterization options for fileformat
+            // Set rasterization options for the file format.
             VectorRasterizationOptions defaultOptions = image.getDefaultOptions(new Object[]{Color.getWhite(), image.getWidth(), image.getHeight()})
                     .getVectorRasterizationOptions();
             options.setVectorRasterizationOptions(defaultOptions);

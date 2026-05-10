@@ -12,7 +12,7 @@ public class ReadSpecificEXIFTagsInformation
     public static void main(String... args)
     {
         Logger.startExample("ReadSpecificEXIFTagsInformation");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingJPEGImages/";
         // Load an image using the factory method Load exposed by Image class
         try (Image image = Image.load(dataDir + "aspose-logo.jpg"))

@@ -8,7 +8,7 @@ public class CreatingImageUsingStream
     public static void main(String[] args)
     {
         Logger.startExample("CreatingImageUsingStream");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "files/";
 
         //Creates an instance of BmpOptions and set its various properties

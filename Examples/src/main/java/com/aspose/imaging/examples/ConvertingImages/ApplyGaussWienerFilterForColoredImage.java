@@ -11,7 +11,7 @@ public class ApplyGaussWienerFilterForColoredImage
 	public static void main(String... args)  {
 		Logger.startExample("ApplyGaussWienerFilterForColoredImage");
 
-		// The path to the documents directory.
+		// The path to the document directory.
 		String dataDir = Utils.getSharedDataDir() + "ConvertingImages/";
 
 		try (Image image = Image.load(dataDir + "aspose-logo.gif"))

@@ -12,7 +12,7 @@ public class ConvertWMFToPDF
     public static void main(String... args)
     {
         Logger.startExample("ConvertWMFToPDF");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ModifyingImages/";
 
         // Load an existing WMF image

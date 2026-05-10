@@ -13,7 +13,7 @@ public class ControllCacheReallocation
     public static void main(String... args)
     {
         Logger.startExample("ControllCacheReallocation");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getOutDir();
 
         // By default the cache folder is set to the local temp directory.  You can specify a different cache folder from the default this way:

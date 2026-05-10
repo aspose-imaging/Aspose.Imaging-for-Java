@@ -12,7 +12,7 @@ public class ExtractTIFFFramestoOtherImageFormat
     public static void main(String... args)
     {
 		Logger.startExample("ExtractTIFFFramestoOtherImageFormat");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "ManipulatingTIFFImages/";
 		try (TiffImage multiImage = (TiffImage) Image.load(dataDir + "sample.tif"))
 		{

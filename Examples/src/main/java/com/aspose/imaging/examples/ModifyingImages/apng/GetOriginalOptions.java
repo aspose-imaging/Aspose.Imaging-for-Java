@@ -20,7 +20,7 @@ public class GetOriginalOptions
             ApngOptions options = (ApngOptions)image.getOriginalOptions();
             if (options.getNumPlays() != 0 || options.getDefaultFrameTime() != 10 || options.getBitDepth() != 8)
             {
-                System.err.println("Exist some errors in default options");
+                System.err.println("There are some errors in the default options");
             }
         }
 

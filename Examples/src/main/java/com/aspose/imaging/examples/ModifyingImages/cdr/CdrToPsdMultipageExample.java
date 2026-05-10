@@ -13,7 +13,7 @@ public class CdrToPsdMultipageExample
     public static void main(String... args)
     {
         Logger.startExample("CdrToPsdMultipageExample");
-        // The path to the documents directory.
+        // The path to the document directory.
         String dataDir = Utils.getSharedDataDir() + "CDR/";
         String inputFileName = dataDir + "MultiPage.cdr";
         String outFile = Utils.getOutDir() + "MultiPageOut.psd";
@@ -22,15 +22,15 @@ public class CdrToPsdMultipageExample
         {
             ImageOptionsBase options = new PsdOptions();
 
-            // By default if image is multipage image all pages exported
+            // By default, if the image is multipage, all pages are exported.
             MultiPageOptions multiPageOptions = new MultiPageOptions();
             options.setMultiPageOptions(multiPageOptions);
 
-            // Optional parameter that indicates to export multipage image as one
-            // layer (page) otherwise it will be exported page to page
+            // Optional parameter that indicates whether to export the multipage image as a single layer (page).
+            // If false, each page will be exported as a separate layer.
             multiPageOptions.setMergeLayers(true);
 
-            // Set rasterization options for fileformat
+            // Set rasterization options for the file format.
             VectorRasterizationOptions defaultOptions = image.getDefaultOptions(new Object[]{Color.getWhite(), image.getWidth(), image.getHeight()})
                     .getVectorRasterizationOptions();
             options.setVectorRasterizationOptions(defaultOptions);

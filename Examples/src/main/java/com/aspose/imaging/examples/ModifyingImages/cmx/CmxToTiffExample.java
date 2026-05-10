@@ -16,7 +16,7 @@ public class CmxToTiffExample
     public static void main(String[] args)
     {
         Logger.startExample("CmxToTiffExample");
-        // The path to the documents directory.
+        // The path to the document directory.
         String inputFile = Utils.getSharedDataDir() + "CMX/MultiPage2.cmx";
         String outFile = Utils.getOutDir() + "MultiPage2.cmx.tiff";
 
