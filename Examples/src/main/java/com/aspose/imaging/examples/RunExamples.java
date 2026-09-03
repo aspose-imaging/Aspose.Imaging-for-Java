@@ -61,6 +61,7 @@ import com.aspose.imaging.examples.images.*;
 import com.aspose.imaging.examples.memorystrategies.*;
 import com.aspose.imaging.examples.metafile.CropbyShifts;
 import com.aspose.imaging.examples.metafile.*;
+import com.aspose.imaging.examples.vectors.CreateVectorImageWithoutSpecifyingFormat;
 import com.aspose.imaging.examples.wmf.ConvertWMFToSVG;
 import com.aspose.imaging.examples.wmf.CropWMFFile;
 import com.aspose.imaging.examples.wmf.CroppingWMFFileWhileConvertingtoPNG;
@@ -363,6 +364,7 @@ public class RunExamples
 		CommonGraphicsEngineForSvgEmfWmf.main(args);
 		ConvOfOtherFormatsToSVG.main(args);
 		SVGToEMFConversion.main(args);
+		CreateVectorImageWithoutSpecifyingFormat.main(args);
 		ConvertWMFToSVG.main(args);
 		SVGToBMPConversion.main(args);
 		SvgNativeResize.main(args);
