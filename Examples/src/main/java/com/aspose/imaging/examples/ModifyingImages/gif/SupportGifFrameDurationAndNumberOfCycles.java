@@ -22,7 +22,7 @@ public class SupportGifFrameDurationAndNumberOfCycles
         {
             image.setFrameTime(2000);
             ((GifFrameBlock)image.getPages()[0]).setFrameTime(200);
-            image.save(outputPath, new GifOptions() {{ setLoopsCount(4); }});
+            image.save(outputPath, new GifOptions() {{ setLoopCount(4); }});
         }
 
         Utils.deleteFile(outputPath);

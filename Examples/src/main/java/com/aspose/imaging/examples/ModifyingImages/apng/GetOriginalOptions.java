@@ -18,7 +18,7 @@ public class GetOriginalOptions
         try (ApngImage image = (ApngImage) Image.load(Path.combine(dataDir, "SteamEngine.png")))
         {
             ApngOptions options = (ApngOptions)image.getOriginalOptions();
-            if (options.getNumPlays() != 0 || options.getDefaultFrameTime() != 10 || options.getBitDepth() != 8)
+            if (options.getLoopCount() != 0 || options.getDefaultFrameTime() != 10 || options.getBitDepth() != 8)
             {
                 System.err.println("There are some errors in the default options");
             }

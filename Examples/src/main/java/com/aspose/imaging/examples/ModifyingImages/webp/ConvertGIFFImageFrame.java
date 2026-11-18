@@ -51,7 +51,7 @@ public class ConvertGIFFImageFrame
                 // Set Properties of WebP image.
                 WebPOptions options = webp.getOptions();
                 options.setAnimBackgroundColor(0xff); // Black
-                options.setAnimLoopCount(0); // Infinity
+                options.setLoopCount(0); // Infinity
                 options.setQuality(50);
                 options.setLossless(false);
 

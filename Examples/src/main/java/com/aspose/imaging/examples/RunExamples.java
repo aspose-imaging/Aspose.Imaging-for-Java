@@ -119,6 +119,7 @@ public class RunExamples
 		//// =====================================================
 
 		Logger.println("Running modifying and converting images tests:");
+		_3DLutCubeSupport.main(args);
         ExtendExifMetadataForRasterImage.main(args);
         SupportOfDigitalSignature.main(args);
 		AutoAdjustImageBrightness.main(args);

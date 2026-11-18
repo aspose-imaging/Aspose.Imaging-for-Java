@@ -28,9 +28,6 @@ public class ConvertDjvuPagesToGif
             //Set the resolution of resultant image
             exportOptions.setResolutionSettings(new ResolutionSetting(300, 300));
 
-            //Set PaletteCorrection to false
-            exportOptions.setDoPaletteCorrection(false);
-
             //Create an instance of 8bit palette and set it as Palette property for instance of GifOptions
             exportOptions.setPalette(ColorPaletteHelper.create8Bit());
 
